@@ -1,0 +1,6 @@
+framework module Pods_PocketCarboUITests {
+  umbrella header "Pods-PocketCarboUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

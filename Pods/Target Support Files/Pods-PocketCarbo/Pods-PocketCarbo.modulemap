@@ -1,0 +1,6 @@
+framework module Pods_PocketCarbo {
+  umbrella header "Pods-PocketCarbo-umbrella.h"
+
+  export *
+  module * { export * }
+}

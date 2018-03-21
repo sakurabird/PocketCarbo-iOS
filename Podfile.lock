@@ -1,0 +1,18 @@
+PODS:
+  - DropDown (2.3.1)
+  - SlideMenuControllerSwift (4.0.0)
+  - XLPagerTabStrip (8.0.0)
+
+DEPENDENCIES:
+  - DropDown
+  - SlideMenuControllerSwift
+  - XLPagerTabStrip (~> 8.0)
+
+SPEC CHECKSUMS:
+  DropDown: 20499c7b2731b0d21609af924e47c7677a2be50d
+  SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
+  XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
+
+PODFILE CHECKSUM: f159ad5f2e2729c1204ad64ef87e6b6085765f4a
+
+COCOAPODS: 1.4.0

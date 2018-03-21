@@ -93,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				214D86E420629B8A00F20EF7 /* PocketCarbo */,
+				214D87192063245400F20EF7 /* Assets */,
 				214D86F920629B8B00F20EF7 /* PocketCarboTests */,
 				214D870420629B8B00F20EF7 /* PocketCarboUITests */,
 				214D86E320629B8A00F20EF7 /* Products */,
@@ -115,10 +116,12 @@
 			isa = PBXGroup;
 			children = (
 				214D86E520629B8A00F20EF7 /* AppDelegate.swift */,
-				214D86E720629B8A00F20EF7 /* ViewController.swift */,
-				214D86E920629B8A00F20EF7 /* Main.storyboard */,
-				214D86EC20629B8A00F20EF7 /* Assets.xcassets */,
-				214D86EE20629B8A00F20EF7 /* LaunchScreen.storyboard */,
+				214D87152063211700F20EF7 /* Models */,
+				214D87172063215100F20EF7 /* Views */,
+				214D87182063217F00F20EF7 /* Controllers */,
+				214D87162063213B00F20EF7 /* Services */,
+				214D87142063210A00F20EF7 /* Helpers */,
+				214D87132063210100F20EF7 /* Extension */,
 				214D86F120629B8A00F20EF7 /* Info.plist */,
 			);
 			path = PocketCarbo;
@@ -140,6 +143,67 @@
 				214D870720629B8B00F20EF7 /* Info.plist */,
 			);
 			path = PocketCarboUITests;
+			sourceTree = "<group>";
+		};
+		214D87132063210100F20EF7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		214D87142063210A00F20EF7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		214D87152063211700F20EF7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		214D87162063213B00F20EF7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		214D87172063215100F20EF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				214D86EE20629B8A00F20EF7 /* LaunchScreen.storyboard */,
+				214D86E920629B8A00F20EF7 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		214D87182063217F00F20EF7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				214D86E720629B8A00F20EF7 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		214D87192063245400F20EF7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				214D871A206325CA00F20EF7 /* Json */,
+				214D86EC20629B8A00F20EF7 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		214D871A206325CA00F20EF7 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 		3BD2BA2BD493E3FF86F91381 /* Frameworks */ = {

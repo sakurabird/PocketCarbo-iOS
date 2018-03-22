@@ -11,10 +11,10 @@
 		214D86E620629B8A00F20EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D86E520629B8A00F20EF7 /* AppDelegate.swift */; };
 		214D86E820629B8A00F20EF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D86E720629B8A00F20EF7 /* ViewController.swift */; };
 		214D86EB20629B8A00F20EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214D86E920629B8A00F20EF7 /* Main.storyboard */; };
-		214D86ED20629B8A00F20EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214D86EC20629B8A00F20EF7 /* Assets.xcassets */; };
 		214D86F020629B8A00F20EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214D86EE20629B8A00F20EF7 /* LaunchScreen.storyboard */; };
 		214D86FB20629B8B00F20EF7 /* PocketCarboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D86FA20629B8B00F20EF7 /* PocketCarboTests.swift */; };
 		214D870620629B8B00F20EF7 /* PocketCarboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D870520629B8B00F20EF7 /* PocketCarboUITests.swift */; };
+		214D871C2063271100F20EF7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 214D871B2063271100F20EF7 /* Settings.bundle */; };
 		48750D9FC6394827298AFC02 /* Pods_PocketCarboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */; };
 		8BA3450CEF195D039A7525C1 /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121BFC4DCE3652E0AAF39151 /* Pods_PocketCarbo.framework */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,6 @@
 		214D86E520629B8A00F20EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		214D86E720629B8A00F20EF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		214D86EA20629B8A00F20EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		214D86EC20629B8A00F20EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		214D86EF20629B8A00F20EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		214D86F120629B8A00F20EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		214D86F620629B8B00F20EF7 /* PocketCarboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketCarboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +50,8 @@
 		214D870120629B8B00F20EF7 /* PocketCarboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketCarboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		214D870520629B8B00F20EF7 /* PocketCarboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketCarboUITests.swift; sourceTree = "<group>"; };
 		214D870720629B8B00F20EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		214D871B2063271100F20EF7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		214D871F20632F6000F20EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		246C833F031A42577093C9AF /* Pods-PocketCarboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.release.xcconfig"; sourceTree = "<group>"; };
 		32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA81E248F31134CA147858B /* Pods-PocketCarboTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboTests/Pods-PocketCarboTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				214D86E420629B8A00F20EF7 /* PocketCarbo */,
-				214D87192063245400F20EF7 /* Assets */,
 				214D86F920629B8B00F20EF7 /* PocketCarboTests */,
 				214D870420629B8B00F20EF7 /* PocketCarboUITests */,
 				214D86E320629B8A00F20EF7 /* Products */,
@@ -123,6 +123,8 @@
 				214D87142063210A00F20EF7 /* Helpers */,
 				214D87132063210100F20EF7 /* Extension */,
 				214D86F120629B8A00F20EF7 /* Info.plist */,
+				214D871E20632F6000F20EF7 /* Assets */,
+				214D871B2063271100F20EF7 /* Settings.bundle */,
 			);
 			path = PocketCarbo;
 			sourceTree = "<group>";
@@ -190,16 +192,16 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		214D87192063245400F20EF7 /* Assets */ = {
+		214D871E20632F6000F20EF7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				214D871A206325CA00F20EF7 /* Json */,
-				214D86EC20629B8A00F20EF7 /* Assets.xcassets */,
+				214D871F20632F6000F20EF7 /* Assets.xcassets */,
+				214D872020632F6000F20EF7 /* Json */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		214D871A206325CA00F20EF7 /* Json */ = {
+		214D872020632F6000F20EF7 /* Json */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -242,6 +244,7 @@
 				214D86E020629B8A00F20EF7 /* Resources */,
 				734F58FF8CA1F549B48EA393 /* [CP] Embed Pods Frameworks */,
 				5CA3177892F58398BB00E937 /* [CP] Copy Pods Resources */,
+				214D87212063324C00F20EF7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -345,8 +348,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214D871C2063271100F20EF7 /* Settings.bundle in Resources */,
 				214D86F020629B8A00F20EF7 /* LaunchScreen.storyboard in Resources */,
-				214D86ED20629B8A00F20EF7 /* Assets.xcassets in Resources */,
 				214D86EB20629B8A00F20EF7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +371,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		214D87212063324C00F20EF7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${BUILT_PRODUCTS_DIR}\"\nbuildVersion=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\") /usr/libexec/PlistBuddy -c \"Set PreferenceSpecifiers:3:DefaultValue $buildVersion\" \"${SRCROOT}/Settings.bundle/Root.plist\"";
+		};
 		223D40375A112BEC52A9E0A6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

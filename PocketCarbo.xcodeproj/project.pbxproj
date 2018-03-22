@@ -153,9 +153,9 @@
 				214D87162063213B00F20EF7 /* Services */,
 				214D87142063210A00F20EF7 /* Helpers */,
 				214D87132063210100F20EF7 /* Extensions */,
-				214D86F120629B8A00F20EF7 /* Info.plist */,
 				214D871E20632F6000F20EF7 /* Assets */,
 				214D871B2063271100F20EF7 /* Settings.bundle */,
+				214D86F120629B8A00F20EF7 /* Info.plist */,
 				21E09FE92064202E00142405 /* Localizable.strings */,
 			);
 			path = PocketCarbo;

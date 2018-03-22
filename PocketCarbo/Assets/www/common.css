@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+.right{
+  text-align: right;
+}
+.container {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+.announce {
+    margin: 10px;
+}
+.date {
+    color:#999999;
+    font-size:0.9em;
+}

@@ -27,6 +27,7 @@
 		214D87392063568A00F20EF7 /* AppLaunchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D87382063568A00F20EF7 /* AppLaunchManager.swift */; };
 		214D873B2063589500F20EF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873A2063589500F20EF7 /* Constants.swift */; };
 		214D873D20635B7500F20EF7 /* UserDefault+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873C20635B7500F20EF7 /* UserDefault+extension.swift */; };
+		214D873F20636C4300F20EF7 /* Notification+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873E20636C4300F20EF7 /* Notification+extension.swift */; };
 		48750D9FC6394827298AFC02 /* Pods_PocketCarboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */; };
 		8BA3450CEF195D039A7525C1 /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121BFC4DCE3652E0AAF39151 /* Pods_PocketCarbo.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		214D87382063568A00F20EF7 /* AppLaunchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchManager.swift; sourceTree = "<group>"; };
 		214D873A2063589500F20EF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		214D873C20635B7500F20EF7 /* UserDefault+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefault+extension.swift"; sourceTree = "<group>"; };
+		214D873E20636C4300F20EF7 /* Notification+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+extension.swift"; sourceTree = "<group>"; };
 		246C833F031A42577093C9AF /* Pods-PocketCarboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.release.xcconfig"; sourceTree = "<group>"; };
 		32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA81E248F31134CA147858B /* Pods-PocketCarboTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboTests/Pods-PocketCarboTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				214D873C20635B7500F20EF7 /* UserDefault+extension.swift */,
+				214D873E20636C4300F20EF7 /* Notification+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214D873F20636C4300F20EF7 /* Notification+extension.swift in Sources */,
 				214D86E820629B8A00F20EF7 /* ViewController.swift in Sources */,
 				214D86E620629B8A00F20EF7 /* AppDelegate.swift in Sources */,
 				214D87392063568A00F20EF7 /* AppLaunchManager.swift in Sources */,

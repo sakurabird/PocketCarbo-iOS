@@ -20,6 +20,10 @@
 		214D872B20633BBD00F20EF7 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 214D872720633BBD00F20EF7 /* help.html */; };
 		214D872C20633BBD00F20EF7 /* privacy_policy.html in Resources */ = {isa = PBXBuildFile; fileRef = 214D872820633BBD00F20EF7 /* privacy_policy.html */; };
 		214D872E2063439800F20EF7 /* foods_and_kinds.json in Resources */ = {isa = PBXBuildFile; fileRef = 214D872D2063439800F20EF7 /* foods_and_kinds.json */; };
+		214D873220634C4D00F20EF7 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D872F20634C4D00F20EF7 /* Food.swift */; };
+		214D873320634C4D00F20EF7 /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873020634C4D00F20EF7 /* Kind.swift */; };
+		214D873420634C4D00F20EF7 /* FavoriteFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873120634C4D00F20EF7 /* FavoriteFood.swift */; };
+		214D873620634C7A00F20EF7 /* FoodsAndKinds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873520634C7A00F20EF7 /* FoodsAndKinds.swift */; };
 		48750D9FC6394827298AFC02 /* Pods_PocketCarboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */; };
 		8BA3450CEF195D039A7525C1 /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121BFC4DCE3652E0AAF39151 /* Pods_PocketCarbo.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +66,10 @@
 		214D872720633BBD00F20EF7 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		214D872820633BBD00F20EF7 /* privacy_policy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy_policy.html; sourceTree = "<group>"; };
 		214D872D2063439800F20EF7 /* foods_and_kinds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foods_and_kinds.json; sourceTree = "<group>"; };
+		214D872F20634C4D00F20EF7 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		214D873020634C4D00F20EF7 /* Kind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
+		214D873120634C4D00F20EF7 /* FavoriteFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteFood.swift; sourceTree = "<group>"; };
+		214D873520634C7A00F20EF7 /* FoodsAndKinds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsAndKinds.swift; sourceTree = "<group>"; };
 		246C833F031A42577093C9AF /* Pods-PocketCarboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.release.xcconfig"; sourceTree = "<group>"; };
 		32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA81E248F31134CA147858B /* Pods-PocketCarboTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboTests/Pods-PocketCarboTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +182,10 @@
 		214D87152063211700F20EF7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				214D873520634C7A00F20EF7 /* FoodsAndKinds.swift */,
+				214D873120634C4D00F20EF7 /* FavoriteFood.swift */,
+				214D872F20634C4D00F20EF7 /* Food.swift */,
+				214D873020634C4D00F20EF7 /* Kind.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -576,6 +588,10 @@
 			files = (
 				214D86E820629B8A00F20EF7 /* ViewController.swift in Sources */,
 				214D86E620629B8A00F20EF7 /* AppDelegate.swift in Sources */,
+				214D873220634C4D00F20EF7 /* Food.swift in Sources */,
+				214D873320634C4D00F20EF7 /* Kind.swift in Sources */,
+				214D873420634C4D00F20EF7 /* FavoriteFood.swift in Sources */,
+				214D873620634C7A00F20EF7 /* FoodsAndKinds.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

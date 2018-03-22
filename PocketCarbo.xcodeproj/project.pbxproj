@@ -139,7 +139,7 @@
 				214D87182063217F00F20EF7 /* Controllers */,
 				214D87162063213B00F20EF7 /* Services */,
 				214D87142063210A00F20EF7 /* Helpers */,
-				214D87132063210100F20EF7 /* Extension */,
+				214D87132063210100F20EF7 /* Extensions */,
 				214D86F120629B8A00F20EF7 /* Info.plist */,
 				214D871E20632F6000F20EF7 /* Assets */,
 				214D871B2063271100F20EF7 /* Settings.bundle */,
@@ -165,16 +165,17 @@
 			path = PocketCarboUITests;
 			sourceTree = "<group>";
 		};
-		214D87132063210100F20EF7 /* Extension */ = {
+		214D87132063210100F20EF7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		214D87142063210A00F20EF7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				214D87372063545600F20EF7 /* Managers */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -241,6 +242,13 @@
 				214D872820633BBD00F20EF7 /* privacy_policy.html */,
 			);
 			path = www;
+			sourceTree = "<group>";
+		};
+		214D87372063545600F20EF7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		3BD2BA2BD493E3FF86F91381 /* Frameworks */ = {

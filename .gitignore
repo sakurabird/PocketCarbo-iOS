@@ -68,3 +68,7 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
+
+# PocketCarbo files
+foods_and_kinds.json

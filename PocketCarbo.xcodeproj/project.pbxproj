@@ -15,6 +15,11 @@
 		214D86FB20629B8B00F20EF7 /* PocketCarboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D86FA20629B8B00F20EF7 /* PocketCarboTests.swift */; };
 		214D870620629B8B00F20EF7 /* PocketCarboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D870520629B8B00F20EF7 /* PocketCarboUITests.swift */; };
 		214D871C2063271100F20EF7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 214D871B2063271100F20EF7 /* Settings.bundle */; };
+		214D872320633B7600F20EF7 /* foods_and_kinds.json in Resources */ = {isa = PBXBuildFile; fileRef = 214D872220633B7600F20EF7 /* foods_and_kinds.json */; };
+		214D872920633BBD00F20EF7 /* announcement.html in Resources */ = {isa = PBXBuildFile; fileRef = 214D872520633BBD00F20EF7 /* announcement.html */; };
+		214D872A20633BBD00F20EF7 /* common.css in Resources */ = {isa = PBXBuildFile; fileRef = 214D872620633BBD00F20EF7 /* common.css */; };
+		214D872B20633BBD00F20EF7 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 214D872720633BBD00F20EF7 /* help.html */; };
+		214D872C20633BBD00F20EF7 /* privacy_policy.html in Resources */ = {isa = PBXBuildFile; fileRef = 214D872820633BBD00F20EF7 /* privacy_policy.html */; };
 		48750D9FC6394827298AFC02 /* Pods_PocketCarboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */; };
 		8BA3450CEF195D039A7525C1 /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121BFC4DCE3652E0AAF39151 /* Pods_PocketCarbo.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +57,11 @@
 		214D870720629B8B00F20EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		214D871B2063271100F20EF7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		214D871F20632F6000F20EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		214D872220633B7600F20EF7 /* foods_and_kinds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foods_and_kinds.json; sourceTree = "<group>"; };
+		214D872520633BBD00F20EF7 /* announcement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = announcement.html; sourceTree = "<group>"; };
+		214D872620633BBD00F20EF7 /* common.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = common.css; sourceTree = "<group>"; };
+		214D872720633BBD00F20EF7 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
+		214D872820633BBD00F20EF7 /* privacy_policy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy_policy.html; sourceTree = "<group>"; };
 		246C833F031A42577093C9AF /* Pods-PocketCarboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.release.xcconfig"; sourceTree = "<group>"; };
 		32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA81E248F31134CA147858B /* Pods-PocketCarboTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboTests/Pods-PocketCarboTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				214D871F20632F6000F20EF7 /* Assets.xcassets */,
+				214D872420633BBD00F20EF7 /* www */,
 				214D872020632F6000F20EF7 /* Json */,
 			);
 			path = Assets;
@@ -204,8 +215,20 @@
 		214D872020632F6000F20EF7 /* Json */ = {
 			isa = PBXGroup;
 			children = (
+				214D872220633B7600F20EF7 /* foods_and_kinds.json */,
 			);
 			path = Json;
+			sourceTree = "<group>";
+		};
+		214D872420633BBD00F20EF7 /* www */ = {
+			isa = PBXGroup;
+			children = (
+				214D872520633BBD00F20EF7 /* announcement.html */,
+				214D872620633BBD00F20EF7 /* common.css */,
+				214D872720633BBD00F20EF7 /* help.html */,
+				214D872820633BBD00F20EF7 /* privacy_policy.html */,
+			);
+			path = www;
 			sourceTree = "<group>";
 		};
 		3BD2BA2BD493E3FF86F91381 /* Frameworks */ = {
@@ -349,7 +372,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				214D871C2063271100F20EF7 /* Settings.bundle in Resources */,
+				214D872B20633BBD00F20EF7 /* help.html in Resources */,
+				214D872320633B7600F20EF7 /* foods_and_kinds.json in Resources */,
+				214D872C20633BBD00F20EF7 /* privacy_policy.html in Resources */,
+				214D872920633BBD00F20EF7 /* announcement.html in Resources */,
 				214D86F020629B8A00F20EF7 /* LaunchScreen.storyboard in Resources */,
+				214D872A20633BBD00F20EF7 /* common.css in Resources */,
 				214D86EB20629B8A00F20EF7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

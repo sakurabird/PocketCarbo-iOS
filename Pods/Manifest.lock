@@ -1,18 +1,26 @@
 PODS:
   - DropDown (2.3.1)
+  - Realm (3.1.0):
+    - Realm/Headers (= 3.1.0)
+  - Realm/Headers (3.1.0)
+  - RealmSwift (3.1.0):
+    - Realm (= 3.1.0)
   - SlideMenuControllerSwift (4.0.0)
   - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
   - DropDown
+  - RealmSwift
   - SlideMenuControllerSwift
   - XLPagerTabStrip (~> 8.0)
 
 SPEC CHECKSUMS:
   DropDown: 20499c7b2731b0d21609af924e47c7677a2be50d
+  Realm: 09513d7c054678d65cd02ce09871f805b0d758ac
+  RealmSwift: e868fee9b10e5490ad94b6b6ecd9027944da1824
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
   XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: f159ad5f2e2729c1204ad64ef87e6b6085765f4a
+PODFILE CHECKSUM: 3f30ecd979678b7847c55e2c27256e5518925c8e
 
 COCOAPODS: 1.4.0

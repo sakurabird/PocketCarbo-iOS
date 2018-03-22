@@ -28,6 +28,7 @@
 		214D873B2063589500F20EF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873A2063589500F20EF7 /* Constants.swift */; };
 		214D873D20635B7500F20EF7 /* UserDefault+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873C20635B7500F20EF7 /* UserDefault+extension.swift */; };
 		214D873F20636C4300F20EF7 /* Notification+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873E20636C4300F20EF7 /* Notification+extension.swift */; };
+		21E09FE72064202E00142405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E09FE92064202E00142405 /* Localizable.strings */; };
 		48750D9FC6394827298AFC02 /* Pods_PocketCarboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */; };
 		8BA3450CEF195D039A7525C1 /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121BFC4DCE3652E0AAF39151 /* Pods_PocketCarbo.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,10 @@
 		214D873A2063589500F20EF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		214D873C20635B7500F20EF7 /* UserDefault+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefault+extension.swift"; sourceTree = "<group>"; };
 		214D873E20636C4300F20EF7 /* Notification+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+extension.swift"; sourceTree = "<group>"; };
+		21E09FE82064202E00142405 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		21E09FEA2064204500142405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		21E09FEB2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		21E09FEC2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		246C833F031A42577093C9AF /* Pods-PocketCarboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.release.xcconfig"; sourceTree = "<group>"; };
 		32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA81E248F31134CA147858B /* Pods-PocketCarboTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboTests/Pods-PocketCarboTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +156,7 @@
 				214D86F120629B8A00F20EF7 /* Info.plist */,
 				214D871E20632F6000F20EF7 /* Assets */,
 				214D871B2063271100F20EF7 /* Settings.bundle */,
+				21E09FE92064202E00142405 /* Localizable.strings */,
 			);
 			path = PocketCarbo;
 			sourceTree = "<group>";
@@ -385,6 +391,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 214D86D920629B8A00F20EF7;
 			productRefGroup = 214D86E320629B8A00F20EF7 /* Products */;
@@ -407,6 +414,7 @@
 				214D872B20633BBD00F20EF7 /* help.html in Resources */,
 				214D872C20633BBD00F20EF7 /* privacy_policy.html in Resources */,
 				214D872920633BBD00F20EF7 /* announcement.html in Resources */,
+				21E09FE72064202E00142405 /* Localizable.strings in Resources */,
 				214D86F020629B8A00F20EF7 /* LaunchScreen.storyboard in Resources */,
 				214D872A20633BBD00F20EF7 /* common.css in Resources */,
 				214D872E2063439800F20EF7 /* foods_and_kinds.json in Resources */,
@@ -655,6 +663,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				214D86EA20629B8A00F20EF7 /* Base */,
+				21E09FEB2064209B00142405 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -667,6 +676,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		21E09FE92064202E00142405 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21E09FE82064202E00142405 /* en */,
+				21E09FEA2064204500142405 /* Base */,
+				21E09FEC2064209B00142405 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -674,6 +693,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -731,6 +751,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

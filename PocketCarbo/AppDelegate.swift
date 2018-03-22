@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Check Data Version and Update If Needed
     AppLaunchManager.sharedInstance.onAppStarted()
-    
+
+    setupSlideMenu()
+
     return true
   }
 
@@ -44,6 +47,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
 
+  // MARK: - Private method
 
+  // サイドバーにコントローラーを割り当てる
+  private func setupSlideMenu() {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+    let mainVC = storyboard.instantiateViewController(withIdentifier: "MainParent") as! MainParentViewController
+    let sideMenuVC = storyboard.instantiateViewController(withIdentifier: "SideMenu") as! SideMenuViewController
+
+    //NavigationBar
+    let navigationController = UINavigationController(rootViewController: mainVC)
+
+    UINavigationBar.appearance().tintColor = UIColor.white
+    UINavigationBar.appearance().barTintColor = UIColor(rgb: 0x2BBBAD)
+    UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+
+    sideMenuVC.mainViewController = navigationController
+
+    let slideMenuController = SlideMenuController(mainViewController: navigationController, leftMenuViewController: sideMenuVC)
+    SlideMenuOptions.contentViewScale = 1
+    self.window?.rootViewController = slideMenuController
+    self.window?.makeKeyAndVisible()
+  }
 }
 

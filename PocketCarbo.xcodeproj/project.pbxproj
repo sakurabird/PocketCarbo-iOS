@@ -28,6 +28,20 @@
 		214D873B2063589500F20EF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873A2063589500F20EF7 /* Constants.swift */; };
 		214D873D20635B7500F20EF7 /* UserDefault+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873C20635B7500F20EF7 /* UserDefault+extension.swift */; };
 		214D873F20636C4300F20EF7 /* Notification+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873E20636C4300F20EF7 /* Notification+extension.swift */; };
+		216AA4DD20643E28002AA44E /* MainParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4DC20643E28002AA44E /* MainParentViewController.swift */; };
+		216AA4DF20643E4E002AA44E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4DE20643E4E002AA44E /* MainViewController.swift */; };
+		216AA4E120643EB8002AA44E /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4E020643EB8002AA44E /* SideMenuViewController.swift */; };
+		216AA4E5206446A5002AA44E /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4E4206446A5002AA44E /* UIColor+extension.swift */; };
+		216AA4E720644868002AA44E /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4E620644868002AA44E /* SideMenuTableViewCell.swift */; };
+		216AA4E92064493C002AA44E /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4E82064493B002AA44E /* HelpViewController.swift */; };
+		216AA4EB20644945002AA44E /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4EA20644945002AA44E /* InformationViewController.swift */; };
+		216AA4ED20644954002AA44E /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4EC20644954002AA44E /* FavoritesViewController.swift */; };
+		216AA4EF2064495D002AA44E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4EE2064495D002AA44E /* SettingsViewController.swift */; };
+		216AA4F1206449DF002AA44E /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4F0206449DF002AA44E /* UIViewController+extension.swift */; };
+		216AA4F320647947002AA44E /* ChildTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4F220647946002AA44E /* ChildTableViewController.swift */; };
+		216AA4F620647958002AA44E /* ChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4F420647958002AA44E /* ChildTableViewCell.swift */; };
+		216AA4F720647958002AA44E /* ChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 216AA4F520647958002AA44E /* ChildTableViewCell.xib */; };
+		216AA4F820647B44002AA44E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214D871F20632F6000F20EF7 /* Assets.xcassets */; };
 		21E09FE72064202E00142405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E09FE92064202E00142405 /* Localizable.strings */; };
 		48750D9FC6394827298AFC02 /* Pods_PocketCarboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */; };
 		8BA3450CEF195D039A7525C1 /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121BFC4DCE3652E0AAF39151 /* Pods_PocketCarbo.framework */; };
@@ -79,6 +93,19 @@
 		214D873A2063589500F20EF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		214D873C20635B7500F20EF7 /* UserDefault+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefault+extension.swift"; sourceTree = "<group>"; };
 		214D873E20636C4300F20EF7 /* Notification+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+extension.swift"; sourceTree = "<group>"; };
+		216AA4DC20643E28002AA44E /* MainParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainParentViewController.swift; sourceTree = "<group>"; };
+		216AA4DE20643E4E002AA44E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		216AA4E020643EB8002AA44E /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		216AA4E4206446A5002AA44E /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		216AA4E620644868002AA44E /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
+		216AA4E82064493B002AA44E /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		216AA4EA20644945002AA44E /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		216AA4EC20644954002AA44E /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		216AA4EE2064495D002AA44E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		216AA4F0206449DF002AA44E /* UIViewController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		216AA4F220647946002AA44E /* ChildTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildTableViewController.swift; sourceTree = "<group>"; };
+		216AA4F420647958002AA44E /* ChildTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildTableViewCell.swift; sourceTree = "<group>"; };
+		216AA4F520647958002AA44E /* ChildTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildTableViewCell.xib; sourceTree = "<group>"; };
 		21E09FE82064202E00142405 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21E09FEA2064204500142405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21E09FEB2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -184,6 +211,8 @@
 			children = (
 				214D873C20635B7500F20EF7 /* UserDefault+extension.swift */,
 				214D873E20636C4300F20EF7 /* Notification+extension.swift */,
+				216AA4E4206446A5002AA44E /* UIColor+extension.swift */,
+				216AA4F0206449DF002AA44E /* UIViewController+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -219,6 +248,7 @@
 			children = (
 				214D86EE20629B8A00F20EF7 /* LaunchScreen.storyboard */,
 				214D86E920629B8A00F20EF7 /* Main.storyboard */,
+				216AA4E620644868002AA44E /* SideMenuTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +257,16 @@
 			isa = PBXGroup;
 			children = (
 				214D86E720629B8A00F20EF7 /* ViewController.swift */,
+				216AA4DC20643E28002AA44E /* MainParentViewController.swift */,
+				216AA4DE20643E4E002AA44E /* MainViewController.swift */,
+				216AA4E020643EB8002AA44E /* SideMenuViewController.swift */,
+				216AA4E82064493B002AA44E /* HelpViewController.swift */,
+				216AA4EA20644945002AA44E /* InformationViewController.swift */,
+				216AA4EC20644954002AA44E /* FavoritesViewController.swift */,
+				216AA4EE2064495D002AA44E /* SettingsViewController.swift */,
+				216AA4F220647946002AA44E /* ChildTableViewController.swift */,
+				216AA4F420647958002AA44E /* ChildTableViewCell.swift */,
+				216AA4F520647958002AA44E /* ChildTableViewCell.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -412,8 +452,10 @@
 			files = (
 				214D871C2063271100F20EF7 /* Settings.bundle in Resources */,
 				214D872B20633BBD00F20EF7 /* help.html in Resources */,
+				216AA4F820647B44002AA44E /* Assets.xcassets in Resources */,
 				214D872C20633BBD00F20EF7 /* privacy_policy.html in Resources */,
 				214D872920633BBD00F20EF7 /* announcement.html in Resources */,
+				216AA4F720647958002AA44E /* ChildTableViewCell.xib in Resources */,
 				21E09FE72064202E00142405 /* Localizable.strings in Resources */,
 				214D86F020629B8A00F20EF7 /* LaunchScreen.storyboard in Resources */,
 				214D872A20633BBD00F20EF7 /* common.css in Resources */,
@@ -615,15 +657,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				214D873F20636C4300F20EF7 /* Notification+extension.swift in Sources */,
+				216AA4E720644868002AA44E /* SideMenuTableViewCell.swift in Sources */,
 				214D86E820629B8A00F20EF7 /* ViewController.swift in Sources */,
 				214D86E620629B8A00F20EF7 /* AppDelegate.swift in Sources */,
+				216AA4F620647958002AA44E /* ChildTableViewCell.swift in Sources */,
+				216AA4E5206446A5002AA44E /* UIColor+extension.swift in Sources */,
+				216AA4EF2064495D002AA44E /* SettingsViewController.swift in Sources */,
+				216AA4E120643EB8002AA44E /* SideMenuViewController.swift in Sources */,
+				216AA4F320647947002AA44E /* ChildTableViewController.swift in Sources */,
+				216AA4DF20643E4E002AA44E /* MainViewController.swift in Sources */,
+				216AA4DD20643E28002AA44E /* MainParentViewController.swift in Sources */,
 				214D87392063568A00F20EF7 /* AppLaunchManager.swift in Sources */,
 				214D873220634C4D00F20EF7 /* Food.swift in Sources */,
+				216AA4ED20644954002AA44E /* FavoritesViewController.swift in Sources */,
+				216AA4F1206449DF002AA44E /* UIViewController+extension.swift in Sources */,
 				214D873D20635B7500F20EF7 /* UserDefault+extension.swift in Sources */,
+				216AA4E92064493C002AA44E /* HelpViewController.swift in Sources */,
 				214D873320634C4D00F20EF7 /* Kind.swift in Sources */,
 				214D873420634C4D00F20EF7 /* FavoriteFood.swift in Sources */,
 				214D873620634C7A00F20EF7 /* FoodsAndKinds.swift in Sources */,
 				214D873B2063589500F20EF7 /* Constants.swift in Sources */,
+				216AA4EB20644945002AA44E /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

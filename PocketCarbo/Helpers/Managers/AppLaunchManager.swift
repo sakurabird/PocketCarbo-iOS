@@ -26,7 +26,6 @@ final class AppLaunchManager {
     }
 
     loadJsonFile()
-    saveDB()
   }
 
 
@@ -53,6 +52,7 @@ final class AppLaunchManager {
       let data = try Data(contentsOf: url)
       try
         foodsAndKinds = JSONDecoder().decode(FoodsAndKinds.self, from: data)
+        saveDB()
     } catch  {
       print(error)
     }
@@ -72,11 +72,15 @@ final class AppLaunchManager {
         realm.add(food, update: true)
       }
     }
+    // print(realm.objects(Kind.self))
 
     guard let dataVersion = self.foodsAndKinds!.dataVersion else { return }
     UserDefaults.standard.setDataVersion(dataVersion: dataVersion)
     print("dataVersion:\(dataVersion) has saved.")
-//    print(realm.objects(Food.self))
+
+    // Post Notification
+    NotificationCenter.default.postEvent(
+      notification: NotificationEvent.foodsAndKindsUpdated, object: self, userInfo: nil)
   }
 
 }

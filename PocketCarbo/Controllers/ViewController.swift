@@ -12,14 +12,17 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
+    print("viewDidLoad")
+    NotificationCenter.default.observeEvent(observer: self, selector: #selector(ViewController.dataUpdated), notification: NotificationEvent.foodsAndKindsUpdated)
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  deinit {
+    NotificationCenter.default.removeObserver(self)
   }
 
-
+  @objc func dataUpdated(notification: NSNotification) {
+    print("TODO: table refresh")
+  }
 }
 

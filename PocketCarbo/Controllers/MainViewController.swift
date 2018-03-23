@@ -17,6 +17,8 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     super.viewDidLoad()
   }
 
+  //MARK: - Setup
+
   func setupPagerTabStrip() {
     // Important: XLPagerTabStrip Settings should be called before viewDidLoad is called.
     settings.style.buttonBarBackgroundColor = UIColor(rgb: 0xfafafa)
@@ -37,6 +39,7 @@ class MainViewController: ButtonBarPagerTabStripViewController {
       newCell?.label.textColor = UIColor(rgb: 0xff6f00)
     }
   }
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -46,13 +49,18 @@ class MainViewController: ButtonBarPagerTabStripViewController {
   // MARK: - PagerTabStripDataSource
 
   override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-    let child_1 = ChildTableViewController(itemInfo: "Table View")
-//    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//    let vc = storyboard.instantiateViewController(withIdentifier: "FoodsTableViewController")
-//    let child_9 = vc
+    let types = TypeDataProvider.sharedInstance.findAll()
+    var viewControllers: [UIViewController] = []
 
-    return [child_1]
-//    return [child_1, child_2, child_3, child_4, child_5, child_6, child_7, child_8, child_9]
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+    for type in types {
+      let vc = storyboard.instantiateViewController(withIdentifier: "Foods") as! FoodsTableViewController
+      vc.setupTabData(indicatorInfo: IndicatorInfo(title: type.name), type: type)
+      viewControllers.append(vc)
+    }
+
+    return viewControllers
   }
 }
 

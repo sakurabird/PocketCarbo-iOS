@@ -42,6 +42,13 @@
 		216AA4F620647958002AA44E /* ChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4F420647958002AA44E /* ChildTableViewCell.swift */; };
 		216AA4F720647958002AA44E /* ChildTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 216AA4F520647958002AA44E /* ChildTableViewCell.xib */; };
 		216AA4F820647B44002AA44E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 214D871F20632F6000F20EF7 /* Assets.xcassets */; };
+		216AA4FD2064B095002AA44E /* FoodsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4FC2064B095002AA44E /* FoodsTableViewController.swift */; };
+		216AA4FF2064B4F0002AA44E /* FoodDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4FE2064B4F0002AA44E /* FoodDataProvider.swift */; };
+		216AA5012064B7D4002AA44E /* KindDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA5002064B7D4002AA44E /* KindDataProvider.swift */; };
+		216AA5032064F824002AA44E /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA5022064F824002AA44E /* Type.swift */; };
+		216AA5052064F83B002AA44E /* type.json in Resources */ = {isa = PBXBuildFile; fileRef = 216AA5042064F83B002AA44E /* type.json */; };
+		216AA5082064F948002AA44E /* TypeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA5072064F948002AA44E /* TypeDataProvider.swift */; };
+		216AA50A206527B9002AA44E /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA509206527B9002AA44E /* FoodTableViewCell.swift */; };
 		21E09FE72064202E00142405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E09FE92064202E00142405 /* Localizable.strings */; };
 		48750D9FC6394827298AFC02 /* Pods_PocketCarboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */; };
 		8BA3450CEF195D039A7525C1 /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121BFC4DCE3652E0AAF39151 /* Pods_PocketCarbo.framework */; };
@@ -106,6 +113,13 @@
 		216AA4F220647946002AA44E /* ChildTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildTableViewController.swift; sourceTree = "<group>"; };
 		216AA4F420647958002AA44E /* ChildTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildTableViewCell.swift; sourceTree = "<group>"; };
 		216AA4F520647958002AA44E /* ChildTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildTableViewCell.xib; sourceTree = "<group>"; };
+		216AA4FC2064B095002AA44E /* FoodsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodsTableViewController.swift; sourceTree = "<group>"; };
+		216AA4FE2064B4F0002AA44E /* FoodDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDataProvider.swift; sourceTree = "<group>"; };
+		216AA5002064B7D4002AA44E /* KindDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KindDataProvider.swift; sourceTree = "<group>"; };
+		216AA5022064F824002AA44E /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		216AA5042064F83B002AA44E /* type.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = type.json; sourceTree = "<group>"; };
+		216AA5072064F948002AA44E /* TypeDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDataProvider.swift; sourceTree = "<group>"; };
+		216AA509206527B9002AA44E /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		21E09FE82064202E00142405 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21E09FEA2064204500142405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21E09FEB2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -220,6 +234,7 @@
 		214D87142063210A00F20EF7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				216AA5062064F922002AA44E /* DataProviders */,
 				214D87372063545600F20EF7 /* Managers */,
 			);
 			path = Helpers;
@@ -229,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				214D873520634C7A00F20EF7 /* FoodsAndKinds.swift */,
+				216AA5022064F824002AA44E /* Type.swift */,
 				214D873120634C4D00F20EF7 /* FavoriteFood.swift */,
 				214D872F20634C4D00F20EF7 /* Food.swift */,
 				214D873020634C4D00F20EF7 /* Kind.swift */,
@@ -249,6 +265,7 @@
 				214D86EE20629B8A00F20EF7 /* LaunchScreen.storyboard */,
 				214D86E920629B8A00F20EF7 /* Main.storyboard */,
 				216AA4E620644868002AA44E /* SideMenuTableViewCell.swift */,
+				216AA509206527B9002AA44E /* FoodTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,6 +277,7 @@
 				216AA4DC20643E28002AA44E /* MainParentViewController.swift */,
 				216AA4DE20643E4E002AA44E /* MainViewController.swift */,
 				216AA4E020643EB8002AA44E /* SideMenuViewController.swift */,
+				216AA4FC2064B095002AA44E /* FoodsTableViewController.swift */,
 				216AA4E82064493B002AA44E /* HelpViewController.swift */,
 				216AA4EA20644945002AA44E /* InformationViewController.swift */,
 				216AA4EC20644954002AA44E /* FavoritesViewController.swift */,
@@ -285,6 +303,7 @@
 		214D872020632F6000F20EF7 /* Json */ = {
 			isa = PBXGroup;
 			children = (
+				216AA5042064F83B002AA44E /* type.json */,
 				214D872D2063439800F20EF7 /* foods_and_kinds.json */,
 			);
 			path = Json;
@@ -307,6 +326,16 @@
 				214D87382063568A00F20EF7 /* AppLaunchManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		216AA5062064F922002AA44E /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				216AA4FE2064B4F0002AA44E /* FoodDataProvider.swift */,
+				216AA5002064B7D4002AA44E /* KindDataProvider.swift */,
+				216AA5072064F948002AA44E /* TypeDataProvider.swift */,
+			);
+			path = DataProviders;
 			sourceTree = "<group>";
 		};
 		3BD2BA2BD493E3FF86F91381 /* Frameworks */ = {
@@ -461,6 +490,7 @@
 				214D872A20633BBD00F20EF7 /* common.css in Resources */,
 				214D872E2063439800F20EF7 /* foods_and_kinds.json in Resources */,
 				214D86EB20629B8A00F20EF7 /* Main.storyboard in Resources */,
+				216AA5052064F83B002AA44E /* type.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,28 +686,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				216AA5082064F948002AA44E /* TypeDataProvider.swift in Sources */,
 				214D873F20636C4300F20EF7 /* Notification+extension.swift in Sources */,
 				216AA4E720644868002AA44E /* SideMenuTableViewCell.swift in Sources */,
 				214D86E820629B8A00F20EF7 /* ViewController.swift in Sources */,
+				216AA4FD2064B095002AA44E /* FoodsTableViewController.swift in Sources */,
 				214D86E620629B8A00F20EF7 /* AppDelegate.swift in Sources */,
 				216AA4F620647958002AA44E /* ChildTableViewCell.swift in Sources */,
 				216AA4E5206446A5002AA44E /* UIColor+extension.swift in Sources */,
 				216AA4EF2064495D002AA44E /* SettingsViewController.swift in Sources */,
 				216AA4E120643EB8002AA44E /* SideMenuViewController.swift in Sources */,
 				216AA4F320647947002AA44E /* ChildTableViewController.swift in Sources */,
+				216AA4FF2064B4F0002AA44E /* FoodDataProvider.swift in Sources */,
 				216AA4DF20643E4E002AA44E /* MainViewController.swift in Sources */,
 				216AA4DD20643E28002AA44E /* MainParentViewController.swift in Sources */,
 				214D87392063568A00F20EF7 /* AppLaunchManager.swift in Sources */,
 				214D873220634C4D00F20EF7 /* Food.swift in Sources */,
 				216AA4ED20644954002AA44E /* FavoritesViewController.swift in Sources */,
 				216AA4F1206449DF002AA44E /* UIViewController+extension.swift in Sources */,
+				216AA5012064B7D4002AA44E /* KindDataProvider.swift in Sources */,
 				214D873D20635B7500F20EF7 /* UserDefault+extension.swift in Sources */,
 				216AA4E92064493C002AA44E /* HelpViewController.swift in Sources */,
 				214D873320634C4D00F20EF7 /* Kind.swift in Sources */,
 				214D873420634C4D00F20EF7 /* FavoriteFood.swift in Sources */,
 				214D873620634C7A00F20EF7 /* FoodsAndKinds.swift in Sources */,
 				214D873B2063589500F20EF7 /* Constants.swift in Sources */,
+				216AA50A206527B9002AA44E /* FoodTableViewCell.swift in Sources */,
 				216AA4EB20644945002AA44E /* InformationViewController.swift in Sources */,
+				216AA5032064F824002AA44E /* Type.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

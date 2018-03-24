@@ -214,34 +214,6 @@
             </objects>
             <point key="canvasLocation" x="511" y="903"/>
         </scene>
-        <!--Information View Controller-->
-        <scene sceneID="JSC-HL-UmF">
-            <objects>
-                <viewController storyboardIdentifier="information" id="fwc-da-iMI" customClass="InformationViewController" customModule="PocketCarbo" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5sO-yG-DTz"/>
-                        <viewControllerLayoutGuide type="bottom" id="xYV-Fw-NRL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zYl-sD-weL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="388-5o-PwC">
-                                <rect key="frame" x="140" y="323" width="94" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <viewLayoutGuide key="safeArea" id="OU8-HV-fI8"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a5R-Xh-cgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1265" y="903"/>
-        </scene>
         <!--Help View Controller-->
         <scene sceneID="Tq9-Iv-UtK">
             <objects>

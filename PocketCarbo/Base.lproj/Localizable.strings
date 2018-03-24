@@ -7,8 +7,13 @@
 */
 //--------------------------------------------------------
 // Template case
-ok = "OK";
+"ok" = "OK";
 
 //--------------------------------------------------------
 // Constants
-appURL = "https://www.pockettoushituryou.com/";
+"appURL" = "https://www.pockettoushituryou.com/";
+
+//--------------------------------------------------------
+// Scene
+"Information.title" = "お知らせ・更新情報";
+

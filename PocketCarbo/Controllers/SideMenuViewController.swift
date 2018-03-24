@@ -48,7 +48,8 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     return UINavigationController(rootViewController: vc)
   }()
   var informationController: UIViewController! = {
-    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.information.name) as! InformationViewController
+    let vc = InformationViewController()
+    vc.navigationItem.title = NSLocalizedString("Information.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
   var helpController: UIViewController! = {
@@ -62,7 +63,8 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             SideMenuData(icon: UIImage(named: "side_menu_favorite"), menuLabel: "お気に入り"),
             SideMenuData(icon: UIImage(named: "side_menu_settings"), menuLabel: "設定"),
             SideMenuData(icon: UIImage(named: "side_menu_share"), menuLabel: "シェア"),
-            SideMenuData(icon: UIImage(named: "side_menu_information"), menuLabel: "お知らせ・更新情報"),
+            SideMenuData(icon: UIImage(named: "side_menu_information"),
+                         menuLabel: NSLocalizedString("Information.title", comment: "")),
             SideMenuData(icon: UIImage(named: "side_menu_help"), menuLabel: "ヘルプ")]
   }()
 

@@ -6,6 +6,7 @@
 //  Copyright © 2018年 Sakura. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import XLPagerTabStrip
 import DropDown
@@ -34,7 +35,9 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
     setupDropDowns()
+    setupTableView()
   }
 
   //MARK: - Setup
@@ -46,7 +49,13 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     self.foods = FoodDataProvider.sharedInstance.findData(typeId: type.id!, sort: sort)
   }
 
-  func setupDropDowns() {
+  private func setupTableView() {
+    tableView.backgroundColor = UIColor(patternImage: UIImage(named: "main_bg")!)
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 200.0
+  }
+
+  private func setupDropDowns() {
     // The view to which the drop down will appear on
     kindsDropDown.anchorView = kindSelectButton // UIView or UIBarButtonItem
     sortDropDown.anchorView = sortSelectButton // UIView or UIBarButtonItem
@@ -91,8 +100,13 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     let cell = tableView.cellForRow(at: indexPath) as! FoodTableViewCell
 
     cell.delegate = self
-    cell.cellState = .expanded
-    addExpandedIndexPath(indexPath)
+    if cellIsExpanded(at: indexPath) {
+      cell.cellState = .collapsed
+      removeExpandedIndexPath(indexPath)
+    } else {
+      cell.cellState = .expanded
+      addExpandedIndexPath(indexPath)
+    }
 
     tableView.beginUpdates()
     tableView.endUpdates()
@@ -106,10 +120,6 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
     tableView.beginUpdates()
     tableView.endUpdates()
-  }
-
-  override func numberOfSections(in tableView: UITableView) -> Int {
-    return 1
   }
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -129,15 +139,15 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     return cell
   }
 
-  func cellIsExpanded(at indexPath: IndexPath) -> Bool {
+  private func cellIsExpanded(at indexPath: IndexPath) -> Bool {
     return indexPaths.contains(indexPath)
   }
 
-  func addExpandedIndexPath(_ indexPath: IndexPath) {
+  private func addExpandedIndexPath(_ indexPath: IndexPath) {
     indexPaths.insert(indexPath)
   }
 
-  func removeExpandedIndexPath(_ indexPath: IndexPath) {
+  private func removeExpandedIndexPath(_ indexPath: IndexPath) {
     indexPaths.remove(indexPath)
   }
 

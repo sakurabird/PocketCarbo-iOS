@@ -75,6 +75,7 @@ class FoodTableViewCell: UITableViewCell {
 
   override func awakeFromNib() {
     selectionStyle = .none
+    backgroundColor = UIColor.clear
     containerView.layer.cornerRadius = 5.0
   }
 

@@ -54,6 +54,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
   }()
   var helpController: UIViewController! = {
     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.help.name) as! HelpViewController
+    vc.navigationItem.title = NSLocalizedString("Help.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
 
@@ -65,7 +66,8 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             SideMenuData(icon: UIImage(named: "side_menu_share"), menuLabel: "シェア"),
             SideMenuData(icon: UIImage(named: "side_menu_information"),
                          menuLabel: NSLocalizedString("Information.title", comment: "")),
-            SideMenuData(icon: UIImage(named: "side_menu_help"), menuLabel: "ヘルプ")]
+            SideMenuData(icon: UIImage(named: "side_menu_help"),
+                         menuLabel: NSLocalizedString("Help.title", comment: ""))]
   }()
 
   @IBOutlet weak var tableView: UITableView!

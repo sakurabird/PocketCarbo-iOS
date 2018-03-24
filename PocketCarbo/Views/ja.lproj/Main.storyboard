@@ -225,54 +225,37 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1r-x5-nKD">
                                 <rect key="frame" x="10" y="30" width="355" height="627"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb6-P9-Glr">
-                                        <rect key="frame" x="40" y="0.0" width="275" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="25H-Wq-OOk"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb6-P9-Glr">
+                                        <rect key="frame" x="0.0" y="241" width="355" height="144"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment content="下のボタンを押していただけますと、 インストール時に表示したチュートリアルを表示します。">
                                                 <attributes>
-                                                    <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                                    <font key="NSFont" size="17" name=".HiraKakuInterface-W3"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3t-fz-lLz">
-                                        <rect key="frame" x="0.0" y="108" width="355" height="519"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </webView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLy-bx-1Gt">
-                                        <rect key="frame" x="40" y="58" width="275" height="40"/>
-                                        <color key="backgroundColor" red="0.70196078429999997" green="0.93333333330000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="zeF-Mx-EBU"/>
-                                        </constraints>
-                                        <state key="normal" title="チュートリアルを表示">
-                                            <color key="titleColor" red="0.082352941176470587" green="0.3529411764705882" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="didTapTutorial:" destination="h1Z-JD-fcr" eventType="touchUpInside" id="GMZ-BV-PzK"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ekU-B3-G3A">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="627"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLy-bx-1Gt">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="144"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3t-fz-lLz">
+                                                <rect key="frame" x="0.0" y="144" width="355" height="483"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </webView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Pb6-P9-Glr" secondAttribute="trailing" constant="40" id="1XL-Bv-ABd"/>
-                                    <constraint firstAttribute="bottom" secondItem="G3t-fz-lLz" secondAttribute="bottom" id="5F6-kg-124"/>
-                                    <constraint firstItem="Pb6-P9-Glr" firstAttribute="top" secondItem="u1r-x5-nKD" secondAttribute="top" id="P7J-TI-o1y"/>
-                                    <constraint firstItem="Pb6-P9-Glr" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" constant="40" id="S2x-hT-WCM"/>
-                                    <constraint firstItem="WLy-bx-1Gt" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" constant="40" id="SJ1-E2-uN4"/>
-                                    <constraint firstItem="WLy-bx-1Gt" firstAttribute="top" secondItem="Pb6-P9-Glr" secondAttribute="bottom" constant="10" id="Spf-Dg-HUI"/>
-                                    <constraint firstAttribute="trailing" secondItem="WLy-bx-1Gt" secondAttribute="trailing" constant="40" id="XbV-fs-yj0"/>
-                                    <constraint firstAttribute="trailing" secondItem="G3t-fz-lLz" secondAttribute="trailing" id="cZk-Bb-AXL"/>
-                                    <constraint firstItem="G3t-fz-lLz" firstAttribute="top" secondItem="WLy-bx-1Gt" secondAttribute="bottom" constant="10" id="hft-vn-Wxp"/>
-                                    <constraint firstItem="G3t-fz-lLz" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" id="lsO-Pk-sih"/>
+                                    <constraint firstAttribute="bottom" secondItem="ekU-B3-G3A" secondAttribute="bottom" id="TLG-k3-uUJ"/>
+                                    <constraint firstItem="ekU-B3-G3A" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" id="lWe-BL-VfN"/>
+                                    <constraint firstItem="ekU-B3-G3A" firstAttribute="top" secondItem="u1r-x5-nKD" secondAttribute="top" id="ns6-X2-7wy"/>
+                                    <constraint firstAttribute="trailing" secondItem="ekU-B3-G3A" secondAttribute="trailing" id="pyi-Nj-wDF"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -285,10 +268,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3NS-dX-WVI"/>
                     </view>
-                    <connections>
-                        <outlet property="showTutorialButton" destination="WLy-bx-1Gt" id="SqW-r4-Vl3"/>
-                        <outlet property="webView" destination="G3t-fz-lLz" id="Vy4-Xd-1GM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvp-99-Vva" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -344,7 +323,6 @@
         <!--Foods Table View Controller-->
         <scene sceneID="NTu-Dp-RU0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1E0-cx-WSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="Foods" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LSH-av-uoM" customClass="FoodsTableViewController" customModule="PocketCarbo" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jeW-mR-lDK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -584,6 +562,7 @@
                         <outlet property="sortSelectButton" destination="3bA-EY-ada" id="9zb-vY-UnD"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1E0-cx-WSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2138" y="125"/>
         </scene>

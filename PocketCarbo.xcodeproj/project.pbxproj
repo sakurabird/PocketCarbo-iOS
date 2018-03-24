@@ -117,7 +117,6 @@
 		216AA509206527B9002AA44E /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		216AA50D20666335002AA44E /* UIButton+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+extention.swift"; sourceTree = "<group>"; };
 		21E09FEA2064204500142405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		21E09FEB2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		21E09FEC2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		246C833F031A42577093C9AF /* Pods-PocketCarboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.release.xcconfig"; sourceTree = "<group>"; };
 		32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -743,7 +742,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				214D86EA20629B8A00F20EF7 /* Base */,
-				21E09FEB2064209B00142405 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

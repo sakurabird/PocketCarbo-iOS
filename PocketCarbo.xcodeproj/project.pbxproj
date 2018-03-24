@@ -46,6 +46,7 @@
 		216AA5052064F83B002AA44E /* type.json in Resources */ = {isa = PBXBuildFile; fileRef = 216AA5042064F83B002AA44E /* type.json */; };
 		216AA5082064F948002AA44E /* TypeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA5072064F948002AA44E /* TypeDataProvider.swift */; };
 		216AA50A206527B9002AA44E /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA509206527B9002AA44E /* FoodTableViewCell.swift */; };
+		216AA50E20666335002AA44E /* UIButton+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA50D20666335002AA44E /* UIButton+extention.swift */; };
 		21E09FE72064202E00142405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E09FE92064202E00142405 /* Localizable.strings */; };
 		48750D9FC6394827298AFC02 /* Pods_PocketCarboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */; };
 		8BA3450CEF195D039A7525C1 /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121BFC4DCE3652E0AAF39151 /* Pods_PocketCarbo.framework */; };
@@ -114,6 +115,7 @@
 		216AA5042064F83B002AA44E /* type.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = type.json; sourceTree = "<group>"; };
 		216AA5072064F948002AA44E /* TypeDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDataProvider.swift; sourceTree = "<group>"; };
 		216AA509206527B9002AA44E /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		216AA50D20666335002AA44E /* UIButton+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+extention.swift"; sourceTree = "<group>"; };
 		21E09FE82064202E00142405 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21E09FEA2064204500142405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21E09FEB2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				214D873E20636C4300F20EF7 /* Notification+extension.swift */,
 				216AA4E4206446A5002AA44E /* UIColor+extension.swift */,
 				216AA4F0206449DF002AA44E /* UIViewController+extension.swift */,
+				216AA50D20666335002AA44E /* UIButton+extention.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -698,6 +701,7 @@
 				214D873320634C4D00F20EF7 /* Kind.swift in Sources */,
 				214D873420634C4D00F20EF7 /* FavoriteFood.swift in Sources */,
 				214D873620634C7A00F20EF7 /* FoodsAndKinds.swift in Sources */,
+				216AA50E20666335002AA44E /* UIButton+extention.swift in Sources */,
 				214D873B2063589500F20EF7 /* Constants.swift in Sources */,
 				216AA50A206527B9002AA44E /* FoodTableViewCell.swift in Sources */,
 				216AA4EB20644945002AA44E /* InformationViewController.swift in Sources */,

@@ -74,9 +74,8 @@ class FoodTableViewCell: UITableViewCell {
   @IBOutlet weak var shareButton: UIButton!
 
   override func awakeFromNib() {
-    selectionStyle = .none
-    backgroundColor = UIColor.clear
-    containerView.layer.cornerRadius = 5.0
+
+    setupViews()
   }
 
   func update(food: Food) {
@@ -120,6 +119,23 @@ class FoodTableViewCell: UITableViewCell {
   }
 
   //MARK: Private Methods
+
+  private func setupViews() {
+    selectionStyle = .none
+    backgroundColor = UIColor.clear
+
+    // Add shadow to cell
+    containerView.layer.cornerRadius = 5.0
+    containerView.layer.borderWidth = 1
+    containerView.layer.borderColor = UIColor.clear.cgColor
+    containerView.layer.masksToBounds = true
+
+    self.layer.shadowOpacity = 0.18
+    self.layer.shadowOffset = CGSize(width: 0, height: 2)
+    self.layer.shadowRadius = 2
+    self.layer.shadowColor = UIColor.black.cgColor
+    self.layer.masksToBounds = false
+  }
 
   private func toggle() {
     stackView.arrangedSubviews[expandedViewIndex].isHidden = stateIsCollapsed()

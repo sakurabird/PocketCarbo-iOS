@@ -75,7 +75,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.estimatedRowHeight = 60.0
+    tableView.estimatedRowHeight = 78.0
     tableView.rowHeight = UITableViewAutomaticDimension
   }
 
@@ -103,6 +103,12 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     }
   }
 
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 78
+  }
+
+  //MARK: - Side Menu Controller
+
   func changeViewController(_ menu: SideMenu) {
     switch menu {
     case .main:
@@ -121,7 +127,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     }
   }
 
-  func share() {
+  private func share() {
     let shareText = "#ポケット糖質量 http://www.pockettoushituryou.com/"
     let shareUrl = NSURL(string: "http://www.pockettoushituryou.com/")!
 

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		144C70CB778C696E4729E241 /* Pods_PocketCarboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1397BC82EADD48BF7C1F56D /* Pods_PocketCarboUITests.framework */; };
 		214D86E620629B8A00F20EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D86E520629B8A00F20EF7 /* AppDelegate.swift */; };
-		214D86E820629B8A00F20EF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D86E720629B8A00F20EF7 /* ViewController.swift */; };
 		214D86EB20629B8A00F20EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214D86E920629B8A00F20EF7 /* Main.storyboard */; };
 		214D86F020629B8A00F20EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214D86EE20629B8A00F20EF7 /* LaunchScreen.storyboard */; };
 		214D86FB20629B8B00F20EF7 /* PocketCarboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D86FA20629B8B00F20EF7 /* PocketCarboTests.swift */; };
@@ -73,7 +72,6 @@
 		121BFC4DCE3652E0AAF39151 /* Pods_PocketCarbo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarbo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		214D86E220629B8A00F20EF7 /* PocketCarbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketCarbo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		214D86E520629B8A00F20EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		214D86E720629B8A00F20EF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		214D86EA20629B8A00F20EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		214D86EF20629B8A00F20EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		214D86F120629B8A00F20EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 		214D87182063217F00F20EF7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				214D86E720629B8A00F20EF7 /* ViewController.swift */,
 				216AA4DC20643E28002AA44E /* MainParentViewController.swift */,
 				216AA4DE20643E4E002AA44E /* MainViewController.swift */,
 				216AA4E020643EB8002AA44E /* SideMenuViewController.swift */,
@@ -679,7 +676,6 @@
 				216AA5082064F948002AA44E /* TypeDataProvider.swift in Sources */,
 				214D873F20636C4300F20EF7 /* Notification+extension.swift in Sources */,
 				216AA4E720644868002AA44E /* SideMenuTableViewCell.swift in Sources */,
-				214D86E820629B8A00F20EF7 /* ViewController.swift in Sources */,
 				216AA4FD2064B095002AA44E /* FoodsTableViewController.swift in Sources */,
 				214D86E620629B8A00F20EF7 /* AppDelegate.swift in Sources */,
 				216AA4E5206446A5002AA44E /* UIColor+extension.swift in Sources */,

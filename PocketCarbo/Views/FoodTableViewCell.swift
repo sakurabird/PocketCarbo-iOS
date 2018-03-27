@@ -82,7 +82,9 @@ class FoodTableViewCell: UITableViewCell {
     self.food = food
 
     foodNameLabel.text = food.name
+    foodNameLabel.textColor = getCarboColor()
     carboPer100gLabel.text = "\(food.carbohydrate_per_100g) g"
+    carboPer100gLabel.textColor = getCarboColor()
     let descriptionString = createDescriptionString(food: food)
     descriptionLabel.text = descriptionString
   }
@@ -144,6 +146,23 @@ class FoodTableViewCell: UITableViewCell {
 
   private func stateIsCollapsed() -> Bool {
     return cellState == .collapsed
+  }
+
+  private func getCarboColor() -> UIColor {
+    switch self.food.carbohydrate_per_100g {
+    case 0 ..< 5:
+      // 糖質量が少ない
+      return UIColor(rgb: 0x0000d2)
+    case 5 ..< 15:
+      // 糖質量がやや多い
+      return UIColor(rgb: 0x049336)
+    case 15 ..< 50:
+      // 糖質量が多い
+      return UIColor(rgb: 0xf44336)
+    default:
+      // 糖質量が非常に多い
+      return UIColor(rgb: 0x9c27b0)
+    }
   }
 
   private func updateFavorites() {

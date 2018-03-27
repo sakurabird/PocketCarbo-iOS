@@ -152,14 +152,6 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     return cell
   }
 
-  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    if cellIsExpanded(at: indexPath) {
-      return 260
-    } else {
-      return 110
-    }
-  }
-
   // MARK: Functions
 
   @objc func dataUpdated(notification: NSNotification) {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toaster
 
 protocol FoodTableViewCellDelegate: class {
   func didTapFavorites(_ sender: FoodTableViewCell)
@@ -106,11 +107,10 @@ class FoodTableViewCell: UITableViewCell {
     sender.animateCellButton(completion: { (finish) in
     })
 
-    // TODO : ちゃんと実装する
-    // https://github.com/devxoul/Toaster を使って表示したい
     let text = createClipboardText()
     UIPasteboard.general.string = text
     let toastText = "テキストをコピーしました\n\(text)"
+    Toast(text: toastText, duration: Delay.long).show()
     print(toastText)
   }
   

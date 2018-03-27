@@ -38,6 +38,17 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
     setupDropDowns()
     setupTableView()
+
+    // Observe Food,Kind DB update event
+    NotificationCenter.default.observeEvent(observer: self,
+                                            selector: #selector(FoodsTableViewController.dataUpdated),
+                                            notification: NotificationEvent.foodsAndKindsUpdated)
+  }
+
+  // MARK: - deinit
+
+  deinit {
+    NotificationCenter.default.removeObserver(self)
   }
 
   //MARK: - Setup
@@ -96,6 +107,8 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     sortDropDown.show()
   }
 
+  // MARK: - TableView
+
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let cell = tableView.cellForRow(at: indexPath) as! FoodTableViewCell
 
@@ -145,6 +158,14 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     } else {
       return 110
     }
+  }
+
+  // MARK: Functions
+
+  @objc func dataUpdated(notification: NSNotification) {
+    kind = KindDataProvider.sharedInstance.findData(typeId: (type?.id)!)
+    foods = FoodDataProvider.sharedInstance.findData(typeId: (type?.id)!, sort: sort)
+    tableView.reloadData()
   }
 
   // MARK: - Private functions

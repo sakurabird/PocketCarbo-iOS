@@ -18,6 +18,10 @@ name: SlideMenuControllerSwift, nameSpecified:
 body: The MIT License (MIT…
 version: 4.0.0
 
+name: Toaster, nameSpecified: 
+body:             DO WHAT …
+version: 2.1.1
+
 name: XLPagerTabStrip, nameSpecified: 
 body: The MIT License (MIT…
 version: 8.0.0

@@ -8,6 +8,7 @@ target 'PocketCarbo' do
   pod 'SlideMenuControllerSwift'
   pod 'DropDown'
   pod 'RealmSwift'
+  pod 'Toaster'
 
   # Need for Realm
   post_install do |installer|

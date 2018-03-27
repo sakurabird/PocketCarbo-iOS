@@ -6,12 +6,14 @@ PODS:
   - RealmSwift (3.1.0):
     - Realm (= 3.1.0)
   - SlideMenuControllerSwift (4.0.0)
+  - Toaster (2.1.1)
   - XLPagerTabStrip (8.0.0)
 
 DEPENDENCIES:
   - DropDown
   - RealmSwift
   - SlideMenuControllerSwift
+  - Toaster
   - XLPagerTabStrip (~> 8.0)
 
 SPEC CHECKSUMS:
@@ -19,8 +21,9 @@ SPEC CHECKSUMS:
   Realm: 09513d7c054678d65cd02ce09871f805b0d758ac
   RealmSwift: e868fee9b10e5490ad94b6b6ecd9027944da1824
   SlideMenuControllerSwift: 021d6318201c53d4d4d3710517d43d6c556c7dd0
+  Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
   XLPagerTabStrip: d1ab378af0923320ec0b5eab11d7b2f803d31261
 
-PODFILE CHECKSUM: 3f30ecd979678b7847c55e2c27256e5518925c8e
+PODFILE CHECKSUM: 018268a5a7726f72dccd997ba73e9b8163ac4786
 
 COCOAPODS: 1.4.0

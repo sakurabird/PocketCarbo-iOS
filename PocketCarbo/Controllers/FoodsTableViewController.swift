@@ -110,14 +110,17 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   // MARK: - TableView
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let cell = tableView.cellForRow(at: indexPath) as! FoodTableViewCell
+    guard let cell = tableView.cellForRow(at: indexPath) else {
+      return
+    }
+    let foodCell = cell as! FoodTableViewCell
 
-    cell.delegate = self
+    foodCell.delegate = self
     if cellIsExpanded(at: indexPath) {
-      cell.cellState = .collapsed
+      foodCell.cellState = .collapsed
       removeExpandedIndexPath(indexPath)
     } else {
-      cell.cellState = .expanded
+      foodCell.cellState = .expanded
       addExpandedIndexPath(indexPath)
     }
 
@@ -126,9 +129,13 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   }
 
   override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-    let cell = tableView.cellForRow(at: indexPath) as! FoodTableViewCell
+    // 時々セルの取得に失敗することがある
+    guard let cell = tableView.cellForRow(at: indexPath) else {
+      return
+    }
+    let foodCell = cell as! FoodTableViewCell
 
-    cell.cellState = .collapsed
+    foodCell.cellState = .collapsed
     removeExpandedIndexPath(indexPath)
 
     tableView.beginUpdates()

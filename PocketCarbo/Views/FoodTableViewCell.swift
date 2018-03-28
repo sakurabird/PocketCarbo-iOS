@@ -111,7 +111,6 @@ class FoodTableViewCell: UITableViewCell {
     UIPasteboard.general.string = text
     let toastText = "テキストをコピーしました\n\(text)"
     Toast(text: toastText, duration: Delay.long).show()
-    print(toastText)
   }
   
   @IBAction func didTapShare(_ sender: UIButton) {

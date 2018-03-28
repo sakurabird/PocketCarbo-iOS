@@ -41,10 +41,12 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
   // other scenes
   var favoritesViewController: UIViewController! = {
     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.favorites.name) as! FavoritesViewController
+    vc.navigationItem.title = NSLocalizedString("Favorite.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
   var settingsController: UIViewController! = {
     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.settings.name) as! SettingsViewController
+    vc.navigationItem.title = NSLocalizedString("Setting.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
   var informationController: UIViewController! = {
@@ -60,10 +62,14 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
 
   // メニューアイコンと文言
   var sideMenuDatas: [SideMenuData] = {
-    return [SideMenuData(icon: UIImage(named: "side_menu_home"), menuLabel: "Home"),
-            SideMenuData(icon: UIImage(named: "side_menu_favorite"), menuLabel: "お気に入り"),
-            SideMenuData(icon: UIImage(named: "side_menu_settings"), menuLabel: "設定"),
-            SideMenuData(icon: UIImage(named: "side_menu_share"), menuLabel: "シェア"),
+    return [SideMenuData(icon: UIImage(named: "side_menu_home"),
+                         menuLabel: NSLocalizedString("Foods.sidemenu.title", comment: "")),
+            SideMenuData(icon: UIImage(named: "side_menu_favorite"),
+                         menuLabel: NSLocalizedString("Favorite.title", comment: "")),
+            SideMenuData(icon: UIImage(named: "side_menu_settings"),
+                         menuLabel: NSLocalizedString("Setting.title", comment: "")),
+            SideMenuData(icon: UIImage(named: "side_menu_share"),
+                         menuLabel: NSLocalizedString("share", comment: "")),
             SideMenuData(icon: UIImage(named: "side_menu_information"),
                          menuLabel: NSLocalizedString("Information.title", comment: "")),
             SideMenuData(icon: UIImage(named: "side_menu_help"),
@@ -128,8 +134,11 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
   }
 
   private func share() {
-    let shareText = "#ポケット糖質量 http://www.pockettoushituryou.com/"
-    let shareUrl = NSURL(string: "http://www.pockettoushituryou.com/")!
+    guard let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String else {
+      return
+    }
+    let shareText = "#\(appName)"
+    let shareUrl = NSURL(string: NSLocalizedString("appURL", comment: ""))!
 
     let activityViewController : UIActivityViewController = UIActivityViewController(
       activityItems: [shareText, shareUrl], applicationActivities: nil)

@@ -1,0 +1,45 @@
+
+/* Class = "UIButton"; normalTitle = "ソート"; ObjectID = "3bA-EY-ada"; */
+"3bA-EY-ada.normalTitle" = "ソート";
+
+/* Class = "UILabel"; text = "(100g中)"; ObjectID = "40k-Ac-7Jy"; */
+"40k-Ac-7Jy.text" = "(100g中)";
+
+/* Class = "UIViewController"; title = "MainParent"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "MainParent";
+
+/* Class = "UILabel"; text = "http://www.pockettoushituryou.com/"; ObjectID = "Ehk-YC-noy"; */
+"Ehk-YC-noy.text" = "http://www.pockettoushituryou.com/";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "Gvv-CX-Ll9"; */
+"Gvv-CX-Ll9.text" = "Home";
+
+/* Class = "UILabel"; text = "食品名"; ObjectID = "HOu-c7-ooM"; */
+"HOu-c7-ooM.text" = "食品名";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Hig-Jd-hQm"; */
+"Hig-Jd-hQm.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "WLy-bx-1Gt"; */
+"WLy-bx-1Gt.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "糖質量一覧・検索"; ObjectID = "efa-Tp-l3d"; */
+"efa-Tp-l3d.title" = "糖質量一覧・検索";
+
+/* Class = "UIButton"; normalTitle = "食品の種類"; ObjectID = "eqb-pa-Nqq"; */
+"eqb-pa-Nqq.normalTitle" = "食品の種類";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "gl1-yk-qyl"; */
+"gl1-yk-qyl.text" = "Settings";
+
+/* Class = "UILabel"; text = "Favorites"; ObjectID = "hNr-n5-rYY"; */
+"hNr-n5-rYY.text" = "Favorites";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "lVA-tO-TCK"; */
+"lVA-tO-TCK.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uPM-Ji-VI8"; */
+"uPM-Ji-VI8.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "糖質量"; ObjectID = "wa3-Cj-UCI"; */
+"wa3-Cj-UCI.text" = "糖質量";

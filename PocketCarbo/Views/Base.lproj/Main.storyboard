@@ -225,7 +225,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1r-x5-nKD">
                                 <rect key="frame" x="10" y="30" width="355" height="627"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb6-P9-Glr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb6-P9-Glr" userLabel="showTutorialDescription">
                                         <rect key="frame" x="40" y="0.0" width="275" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="25H-Wq-OOk"/>
@@ -234,23 +234,28 @@
                                             <fragment content="下のボタンを押していただけますと、 インストール時に表示したチュートリアルを表示します。">
                                                 <attributes>
                                                     <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3t-fz-lLz">
-                                        <rect key="frame" x="0.0" y="108" width="355" height="519"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </webView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLy-bx-1Gt">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WLy-bx-1Gt">
                                         <rect key="frame" x="40" y="58" width="275" height="40"/>
                                         <color key="backgroundColor" red="0.70196078429999997" green="0.93333333330000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="zeF-Mx-EBU"/>
                                         </constraints>
-                                        <state key="normal" title="チュートリアルを表示">
-                                            <color key="titleColor" red="0.082352941176470587" green="0.3529411764705882" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="チュートリアルを表示">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.082352941176470587" green="0.3529411764705882" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="15" name=".HiraKakuInterface-W3"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -261,18 +266,22 @@
                                             <action selector="didTapTutorial:" destination="h1Z-JD-fcr" eventType="touchUpInside" id="GMZ-BV-PzK"/>
                                         </connections>
                                     </button>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3t-fz-lLz">
+                                        <rect key="frame" x="0.0" y="108" width="355" height="519"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </webView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Pb6-P9-Glr" secondAttribute="trailing" constant="40" id="1XL-Bv-ABd"/>
+                                    <constraint firstItem="Pb6-P9-Glr" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" constant="40" id="4zp-9d-SQA"/>
                                     <constraint firstAttribute="bottom" secondItem="G3t-fz-lLz" secondAttribute="bottom" id="5F6-kg-124"/>
                                     <constraint firstItem="Pb6-P9-Glr" firstAttribute="top" secondItem="u1r-x5-nKD" secondAttribute="top" id="P7J-TI-o1y"/>
-                                    <constraint firstItem="Pb6-P9-Glr" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" constant="40" id="S2x-hT-WCM"/>
                                     <constraint firstItem="WLy-bx-1Gt" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" constant="40" id="SJ1-E2-uN4"/>
                                     <constraint firstItem="WLy-bx-1Gt" firstAttribute="top" secondItem="Pb6-P9-Glr" secondAttribute="bottom" constant="10" id="Spf-Dg-HUI"/>
                                     <constraint firstAttribute="trailing" secondItem="WLy-bx-1Gt" secondAttribute="trailing" constant="40" id="XbV-fs-yj0"/>
                                     <constraint firstAttribute="trailing" secondItem="G3t-fz-lLz" secondAttribute="trailing" id="cZk-Bb-AXL"/>
                                     <constraint firstItem="G3t-fz-lLz" firstAttribute="top" secondItem="WLy-bx-1Gt" secondAttribute="bottom" constant="10" id="hft-vn-Wxp"/>
                                     <constraint firstItem="G3t-fz-lLz" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" id="lsO-Pk-sih"/>
+                                    <constraint firstItem="Pb6-P9-Glr" firstAttribute="trailing" secondItem="WLy-bx-1Gt" secondAttribute="trailing" id="pol-qc-pqN"/>
                                 </constraints>
                             </view>
                         </subviews>

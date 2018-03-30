@@ -325,18 +325,86 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaW-mR-eM6">
+                                <rect key="frame" x="0.0" y="48" width="375" height="56"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Zvp-94-sJc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNw-da-ljV">
+                                                <rect key="frame" x="12" y="8" width="253" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <state key="normal" title="食品の種類" image="dropdown_caret">
+                                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="disTapKind:" destination="0Gb-Xt-pIX" eventType="touchUpInside" id="Tks-Xs-zkd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvQ-8r-CcH">
+                                                <rect key="frame" x="277" y="8" width="86" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="999" constant="86" id="GVk-I4-7F9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <state key="normal" title="ソート" image="dropdown_caret">
+                                                    <color key="titleColor" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapSort:" destination="0Gb-Xt-pIX" eventType="touchUpInside" id="N16-62-zZt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="12"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Zvp-94-sJc" secondAttribute="trailing" id="4cK-AB-sUQ"/>
+                                    <constraint firstAttribute="height" constant="56" id="5Ym-hu-WDI"/>
+                                    <constraint firstItem="Zvp-94-sJc" firstAttribute="top" secondItem="QaW-mR-eM6" secondAttribute="top" id="dPc-Bn-oeX"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zvp-94-sJc" secondAttribute="bottom" id="h0c-S6-pvG"/>
+                                    <constraint firstItem="Zvp-94-sJc" firstAttribute="leading" secondItem="QaW-mR-eM6" secondAttribute="leading" id="zgI-58-EsS"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7CV-Yc-JaI">
-                                <rect key="frame" x="0.0" y="45" width="375" height="602"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="543"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="QaW-mR-eM6" firstAttribute="trailing" secondItem="jXl-2i-l1I" secondAttribute="trailing" id="D1P-4m-tNe"/>
                             <constraint firstItem="vo5-Ym-PDV" firstAttribute="top" secondItem="uOt-Dw-qGk" secondAttribute="top" id="HMh-8A-uJr"/>
                             <constraint firstAttribute="trailing" secondItem="vo5-Ym-PDV" secondAttribute="trailing" id="Pcf-82-XtD"/>
+                            <constraint firstItem="QaW-mR-eM6" firstAttribute="top" secondItem="vo5-Ym-PDV" secondAttribute="bottom" id="PqT-BB-eek"/>
+                            <constraint firstItem="7CV-Yc-JaI" firstAttribute="top" secondItem="QaW-mR-eM6" secondAttribute="bottom" id="TGa-RZ-g2l"/>
                             <constraint firstAttribute="trailing" secondItem="7CV-Yc-JaI" secondAttribute="trailing" id="aGn-ZV-FpG"/>
-                            <constraint firstItem="7CV-Yc-JaI" firstAttribute="top" secondItem="vo5-Ym-PDV" secondAttribute="bottom" constant="-3" id="bcI-tU-Jbo"/>
                             <constraint firstItem="vo5-Ym-PDV" firstAttribute="leading" secondItem="uOt-Dw-qGk" secondAttribute="leading" id="eye-74-X4C"/>
                             <constraint firstAttribute="bottom" secondItem="7CV-Yc-JaI" secondAttribute="bottom" id="fHy-SN-avG"/>
+                            <constraint firstItem="QaW-mR-eM6" firstAttribute="leading" secondItem="jXl-2i-l1I" secondAttribute="leading" id="fjW-XM-9ci"/>
                             <constraint firstItem="7CV-Yc-JaI" firstAttribute="leading" secondItem="uOt-Dw-qGk" secondAttribute="leading" id="yGm-lx-cau"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jXl-2i-l1I"/>
@@ -344,6 +412,8 @@
                     <connections>
                         <outlet property="buttonBarView" destination="vo5-Ym-PDV" id="U15-CC-0Cp"/>
                         <outlet property="containerView" destination="7CV-Yc-JaI" id="7X7-iS-6KP"/>
+                        <outlet property="kindSelectButton" destination="bNw-da-ljV" id="WK7-Qp-epB"/>
+                        <outlet property="sortSelectButton" destination="OvQ-8r-CcH" id="6Tb-8S-QnG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cds-fi-brC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -358,88 +428,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="UMx-Wn-HHc">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="772-4O-Mz2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqb-pa-Nqq">
-                                            <rect key="frame" x="12" y="8" width="106" height="24"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <state key="normal" title="食品の種類" image="dropdown_caret">
-                                                <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                    <real key="value" value="2"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="didTapKindSelect:" destination="LSH-av-uoM" eventType="touchUpInside" id="C5B-xV-H7K"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bA-EY-ada">
-                                            <rect key="frame" x="130" y="8" width="233" height="24"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="86" id="UVw-pd-Qio"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <state key="normal" title="ソート" image="dropdown_caret">
-                                                <color key="titleColor" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                    <real key="value" value="2"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="5"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <action selector="didTapSort:" destination="LSH-av-uoM" eventType="touchUpInside" id="i6F-a0-s6u"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="12"/>
-                                </stackView>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="772-4O-Mz2" firstAttribute="top" secondItem="UMx-Wn-HHc" secondAttribute="top" id="10z-Bs-7uE"/>
-                                <constraint firstItem="772-4O-Mz2" firstAttribute="leading" secondItem="UMx-Wn-HHc" secondAttribute="leading" id="Bsl-fA-5Jc"/>
-                                <constraint firstAttribute="bottom" secondItem="772-4O-Mz2" secondAttribute="bottom" constant="20" id="SgA-Zc-ZED"/>
-                                <constraint firstAttribute="trailing" secondItem="772-4O-Mz2" secondAttribute="trailing" id="xc9-BJ-dgv"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodCell" rowHeight="200" id="Gnd-kf-FU5" customClass="FoodTableViewCell" customModule="PocketCarbo">
-                                <rect key="frame" x="0.0" y="88" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gnd-kf-FU5" id="042-NI-QQF">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajG-fS-WZK">
-                                            <rect key="frame" x="16" y="16" width="343" height="184"/>
+                                            <rect key="frame" x="16" y="0.0" width="343" height="184"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ut-Er-7Wv">
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="184"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFd-qd-0E7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="96"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="112"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="食品名" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOu-c7-ooM">
                                                                     <rect key="frame" x="16" y="16" width="61.5" height="24"/>
@@ -485,10 +489,10 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vm8-Jo-D6r">
-                                                            <rect key="frame" x="0.0" y="96" width="343" height="88"/>
+                                                            <rect key="frame" x="0.0" y="112" width="343" height="72"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERx-ER-E4E">
-                                                                    <rect key="frame" x="16" y="0.0" width="311" height="58"/>
+                                                                    <rect key="frame" x="16" y="0.0" width="311" height="42"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="一回分あたりの目安量">
                                                                             <attributes>
@@ -501,7 +505,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hig-Jd-hQm">
-                                                                    <rect key="frame" x="307" y="58" width="20" height="20"/>
+                                                                    <rect key="frame" x="307" y="42" width="20" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" priority="999" constant="20" id="BgX-zz-5LE"/>
                                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" priority="999" constant="20" id="uSL-qE-nE7"/>
@@ -512,7 +516,7 @@
                                                                     </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPM-Ji-VI8">
-                                                                    <rect key="frame" x="271" y="58" width="20" height="20"/>
+                                                                    <rect key="frame" x="271" y="42" width="20" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="20" id="Sz8-1o-O7H"/>
                                                                         <constraint firstAttribute="height" constant="20" id="VcP-tu-84M"/>
@@ -523,7 +527,7 @@
                                                                     </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVA-tO-TCK">
-                                                                    <rect key="frame" x="235" y="58" width="20" height="20"/>
+                                                                    <rect key="frame" x="235" y="42" width="20" height="20"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" priority="999" constant="20" id="GK7-Sa-07F"/>
                                                                         <constraint firstAttribute="height" priority="999" constant="20" id="TCW-RH-bR9"/>
@@ -563,8 +567,8 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="ajG-fS-WZK" secondAttribute="trailing" constant="16" id="Rej-0y-QAk"/>
                                         <constraint firstItem="ajG-fS-WZK" firstAttribute="leading" secondItem="042-NI-QQF" secondAttribute="leading" constant="16" id="XRG-HB-266"/>
-                                        <constraint firstItem="ajG-fS-WZK" firstAttribute="top" secondItem="042-NI-QQF" secondAttribute="top" constant="16" id="aLh-jm-Gdc"/>
-                                        <constraint firstAttribute="bottom" secondItem="ajG-fS-WZK" secondAttribute="bottom" id="hNt-Mz-mnv"/>
+                                        <constraint firstItem="ajG-fS-WZK" firstAttribute="top" secondItem="042-NI-QQF" secondAttribute="top" id="aLh-jm-Gdc"/>
+                                        <constraint firstAttribute="bottom" secondItem="ajG-fS-WZK" secondAttribute="bottom" constant="16" id="hNt-Mz-mnv"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -585,10 +589,6 @@
                             <outlet property="delegate" destination="LSH-av-uoM" id="JzC-7t-FAy"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="kindSelectButton" destination="eqb-pa-Nqq" id="ite-nq-VhM"/>
-                        <outlet property="sortSelectButton" destination="3bA-EY-ada" id="9zb-vY-UnD"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1E0-cx-WSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

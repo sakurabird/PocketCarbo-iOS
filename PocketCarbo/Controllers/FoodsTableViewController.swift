@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import XLPagerTabStrip
-import DropDown
 
 class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, FoodTableViewCellDelegate {
 
@@ -21,22 +20,15 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   var indicatorInfo = IndicatorInfo(title: "Kinds")
 
   var type: Type?
-  var kind: [Kind]?
+  var kinds: [Kind]?
   var foods: [Food]?
 
-  var sort: FoodSortOrder = .nameAsc
-
-  let kindsDropDown = DropDown()
-  let sortDropDown = DropDown()
-
-
-  @IBOutlet weak var kindSelectButton: UIButton!
-  @IBOutlet weak var sortSelectButton: UIButton!
+  var selectedKind: Kind = Kind()
+  var selectedSort: FoodSortOrder = .nameAsc
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    setupDropDowns()
     setupTableView()
 
     // Observe Food,Kind DB update event
@@ -56,8 +48,13 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   func setupTabData(indicatorInfo: IndicatorInfo, type: Type) {
     self.indicatorInfo = indicatorInfo
     self.type = type
-    self.kind = KindDataProvider.sharedInstance.findData(typeId: type.id!)
-    self.foods = FoodDataProvider.sharedInstance.findData(typeId: type.id!, sort: sort)
+    let kind = Kind()
+    kind.id = 0
+    kind.name = NSLocalizedString("Foods.dropdown.all", comment: "")
+    self.selectedKind = kind; // 全ての種類
+    self.selectedSort = .nameAsc;
+    self.kinds = KindDataProvider.sharedInstance.findData(typeId: type.id!)
+    self.foods = FoodDataProvider.sharedInstance.findData(typeId: type.id!, sort: selectedSort)
   }
 
   private func setupTableView() {
@@ -66,45 +63,10 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     tableView.estimatedRowHeight = 200.0
   }
 
-  private func setupDropDowns() {
-    // The view to which the drop down will appear on
-    kindsDropDown.anchorView = kindSelectButton // UIView or UIBarButtonItem
-    sortDropDown.anchorView = sortSelectButton // UIView or UIBarButtonItem
-
-    kindsDropDown.dismissMode = .onTap
-    sortDropDown.dismissMode = .onTap
-    kindsDropDown.direction = .any
-    sortDropDown.direction = .any
-
-    // TODO : ちゃんと実装
-
-    // The list of items to display. Can be changed dynamically
-    kindsDropDown.dataSource = ["Car", "Motorcycle", "Truck"]
-    // Action triggered on selection
-    kindsDropDown.selectionAction = { [weak self] (index, item) in
-      self?.kindSelectButton.setTitle(item, for: .normal)
-    }
-    sortDropDown.dataSource = ["Car", "Motorcycle", "Truck","あああ"]
-    // Action triggered on selection
-    sortDropDown.selectionAction = { [weak self] (index, item) in
-      self?.sortSelectButton.setTitle(item, for: .normal)
-    }
-  }
-
   // MARK: - IndicatorInfoProvider
 
   func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
     return indicatorInfo
-  }
-
-  // MARK: - Actions
-
-  @IBAction func didTapKindSelect(_ sender: UIButton) {
-    kindsDropDown.show()
-  }
-
-  @IBAction func didTapSort(_ sender: Any) {
-    sortDropDown.show()
   }
 
   // MARK: - TableView
@@ -162,9 +124,21 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   // MARK: Functions
 
   @objc func dataUpdated(notification: NSNotification) {
-    kind = KindDataProvider.sharedInstance.findData(typeId: (type?.id)!)
-    foods = FoodDataProvider.sharedInstance.findData(typeId: (type?.id)!, sort: sort)
+    kinds = KindDataProvider.sharedInstance.findData(typeId: (type?.id)!)
+    foods = FoodDataProvider.sharedInstance.findData(typeId: (type?.id)!, sort: selectedSort)
     tableView.reloadData()
+  }
+
+  func extractKindData(kind: Kind) {
+    self.selectedKind = kind;
+    if kind.id == 0 {
+      foods = FoodDataProvider.sharedInstance.findData(typeId: (type?.id)!, sort: selectedSort)
+    } else {
+      foods = FoodDataProvider.sharedInstance.findData(typeId: (type?.id)!, kindId: kind.id, sort: selectedSort)
+    }
+    tableView.reloadData()
+    let indexPath = NSIndexPath(row: 0, section: 0)
+    self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: false)
   }
 
   // MARK: - Private functions

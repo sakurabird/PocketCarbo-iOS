@@ -66,7 +66,7 @@ final class FoodDataProvider {
     return  Array(foods)
   }
 
-  func findDataFilteredKind(typeId: Int, kindId: Int, sort: FoodSortOrder) -> [Food] {
+  func findData(typeId: Int, kindId: Int, sort: FoodSortOrder) -> [Food] {
 
     let predicate = NSPredicate(format: "type_id == %i AND kind_id == %i", argumentArray: [typeId, kindId])
     let foods = realm.objects(Food.self).filter(predicate)

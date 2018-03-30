@@ -267,9 +267,9 @@
 		214D87182063217F00F20EF7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				216AA4E020643EB8002AA44E /* SideMenuViewController.swift */,
 				216AA4DC20643E28002AA44E /* MainParentViewController.swift */,
 				216AA4DE20643E4E002AA44E /* MainViewController.swift */,
-				216AA4E020643EB8002AA44E /* SideMenuViewController.swift */,
 				216AA4FC2064B095002AA44E /* FoodsTableViewController.swift */,
 				216AA4E82064493B002AA44E /* HelpViewController.swift */,
 				216AA4EA20644945002AA44E /* InformationViewController.swift */,

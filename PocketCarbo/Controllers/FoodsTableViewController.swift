@@ -131,14 +131,12 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
   func extractKindData(kind: Kind) {
     self.selectedKind = kind;
-    if kind.id == 0 {
-      foods = FoodDataProvider.sharedInstance.findData(typeId: (type?.id)!, sort: selectedSort)
-    } else {
-      foods = FoodDataProvider.sharedInstance.findData(typeId: (type?.id)!, kindId: kind.id, sort: selectedSort)
-    }
-    tableView.reloadData()
-    let indexPath = NSIndexPath(row: 0, section: 0)
-    self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: false)
+    refeshData()
+  }
+
+  func sortData(sortOrder: FoodSortOrder) {
+    self.selectedSort = sortOrder;
+    refeshData()
   }
 
   // MARK: - Private functions
@@ -153,6 +151,18 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
   private func removeExpandedIndexPath(_ indexPath: IndexPath) {
     indexPaths.remove(indexPath)
+  }
+
+  private func refeshData() {
+    if selectedKind.id == 0 {
+      foods = FoodDataProvider.sharedInstance.findData(typeId: (type?.id)!, sort: selectedSort)
+    } else {
+      foods = FoodDataProvider.sharedInstance.findData(typeId: (type?.id)!, kindId: selectedKind.id, sort: selectedSort)
+    }
+
+    tableView.reloadData()
+    let indexPath = NSIndexPath(row: 0, section: 0)
+    self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: false)
   }
 
   // MARK: - FoodTableViewCell Actions

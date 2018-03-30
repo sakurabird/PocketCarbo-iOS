@@ -17,6 +17,21 @@
 //--------------------------------------------------------
 // Foods Scene
 "Foods.sidemenu.title" = "HOME";
+"Foods.description.text1" = "あたりの値\n";
+"Foods.description.text2" = "糖質 : %@ g\n";
+"Foods.description.text3" = "カロリー : %@ kcal\n";
+"Foods.description.text4" = "たんぱく質 : %@ g\n";
+"Foods.description.text5" = "脂質 : %@ g\n";
+"Foods.description.text6" = "塩分 : %@ g";
+
+"Foods.text.copied" = "テキストをコピーしました\n%@";
+"Foods.clipboard.text1" = "100gあたりの糖質量:%@g, ";
+"Foods.clipboard.text2" = "%@gあたりの糖質量:%@g, ";
+"Foods.clipboard.text3" = "カロリー:%@kcal, ";
+"Foods.clipboard.text4" = "たんぱく質:%@g, ";
+"Foods.clipboard.text5" = "脂質:%@g, ";
+"Foods.clipboard.text6" = "塩分:%@g \n#ポケット糖質量";
+
 
 //--------------------------------------------------------
 // Favorite Scene

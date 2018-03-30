@@ -9,6 +9,7 @@
 import UIKit
 import XLPagerTabStrip
 import DropDown
+import Toaster
 
 class MainViewController: ButtonBarPagerTabStripViewController {
 
@@ -66,11 +67,35 @@ class MainViewController: ButtonBarPagerTabStripViewController {
 
     setupKindsDataSource()
 
-    // TODO
-    sortDropDown.dataSource = ["Car", "Motorcycle", "Truck","あああ"]
+    sortDropDown.dataSource = createSortStrings()
+    
     // Action triggered on selection
+    let foodsTableViewController = tabControllers![currentIndex] as! FoodsTableViewController
     sortDropDown.selectionAction = { [weak self] (index, item) in
-      self?.sortSelectButton.setTitle(item, for: .normal)
+
+      var sortOrder: FoodSortOrder = .nameAsc
+      var toastString = String()
+
+      switch index {
+      case 0:
+        sortOrder = .nameAsc
+        toastString.append(NSLocalizedString("Foods.dropdown.sort.nameAsc", comment: ""))
+      case 1:
+        sortOrder = .nameDsc
+        toastString.append(NSLocalizedString("Foods.dropdown.sort.nameDsc", comment: ""))
+      case 2:
+        sortOrder = .carbohydratePer100gAsc
+        toastString.append(NSLocalizedString("Foods.dropdown.sort.carbohydratePer100gAsc", comment: ""))
+      case 3:
+        sortOrder = .carbohydratePer100gDsc
+        toastString.append(NSLocalizedString("Foods.dropdown.sort.carbohydratePer100gDsc", comment: ""))
+      default:
+        print(sortOrder)
+      }
+
+      toastString.append(NSLocalizedString("Foods.dropdown.sort.toast", comment: ""))
+      Toast(text: toastString, duration: Delay.long).show()
+      foodsTableViewController.sortData(sortOrder: sortOrder)
     }
   }
 
@@ -104,6 +129,16 @@ class MainViewController: ButtonBarPagerTabStripViewController {
       }
       self?.kindSelectButton.setTitle(item, for: .normal)
     }
+  }
+
+  func createSortStrings() -> [String] {
+    var strings: [String] = [String]()
+    strings.append(NSLocalizedString("Foods.dropdown.sort.nameAsc", comment: ""))
+    strings.append(NSLocalizedString("Foods.dropdown.sort.nameDsc", comment: ""))
+    strings.append(NSLocalizedString("Foods.dropdown.sort.carbohydratePer100gAsc", comment: ""))
+    strings.append(NSLocalizedString("Foods.dropdown.sort.carbohydratePer100gDsc", comment: ""))
+
+    return strings
   }
 
   // MARK: - PagerTabStripDataSource

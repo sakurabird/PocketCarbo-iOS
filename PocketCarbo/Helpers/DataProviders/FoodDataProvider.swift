@@ -13,7 +13,7 @@ import RealmSwift
 
 enum FoodSortOrder: Int {
   case nameAsc = 0
-  case nameDesc
+  case nameDsc
   case carbohydratePer100gAsc
   case carbohydratePer100gDsc
 
@@ -21,7 +21,7 @@ enum FoodSortOrder: Int {
     switch self {
     case .nameAsc:
       return "name"
-    case .nameDesc:
+    case .nameDsc:
       return "name"
     case .carbohydratePer100gAsc:
       return "carbohydrate_per_100g"
@@ -34,7 +34,7 @@ enum FoodSortOrder: Int {
     switch self {
     case .nameAsc:
       return true
-    case .nameDesc:
+    case .nameDsc:
       return false
     case .carbohydratePer100gAsc:
       return true
@@ -42,7 +42,6 @@ enum FoodSortOrder: Int {
       return false
     }
   }
-
 }
 
 final class FoodDataProvider {
@@ -69,7 +68,7 @@ final class FoodDataProvider {
   func findData(typeId: Int, kindId: Int, sort: FoodSortOrder) -> [Food] {
 
     let predicate = NSPredicate(format: "type_id == %i AND kind_id == %i", argumentArray: [typeId, kindId])
-    let foods = realm.objects(Food.self).filter(predicate)
+    let foods = realm.objects(Food.self).filter(predicate).sorted(byKeyPath: sort.key(), ascending: sort.ascending())
     
     return  Array(foods)
   }

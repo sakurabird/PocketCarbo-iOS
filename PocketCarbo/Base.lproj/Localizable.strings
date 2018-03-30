@@ -19,6 +19,11 @@
 "Foods.sidemenu.title" = "HOME";
 
 "Foods.dropdown.all" = "全ての種類";
+"Foods.dropdown.sort.nameAsc" = "食品名順";
+"Foods.dropdown.sort.nameDsc" = "食品名逆順";
+"Foods.dropdown.sort.carbohydratePer100gAsc" = "糖質量の少ない順";
+"Foods.dropdown.sort.carbohydratePer100gDsc" = "糖質量の多い順";
+"Foods.dropdown.sort.toast" = "に並び替えました";
 
 "Foods.description.text1" = "あたりの値\n";
 "Foods.description.text2" = "糖質 : %@ g\n";

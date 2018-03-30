@@ -109,7 +109,7 @@ class FoodTableViewCell: UITableViewCell {
 
     let text = createClipboardText()
     UIPasteboard.general.string = text
-    let toastText = "テキストをコピーしました\n\(text)"
+    let toastText = String(format: NSLocalizedString("Foods.text.copied", comment: ""), text)
     Toast(text: toastText, duration: Delay.long).show()
   }
   
@@ -170,7 +170,6 @@ class FoodTableViewCell: UITableViewCell {
   }
 
   private func createDescriptionString(food: Food) -> String {
-    // TODO : string fileを使う
 
     var str: String = ""
 
@@ -178,12 +177,13 @@ class FoodTableViewCell: UITableViewCell {
     if let hint = food.weight_hint {
       str.append(hint)
     }
-    str.append("あたりの値\n")
-    str.append("糖質 : \(food.carbohydrate_per_weight) g\n")
-    str.append("カロリー : \(food.calory) g\n")
-    str.append("たんぱく質 : \(food.protein) g\n")
-    str.append("脂質 : \(food.fat) g\n")
-    str.append("塩分 : \(food.sodium) g")
+
+    str.append(NSLocalizedString("Foods.description.text1", comment: ""))
+    str.append(String(format: NSLocalizedString("Foods.description.text2", comment: ""), String(food.carbohydrate_per_weight)))
+    str.append(String(format: NSLocalizedString("Foods.description.text3", comment: ""), String(food.calory)))
+    str.append(String(format: NSLocalizedString("Foods.description.text4", comment: ""), String(food.protein)))
+    str.append(String(format: NSLocalizedString("Foods.description.text5", comment: ""), String(food.fat)))
+    str.append(String(format: NSLocalizedString("Foods.description.text6", comment: ""), String(food.sodium)))
 
     return str
   }
@@ -191,18 +191,17 @@ class FoodTableViewCell: UITableViewCell {
   private func createClipboardText() -> String {
    var str: String = ""
     str.append(food.name!)
-    str.append("100gあたりの糖質量:\(food.carbohydrate_per_100g)g, ")
+    str.append(String(format: NSLocalizedString("Foods.clipboard.text1", comment: ""), String(food.carbohydrate_per_100g)))
     if let weight_hint = food.weight_hint {
       str.append(weight_hint)
     }
     if food.weight != 100 {
-      str.append("\(food.weight)gあたりの糖質量:\(food.carbohydrate_per_weight)g, ")
+      str.append(String(format: NSLocalizedString("Foods.clipboard.text2", comment: ""), String(food.weight), String(food.carbohydrate_per_weight)))
     }
-    str.append("カロリー:\(food.calory)g, ")
-    str.append("たんぱく質:\(food.protein)g, ")
-    str.append("脂質:\(food.fat)g, ")
-    str.append("塩分:\(food.sodium)g ")
-    str.append("#ポケット糖質量")
+    str.append(String(format: NSLocalizedString("Foods.clipboard.text3", comment: ""), String(food.calory)))
+    str.append(String(format: NSLocalizedString("Foods.clipboard.text4", comment: ""), String(food.protein)))
+    str.append(String(format: NSLocalizedString("Foods.clipboard.text5", comment: ""), String(food.fat)))
+    str.append(String(format: NSLocalizedString("Foods.clipboard.text6", comment: ""), String(food.sodium)))
 
     return str
   }

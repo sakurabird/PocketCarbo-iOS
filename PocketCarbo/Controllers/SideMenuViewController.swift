@@ -50,7 +50,9 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     return UINavigationController(rootViewController: vc)
   }()
   var informationController: UIViewController! = {
-    let vc = InformationViewController()
+    let htmlPath = Bundle.main.path(forResource: "announcement", ofType: "html")
+    let url = URL(fileURLWithPath: htmlPath!)
+    let vc = WebViewController(url: url, embed: true)
     vc.navigationItem.title = NSLocalizedString("Information.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
@@ -81,7 +83,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.estimatedRowHeight = 78.0
+    tableView.estimatedRowHeight = 70.0
     tableView.rowHeight = UITableViewAutomaticDimension
   }
 
@@ -110,7 +112,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
   }
 
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 78
+    return 56
   }
 
   //MARK: - Side Menu Controller

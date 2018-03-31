@@ -10,36 +10,29 @@ import UIKit
 
 class WebViewController: UIViewController, UIWebViewDelegate {
 
-  let url: URL
-  let embed: Bool
+  @IBOutlet weak var progressView: UIProgressView!
+  @IBOutlet weak var webView: UIWebView!
+  
+  var url: URL?
+  var embed: Bool?
 
-  init(url: URL, embed: Bool) {
+  func setUp(url: URL, embed: Bool) {
     self.url = url
     self.embed = embed
-
-    super.init(nibName: nil, bundle: nil)
-  }
-
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let webView:UIWebView = UIWebView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.width, height:UIScreen.main.bounds.height))
-
-    self.view.addSubview(webView)
-
     webView.delegate = self
 
-    let request:URLRequest = URLRequest(url: url)
+    let request:URLRequest = URLRequest(url: url!)
     webView.loadRequest(request)
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    if embed {
+    if embed! {
       // sidebar
       self.setNavigationBarItem()
     } else {
@@ -60,6 +53,8 @@ class WebViewController: UIViewController, UIWebViewDelegate {
   }
 
   func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    self.progressView.alpha = 1
+
     switch navigationType {
     case .linkClicked:
       // Open links in Safari
@@ -77,5 +72,18 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     }
   }
 
+  func webViewDidStartLoad(_ webView: UIWebView) {
+    self.progressView.setProgress(0.1, animated: false)
+  }
+
+  func webViewDidFinishLoad(_ webView: UIWebView) {
+    self.progressView.setProgress(1.0, animated: true)
+    self.progressView.alpha = 0
+  }
+
+  func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+    self.progressView.setProgress(1.0, animated: true)
+    self.progressView.alpha = 0
+  }
 }
 

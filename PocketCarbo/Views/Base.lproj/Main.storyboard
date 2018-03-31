@@ -359,6 +359,48 @@
             </objects>
             <point key="canvasLocation" x="1293.5999999999999" y="902.69865067466276"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="ECL-mp-lyS">
+            <objects>
+                <viewController storyboardIdentifier="information" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xax-Ai-LhM" customClass="WebViewController" customModule="PocketCarbo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jfw-Iv-XHr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UK6-0A-KtS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="nPh-dI-C43"/>
+                                </constraints>
+                                <color key="progressTintColor" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="0.16862745100000001" green="0.73333333329999995" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcr-34-zrh">
+                                <rect key="frame" x="0.0" y="23" width="375" height="644"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rcr-34-zrh" firstAttribute="bottom" secondItem="EpZ-9h-1a5" secondAttribute="bottom" id="58i-Rl-24b"/>
+                            <constraint firstItem="rcr-34-zrh" firstAttribute="leading" secondItem="EpZ-9h-1a5" secondAttribute="leading" id="SKf-ai-Hnf"/>
+                            <constraint firstItem="rcr-34-zrh" firstAttribute="top" secondItem="UK6-0A-KtS" secondAttribute="bottom" id="UNK-hh-Lnb"/>
+                            <constraint firstAttribute="trailing" secondItem="UK6-0A-KtS" secondAttribute="trailing" id="aDt-HB-uQG"/>
+                            <constraint firstItem="UK6-0A-KtS" firstAttribute="leading" secondItem="jfw-Iv-XHr" secondAttribute="leading" id="j9Z-Qc-8AX"/>
+                            <constraint firstItem="rcr-34-zrh" firstAttribute="trailing" secondItem="EpZ-9h-1a5" secondAttribute="trailing" id="vb9-GR-Gpo"/>
+                            <constraint firstItem="UK6-0A-KtS" firstAttribute="top" secondItem="EpZ-9h-1a5" secondAttribute="top" id="vmD-L4-8dA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EpZ-9h-1a5"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="UK6-0A-KtS" id="PEY-fN-laK"/>
+                        <outlet property="webView" destination="rcr-34-zrh" id="chT-M4-Vtt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VNb-Jn-ZTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2135.1999999999998" y="896.40179910044981"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="VKv-LO-2k6">
             <objects>

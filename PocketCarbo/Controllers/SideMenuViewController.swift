@@ -44,18 +44,22 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     vc.navigationItem.title = NSLocalizedString("Favorite.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
+
   var settingsController: UIViewController! = {
     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.settings.name) as! SettingsViewController
     vc.navigationItem.title = NSLocalizedString("Setting.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
+
   var informationController: UIViewController! = {
     let htmlPath = Bundle.main.path(forResource: "announcement", ofType: "html")
     let url = URL(fileURLWithPath: htmlPath!)
-    let vc = WebViewController(url: url, embed: true)
+    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.information.name) as! WebViewController
+    vc.setUp(url: url, embed: true)
     vc.navigationItem.title = NSLocalizedString("Information.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
+  
   var helpController: UIViewController! = {
     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.help.name) as! HelpViewController
     vc.navigationItem.title = NSLocalizedString("Help.title", comment: "")

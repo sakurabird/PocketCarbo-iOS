@@ -56,7 +56,8 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
     let informationController: UIViewController! = {
       let htmlPath = Bundle.main.path(forResource: "privacy_policy", ofType: "html")
       let url = URL(fileURLWithPath: htmlPath!)
-      let vc = WebViewController(url: url, embed: false)
+      let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.information.name) as! WebViewController
+      vc.setUp(url: url, embed: false)
       vc.navigationItem.title = NSLocalizedString("Setting.privacy_policy", comment: "")
       return UINavigationController(rootViewController: vc)
     }()

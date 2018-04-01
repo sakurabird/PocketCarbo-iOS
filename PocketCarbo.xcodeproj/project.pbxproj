@@ -305,8 +305,8 @@
 		214D872420633BBD00F20EF7 /* www */ = {
 			isa = PBXGroup;
 			children = (
-				214D872520633BBD00F20EF7 /* announcement.html */,
 				214D872620633BBD00F20EF7 /* common.css */,
+				214D872520633BBD00F20EF7 /* announcement.html */,
 				214D872720633BBD00F20EF7 /* help.html */,
 				214D872820633BBD00F20EF7 /* privacy_policy.html */,
 			);

@@ -66,19 +66,26 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
   }
 
   @objc func handleTapMailToDev(sender: UITapGestureRecognizer) {
-    // TODO : 仮実装
+    
     if !MFMailComposeViewController.canSendMail() {
-      present(UIAlertController.alertWithTitle(title: "mail起動エラー", message: "メールの起動が出来ませんでした。\nお手数ですが\n sakurafish1@gmail.com\n宛にメールをお送りくださいませ。", buttonTitle: "OK"), animated: true, completion: nil)
+      let title: String = NSLocalizedString("Setting.mail.error.title", comment: "")
+      let message: String = NSLocalizedString("Setting.mail.error.message", comment: "")
+      present(UIAlertController.alertWithTitle(title: title, message: message, buttonTitle: "OK"), animated: true, completion: nil)
       return
     }
 
+    let mail: String = NSLocalizedString("mail", comment: "")
+    let subject: String = NSLocalizedString("Setting.mail.subject", comment: "")
+    let body: String = NSLocalizedString("Setting.mail.messageBody", comment: "")
+
     let mailViewController = MFMailComposeViewController()
-    let toRecipients = ["sakurafish1@gmail.com"]
+    let toRecipients = [mail]
 
     mailViewController.mailComposeDelegate = self
-    mailViewController.setSubject("【ポケット糖質量】ご意見・ご要望")
+    mailViewController.setSubject(subject)
     mailViewController.setToRecipients(toRecipients)
-    mailViewController.setMessageBody("ポケット糖質量へのご意見・ご要望をご記入ください。\nユーザー様のメールアドレスはこの連絡以外に使用することは一切ありません。\n返信が必要な場合、sakurafish1@gmail.comというメールアドレスよりお送りいたします。\n--------------------\n", isHTML: false)
+    mailViewController.setMessageBody(body, isHTML: false)
+
     self.present(mailViewController, animated: true, completion: nil)
   }
 

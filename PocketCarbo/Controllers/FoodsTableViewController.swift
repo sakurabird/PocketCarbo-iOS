@@ -23,6 +23,8 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   var kinds: [Kind]?
   var foods: [Food]?
 
+  var kindDatasource = [String]()
+
   var selectedKind: Kind = Kind()
   var selectedSort: FoodSortOrder = .nameAsc
 
@@ -53,9 +55,16 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     kind.name = NSLocalizedString("Foods.dropdown.all", comment: "")
     self.selectedKind = kind; // 全ての種類
     self.selectedSort = .nameAsc;
+
     self.kinds = KindDataProvider.sharedInstance.findData(typeId: type.id!)
     self.foods = FoodDataProvider.sharedInstance.findData(typeId: type.id!, sort: selectedSort)
-  }
+
+    // Dropdown Datasource
+    kindDatasource.append(kind.name!)
+    for kind in kinds! {
+      kindDatasource.append(kind.name!)
+    }
+}
 
   private func setupTableView() {
     tableView.backgroundColor = UIColor(patternImage: UIImage(named: "main_bg")!)

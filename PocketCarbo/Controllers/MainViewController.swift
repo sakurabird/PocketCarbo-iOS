@@ -65,10 +65,37 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     kindsDropDown.direction = .any
     sortDropDown.direction = .any
 
-    setupKindsDataSource()
-
+    setupKindsEachTab()
     sortDropDown.dataSource = createSortStrings()
-    
+    setupSortEachTab()
+  }
+
+  private func setupKindsEachTab() {
+
+    let foodsTableViewController = tabControllers![currentIndex] as! FoodsTableViewController
+    let kinds = foodsTableViewController.kinds
+
+    kindSelectButton.setTitle(foodsTableViewController.selectedKind.name, for: .normal)
+    kindsDropDown.dataSource = foodsTableViewController.kindDatasource
+
+    // Action triggered on selection
+    kindsDropDown.selectionAction = { [weak self] (index, item) in
+
+      if index == 0 {
+        let kindAll = Kind()
+        kindAll.id = 0
+        kindAll.name = NSLocalizedString("Foods.dropdown.all", comment: "")
+        foodsTableViewController.extractKindData(kind: kindAll)
+      } else {
+        let kind = kinds![index - 1]
+        foodsTableViewController.extractKindData(kind: kind)
+      }
+      self?.kindSelectButton.setTitle(item, for: .normal)
+    }
+  }
+
+  fileprivate func setupSortEachTab() {
+
     // Action triggered on selection
     let foodsTableViewController = tabControllers![currentIndex] as! FoodsTableViewController
     sortDropDown.selectionAction = { [weak self] (index, item) in
@@ -96,38 +123,6 @@ class MainViewController: ButtonBarPagerTabStripViewController {
       toastString.append(NSLocalizedString("Foods.dropdown.sort.toast", comment: ""))
       Toast(text: toastString, duration: Delay.long).show()
       foodsTableViewController.sortData(sortOrder: sortOrder)
-    }
-  }
-
-  private func setupKindsDataSource() {
-
-    let foodsTableViewController = tabControllers![currentIndex] as! FoodsTableViewController
-    let kinds = foodsTableViewController.kinds
-
-    kindSelectButton.setTitle(foodsTableViewController.selectedKind.name, for: .normal)
-
-    let kindAll = Kind()
-    kindAll.id = 0
-    kindAll.name = NSLocalizedString("Foods.dropdown.all", comment: "")
-
-    var kindDatasource = [String]()
-    kindDatasource.append(kindAll.name!)
-    for kind in kinds! {
-      kindDatasource.append(kind.name!)
-    }
-
-    kindsDropDown.dataSource = kindDatasource
-
-    // Action triggered on selection
-    kindsDropDown.selectionAction = { [weak self] (index, item) in
-
-      if index == 0 {
-        foodsTableViewController.extractKindData(kind: kindAll)
-      } else {
-        let kind = kinds![index - 1]
-        foodsTableViewController.extractKindData(kind: kind)
-      }
-      self?.kindSelectButton.setTitle(item, for: .normal)
     }
   }
 
@@ -163,8 +158,9 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     super.updateIndicator(for: viewController, fromIndex: fromIndex, toIndex: toIndex, withProgressPercentage: progressPercentage, indexWasChanged: indexWasChanged)
 
     if indexWasChanged && toIndex > -1 && toIndex < viewControllers.count {
-      // Kind dropdown refresh
-      setupKindsDataSource()
+      // dropdown refresh
+      setupKindsEachTab()
+      setupSortEachTab()
     }
   }
 

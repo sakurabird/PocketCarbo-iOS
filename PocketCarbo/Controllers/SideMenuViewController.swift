@@ -143,6 +143,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     guard let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String else {
       return
     }
+    // TODO : app store URL
     let shareText = "#\(appName)"
     let shareUrl = NSURL(string: NSLocalizedString("appURL", comment: ""))!
 

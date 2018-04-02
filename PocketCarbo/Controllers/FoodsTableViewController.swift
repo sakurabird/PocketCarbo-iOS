@@ -28,6 +28,8 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   var selectedKind: Kind = Kind()
   var selectedSort: FoodSortOrder = .nameAsc
 
+  let searchController = UISearchController(searchResultsController: nil)
+
   let kindAll: Kind = {
     let kind: Kind = Kind()
     kind.id = 0
@@ -35,16 +37,26 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     return kind
   }()
 
+  // MARK: - View life cycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     setupTableView()
+    setupSearchController()
 
     // Observe Food,Kind DB update event
     NotificationCenter.default.observeEvent(observer: self,
                                             selector: #selector(FoodsTableViewController.dataUpdated),
                                             notification: NotificationEvent.foodsAndKindsUpdated)
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    if #available(iOS 11.0, *) {
+      // 検索画面の検索欄を常に表示しておく
+      navigationItem.hidesSearchBarWhenScrolling = false
+    }
   }
 
   // MARK: - deinit
@@ -71,8 +83,10 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     }
 }
 
-  private func setupTableView() {
+  func setupTableView() {
     tableView.backgroundColor = UIColor(patternImage: UIImage(named: "main_bg")!)
+    let insets = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
+    self.tableView.contentInset = insets
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 200.0
   }
@@ -210,3 +224,85 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
 }
 
+// -----------------------
+// MARK: - 検索画面用のextension
+// -----------------------
+extension FoodsTableViewController: UISearchBarDelegate {
+
+  // MARK: - Setup
+
+  fileprivate func setupSearchController() {
+    // Setup the Search Controller
+    definesPresentationContext = true
+    searchController.searchResultsUpdater = self
+    searchController.searchBar.delegate = self
+    searchController.obscuresBackgroundDuringPresentation = false
+
+    searchController.searchBar.placeholder = NSLocalizedString("Foods.search.placeholder", comment: "")
+    searchController.searchBar.tintColor = .white // cancel text
+    if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+      if let backgroundview = textfield.subviews.first {
+        backgroundview.backgroundColor = UIColor.white // Background color
+        // Rounded corner
+        backgroundview.layer.cornerRadius = 10;
+        backgroundview.clipsToBounds = true;
+      }
+    }
+
+    if #available(iOS 11.0, *) {
+      navigationItem.searchController = searchController
+    } else {
+      // Fallback on earlier versions
+    }
+  }
+
+  func setupAllData() {
+    setLeftNavigationBarBack()
+    self.selectedKind = kindAll;
+    self.foods = FoodDataProvider.sharedInstance.findAll()
+  }
+
+  // MARK: - UISearchBar Delegate
+
+  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    filterContentForSearchText(searchBar.text!)
+  }
+
+  // MARK: - Helper
+
+  func isFiltering() -> Bool {
+    return searchController.isActive && !searchBarIsEmpty()
+  }
+
+  func searchBarIsEmpty() -> Bool {
+    // Returns true if the text is empty or nil
+    return searchController.searchBar.text?.isEmpty ?? true
+  }
+
+  func filterContentForSearchText(_ searchText: String) {
+
+    if searchBarIsEmpty() {
+      guard let foodsCount: Int = foods?.count else {
+        return
+      }
+      if (foodsCount > 0) {
+        let indexPath = NSIndexPath(row: 0, section: 0)
+        self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: false)
+      }
+      self.foods = FoodDataProvider.sharedInstance.findAll()
+    } else {
+      self.foods = FoodDataProvider.sharedInstance.findData(searchText: searchText)
+    }
+
+    tableView.reloadData()
+  }
+}
+
+extension FoodsTableViewController: UISearchResultsUpdating {
+
+  // MARK: - UISearchResultsUpdating Delegate
+
+  func updateSearchResults(for searchController: UISearchController) {
+    filterContentForSearchText(searchController.searchBar.text!)
+  }
+}

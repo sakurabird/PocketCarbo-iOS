@@ -82,10 +82,7 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     kindsDropDown.selectionAction = { [weak self] (index, item) in
 
       if index == 0 {
-        let kindAll = Kind()
-        kindAll.id = 0
-        kindAll.name = NSLocalizedString("Foods.dropdown.all", comment: "")
-        foodsTableViewController.extractKindData(kind: kindAll)
+        foodsTableViewController.extractKindData(kind: foodsTableViewController.kindAll)
       } else {
         let kind = kinds![index - 1]
         foodsTableViewController.extractKindData(kind: kind)

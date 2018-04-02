@@ -72,4 +72,13 @@ final class FoodDataProvider {
     
     return  Array(foods)
   }
+
+  func findData(searchText: String) -> [Food] {
+
+    let predicate = NSPredicate(format: "search_word CONTAINS[c] %@ OR name CONTAINS[c] %@", argumentArray: [searchText, searchText])
+    let foods = realm.objects(Food.self).filter(predicate)
+      .sorted(byKeyPath: FoodSortOrder.nameAsc.key(), ascending: FoodSortOrder.nameAsc.ascending())
+
+    return  Array(foods)
+  }
 }

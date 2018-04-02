@@ -15,6 +15,7 @@
 // Template case
 "ok" = "OK";
 "share" = "シェア";
+"search" = "検索";
 
 //--------------------------------------------------------
 // Foods Scene
@@ -41,6 +42,8 @@
 "Foods.clipboard.text4" = "たんぱく質:%@g, ";
 "Foods.clipboard.text5" = "脂質:%@g, ";
 "Foods.clipboard.text6" = "塩分:%@g \n#ポケット糖質量";
+
+"Foods.search.placeholder" = "検索したい食品名を入力して下さい";
 
 
 //--------------------------------------------------------

@@ -26,5 +26,15 @@ class MainParentViewController: UIViewController {
   @IBAction func unwindToMainParentViewController(segue: UIStoryboardSegue) {
   }
 
+  @IBAction func didTapSearch(_ sender: UIBarButtonItem) {
+    // 検索ボタンが押された
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let vc = storyboard.instantiateViewController(withIdentifier: "Foods") as! FoodsTableViewController
+    vc.navigationItem.title = NSLocalizedString("search", comment: "")
+    vc.setupAllData()
+    let nv = UINavigationController(rootViewController: vc)
+
+    self.present(nv, animated: true, completion: nil)
+  }
 }
 

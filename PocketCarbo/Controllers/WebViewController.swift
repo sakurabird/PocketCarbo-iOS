@@ -37,19 +37,8 @@ class WebViewController: UIViewController, UIWebViewDelegate {
       self.setNavigationBarItem()
     } else {
       // modal view
-      self.removeNavigationBarItem()
-      let button: UIButton = UIButton(type: UIButtonType.custom)
-      button.setImage(UIImage(named: "navigation_back_white"), for: UIControlState.normal)
-      button.addTarget(self, action: #selector(backButtonPressed(sender:)), for: UIControlEvents.touchUpInside)
-      button.frame =  CGRect(x: 0, y: 0, width: 36, height: 36)
-      let barButton = UIBarButtonItem(customView: button)
-      self.navigationItem.leftBarButtonItem = barButton
+      self.setLeftNavigationBarBack()
     }
-  }
-
-  @objc
-  func backButtonPressed(sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
   }
 
   func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {

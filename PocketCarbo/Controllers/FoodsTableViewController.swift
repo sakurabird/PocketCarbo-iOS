@@ -28,6 +28,14 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   var selectedKind: Kind = Kind()
   var selectedSort: FoodSortOrder = .nameAsc
 
+  let kindAll: Kind = {
+    let kind: Kind = Kind()
+    kind.id = 0
+    kind.name = NSLocalizedString("Foods.dropdown.all", comment: "")
+    return kind
+  }()
+
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -50,17 +58,14 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   func setupTabData(indicatorInfo: IndicatorInfo, type: Type) {
     self.indicatorInfo = indicatorInfo
     self.type = type
-    let kind = Kind()
-    kind.id = 0
-    kind.name = NSLocalizedString("Foods.dropdown.all", comment: "")
-    self.selectedKind = kind; // 全ての種類
+    self.selectedKind = kindAll; // 全ての種類
     self.selectedSort = .nameAsc;
 
     self.kinds = KindDataProvider.sharedInstance.findData(typeId: type.id!)
     self.foods = FoodDataProvider.sharedInstance.findData(typeId: type.id!, sort: selectedSort)
 
     // Dropdown Datasource
-    kindDatasource.append(kind.name!)
+    kindDatasource.append(kindAll.name!)
     for kind in kinds! {
       kindDatasource.append(kind.name!)
     }

@@ -708,6 +708,6 @@
         <image name="cell_favorite_line" width="24" height="24"/>
         <image name="cell_share" width="24" height="24"/>
         <image name="dropdown_caret" width="24" height="12"/>
-        <image name="splash_logo" width="477" height="75"/>
+        <image name="splash_logo" width="300" height="300"/>
     </resources>
 </document>

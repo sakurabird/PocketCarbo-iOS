@@ -53,10 +53,8 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    if #available(iOS 11.0, *) {
-      // 検索画面の検索欄を常に表示しておく
-      navigationItem.hidesSearchBarWhenScrolling = false
-    }
+    // 検索画面の検索欄を常に表示しておく
+    navigationItem.hidesSearchBarWhenScrolling = false
   }
 
   // MARK: - deinit
@@ -246,12 +244,7 @@ extension FoodsTableViewController: UISearchBarDelegate {
         backgroundview.clipsToBounds = true;
       }
     }
-
-    if #available(iOS 11.0, *) {
-      navigationItem.searchController = searchController
-    } else {
-      // Fallback on earlier versions
-    }
+    navigationItem.searchController = searchController
   }
 
   func setupAllData() {

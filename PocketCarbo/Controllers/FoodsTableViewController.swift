@@ -152,9 +152,7 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   // MARK: Functions
 
   @objc func dataUpdated(notification: NSNotification) {
-    kinds = KindDataProvider.sharedInstance.findData(typeId: (type?.id)!)
-    foods = FoodDataProvider.sharedInstance.findData(typeId: (type?.id)!, sort: selectedSort)
-    tableView.reloadData()
+    refeshData()
   }
 
   func extractKindData(kind: Kind) {
@@ -170,15 +168,19 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   // MARK: - Private functions
 
   private func cellIsExpanded(at indexPath: IndexPath) -> Bool {
-    return indexPaths.contains(indexPath)
+    return self.indexPaths.contains(indexPath)
   }
 
   private func addExpandedIndexPath(_ indexPath: IndexPath) {
-    indexPaths.insert(indexPath)
+    self.indexPaths.insert(indexPath)
   }
 
   private func removeExpandedIndexPath(_ indexPath: IndexPath) {
-    indexPaths.remove(indexPath)
+    self.indexPaths.remove(indexPath)
+  }
+
+  fileprivate func clearExpandedIndexPath() {
+    self.indexPaths.removeAll()
   }
 
   private func refeshData() {
@@ -188,6 +190,7 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
       foods = FoodDataProvider.sharedInstance.findData(typeId: (type?.id)!, kindId: selectedKind.id, sort: selectedSort)
     }
 
+    clearExpandedIndexPath()
     tableView.reloadData()
     let indexPath = NSIndexPath(row: 0, section: 0)
     self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: false)
@@ -289,6 +292,7 @@ extension FoodsTableViewController: UISearchBarDelegate {
       self.foods = FoodDataProvider.sharedInstance.findData(searchText: searchText)
     }
 
+    clearExpandedIndexPath()
     tableView.reloadData()
   }
 }
@@ -312,6 +316,8 @@ extension FoodsTableViewController {
   func setupFavoritesData() {
     self.selectedKind = kindAll;
     self.foods = FavoriteDataProvider.sharedInstance.findAll()
+
+    clearExpandedIndexPath()
     tableView.reloadData()
   }
 }

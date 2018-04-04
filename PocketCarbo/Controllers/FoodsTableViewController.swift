@@ -195,9 +195,6 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
   // MARK: - FoodTableViewCell Actions
 
-  func didTapFavorites(_ sender: FoodTableViewCell) {
-  }
-
   func didTapShare(_ sender: FoodTableViewCell, shareText: String) {
     let shareUrl = NSURL(string: NSLocalizedString("appURL", comment: ""))!
 
@@ -219,9 +216,7 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     ]
 
     self.present(activityViewController, animated: true, completion: nil)
-
   }
-
 }
 
 // -----------------------

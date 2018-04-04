@@ -10,7 +10,6 @@ import UIKit
 import Toaster
 
 protocol FoodTableViewCellDelegate: class {
-  func didTapFavorites(_ sender: FoodTableViewCell)
   func didTapShare(_ sender: FoodTableViewCell, shareText: String)
 }
 
@@ -88,19 +87,26 @@ class FoodTableViewCell: UITableViewCell {
     carboPer100gLabel.textColor = getCarboColor()
     let descriptionString = createDescriptionString(food: food)
     descriptionLabel.text = descriptionString
+
+    let isFavorite = FavoriteDataProvider.sharedInstance.isFavorite(food: food)
+    favoritesState = isFavorite ? .favorite : .notFavorite
   }
 
   //MARK: Button Action
 
   @IBAction func didTapFavorites(_ sender: UIButton) {
-    // TODO : ちゃんと実装する
-    delegate?.didTapFavorites(self)//いらない？
-    favoritesState = favoritesState == .favorite ? .notFavorite : .favorite
+
+    let isFavorite = FavoriteDataProvider.sharedInstance.isFavorite(food: food)
+
+    if isFavorite {
+      FavoriteDataProvider.sharedInstance.removeData(food: food)
+    } else {
+      FavoriteDataProvider.sharedInstance.saveData(food: food)
+    }
 
     sender.animateCellButton(completion: { (finish) in
-      self.favoritesButton.setImage(self.favoritesState.favoriteImage, for: UIControlState.normal)
+      self.favoritesState = isFavorite ? .notFavorite : .favorite
     })
-
   }
 
   @IBAction func didTapCopyToclipboard(_ sender: UIButton) {
@@ -165,8 +171,7 @@ class FoodTableViewCell: UITableViewCell {
   }
 
   private func updateFavorites() {
-    // TODO : ちゃんと実装する
-    // update DB
+    self.favoritesButton.setImage(self.favoritesState.favoriteImage, for: UIControlState.normal)
   }
 
   private func createDescriptionString(food: Food) -> String {

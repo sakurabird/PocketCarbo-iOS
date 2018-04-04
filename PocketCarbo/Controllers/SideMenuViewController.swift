@@ -36,21 +36,24 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
   let cellIdentifier = "SideMenuCell"
 
   // instantiate from AppDelegate
+  // Foods scene
   var mainViewController: UIViewController!
 
-  // other scenes
+  // Favorites scene
   var favoritesViewController: UIViewController! = {
     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.favorites.name) as! FavoritesViewController
     vc.navigationItem.title = NSLocalizedString("Favorite.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
 
+  // Settings scene
   var settingsController: UIViewController! = {
     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.settings.name) as! SettingsViewController
     vc.navigationItem.title = NSLocalizedString("Setting.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
 
+  // Information scene
   var informationController: UIViewController! = {
     let htmlPath = Bundle.main.path(forResource: "announcement", ofType: "html")
     let url = URL(fileURLWithPath: htmlPath!)
@@ -60,6 +63,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     return UINavigationController(rootViewController: vc)
   }()
   
+  // Help scene
   var helpController: UIViewController! = {
     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.help.name) as! HelpViewController
     vc.navigationItem.title = NSLocalizedString("Help.title", comment: "")
@@ -125,15 +129,23 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     switch menu {
     case .main:
       self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
+
     case .favorites:
+      let nav = self.favoritesViewController as! UINavigationController
+      let vc = nav.topViewController as! FavoritesViewController
+      vc.updateFavorites()
       self.slideMenuController()?.changeMainViewController(self.favoritesViewController, close: true)
+
     case .settings:
       self.slideMenuController()?.changeMainViewController(self.settingsController, close: true)
+
     case .share:
       self.slideMenuController()?.closeLeft()
       share()
+
     case .information:
       self.slideMenuController()?.changeMainViewController(self.informationController, close: true)
+
     case .help:
       self.slideMenuController()?.changeMainViewController(self.helpController, close: true)
     }

@@ -301,3 +301,17 @@ extension FoodsTableViewController: UISearchResultsUpdating {
     filterContentForSearchText(searchController.searchBar.text!)
   }
 }
+
+// ---------------------------------
+// MARK: - お気に入り画面用のextension
+// ---------------------------------
+extension FoodsTableViewController {
+
+  // MARK: - Setup
+
+  func setupFavoritesData() {
+    self.selectedKind = kindAll;
+    self.foods = FavoriteDataProvider.sharedInstance.findAll()
+    tableView.reloadData()
+  }
+}

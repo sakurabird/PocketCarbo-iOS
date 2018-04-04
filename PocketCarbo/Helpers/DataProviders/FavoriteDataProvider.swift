@@ -17,15 +17,17 @@ final class FavoriteDataProvider {
 
   let realm: Realm = try! Realm()
 
-  func findAll() -> [FavoriteFood] {
-    let favorite = realm.objects(FavoriteFood.self).sorted(byKeyPath: "createdAt", ascending: false)
-//    print(realm.objects(FavoriteFood.self))
-    return Array(favorite)
+  func findAll() -> [Food] {
+    let favorites = realm.objects(FavoriteFood.self).sorted(byKeyPath: "createdAt", ascending: false)
+    var foods: [Food] = [Food]()
+
+    for fav in favorites {
+      foods.append(fav.food!)
+    }
+    return foods
   }
 
   func isFavorite(food: Food) -> Bool {
-
-    print(realm.objects(FavoriteFood.self))
     let predicate = NSPredicate(format: "id == %i", food.id)
     if realm.objects(FavoriteFood.self).filter(predicate).first != nil {
       return true

@@ -45,6 +45,7 @@
 		216AA5082064F948002AA44E /* TypeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA5072064F948002AA44E /* TypeDataProvider.swift */; };
 		216AA50A206527B9002AA44E /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA509206527B9002AA44E /* FoodTableViewCell.swift */; };
 		216AA50E20666335002AA44E /* UIButton+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA50D20666335002AA44E /* UIButton+extention.swift */; };
+		21A8EAF82072930B008FA5D0 /* FavoriteDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A8EAF72072930B008FA5D0 /* FavoriteDataProvider.swift */; };
 		21E09FE72064202E00142405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E09FE92064202E00142405 /* Localizable.strings */; };
 		21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */; };
 		21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E99206FE103006ECDA2 /* WebViewController.swift */; };
@@ -115,6 +116,7 @@
 		216AA509206527B9002AA44E /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		216AA50D20666335002AA44E /* UIButton+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+extention.swift"; sourceTree = "<group>"; };
 		21A62D5C206E37F400AD4F7D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		21A8EAF72072930B008FA5D0 /* FavoriteDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteDataProvider.swift; sourceTree = "<group>"; };
 		21E09FEA2064204500142405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21E09FEC2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				216AA4FE2064B4F0002AA44E /* FoodDataProvider.swift */,
+				21A8EAF72072930B008FA5D0 /* FavoriteDataProvider.swift */,
 				216AA5002064B7D4002AA44E /* KindDataProvider.swift */,
 				216AA5072064F948002AA44E /* TypeDataProvider.swift */,
 			);
@@ -689,6 +692,7 @@
 				216AA4E120643EB8002AA44E /* SideMenuViewController.swift in Sources */,
 				216AA4FF2064B4F0002AA44E /* FoodDataProvider.swift in Sources */,
 				216AA4DF20643E4E002AA44E /* MainViewController.swift in Sources */,
+				21A8EAF82072930B008FA5D0 /* FavoriteDataProvider.swift in Sources */,
 				216AA4DD20643E28002AA44E /* MainParentViewController.swift in Sources */,
 				21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */,
 				21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */,

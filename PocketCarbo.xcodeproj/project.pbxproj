@@ -271,9 +271,9 @@
 			children = (
 				214D86EE20629B8A00F20EF7 /* LaunchScreen.storyboard */,
 				214D86E920629B8A00F20EF7 /* Main.storyboard */,
+				2147C61420761D0800A845C2 /* EmptyDataView.xib */,
 				216AA4E620644868002AA44E /* SideMenuTableViewCell.swift */,
 				216AA509206527B9002AA44E /* FoodTableViewCell.swift */,
-				2147C61420761D0800A845C2 /* EmptyDataView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";

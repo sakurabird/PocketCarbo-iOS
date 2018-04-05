@@ -132,7 +132,14 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     guard let foods = self.foods else {
+      self.tableView.setEmptyView()
       return 0
+    }
+
+    if foods.count  == 0 {
+      self.tableView.setEmptyView()
+    } else {
+      self.tableView.restore()
     }
     return foods.count
   }

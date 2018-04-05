@@ -70,7 +70,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.48627450980392156" green="0.88235294117647056" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.73333333329999995" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Cl6-AV-qO9" firstAttribute="top" secondItem="9Ba-nC-WoX" secondAttribute="top" id="3Vv-Re-6MH"/>
                                     <constraint firstAttribute="height" constant="150" id="Kt2-c7-TCi"/>
@@ -588,7 +588,7 @@
                                                             <rect key="frame" x="0.0" y="128" width="343" height="56"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERx-ER-E4E">
-                                                                    <rect key="frame" x="16" y="0.0" width="311" height="26"/>
+                                                                    <rect key="frame" x="16" y="0.0" width="311" height="22"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="一回分あたりの目安量">
                                                                             <attributes>
@@ -601,10 +601,10 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hig-Jd-hQm">
-                                                                    <rect key="frame" x="307" y="26" width="20" height="20"/>
+                                                                    <rect key="frame" x="303" y="22" width="24" height="24"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" priority="999" constant="20" id="BgX-zz-5LE"/>
-                                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" priority="999" constant="20" id="uSL-qE-nE7"/>
+                                                                        <constraint firstAttribute="height" priority="999" constant="24" id="BgX-zz-5LE"/>
+                                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" priority="999" constant="24" id="uSL-qE-nE7"/>
                                                                     </constraints>
                                                                     <state key="normal" title="Button" image="cell_favorite_line"/>
                                                                     <connections>
@@ -612,10 +612,10 @@
                                                                     </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPM-Ji-VI8">
-                                                                    <rect key="frame" x="271" y="26" width="20" height="20"/>
+                                                                    <rect key="frame" x="259" y="22" width="24" height="24"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="20" id="Sz8-1o-O7H"/>
-                                                                        <constraint firstAttribute="height" constant="20" id="VcP-tu-84M"/>
+                                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="24" id="Sz8-1o-O7H"/>
+                                                                        <constraint firstAttribute="height" constant="24" id="VcP-tu-84M"/>
                                                                     </constraints>
                                                                     <state key="normal" title="Button" image="cell_copy_clipboard"/>
                                                                     <connections>
@@ -623,10 +623,10 @@
                                                                     </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVA-tO-TCK">
-                                                                    <rect key="frame" x="235" y="26" width="20" height="20"/>
+                                                                    <rect key="frame" x="215" y="22" width="24" height="24"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" priority="999" constant="20" id="GK7-Sa-07F"/>
-                                                                        <constraint firstAttribute="height" priority="999" constant="20" id="TCW-RH-bR9"/>
+                                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" priority="999" constant="24" id="GK7-Sa-07F"/>
+                                                                        <constraint firstAttribute="height" priority="999" constant="24" id="TCW-RH-bR9"/>
                                                                     </constraints>
                                                                     <state key="normal" title="Button" image="cell_share"/>
                                                                     <connections>
@@ -637,11 +637,11 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="Hig-Jd-hQm" secondAttribute="trailing" constant="16" id="8Xf-TW-XU8"/>
                                                                 <constraint firstItem="Hig-Jd-hQm" firstAttribute="top" secondItem="ERx-ER-E4E" secondAttribute="bottom" id="Atx-Hf-NMq"/>
-                                                                <constraint firstItem="uPM-Ji-VI8" firstAttribute="leading" secondItem="lVA-tO-TCK" secondAttribute="trailing" constant="16" id="DIi-Db-1WF"/>
+                                                                <constraint firstItem="uPM-Ji-VI8" firstAttribute="leading" secondItem="lVA-tO-TCK" secondAttribute="trailing" constant="20" id="DIi-Db-1WF"/>
                                                                 <constraint firstAttribute="trailing" secondItem="ERx-ER-E4E" secondAttribute="trailing" constant="16" id="Jip-eX-Yyj"/>
                                                                 <constraint firstItem="lVA-tO-TCK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vm8-Jo-D6r" secondAttribute="leading" priority="999" id="Oix-xq-YUz"/>
                                                                 <constraint firstItem="ERx-ER-E4E" firstAttribute="top" secondItem="vm8-Jo-D6r" secondAttribute="top" id="TbA-2W-Tct"/>
-                                                                <constraint firstItem="Hig-Jd-hQm" firstAttribute="leading" secondItem="uPM-Ji-VI8" secondAttribute="trailing" constant="16" id="Xv4-XK-Exc"/>
+                                                                <constraint firstItem="Hig-Jd-hQm" firstAttribute="leading" secondItem="uPM-Ji-VI8" secondAttribute="trailing" constant="20" id="Xv4-XK-Exc"/>
                                                                 <constraint firstItem="uPM-Ji-VI8" firstAttribute="bottom" secondItem="Hig-Jd-hQm" secondAttribute="bottom" id="dAD-cg-PyR"/>
                                                                 <constraint firstItem="ERx-ER-E4E" firstAttribute="leading" secondItem="vm8-Jo-D6r" secondAttribute="leading" constant="16" id="ekY-X7-fEk"/>
                                                                 <constraint firstAttribute="bottom" secondItem="Hig-Jd-hQm" secondAttribute="bottom" constant="10" id="kb8-3k-Xmh"/>

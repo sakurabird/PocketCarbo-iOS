@@ -106,7 +106,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell =  tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SideMenuTableViewCell else {
-      fatalError("The dequeued cell is not an instance of LeftTableViewCell.")
+      fatalError("The dequeued cell is not an instance of SideMenuTableViewCell.")
     }
     cell.configureWithData(sideMenuDatas[indexPath.row])
 

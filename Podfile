@@ -9,6 +9,7 @@ target 'PocketCarbo' do
   pod 'DropDown'
   pod 'RealmSwift'
   pod 'Toaster'
+  pod 'Gecco'
 
   # Need for Realm
   post_install do |installer|

@@ -2,17 +2,21 @@ name: DropDown, nameSpecified:
 body: The MIT License (MIT…
 version: 2.3.1
 
+name: Gecco, nameSpecified: 
+body: The MIT License (MIT…
+version: 1.0.0
+
 name: Realm, nameSpecified: 
 body: TABLE OF CONTENTS
 
 1…
-version: 3.1.0
+version: 3.3.2
 
 name: RealmSwift, nameSpecified: 
 body: TABLE OF CONTENTS
 
 1…
-version: 3.1.0
+version: 3.3.2
 
 name: SlideMenuControllerSwift, nameSpecified: 
 body: The MIT License (MIT…
@@ -24,7 +28,7 @@ version: 2.1.1
 
 name: XLPagerTabStrip, nameSpecified: 
 body: The MIT License (MIT…
-version: 8.0.0
+version: 8.0.1
 
 add-version-numbers: false
 

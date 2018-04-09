@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import WebKit
 import Toaster
 
-class HelpViewController: UIViewController, UIWebViewDelegate {
+class HelpViewController: UIViewController, WKNavigationDelegate {
 
-  @IBOutlet weak var webView: UIWebView!
+  @IBOutlet weak var webView: WKWebView!
   @IBOutlet weak var showTutorialButton: UIButton!
 
   override func viewDidLoad() {
@@ -19,8 +20,9 @@ class HelpViewController: UIViewController, UIWebViewDelegate {
 
     let htmlPath = Bundle.main.path(forResource: "help", ofType: "html")
     let url = URL(fileURLWithPath: htmlPath!)
-    let request:URLRequest = URLRequest(url: url)
-    webView.loadRequest(request)
+    let request = URLRequest(url: url)
+    webView.navigationDelegate = self
+    webView.load(request)
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -28,21 +30,20 @@ class HelpViewController: UIViewController, UIWebViewDelegate {
     self.setNavigationBarItem()
   }
 
-  func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-    switch navigationType {
-    case .linkClicked:
-      // Open links in Safari
-      guard let url = request.url else { return true }
+  func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 
-      if #available(iOS 10.0, *) {
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    // リンクは全て外部ブラウザに飛ばす
+    if navigationAction.navigationType == .linkActivated  {
+      if let url = navigationAction.request.url,
+        UIApplication.shared.canOpenURL(url) {
+        UIApplication.shared.open(url)
+        decisionHandler(.cancel)
       } else {
-        // openURL(_:) is deprecated in iOS 10+.
-        UIApplication.shared.openURL(url)
+        decisionHandler(.allow)
       }
-      return false
-    default:
-      return true
+    } else {
+      // not a user click
+      decisionHandler(.allow)
     }
   }
 

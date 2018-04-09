@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>755680908290-jmlem70bsc0n8hb5nodd8eoo9m0t6cae.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.755680908290-jmlem70bsc0n8hb5nodd8eoo9m0t6cae</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCrgGec3Z-gMsnada_WGR_GTmlT8_gqR4w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>755680908290</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>sakurafish.com.ios.PocketCarbo</string>
+	<key>PROJECT_ID</key>
+	<string>pocketcarbo</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pocketcarbo.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:755680908290:ios:a4b573a38f40d18e</string>
+	<key>DATABASE_URL</key>
+	<string>https://pocketcarbo.firebaseio.com</string>
+</dict>
+</plist>

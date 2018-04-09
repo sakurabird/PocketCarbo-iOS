@@ -4,6 +4,7 @@ target 'PocketCarbo' do
   use_frameworks!
 
   # Pods for PocketCarbo
+  pod 'Firebase/Core'
   pod 'XLPagerTabStrip', '~> 8.0'
   pod 'SlideMenuControllerSwift'
   pod 'DropDown'

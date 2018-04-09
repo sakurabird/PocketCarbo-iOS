@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import SlideMenuControllerSwift
 
 @UIApplicationMain
@@ -16,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+    // Google Service
+    FirebaseApp.configure()
 
     // Check Data Version and Update If Needed
     AppLaunchManager.sharedInstance.onAppStarted()

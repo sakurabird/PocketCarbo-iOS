@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationDidEnterBackground(_ application: UIApplication) {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    UserDefaults.standard.setFirstLaunch(firstLaunch: false)
   }
 
   func applicationWillEnterForeground(_ application: UIApplication) {
@@ -67,6 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let slideMenuController = SlideMenuController(mainViewController: navigationController, leftMenuViewController: sideMenuVC)
     SlideMenuOptions.contentViewScale = 1
+    
     self.window?.rootViewController = slideMenuController
     self.window?.makeKeyAndVisible()
   }

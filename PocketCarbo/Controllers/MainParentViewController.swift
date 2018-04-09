@@ -10,6 +10,8 @@ import UIKit
 
 class MainParentViewController: UIViewController {
 
+  // MARK: - View life cycle
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -19,6 +21,23 @@ class MainParentViewController: UIViewController {
     super.viewWillAppear(animated)
 
     self.setNavigationBarItem()
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    showTutorial()
+  }
+
+  // MARK: Functions
+
+  func showTutorial() {
+    if UserDefaults.standard.isTutorialShowing() || !UserDefaults.standard.isShowTutorial() {
+      return
+    }
+
+    let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tutorial") as! TutorialViewController
+    self.navigationController?.present(viewController, animated: true, completion: nil)
+    UserDefaults.standard.setShowTutorial(showTutorial: false)
   }
 
   // MARK: - Navigation

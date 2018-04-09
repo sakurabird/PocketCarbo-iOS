@@ -30,6 +30,10 @@ name: Gecco, nameSpecified:
 body: The MIT License (MIT…
 version: 1.0.0
 
+name: Google-Mobile-Ads-SDK, nameSpecified: 
+body: Copyright 2018 Googl…
+version: 7.30.0
+
 name: GoogleToolboxForMac, nameSpecified: 
 body: 
                    …

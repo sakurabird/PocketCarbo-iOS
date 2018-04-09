@@ -7,6 +7,7 @@ target 'PocketCarbo' do
   pod 'Firebase/Core'
   pod 'Fabric', '~> 1.7.2'
   pod 'Crashlytics', '~> 3.9.3'
+  pod 'Google-Mobile-Ads-SDK'
   pod 'XLPagerTabStrip', '~> 8.0'
   pod 'SlideMenuControllerSwift'
   pod 'DropDown'

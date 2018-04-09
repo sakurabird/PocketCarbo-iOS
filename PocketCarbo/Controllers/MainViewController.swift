@@ -95,7 +95,7 @@ class MainViewController: ButtonBarPagerTabStripViewController {
 
     // Action triggered on selection
     let foodsTableViewController = tabControllers![currentIndex] as! FoodsTableViewController
-    sortDropDown.selectionAction = { [weak self] (index, item) in
+    sortDropDown.selectionAction = { (index, item) in
 
       var sortOrder: FoodSortOrder = .nameAsc
       var toastString = String()

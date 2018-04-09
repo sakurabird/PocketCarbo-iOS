@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		144C70CB778C696E4729E241 /* Pods_PocketCarboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1397BC82EADD48BF7C1F56D /* Pods_PocketCarboUITests.framework */; };
+		1CF2B5C2E2DEE2EF666AF060 /* Pods_PocketCarboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE81331B70D3B3D76DDEC7CB /* Pods_PocketCarboTests.framework */; };
+		21402F6A2079FB8200C552F6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21402F692079FB8100C552F6 /* TutorialViewController.swift */; };
 		2147C61520761D0800A845C2 /* EmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2147C61420761D0800A845C2 /* EmptyDataView.xib */; };
 		2147C61720761E2900A845C2 /* UIView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147C61620761E2900A845C2 /* UIView+extention.swift */; };
 		214D86E620629B8A00F20EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D86E520629B8A00F20EF7 /* AppDelegate.swift */; };
@@ -52,8 +53,8 @@
 		21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */; };
 		21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E99206FE103006ECDA2 /* WebViewController.swift */; };
 		21FAF841207615EF004048E5 /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FAF840207615EF004048E5 /* UITableView+extension.swift */; };
-		48750D9FC6394827298AFC02 /* Pods_PocketCarboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */; };
-		8BA3450CEF195D039A7525C1 /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121BFC4DCE3652E0AAF39151 /* Pods_PocketCarbo.framework */; };
+		3048598BCED3767E9561682C /* Pods_PocketCarboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F395249A8D767A32E15DBC /* Pods_PocketCarboUITests.framework */; };
+		53134BCD252CE8653D127641 /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E55201D72BB574D8A65A84 /* Pods_PocketCarbo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		121BFC4DCE3652E0AAF39151 /* Pods_PocketCarbo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarbo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EEE2F4D1371AAD2C87057D0 /* Pods-PocketCarboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		21402F692079FB8100C552F6 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		2147C61420761D0800A845C2 /* EmptyDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataView.xib; sourceTree = "<group>"; };
 		2147C61620761E2900A845C2 /* UIView+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extention.swift"; sourceTree = "<group>"; };
 		214D86E220629B8A00F20EF7 /* PocketCarbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketCarbo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,14 +129,14 @@
 		21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
 		21EB5E99206FE103006ECDA2 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		21FAF840207615EF004048E5 /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
-		246C833F031A42577093C9AF /* Pods-PocketCarboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.release.xcconfig"; sourceTree = "<group>"; };
-		32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FA81E248F31134CA147858B /* Pods-PocketCarboTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboTests/Pods-PocketCarboTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6F44C9FD189D5D55EBCCD44B /* Pods-PocketCarboTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboTests/Pods-PocketCarboTests.release.xcconfig"; sourceTree = "<group>"; };
-		8A68C041FDBEFCCACBE3CE88 /* Pods-PocketCarbo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarbo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo.release.xcconfig"; sourceTree = "<group>"; };
-		A1397BC82EADD48BF7C1F56D /* Pods_PocketCarboUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B04DEC890D103763217C926F /* Pods-PocketCarbo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarbo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo.debug.xcconfig"; sourceTree = "<group>"; };
-		D01B078603FDCC7E3E62E2FC /* Pods-PocketCarboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D2C521B972E5CEFDA1CA638 /* Pods-PocketCarboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.release.xcconfig"; sourceTree = "<group>"; };
+		44F2A974A48250F8902230DE /* Pods-PocketCarboTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboTests/Pods-PocketCarboTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C5BE215D88EAD17CC1EB3A8 /* Pods-PocketCarboTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboTests/Pods-PocketCarboTests.release.xcconfig"; sourceTree = "<group>"; };
+		A8F395249A8D767A32E15DBC /* Pods_PocketCarboUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE81331B70D3B3D76DDEC7CB /* Pods_PocketCarboTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6E55201D72BB574D8A65A84 /* Pods_PocketCarbo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarbo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE6C1AC699A1882B337540C /* Pods-PocketCarbo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarbo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo.debug.xcconfig"; sourceTree = "<group>"; };
+		E66E9B212BFDE1CAA2EC2C3D /* Pods-PocketCarbo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarbo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BA3450CEF195D039A7525C1 /* Pods_PocketCarbo.framework in Frameworks */,
+				53134BCD252CE8653D127641 /* Pods_PocketCarbo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48750D9FC6394827298AFC02 /* Pods_PocketCarboTests.framework in Frameworks */,
+				1CF2B5C2E2DEE2EF666AF060 /* Pods_PocketCarboTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				144C70CB778C696E4729E241 /* Pods_PocketCarboUITests.framework in Frameworks */,
+				3048598BCED3767E9561682C /* Pods_PocketCarboUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,8 +174,8 @@
 				214D86F920629B8B00F20EF7 /* PocketCarboTests */,
 				214D870420629B8B00F20EF7 /* PocketCarboUITests */,
 				214D86E320629B8A00F20EF7 /* Products */,
-				3C950FCD5B17046AB52B4AB1 /* Pods */,
-				3BD2BA2BD493E3FF86F91381 /* Frameworks */,
+				4198D3FABA7DABD00C0BD99B /* Pods */,
+				596BBB48FCF9955347934357 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -285,6 +287,7 @@
 				216AA4DC20643E28002AA44E /* MainParentViewController.swift */,
 				216AA4DE20643E4E002AA44E /* MainViewController.swift */,
 				216AA4FC2064B095002AA44E /* FoodsTableViewController.swift */,
+				21402F692079FB8100C552F6 /* TutorialViewController.swift */,
 				216AA4E82064493B002AA44E /* HelpViewController.swift */,
 				21EB5E99206FE103006ECDA2 /* WebViewController.swift */,
 				216AA4EC20644954002AA44E /* FavoritesViewController.swift */,
@@ -343,27 +346,27 @@
 			path = DataProviders;
 			sourceTree = "<group>";
 		};
-		3BD2BA2BD493E3FF86F91381 /* Frameworks */ = {
+		4198D3FABA7DABD00C0BD99B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				121BFC4DCE3652E0AAF39151 /* Pods_PocketCarbo.framework */,
-				32A82323402B75AA01B36981 /* Pods_PocketCarboTests.framework */,
-				A1397BC82EADD48BF7C1F56D /* Pods_PocketCarboUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3C950FCD5B17046AB52B4AB1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B04DEC890D103763217C926F /* Pods-PocketCarbo.debug.xcconfig */,
-				8A68C041FDBEFCCACBE3CE88 /* Pods-PocketCarbo.release.xcconfig */,
-				5FA81E248F31134CA147858B /* Pods-PocketCarboTests.debug.xcconfig */,
-				6F44C9FD189D5D55EBCCD44B /* Pods-PocketCarboTests.release.xcconfig */,
-				D01B078603FDCC7E3E62E2FC /* Pods-PocketCarboUITests.debug.xcconfig */,
-				246C833F031A42577093C9AF /* Pods-PocketCarboUITests.release.xcconfig */,
+				CEE6C1AC699A1882B337540C /* Pods-PocketCarbo.debug.xcconfig */,
+				E66E9B212BFDE1CAA2EC2C3D /* Pods-PocketCarbo.release.xcconfig */,
+				44F2A974A48250F8902230DE /* Pods-PocketCarboTests.debug.xcconfig */,
+				7C5BE215D88EAD17CC1EB3A8 /* Pods-PocketCarboTests.release.xcconfig */,
+				1EEE2F4D1371AAD2C87057D0 /* Pods-PocketCarboUITests.debug.xcconfig */,
+				2D2C521B972E5CEFDA1CA638 /* Pods-PocketCarboUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		596BBB48FCF9955347934357 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6E55201D72BB574D8A65A84 /* Pods_PocketCarbo.framework */,
+				AE81331B70D3B3D76DDEC7CB /* Pods_PocketCarboTests.framework */,
+				A8F395249A8D767A32E15DBC /* Pods_PocketCarboUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,12 +376,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 214D870A20629B8B00F20EF7 /* Build configuration list for PBXNativeTarget "PocketCarbo" */;
 			buildPhases = (
-				C743AAC0E3B18778303F968E /* [CP] Check Pods Manifest.lock */,
+				DE49EF84675109BF6B638DDE /* [CP] Check Pods Manifest.lock */,
 				214D86DE20629B8A00F20EF7 /* Sources */,
 				214D86DF20629B8A00F20EF7 /* Frameworks */,
 				214D86E020629B8A00F20EF7 /* Resources */,
-				734F58FF8CA1F549B48EA393 /* [CP] Embed Pods Frameworks */,
 				214D87212063324C00F20EF7 /* ShellScript */,
+				237D1F2EF50446E47223FFE7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -393,7 +396,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 214D870D20629B8B00F20EF7 /* Build configuration list for PBXNativeTarget "PocketCarboTests" */;
 			buildPhases = (
-				223D40375A112BEC52A9E0A6 /* [CP] Check Pods Manifest.lock */,
+				312C4D3A18C21E08B5103DE3 /* [CP] Check Pods Manifest.lock */,
 				214D86F220629B8B00F20EF7 /* Sources */,
 				214D86F320629B8B00F20EF7 /* Frameworks */,
 				214D86F420629B8B00F20EF7 /* Resources */,
@@ -412,7 +415,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 214D871020629B8B00F20EF7 /* Build configuration list for PBXNativeTarget "PocketCarboUITests" */;
 			buildPhases = (
-				656006838A61881C6634998E /* [CP] Check Pods Manifest.lock */,
+				5A6E3B9361B88DB98B0BFB11 /* [CP] Check Pods Manifest.lock */,
 				214D86FD20629B8B00F20EF7 /* Sources */,
 				214D86FE20629B8B00F20EF7 /* Frameworks */,
 				214D86FF20629B8B00F20EF7 /* Resources */,
@@ -523,43 +526,7 @@
 			shellPath = /bin/sh;
 			shellScript = "APP_VERSION=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" $PRODUCT_SETTINGS_PATH)\n/usr/libexec/PlistBuddy -c \"Set :PreferenceSpecifiers:1:DefaultValue ${APP_VERSION}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Settings.bundle/Root.plist\"\n\nBUILD_NUMBER=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" $PRODUCT_SETTINGS_PATH)\n/usr/libexec/PlistBuddy -c \"Set :PreferenceSpecifiers:2:DefaultValue ${BUILD_NUMBER}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Settings.bundle/Root.plist\"\n";
 		};
-		223D40375A112BEC52A9E0A6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PocketCarboTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		656006838A61881C6634998E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PocketCarboUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		734F58FF8CA1F549B48EA393 /* [CP] Embed Pods Frameworks */ = {
+		237D1F2EF50446E47223FFE7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -589,7 +556,43 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C743AAC0E3B18778303F968E /* [CP] Check Pods Manifest.lock */ = {
+		312C4D3A18C21E08B5103DE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PocketCarboTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A6E3B9361B88DB98B0BFB11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PocketCarboUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE49EF84675109BF6B638DDE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -628,6 +631,7 @@
 				216AA4DD20643E28002AA44E /* MainParentViewController.swift in Sources */,
 				21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */,
 				21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */,
+				21402F6A2079FB8200C552F6 /* TutorialViewController.swift in Sources */,
 				214D87392063568A00F20EF7 /* AppLaunchManager.swift in Sources */,
 				214D873220634C4D00F20EF7 /* Food.swift in Sources */,
 				216AA4ED20644954002AA44E /* FavoritesViewController.swift in Sources */,
@@ -819,11 +823,12 @@
 		};
 		214D870B20629B8B00F20EF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B04DEC890D103763217C926F /* Pods-PocketCarbo.debug.xcconfig */;
+			baseConfigurationReference = CEE6C1AC699A1882B337540C /* Pods-PocketCarbo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28TS6W29VY;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = PocketCarbo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -836,11 +841,12 @@
 		};
 		214D870C20629B8B00F20EF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A68C041FDBEFCCACBE3CE88 /* Pods-PocketCarbo.release.xcconfig */;
+			baseConfigurationReference = E66E9B212BFDE1CAA2EC2C3D /* Pods-PocketCarbo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28TS6W29VY;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = PocketCarbo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -853,7 +859,7 @@
 		};
 		214D870E20629B8B00F20EF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FA81E248F31134CA147858B /* Pods-PocketCarboTests.debug.xcconfig */;
+			baseConfigurationReference = 44F2A974A48250F8902230DE /* Pods-PocketCarboTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -871,7 +877,7 @@
 		};
 		214D870F20629B8B00F20EF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F44C9FD189D5D55EBCCD44B /* Pods-PocketCarboTests.release.xcconfig */;
+			baseConfigurationReference = 7C5BE215D88EAD17CC1EB3A8 /* Pods-PocketCarboTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -889,7 +895,7 @@
 		};
 		214D871120629B8B00F20EF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D01B078603FDCC7E3E62E2FC /* Pods-PocketCarboUITests.debug.xcconfig */;
+			baseConfigurationReference = 1EEE2F4D1371AAD2C87057D0 /* Pods-PocketCarboUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -906,7 +912,7 @@
 		};
 		214D871220629B8B00F20EF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 246C833F031A42577093C9AF /* Pods-PocketCarboUITests.release.xcconfig */;
+			baseConfigurationReference = 2D2C521B972E5CEFDA1CA638 /* Pods-PocketCarboUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

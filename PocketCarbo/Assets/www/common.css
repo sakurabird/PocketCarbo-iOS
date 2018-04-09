@@ -106,6 +106,7 @@ ul, ol {
   padding-bottom: 2rem;
 }
 .disc {
+    font-size: small;
     margin: 10px;
 }
 .date {

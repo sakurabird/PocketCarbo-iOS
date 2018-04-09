@@ -333,21 +333,25 @@
                                             <action selector="didTapTutorial:" destination="h1Z-JD-fcr" eventType="touchUpInside" id="GMZ-BV-PzK"/>
                                         </connections>
                                     </button>
-                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3t-fz-lLz">
-                                        <rect key="frame" x="0.0" y="108" width="355" height="519"/>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cn7-og-G3d">
+                                        <rect key="frame" x="0.0" y="106" width="355" height="521"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </webView>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Cn7-og-G3d" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" id="2hm-pA-FFl"/>
                                     <constraint firstItem="Pb6-P9-Glr" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" constant="16" id="4zp-9d-SQA"/>
-                                    <constraint firstAttribute="bottom" secondItem="G3t-fz-lLz" secondAttribute="bottom" id="5F6-kg-124"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cn7-og-G3d" secondAttribute="bottom" id="5BT-gy-cco"/>
+                                    <constraint firstItem="Cn7-og-G3d" firstAttribute="top" secondItem="WLy-bx-1Gt" secondAttribute="bottom" constant="8" id="HqB-C1-iXt"/>
                                     <constraint firstItem="Pb6-P9-Glr" firstAttribute="top" secondItem="u1r-x5-nKD" secondAttribute="top" id="P7J-TI-o1y"/>
                                     <constraint firstItem="WLy-bx-1Gt" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" constant="40" id="SJ1-E2-uN4"/>
                                     <constraint firstItem="WLy-bx-1Gt" firstAttribute="top" secondItem="Pb6-P9-Glr" secondAttribute="bottom" constant="10" id="Spf-Dg-HUI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cn7-og-G3d" secondAttribute="trailing" id="WeS-n9-Qbn"/>
                                     <constraint firstAttribute="trailing" secondItem="WLy-bx-1Gt" secondAttribute="trailing" constant="40" id="XbV-fs-yj0"/>
-                                    <constraint firstAttribute="trailing" secondItem="G3t-fz-lLz" secondAttribute="trailing" id="cZk-Bb-AXL"/>
-                                    <constraint firstItem="G3t-fz-lLz" firstAttribute="top" secondItem="WLy-bx-1Gt" secondAttribute="bottom" constant="10" id="hft-vn-Wxp"/>
-                                    <constraint firstItem="G3t-fz-lLz" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" id="lsO-Pk-sih"/>
                                     <constraint firstAttribute="trailing" secondItem="Pb6-P9-Glr" secondAttribute="trailing" constant="16" id="vuj-x7-cO1"/>
                                 </constraints>
                             </view>
@@ -363,12 +367,12 @@
                     </view>
                     <connections>
                         <outlet property="showTutorialButton" destination="WLy-bx-1Gt" id="SqW-r4-Vl3"/>
-                        <outlet property="webView" destination="G3t-fz-lLz" id="Vy4-Xd-1GM"/>
+                        <outlet property="webView" destination="Cn7-og-G3d" id="F2D-j4-op8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvp-99-Vva" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="497" y="903"/>
+            <point key="canvasLocation" x="496.80000000000001" y="902.69865067466276"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="ECL-mp-lyS">

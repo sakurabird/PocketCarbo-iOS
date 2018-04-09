@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toaster
 
 class HelpViewController: UIViewController, UIWebViewDelegate {
 
@@ -48,7 +49,10 @@ class HelpViewController: UIViewController, UIWebViewDelegate {
   //MARK: Button Action
 
   @IBAction func didTapTutorial(_ sender: UIButton) {
-    print("TODO : チュートリアル表示")
+    UserDefaults.standard.setShowTutorial(showTutorial: true)
+    UserDefaults.standard.setTutorialShowing(tutorialShowing: false)
+    let toastText = NSLocalizedString("Help.toast.tutorial", comment: "")
+    Toast(text: toastText, duration: Delay.short).show()
   }
   
 }

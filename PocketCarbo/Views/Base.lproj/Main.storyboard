@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainParent-->
         <scene sceneID="tne-QT-ifu">
@@ -283,15 +288,20 @@
                                 <rect key="frame" x="10" y="30" width="355" height="627"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb6-P9-Glr" userLabel="showTutorialDescription">
-                                        <rect key="frame" x="40" y="0.0" width="275" height="48"/>
+                                        <rect key="frame" x="16" y="0.0" width="323" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="25H-Wq-OOk"/>
                                         </constraints>
                                         <attributedString key="attributedText">
-                                            <fragment content="下のボタンを押していただけますと、 インストール時に表示したチュートリアルを表示します。">
+                                            <fragment content="下のボタンを押していただけますと、 ホーム画面にチュートリアルを表示します。">
                                                 <attributes>
-                                                    <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="12" name="HGGothicE"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="19" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -329,7 +339,7 @@
                                     </webView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Pb6-P9-Glr" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" constant="40" id="4zp-9d-SQA"/>
+                                    <constraint firstItem="Pb6-P9-Glr" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" constant="16" id="4zp-9d-SQA"/>
                                     <constraint firstAttribute="bottom" secondItem="G3t-fz-lLz" secondAttribute="bottom" id="5F6-kg-124"/>
                                     <constraint firstItem="Pb6-P9-Glr" firstAttribute="top" secondItem="u1r-x5-nKD" secondAttribute="top" id="P7J-TI-o1y"/>
                                     <constraint firstItem="WLy-bx-1Gt" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" constant="40" id="SJ1-E2-uN4"/>
@@ -338,7 +348,7 @@
                                     <constraint firstAttribute="trailing" secondItem="G3t-fz-lLz" secondAttribute="trailing" id="cZk-Bb-AXL"/>
                                     <constraint firstItem="G3t-fz-lLz" firstAttribute="top" secondItem="WLy-bx-1Gt" secondAttribute="bottom" constant="10" id="hft-vn-Wxp"/>
                                     <constraint firstItem="G3t-fz-lLz" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" id="lsO-Pk-sih"/>
-                                    <constraint firstItem="Pb6-P9-Glr" firstAttribute="trailing" secondItem="WLy-bx-1Gt" secondAttribute="trailing" id="pol-qc-pqN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pb6-P9-Glr" secondAttribute="trailing" constant="16" id="vuj-x7-cO1"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -514,7 +524,184 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cds-fi-brC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1293.5999999999999" y="115.59220389805098"/>
+            <point key="canvasLocation" x="1294" y="117"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="da0-tf-VMq">
+            <objects>
+                <viewController storyboardIdentifier="tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Chj-4T-jST" customClass="TutorialViewController" customModule="PocketCarbo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FWk-zq-qiN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jq3-7p-HrE">
+                                <rect key="frame" x="16" y="98" width="343" height="110.5"/>
+                                <string key="text">ポケット糖質量をインストールして下さってありがとうございます！
+
+このアイコンをクリックすると全体のメニューが表示されます。</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqP-op-aUb" userLabel="この虫メガネアイコンをクリックすると任意の文字で食品を検索できます。 ひらがな、カタカナ、漢字の一部を入れてみてくださいね。">
+                                <rect key="frame" x="16" y="98" width="343" height="79.5"/>
+                                <string key="text">この虫メガネアイコンをクリックすると任意の文字で食品を検索できます。
+ひらがな、カタカナ、漢字の一部を入れてみてくださいね。</string>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W4" family="Hiragino Sans" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3om-wC-BzP">
+                                <rect key="frame" x="16" y="150" width="343" height="177"/>
+                                <string key="text">ここはタブです。
+食品の分類別に６つのタブが隣り合っています。
+
+左右にスワイプするか
+タブの文字をクリックして
+
+表示を切り替えて見てくださいね！</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXA-pj-dpN">
+                                <rect key="frame" x="16" y="210" width="343" height="88.5"/>
+                                <string key="text">あともう少しお付き合いください！
+
+左端のバーを押すと更に食品の種類を絞り込むことが出来ます。</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4n-3p-R18">
+                                <rect key="frame" x="16" y="201" width="343" height="88.5"/>
+                                <string key="text">右側はソートボタンです。
+
+デフォルトでは食品名順に並んでいますが糖質量順に並び替えたりすることが出来ます。</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7Wk-gR-EYN">
+                                <rect key="frame" x="16" y="138" width="343" height="250.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_image1" translatesAutoresizingMaskIntoConstraints="NO" id="xaG-Yg-q67">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="194"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="リストの行をクリックして詳細情報を表示します。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWQ-PQ-fV2">
+                                        <rect key="frame" x="0.0" y="206" width="343" height="44.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Bkg-fY-h1T">
+                                <rect key="frame" x="16" y="120" width="343" height="379"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="食品は糖質量率によって色分けしています。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ii5-eB-b4F">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_image2" translatesAutoresizingMaskIntoConstraints="NO" id="hVU-u1-CIf">
+                                        <rect key="frame" x="0.0" y="34.5" width="343" height="266"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="読んでくれてありがとうございました！ ポケット糖質量を毎日のご健康にお役立てください！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJO-Pa-AWV">
+                                        <rect key="frame" x="0.0" y="312.5" width="343" height="66.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z1X-Go-ELN">
+                                <rect key="frame" x="20" y="539" width="335" height="56"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_egg" translatesAutoresizingMaskIntoConstraints="NO" id="g8b-RY-dHn">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="Cso-I5-RVV"/>
+                                            <constraint firstAttribute="height" constant="56" id="bHz-7y-Y9w"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="このチュートリアルは後からでもご覧いただけます。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyq-nP-amS">
+                                        <rect key="frame" x="56" y="0.0" width="279" height="56"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJN-Fk-TDZ">
+                                <rect key="frame" x="140" y="611" width="94" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="12" minY="4" maxX="12" maxY="4"/>
+                                <state key="normal" title="スキップ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="69m-Yv-5eL" firstAttribute="trailing" secondItem="dXA-pj-dpN" secondAttribute="trailing" constant="16" id="2ZY-cf-vDi"/>
+                            <constraint firstItem="3om-wC-BzP" firstAttribute="top" secondItem="69m-Yv-5eL" secondAttribute="top" constant="130" id="JkZ-vd-guH"/>
+                            <constraint firstItem="69m-Yv-5eL" firstAttribute="trailing" secondItem="7Wk-gR-EYN" secondAttribute="trailing" constant="16" id="NXq-fq-9iD"/>
+                            <constraint firstItem="69m-Yv-5eL" firstAttribute="trailing" secondItem="3om-wC-BzP" secondAttribute="trailing" constant="16" id="P8n-f7-coz"/>
+                            <constraint firstItem="aJN-Fk-TDZ" firstAttribute="centerX" secondItem="FWk-zq-qiN" secondAttribute="centerX" id="PkF-pu-TR4"/>
+                            <constraint firstItem="dXA-pj-dpN" firstAttribute="top" secondItem="69m-Yv-5eL" secondAttribute="top" constant="190" id="PrM-bz-3lT"/>
+                            <constraint firstItem="69m-Yv-5eL" firstAttribute="trailing" secondItem="pqP-op-aUb" secondAttribute="trailing" constant="16" id="R1x-oA-foF"/>
+                            <constraint firstItem="69m-Yv-5eL" firstAttribute="trailing" secondItem="Jq3-7p-HrE" secondAttribute="trailing" constant="16" id="SSL-6j-k63"/>
+                            <constraint firstItem="pqP-op-aUb" firstAttribute="leading" secondItem="69m-Yv-5eL" secondAttribute="leading" constant="16" id="Snb-4V-RCY"/>
+                            <constraint firstItem="Jq3-7p-HrE" firstAttribute="leading" secondItem="69m-Yv-5eL" secondAttribute="leading" constant="16" id="T3Y-zY-jjb"/>
+                            <constraint firstItem="Bkg-fY-h1T" firstAttribute="centerX" secondItem="69m-Yv-5eL" secondAttribute="centerX" id="TZ1-P8-ER0"/>
+                            <constraint firstItem="aJN-Fk-TDZ" firstAttribute="top" secondItem="Z1X-Go-ELN" secondAttribute="bottom" constant="16" id="U2b-L7-bCX"/>
+                            <constraint firstItem="Z1X-Go-ELN" firstAttribute="centerX" secondItem="FWk-zq-qiN" secondAttribute="centerX" id="WB1-sm-GY4"/>
+                            <constraint firstItem="69m-Yv-5eL" firstAttribute="trailing" secondItem="Z1X-Go-ELN" secondAttribute="trailing" constant="20" id="Ybm-4m-4gC"/>
+                            <constraint firstItem="7Wk-gR-EYN" firstAttribute="top" secondItem="69m-Yv-5eL" secondAttribute="top" constant="118" id="b9v-pw-6lh"/>
+                            <constraint firstItem="69m-Yv-5eL" firstAttribute="bottom" secondItem="aJN-Fk-TDZ" secondAttribute="bottom" constant="27" id="dP0-X2-79e"/>
+                            <constraint firstItem="D4n-3p-R18" firstAttribute="leading" secondItem="69m-Yv-5eL" secondAttribute="leading" constant="16" id="fPa-bi-Dj7"/>
+                            <constraint firstItem="Bkg-fY-h1T" firstAttribute="leading" secondItem="69m-Yv-5eL" secondAttribute="leading" constant="16" id="gE8-qP-AVA"/>
+                            <constraint firstItem="pqP-op-aUb" firstAttribute="top" secondItem="69m-Yv-5eL" secondAttribute="top" constant="78" id="hIQ-ZY-ePI"/>
+                            <constraint firstItem="Bkg-fY-h1T" firstAttribute="top" secondItem="69m-Yv-5eL" secondAttribute="top" constant="100" id="k5j-ct-tXD"/>
+                            <constraint firstItem="3om-wC-BzP" firstAttribute="leading" secondItem="69m-Yv-5eL" secondAttribute="leading" constant="16" id="kx0-z7-Qro"/>
+                            <constraint firstItem="dXA-pj-dpN" firstAttribute="leading" secondItem="69m-Yv-5eL" secondAttribute="leading" constant="16" id="kxc-xP-LLD"/>
+                            <constraint firstItem="69m-Yv-5eL" firstAttribute="trailing" secondItem="D4n-3p-R18" secondAttribute="trailing" constant="16" id="pul-ZV-xyk"/>
+                            <constraint firstItem="Jq3-7p-HrE" firstAttribute="top" secondItem="69m-Yv-5eL" secondAttribute="top" constant="78" id="t1s-ap-m0O"/>
+                            <constraint firstItem="D4n-3p-R18" firstAttribute="top" secondItem="69m-Yv-5eL" secondAttribute="top" constant="181" id="tgm-Wt-owL"/>
+                            <constraint firstItem="7Wk-gR-EYN" firstAttribute="leading" secondItem="69m-Yv-5eL" secondAttribute="leading" constant="16" id="tjs-Ix-cnz"/>
+                            <constraint firstItem="69m-Yv-5eL" firstAttribute="trailing" secondItem="Bkg-fY-h1T" secondAttribute="trailing" constant="16" id="x6r-Gp-HND"/>
+                            <constraint firstItem="Z1X-Go-ELN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="69m-Yv-5eL" secondAttribute="leading" constant="20" id="y0X-y5-njF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="69m-Yv-5eL"/>
+                    </view>
+                    <connections>
+                        <outlet property="skipButton" destination="aJN-Fk-TDZ" id="jDQ-a0-blC"/>
+                        <outlet property="skipDescription" destination="Z1X-Go-ELN" id="8aO-iV-yOO"/>
+                        <outletCollection property="annotationViews" destination="Jq3-7p-HrE" collectionClass="NSMutableArray" id="haG-YK-iTE"/>
+                        <outletCollection property="annotationViews" destination="pqP-op-aUb" collectionClass="NSMutableArray" id="pWg-an-UrN"/>
+                        <outletCollection property="annotationViews" destination="3om-wC-BzP" collectionClass="NSMutableArray" id="cLI-or-h4Q"/>
+                        <outletCollection property="annotationViews" destination="dXA-pj-dpN" collectionClass="NSMutableArray" id="v4p-VC-FBH"/>
+                        <outletCollection property="annotationViews" destination="D4n-3p-R18" collectionClass="NSMutableArray" id="4gz-KC-lnd"/>
+                        <outletCollection property="annotationViews" destination="7Wk-gR-EYN" collectionClass="NSMutableArray" id="bYA-gs-zVI"/>
+                        <outletCollection property="annotationViews" destination="Bkg-fY-h1T" collectionClass="NSMutableArray" id="UL5-iY-AWk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qc-dH-OQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.80000000000001" y="-576.1619190404798"/>
         </scene>
         <!--Foods Table View Controller-->
         <scene sceneID="NTu-Dp-RU0">
@@ -689,7 +876,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1E0-cx-WSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2138" y="125"/>
+            <point key="canvasLocation" x="2060" y="155"/>
         </scene>
     </scenes>
     <resources>
@@ -698,6 +885,9 @@
         <image name="cell_favorite_line" width="24" height="24"/>
         <image name="cell_share" width="24" height="24"/>
         <image name="dropdown_caret" width="24" height="12"/>
+        <image name="img_egg" width="40" height="40"/>
         <image name="splash_logo" width="300" height="300"/>
+        <image name="tutorial_image1" width="300" height="194"/>
+        <image name="tutorial_image2" width="240" height="266"/>
     </resources>
 </document>

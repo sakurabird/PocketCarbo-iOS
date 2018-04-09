@@ -49,6 +49,9 @@
 		216AA50A206527B9002AA44E /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA509206527B9002AA44E /* FoodTableViewCell.swift */; };
 		216AA50E20666335002AA44E /* UIButton+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA50D20666335002AA44E /* UIButton+extention.swift */; };
 		21A8EAF82072930B008FA5D0 /* FavoriteDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A8EAF72072930B008FA5D0 /* FavoriteDataProvider.swift */; };
+		21C0D992207BD906007F68A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D991207BD906007F68A0 /* GoogleService-Info.plist */; };
+		21C0D993207BD906007F68A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D991207BD906007F68A0 /* GoogleService-Info.plist */; };
+		21C0D994207BD906007F68A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D991207BD906007F68A0 /* GoogleService-Info.plist */; };
 		21E09FE72064202E00142405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E09FE92064202E00142405 /* Localizable.strings */; };
 		21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */; };
 		21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E99206FE103006ECDA2 /* WebViewController.swift */; };
@@ -124,6 +127,7 @@
 		216AA50D20666335002AA44E /* UIButton+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+extention.swift"; sourceTree = "<group>"; };
 		21A62D5C206E37F400AD4F7D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		21A8EAF72072930B008FA5D0 /* FavoriteDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteDataProvider.swift; sourceTree = "<group>"; };
+		21C0D991207BD906007F68A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		21E09FEA2064204500142405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21E09FEC2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 				214D871E20632F6000F20EF7 /* Assets */,
 				214D871B2063271100F20EF7 /* Settings.bundle */,
 				214D86F120629B8A00F20EF7 /* Info.plist */,
+				21C0D991207BD906007F68A0 /* GoogleService-Info.plist */,
 				21E09FE92064202E00142405 /* Localizable.strings */,
 			);
 			path = PocketCarbo;
@@ -481,6 +486,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C0D992207BD906007F68A0 /* GoogleService-Info.plist in Resources */,
 				214D871C2063271100F20EF7 /* Settings.bundle in Resources */,
 				214D872B20633BBD00F20EF7 /* help.html in Resources */,
 				216AA4F820647B44002AA44E /* Assets.xcassets in Resources */,
@@ -500,6 +506,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C0D993207BD906007F68A0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +514,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C0D994207BD906007F68A0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,21 +543,25 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/Gecco/Gecco.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gecco.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

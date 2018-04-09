@@ -1,4 +1,4 @@
-platform :ios, '10.06'
+platform :ios, '11.0'
 
 target 'PocketCarbo' do
   use_frameworks!

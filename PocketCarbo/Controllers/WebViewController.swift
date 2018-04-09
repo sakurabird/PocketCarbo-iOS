@@ -7,27 +7,27 @@
 //
 
 import UIKit
+import WebKit
 
-class WebViewController: UIViewController, UIWebViewDelegate {
+class WebViewController: UIViewController, WKNavigationDelegate {
 
   @IBOutlet weak var progressView: UIProgressView!
-  @IBOutlet weak var webView: UIWebView!
+  @IBOutlet weak var webView: WKWebView!
   
   var url: URL?
   var embed: Bool?
+  var observeEstimatedProgress: NSKeyValueObservation?
 
-  func setUp(url: URL, embed: Bool) {
-    self.url = url
-    self.embed = embed
-  }
+  // MARK: - View life cycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    webView.delegate = self
-
-    let request:URLRequest = URLRequest(url: url!)
-    webView.loadRequest(request)
+    let request = URLRequest(url: url!)
+    self.webView.navigationDelegate = self
+    self.webView.load(request)
+    self.webView.allowsBackForwardNavigationGestures = true
+    self.observeKeysFowWebView()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -41,38 +41,50 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     }
   }
 
-  func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-    self.progressView.alpha = 1
+  // MARK: - Setup
 
-    switch navigationType {
-    case .linkClicked:
-      // Open links in Safari
-      guard let url = request.url else { return true }
+  func setUp(url: URL, embed: Bool) {
+    self.url = url
+    self.embed = embed
+  }
 
-      if #available(iOS 10.0, *) {
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+  // MARK: - WKNavigationDelegate
+
+  func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+
+    // リンクは全て外部ブラウザに飛ばす
+    if navigationAction.navigationType == .linkActivated  {
+      if let url = navigationAction.request.url,
+        UIApplication.shared.canOpenURL(url) {
+        UIApplication.shared.open(url)
+        decisionHandler(.cancel)
       } else {
-        // openURL(_:) is deprecated in iOS 10+.
-        UIApplication.shared.openURL(url)
+        decisionHandler(.allow)
       }
-      return false
-    default:
-      return true
+    } else {
+      // not a user click
+      decisionHandler(.allow)
     }
   }
 
-  func webViewDidStartLoad(_ webView: UIWebView) {
-    self.progressView.setProgress(0.1, animated: false)
-  }
+  func observeKeysFowWebView() {
 
-  func webViewDidFinishLoad(_ webView: UIWebView) {
-    self.progressView.setProgress(1.0, animated: true)
-    self.progressView.alpha = 0
-  }
+    // WKWebView の estimatedProgress の値監視
+    self.observeEstimatedProgress = self.webView.observe(\.estimatedProgress, options: [.new], changeHandler: { (webView, change) in
+      self.progressView.alpha = 1.0
+      self.progressView.setProgress(Float(change.newValue!), animated: true)
 
-  func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-    self.progressView.setProgress(1.0, animated: true)
-    self.progressView.alpha = 0
+      if (self.webView.estimatedProgress >= 1.0) {
+        UIView.animate(withDuration: 0.3,
+                       delay: 0.3,
+                       options: [.curveEaseOut],
+                       animations: { [weak self] in
+                        self?.progressView.alpha = 0.0
+          }, completion: { _ in
+            self.progressView.setProgress(0.0, animated: false)
+        })
+      }
+    })
   }
 }
 

@@ -35,6 +35,9 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     return kind
   }()
 
+  fileprivate var canHideOrShowNavBar = false
+  fileprivate var lastContentOffset: CGFloat = 0
+
   // MARK: - View life cycle
 
   override func viewDidLoad() {
@@ -257,6 +260,39 @@ extension FoodsTableViewController {
 
     clearExpandedIndexPath()
     tableView.reloadData()
+  }
+}
+
+extension FoodsTableViewController {
+
+  // MARK: - UIScrollView Delegate
+
+  override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    if lastContentOffset > scrollView.contentOffset.y && canHideOrShowNavBar {
+      if parent?.navigationController?.isNavigationBarHidden ?? false {
+        parent?.navigationController?.setNavigationBarHidden(false, animated: true)
+      }
+    } else if lastContentOffset < scrollView.contentOffset.y && canHideOrShowNavBar {
+      if !(parent?.navigationController?.isNavigationBarHidden ?? false) {
+        parent?.navigationController?.setNavigationBarHidden(true, animated: true)
+      }
+    }
+    lastContentOffset = scrollView.contentOffset.y
+  }
+
+  override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    canHideOrShowNavBar = true
+  }
+
+  override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    canHideOrShowNavBar = false
+  }
+
+  override func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
+    if parent?.navigationController?.isNavigationBarHidden != nil {
+      parent?.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    return true
   }
 
 }

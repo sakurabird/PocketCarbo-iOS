@@ -48,10 +48,17 @@
 		216AA5082064F948002AA44E /* TypeDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA5072064F948002AA44E /* TypeDataProvider.swift */; };
 		216AA50A206527B9002AA44E /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA509206527B9002AA44E /* FoodTableViewCell.swift */; };
 		216AA50E20666335002AA44E /* UIButton+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA50D20666335002AA44E /* UIButton+extention.swift */; };
+		21730480207C932100EB055A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173047F207C932100EB055A /* SearchViewController.swift */; };
 		21A8EAF82072930B008FA5D0 /* FavoriteDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A8EAF72072930B008FA5D0 /* FavoriteDataProvider.swift */; };
-		21C0D992207BD906007F68A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D991207BD906007F68A0 /* GoogleService-Info.plist */; };
-		21C0D993207BD906007F68A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D991207BD906007F68A0 /* GoogleService-Info.plist */; };
-		21C0D994207BD906007F68A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D991207BD906007F68A0 /* GoogleService-Info.plist */; };
+		21C0D997207BECD1007F68A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D996207BECD1007F68A0 /* GoogleService-Info.plist */; };
+		21C0D998207BECD1007F68A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D996207BECD1007F68A0 /* GoogleService-Info.plist */; };
+		21C0D999207BECD1007F68A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D996207BECD1007F68A0 /* GoogleService-Info.plist */; };
+		21C0D99B207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
+		21C0D99C207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
+		21C0D99D207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
+		21C0D99F207BF73F007F68A0 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0D99E207BF73F007F68A0 /* ADManager.swift */; };
+		21C0D9A0207BF73F007F68A0 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0D99E207BF73F007F68A0 /* ADManager.swift */; };
+		21C0D9A1207BF73F007F68A0 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0D99E207BF73F007F68A0 /* ADManager.swift */; };
 		21E09FE72064202E00142405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E09FE92064202E00142405 /* Localizable.strings */; };
 		21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */; };
 		21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E99206FE103006ECDA2 /* WebViewController.swift */; };
@@ -125,9 +132,12 @@
 		216AA5072064F948002AA44E /* TypeDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeDataProvider.swift; sourceTree = "<group>"; };
 		216AA509206527B9002AA44E /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		216AA50D20666335002AA44E /* UIButton+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+extention.swift"; sourceTree = "<group>"; };
+		2173047F207C932100EB055A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		21A62D5C206E37F400AD4F7D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		21A8EAF72072930B008FA5D0 /* FavoriteDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteDataProvider.swift; sourceTree = "<group>"; };
-		21C0D991207BD906007F68A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		21C0D996207BECD1007F68A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		21C0D99A207BEDED007F68A0 /* Secret.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
+		21C0D99E207BF73F007F68A0 /* ADManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADManager.swift; sourceTree = "<group>"; };
 		21E09FEA2064204500142405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21E09FEC2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
@@ -206,7 +216,8 @@
 				214D871E20632F6000F20EF7 /* Assets */,
 				214D871B2063271100F20EF7 /* Settings.bundle */,
 				214D86F120629B8A00F20EF7 /* Info.plist */,
-				21C0D991207BD906007F68A0 /* GoogleService-Info.plist */,
+				21C0D996207BECD1007F68A0 /* GoogleService-Info.plist */,
+				21C0D99A207BEDED007F68A0 /* Secret.plist */,
 				21E09FE92064202E00142405 /* Localizable.strings */,
 			);
 			path = PocketCarbo;
@@ -297,6 +308,7 @@
 				21EB5E99206FE103006ECDA2 /* WebViewController.swift */,
 				216AA4EC20644954002AA44E /* FavoritesViewController.swift */,
 				216AA4EE2064495D002AA44E /* SettingsViewController.swift */,
+				2173047F207C932100EB055A /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -336,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				214D87382063568A00F20EF7 /* AppLaunchManager.swift */,
+				21C0D99E207BF73F007F68A0 /* ADManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -443,7 +456,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Sakura;
 				TargetAttributes = {
 					214D86E120629B8A00F20EF7 = {
@@ -487,10 +500,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21C0D992207BD906007F68A0 /* GoogleService-Info.plist in Resources */,
+				21C0D997207BECD1007F68A0 /* GoogleService-Info.plist in Resources */,
 				214D871C2063271100F20EF7 /* Settings.bundle in Resources */,
 				214D872B20633BBD00F20EF7 /* help.html in Resources */,
 				216AA4F820647B44002AA44E /* Assets.xcassets in Resources */,
+				21C0D99B207BEDED007F68A0 /* Secret.plist in Resources */,
 				214D872C20633BBD00F20EF7 /* privacy_policy.html in Resources */,
 				214D872920633BBD00F20EF7 /* announcement.html in Resources */,
 				21E09FE72064202E00142405 /* Localizable.strings in Resources */,
@@ -507,7 +521,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21C0D993207BD906007F68A0 /* GoogleService-Info.plist in Resources */,
+				21C0D99C207BEDED007F68A0 /* Secret.plist in Resources */,
+				21C0D998207BECD1007F68A0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +530,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21C0D994207BD906007F68A0 /* GoogleService-Info.plist in Resources */,
+				21C0D99D207BEDED007F68A0 /* Secret.plist in Resources */,
+				21C0D999207BECD1007F68A0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,7 +669,9 @@
 				216AA4E120643EB8002AA44E /* SideMenuViewController.swift in Sources */,
 				216AA4FF2064B4F0002AA44E /* FoodDataProvider.swift in Sources */,
 				216AA4DF20643E4E002AA44E /* MainViewController.swift in Sources */,
+				21C0D99F207BF73F007F68A0 /* ADManager.swift in Sources */,
 				21A8EAF82072930B008FA5D0 /* FavoriteDataProvider.swift in Sources */,
+				21730480207C932100EB055A /* SearchViewController.swift in Sources */,
 				216AA4DD20643E28002AA44E /* MainParentViewController.swift in Sources */,
 				21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */,
 				21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */,
@@ -681,6 +699,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C0D9A0207BF73F007F68A0 /* ADManager.swift in Sources */,
 				214D86FB20629B8B00F20EF7 /* PocketCarboTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -689,6 +708,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C0D9A1207BF73F007F68A0 /* ADManager.swift in Sources */,
 				214D870620629B8B00F20EF7 /* PocketCarboUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,6 +773,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -760,6 +781,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -811,6 +833,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -818,6 +841,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -857,7 +881,7 @@
 				DEVELOPMENT_TEAM = 28TS6W29VY;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = PocketCarbo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sakurafish.com.ios.PocketCarbo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -875,7 +899,7 @@
 				DEVELOPMENT_TEAM = 28TS6W29VY;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = PocketCarbo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sakurafish.com.ios.PocketCarbo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

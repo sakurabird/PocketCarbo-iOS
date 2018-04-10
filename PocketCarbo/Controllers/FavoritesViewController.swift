@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import GoogleMobileAds
 
 class FavoritesViewController: UIViewController {
 
@@ -16,11 +17,14 @@ class FavoritesViewController: UIViewController {
   var foodsTableViewController: FoodsTableViewController?
   var notificationToken: NotificationToken?
 
+  @IBOutlet weak var adBannerView: GADBannerView!
+  
   // MARK: - View life cycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    setupAdMob()
     setupFavorites()
   }
 
@@ -55,5 +59,11 @@ class FavoritesViewController: UIViewController {
     notificationToken = realm.observe { [unowned self] note, realm in
       self.updateFavorites()
     }
+  }
+
+  private func setupAdMob() {
+    adBannerView.adUnitID = ADManager.sharedInstance.getBannerId()
+    adBannerView.rootViewController = self
+    adBannerView.load(GADRequest())
   }
 }

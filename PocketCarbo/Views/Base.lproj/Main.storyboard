@@ -486,8 +486,8 @@
                                     <constraint firstAttribute="trailing" secondItem="OvQ-8r-CcH" secondAttribute="trailing" constant="16" id="zXV-nm-3YB"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7CV-Yc-JaI">
-                                <rect key="frame" x="0.0" y="104" width="375" height="495"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7CV-Yc-JaI">
+                                <rect key="frame" x="0.0" y="104" width="375" height="493"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQ6-p0-pMI" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="597" width="375" height="50"/>
@@ -926,6 +926,6 @@
         <image name="tutorial_image2" width="240" height="266"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nKJ-zS-xLh"/>
+        <segue reference="0xg-Ij-ORp"/>
     </inferredMetricsTieBreakers>
 </document>

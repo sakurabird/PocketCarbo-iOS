@@ -30,8 +30,9 @@ class SearchViewController: UIViewController {
     super.viewWillAppear(animated)
 
     self.setLeftNavigationBarBack()
+    self.navigationController?.hidesBarsOnSwipe = true
     // 検索画面の検索欄を常に表示しておく
-    navigationItem.hidesSearchBarWhenScrolling = false
+    self.navigationItem.hidesSearchBarWhenScrolling = false
   }
 
   // MARK: Private Functions

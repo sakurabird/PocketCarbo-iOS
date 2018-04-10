@@ -21,6 +21,7 @@ class MainParentViewController: UIViewController {
     super.viewWillAppear(animated)
 
     self.setNavigationBarItem()
+    self.navigationController?.hidesBarsOnSwipe = true
   }
 
   override func viewDidAppear(_ animated: Bool) {

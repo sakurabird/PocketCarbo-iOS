@@ -486,9 +486,15 @@
                                     <constraint firstAttribute="trailing" secondItem="OvQ-8r-CcH" secondAttribute="trailing" constant="16" id="zXV-nm-3YB"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7CV-Yc-JaI">
-                                <rect key="frame" x="0.0" y="104" width="375" height="543"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7CV-Yc-JaI">
+                                <rect key="frame" x="0.0" y="104" width="375" height="495"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQ6-p0-pMI" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="597" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="dY2-eE-yLN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -496,16 +502,20 @@
                             <constraint firstItem="vo5-Ym-PDV" firstAttribute="top" secondItem="uOt-Dw-qGk" secondAttribute="top" id="HMh-8A-uJr"/>
                             <constraint firstAttribute="trailing" secondItem="vo5-Ym-PDV" secondAttribute="trailing" id="Pcf-82-XtD"/>
                             <constraint firstItem="QaW-mR-eM6" firstAttribute="top" secondItem="vo5-Ym-PDV" secondAttribute="bottom" id="PqT-BB-eek"/>
+                            <constraint firstItem="YQ6-p0-pMI" firstAttribute="bottom" secondItem="jXl-2i-l1I" secondAttribute="bottom" id="RQb-eX-HKE"/>
                             <constraint firstItem="7CV-Yc-JaI" firstAttribute="top" secondItem="QaW-mR-eM6" secondAttribute="bottom" id="TGa-RZ-g2l"/>
+                            <constraint firstItem="YQ6-p0-pMI" firstAttribute="leading" secondItem="jXl-2i-l1I" secondAttribute="leading" id="TRC-AC-wJu"/>
                             <constraint firstAttribute="trailing" secondItem="7CV-Yc-JaI" secondAttribute="trailing" id="aGn-ZV-FpG"/>
                             <constraint firstItem="vo5-Ym-PDV" firstAttribute="leading" secondItem="uOt-Dw-qGk" secondAttribute="leading" id="eye-74-X4C"/>
-                            <constraint firstAttribute="bottom" secondItem="7CV-Yc-JaI" secondAttribute="bottom" id="fHy-SN-avG"/>
                             <constraint firstItem="QaW-mR-eM6" firstAttribute="leading" secondItem="jXl-2i-l1I" secondAttribute="leading" id="fjW-XM-9ci"/>
+                            <constraint firstItem="YQ6-p0-pMI" firstAttribute="top" secondItem="7CV-Yc-JaI" secondAttribute="bottom" id="hdZ-Mc-tDr"/>
+                            <constraint firstItem="jXl-2i-l1I" firstAttribute="trailing" secondItem="YQ6-p0-pMI" secondAttribute="trailing" id="iUK-5I-8Qs"/>
                             <constraint firstItem="7CV-Yc-JaI" firstAttribute="leading" secondItem="uOt-Dw-qGk" secondAttribute="leading" id="yGm-lx-cau"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jXl-2i-l1I"/>
                     </view>
                     <connections>
+                        <outlet property="adBannerView" destination="YQ6-p0-pMI" id="fxc-yX-QvM"/>
                         <outlet property="buttonBarView" destination="vo5-Ym-PDV" id="U15-CC-0Cp"/>
                         <outlet property="containerView" destination="7CV-Yc-JaI" id="7X7-iS-6KP"/>
                         <outlet property="kindSelectButton" destination="bNw-da-ljV" id="WK7-Qp-epB"/>
@@ -514,7 +524,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cds-fi-brC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1294" y="117"/>
+            <point key="canvasLocation" x="1293.5999999999999" y="116.49175412293854"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="da0-tf-VMq">

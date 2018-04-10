@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 import XLPagerTabStrip
 import DropDown
 import Toaster
@@ -21,13 +22,15 @@ class MainViewController: ButtonBarPagerTabStripViewController {
   @IBOutlet weak var kindSelectButton: UIButton!
   @IBOutlet weak var sortSelectButton: UIButton!
   
+  @IBOutlet weak var adBannerView: GADBannerView!
+  
   override func viewDidLoad() {
     setupPagerTabStrip()
 
     super.viewDidLoad()
 
     self.view.backgroundColor = UIColor(patternImage: UIImage(named: "main_bg")!)
-
+    setupAdMob()
   }
 
   //MARK: - Setup
@@ -159,6 +162,12 @@ class MainViewController: ButtonBarPagerTabStripViewController {
       setupKindsEachTab()
       setupSortEachTab()
     }
+  }
+
+  private func setupAdMob() {
+    adBannerView.adUnitID = ADManager.sharedInstance.getBannerId()
+    adBannerView.rootViewController = self
+    adBannerView.load(GADRequest())
   }
 
   // MARK: - Button Actions

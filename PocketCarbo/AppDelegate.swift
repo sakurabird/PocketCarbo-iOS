@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Google Service
     FirebaseApp.configure()
 
+    // Setup Admob
+    ADManager.sharedInstance.setupAdMob()
+
     // Check Data Version and Update If Needed
     AppLaunchManager.sharedInstance.onAppStarted()
 

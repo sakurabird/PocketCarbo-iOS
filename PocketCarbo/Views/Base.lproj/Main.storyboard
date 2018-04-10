@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Futura.ttc">
-            <string>Futura-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--MainParent-->
         <scene sceneID="tne-QT-ifu">
@@ -73,9 +69,9 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16862745100000001" green="0.73333333329999995" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="9gk-oy-Y26"/>
                                     <constraint firstItem="Pc2-t2-iI2" firstAttribute="centerX" secondItem="JbJ-nn-exW" secondAttribute="centerX" id="FWy-Sy-vJ1"/>
                                     <constraint firstItem="Pc2-t2-iI2" firstAttribute="top" secondItem="JbJ-nn-exW" secondAttribute="top" id="IPL-Ze-zdm"/>
+                                    <constraint firstAttribute="height" constant="150" id="rnD-H7-fFh"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-Cu-whA">
@@ -123,14 +119,14 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.16862745100000001" green="0.73333333329999995" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9fV-cx-ORd" firstAttribute="trailing" secondItem="JbJ-nn-exW" secondAttribute="trailing" id="6EA-Mk-4Je"/>
                             <constraint firstItem="hfB-Cu-whA" firstAttribute="bottom" secondItem="9fV-cx-ORd" secondAttribute="bottom" id="Ang-mB-fRa"/>
                             <constraint firstItem="hfB-Cu-whA" firstAttribute="leading" secondItem="9fV-cx-ORd" secondAttribute="leading" id="HjM-xJ-YTZ"/>
                             <constraint firstItem="hfB-Cu-whA" firstAttribute="top" secondItem="JbJ-nn-exW" secondAttribute="bottom" id="Kl6-9Y-LzR"/>
                             <constraint firstItem="9fV-cx-ORd" firstAttribute="trailing" secondItem="hfB-Cu-whA" secondAttribute="trailing" id="RPG-XF-hiu"/>
-                            <constraint firstItem="9fV-cx-ORd" firstAttribute="top" secondItem="JbJ-nn-exW" secondAttribute="top" id="mWI-9M-Yln"/>
+                            <constraint firstItem="JbJ-nn-exW" firstAttribute="top" secondItem="9fV-cx-ORd" secondAttribute="top" id="Wmm-v9-SLp"/>
                             <constraint firstItem="JbJ-nn-exW" firstAttribute="leading" secondItem="9fV-cx-ORd" secondAttribute="leading" id="zZV-kb-cfL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9fV-cx-ORd"/>
@@ -152,33 +148,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZa-9U-cPV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="611"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                                 <connections>
                                     <segue destination="LSH-av-uoM" kind="embed" id="0xg-Ij-ORp"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODO : Dummy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVe-LI-VDg">
-                                <rect key="frame" x="0.0" y="611" width="375" height="56"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JcA-wP-1rK" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="kL1-x7-RSq"/>
+                                    <constraint firstAttribute="height" constant="50" id="ieY-vF-BeY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FVe-LI-VDg" firstAttribute="top" secondItem="qZa-9U-cPV" secondAttribute="bottom" id="Czn-zr-a1i"/>
+                            <constraint firstItem="mfO-Wo-vgK" firstAttribute="trailing" secondItem="JcA-wP-1rK" secondAttribute="trailing" id="5j6-MD-Lgy"/>
                             <constraint firstItem="qZa-9U-cPV" firstAttribute="trailing" secondItem="mfO-Wo-vgK" secondAttribute="trailing" id="O3i-tI-Hda"/>
-                            <constraint firstItem="mfO-Wo-vgK" firstAttribute="bottom" secondItem="FVe-LI-VDg" secondAttribute="bottom" id="Rnn-Om-ogf"/>
-                            <constraint firstItem="FVe-LI-VDg" firstAttribute="leading" secondItem="mfO-Wo-vgK" secondAttribute="leading" id="USc-Ej-TUL"/>
+                            <constraint firstItem="JcA-wP-1rK" firstAttribute="leading" secondItem="mfO-Wo-vgK" secondAttribute="leading" id="R2w-JU-I5N"/>
+                            <constraint firstItem="mfO-Wo-vgK" firstAttribute="bottom" secondItem="JcA-wP-1rK" secondAttribute="bottom" id="SFX-jF-1IC"/>
                             <constraint firstItem="qZa-9U-cPV" firstAttribute="top" secondItem="sVY-d7-gZN" secondAttribute="top" id="ZEv-MS-a2R"/>
-                            <constraint firstItem="mfO-Wo-vgK" firstAttribute="trailing" secondItem="FVe-LI-VDg" secondAttribute="trailing" id="kU5-JA-hY5"/>
+                            <constraint firstItem="JcA-wP-1rK" firstAttribute="top" secondItem="qZa-9U-cPV" secondAttribute="bottom" id="dvT-Xc-Xg9"/>
                             <constraint firstItem="qZa-9U-cPV" firstAttribute="leading" secondItem="mfO-Wo-vgK" secondAttribute="leading" id="mos-Mh-Wju"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mfO-Wo-vgK"/>
                     </view>
+                    <connections>
+                        <outlet property="adBannerView" destination="JcA-wP-1rK" id="peH-a0-mrM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OLb-Qp-6Wy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -701,7 +698,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="Foods" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LSH-av-uoM" customClass="FoodsTableViewController" customModule="PocketCarbo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jeW-mR-lDK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="611"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -864,6 +861,48 @@
             </objects>
             <point key="canvasLocation" x="2137" y="143"/>
         </scene>
+        <!--Search View Controller-->
+        <scene sceneID="8DT-ds-OGi">
+            <objects>
+                <viewController storyboardIdentifier="search" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fZq-uq-5C8" customClass="SearchViewController" customModule="PocketCarbo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jrq-hC-7ar">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAS-yz-QRo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                <connections>
+                                    <segue destination="LSH-av-uoM" kind="embed" id="nKJ-zS-xLh"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXK-yV-Uee" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ORs-S3-7hI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aAS-yz-QRo" firstAttribute="trailing" secondItem="53l-4j-Qzi" secondAttribute="trailing" id="1tx-di-Grx"/>
+                            <constraint firstItem="lXK-yV-Uee" firstAttribute="top" secondItem="aAS-yz-QRo" secondAttribute="bottom" id="23N-Ob-aRj"/>
+                            <constraint firstItem="aAS-yz-QRo" firstAttribute="leading" secondItem="53l-4j-Qzi" secondAttribute="leading" id="JBp-kS-EgM"/>
+                            <constraint firstItem="lXK-yV-Uee" firstAttribute="leading" secondItem="53l-4j-Qzi" secondAttribute="leading" id="M3D-z9-X9g"/>
+                            <constraint firstItem="aAS-yz-QRo" firstAttribute="top" secondItem="Jrq-hC-7ar" secondAttribute="top" id="Olc-Ck-fqK"/>
+                            <constraint firstItem="53l-4j-Qzi" firstAttribute="bottom" secondItem="lXK-yV-Uee" secondAttribute="bottom" id="VZm-UU-ioW"/>
+                            <constraint firstItem="53l-4j-Qzi" firstAttribute="trailing" secondItem="lXK-yV-Uee" secondAttribute="trailing" id="q9k-CF-TY8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="53l-4j-Qzi"/>
+                    </view>
+                    <connections>
+                        <outlet property="adBannerView" destination="lXK-yV-Uee" id="BEP-9f-pbh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sjZ-FL-BVF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2980" y="903"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cell_carret_down" width="10" height="6"/>
@@ -876,4 +915,7 @@
         <image name="tutorial_image1" width="300" height="194"/>
         <image name="tutorial_image2" width="240" height="266"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="nKJ-zS-xLh"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -69,7 +69,7 @@ class SearchViewController: UIViewController {
   private func setupAdMob() {
     adBannerView.adUnitID = ADManager.sharedInstance.getBannerId()
     adBannerView.rootViewController = self
-    adBannerView.load(GADRequest())
+    adBannerView.load(ADManager.sharedInstance.getGADRequest())
   }
 }
 

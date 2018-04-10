@@ -28,8 +28,6 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   var selectedKind: Kind = Kind()
   var selectedSort: FoodSortOrder = .nameAsc
 
-  let searchController = UISearchController(searchResultsController: nil)
-
   let kindAll: Kind = {
     let kind: Kind = Kind()
     kind.id = 0
@@ -43,18 +41,11 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     super.viewDidLoad()
 
     setupTableView()
-    setupSearchController()
 
     // Observe Food,Kind DB update event
     NotificationCenter.default.observeEvent(observer: self,
                                             selector: #selector(FoodsTableViewController.dataUpdated),
                                             notification: NotificationEvent.foodsAndKindsUpdated)
-  }
-
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    // 検索画面の検索欄を常に表示しておく
-    navigationItem.hidesSearchBarWhenScrolling = false
   }
 
   // MARK: - deinit
@@ -227,66 +218,38 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   }
 }
 
-// -----------------------
-// MARK: - 検索画面用のextension
-// -----------------------
-extension FoodsTableViewController: UISearchBarDelegate {
 
-  // MARK: - Setup
+// -------------------------------------------
+// MARK: - お気に入り画面・検索画面用のextension
+// -------------------------------------------
+extension FoodsTableViewController {
 
-  fileprivate func setupSearchController() {
-    // Setup the Search Controller
-    definesPresentationContext = true
-    searchController.searchResultsUpdater = self
-    searchController.searchBar.delegate = self
-    searchController.obscuresBackgroundDuringPresentation = false
+  // お気に入り画面用のsetup
+  func setupFavoritesData() {
+    self.selectedKind = kindAll;
+    self.foods = FavoriteDataProvider.sharedInstance.findAll()
 
-    searchController.searchBar.placeholder = NSLocalizedString("Foods.search.placeholder", comment: "")
-    searchController.searchBar.tintColor = .white // cancel text
-    if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
-      if let backgroundview = textfield.subviews.first {
-        backgroundview.backgroundColor = UIColor.white // Background color
-        // Rounded corner
-        backgroundview.layer.cornerRadius = 10;
-        backgroundview.clipsToBounds = true;
-      }
-    }
-    navigationItem.searchController = searchController
+    clearExpandedIndexPath()
+    tableView.reloadData()
   }
 
+  // 検索画面用のsetup
   func setupAllData() {
-    setLeftNavigationBarBack()
     self.selectedKind = kindAll;
     self.foods = FoodDataProvider.sharedInstance.findAll()
   }
 
-  // MARK: - UISearchBar Delegate
-
-  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    filterContentForSearchText(searchBar.text!)
-  }
-
-  // MARK: - Helper
-
-  func isFiltering() -> Bool {
-    return searchController.isActive && !searchBarIsEmpty()
-  }
-
-  func searchBarIsEmpty() -> Bool {
-    // Returns true if the text is empty or nil
-    return searchController.searchBar.text?.isEmpty ?? true
-  }
-
-  func filterContentForSearchText(_ searchText: String) {
-
-    if searchBarIsEmpty() {
-      guard let foodsCount: Int = foods?.count else {
+  func didChangeSearchText(_ searchText: String) {
+    // 検索フィールドが変更された
+    if searchText.isEmpty {
+      guard let foodsCount: Int = self.foods?.count else {
         return
       }
       if (foodsCount > 0) {
         let indexPath = NSIndexPath(row: 0, section: 0)
         self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: false)
       }
+      // emptyの場合は全件表示
       self.foods = FoodDataProvider.sharedInstance.findAll()
     } else {
       self.foods = FoodDataProvider.sharedInstance.findData(searchText: searchText)
@@ -295,29 +258,5 @@ extension FoodsTableViewController: UISearchBarDelegate {
     clearExpandedIndexPath()
     tableView.reloadData()
   }
-}
 
-extension FoodsTableViewController: UISearchResultsUpdating {
-
-  // MARK: - UISearchResultsUpdating Delegate
-
-  func updateSearchResults(for searchController: UISearchController) {
-    filterContentForSearchText(searchController.searchBar.text!)
-  }
-}
-
-// ---------------------------------
-// MARK: - お気に入り画面用のextension
-// ---------------------------------
-extension FoodsTableViewController {
-
-  // MARK: - Setup
-
-  func setupFavoritesData() {
-    self.selectedKind = kindAll;
-    self.foods = FavoriteDataProvider.sharedInstance.findAll()
-
-    clearExpandedIndexPath()
-    tableView.reloadData()
-  }
 }

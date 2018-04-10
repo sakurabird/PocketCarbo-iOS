@@ -40,4 +40,11 @@ final class ADManager {
     print("ad:\(id)")
     return id
   }
+
+  func getGADRequest() -> GADRequest {
+    let request = GADRequest()
+    // TODO : テスト用のデバイスを追加したらここにdevice idを追加する
+    request.testDevices = [ "1272c87f3c314b9131df2f16c82e646f" ] // iPhone7
+    return request
+  }
 }

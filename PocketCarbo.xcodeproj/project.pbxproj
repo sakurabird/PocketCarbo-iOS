@@ -881,7 +881,7 @@
 				DEVELOPMENT_TEAM = 28TS6W29VY;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = PocketCarbo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sakurafish.com.ios.PocketCarbo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -899,7 +899,7 @@
 				DEVELOPMENT_TEAM = 28TS6W29VY;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = PocketCarbo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sakurafish.com.ios.PocketCarbo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

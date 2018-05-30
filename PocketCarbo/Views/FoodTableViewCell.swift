@@ -87,12 +87,14 @@ class FoodTableViewCell: UITableViewCell {
     foodNameLabel.textColor = getCarboColor()
 
     carboPer100gLabel.text = "\(food.carbohydrate_per_100g) g"
-    carboPer100gLabel.textColor = getCarboColor()
+    let textColor : UIColor = getCarboColor()
+    carboPer100gLabel.textColor = textColor
 
     cubeSugar100Label.text = createCubeSugarString(carbohydrate: food.carbohydrate_per_100g)
 
     let descriptionString = createDescriptionString(food: food)
     descriptionLabel.text = descriptionString
+    descriptionLabel.textColor = textColor
 
     cubeSugarLabel.text = createCubeSugarString(carbohydrate: food.carbohydrate_per_weight)
 
@@ -165,16 +167,16 @@ class FoodTableViewCell: UITableViewCell {
     switch self.food.carbohydrate_per_100g {
     case 0 ..< 5:
       // 糖質量が少ない
-      return UIColor(rgb: 0x0000d2)
+      return UIColor(named: "ColorTextSafe")!
     case 5 ..< 15:
       // 糖質量がやや多い
-      return UIColor(rgb: 0x049336)
+      return UIColor(named: "ColorTextWarning")!
     case 15 ..< 50:
       // 糖質量が多い
-      return UIColor(rgb: 0xf44336)
+      return UIColor(named: "ColorTextDanger")!
     default:
       // 糖質量が非常に多い
-      return UIColor(rgb: 0x9c27b0)
+      return UIColor(named: "ColorTextDangerHigh")!
     }
   }
 

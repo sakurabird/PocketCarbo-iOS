@@ -38,12 +38,12 @@ class MainViewController: ButtonBarPagerTabStripViewController {
   func setupPagerTabStrip() {
     // Important: XLPagerTabStrip Settings should be called before viewDidLoad is called.
 
-    settings.style.buttonBarBackgroundColor = UIColor(rgb: 0xfafafa)
-    settings.style.buttonBarItemBackgroundColor = UIColor(rgb: 0xfafafa)
-    settings.style.selectedBarBackgroundColor = UIColor(rgb: 0xff6f00)
+    settings.style.buttonBarBackgroundColor = UIColor(named: "ColorTabBackground")
+    settings.style.buttonBarItemBackgroundColor = UIColor(named: "ColorTabBackground")
+    settings.style.selectedBarBackgroundColor = UIColor(named: "ColorAccent")!
     settings.style.selectedBarHeight = 4.0
     settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
-    settings.style.buttonBarItemTitleColor = UIColor(rgb: 0x757575)
+    settings.style.buttonBarItemTitleColor = UIColor(named: "ColorTextGrayDark")
     settings.style.buttonBarItemLeftRightMargin = 8
     settings.style.buttonBarMinimumLineSpacing = 0
     settings.style.buttonBarItemsShouldFillAvailableWidth = true
@@ -52,8 +52,8 @@ class MainViewController: ButtonBarPagerTabStripViewController {
 
     changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
       guard changeCurrentIndex == true else { return }
-      oldCell?.label.textColor = UIColor(rgb: 0x757575)
-      newCell?.label.textColor = UIColor(rgb: 0xff6f00)
+      oldCell?.label.textColor = UIColor(named: "ColorTextGrayDark")
+      newCell?.label.textColor = UIColor(named: "ColorAccent")
     }
   }
 

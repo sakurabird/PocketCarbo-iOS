@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,7 +67,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.16862745100000001" green="0.73333333329999995" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="ColorPrimary"/>
                                 <constraints>
                                     <constraint firstItem="Pc2-t2-iI2" firstAttribute="centerX" secondItem="JbJ-nn-exW" secondAttribute="centerX" id="FWy-Sy-vJ1"/>
                                     <constraint firstItem="Pc2-t2-iI2" firstAttribute="top" secondItem="JbJ-nn-exW" secondAttribute="top" id="IPL-Ze-zdm"/>
@@ -368,8 +369,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="nPh-dI-C43"/>
                                 </constraints>
-                                <color key="progressTintColor" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="trackTintColor" red="0.16862745100000001" green="0.73333333329999995" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="progressTintColor" name="ColorAccent"/>
+                                <color key="trackTintColor" name="ColorPrimary"/>
                             </progressView>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eei-Oc-p1Q">
                                 <rect key="frame" x="0.0" y="23" width="375" height="644"/>
@@ -431,7 +432,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="食品の種類" image="dropdown_caret">
-                                            <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" name="ColorAccent"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -441,7 +442,7 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" name="ColorAccent"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -456,7 +457,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="ソート" image="dropdown_caret">
-                                            <color key="titleColor" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" name="ColorAccent"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -466,7 +467,7 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="1" green="0.43529411759999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" name="ColorAccent"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -758,7 +759,7 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRl-fh-QNG">
                                                                             <rect key="frame" x="142.5" y="14.5" width="42" height="20.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
+                                                                            <color key="textColor" name="ColorPrimary"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -782,7 +783,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vm8-Jo-D6r">
                                                             <rect key="frame" x="0.0" y="128" width="343" height="56"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pzb-mW-VvQ">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Pzb-mW-VvQ">
                                                                     <rect key="frame" x="16" y="0.0" width="311" height="40"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一回分あたりの目安量" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERx-ER-E4E">
@@ -792,9 +793,9 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sij-JL-gPR">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="311" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="4" width="311" height="8"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
+                                                                            <color key="textColor" name="ColorPrimary"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="B8c-Lw-BJI">
@@ -833,7 +834,7 @@
                                                                                         <action selector="didTapShare:" destination="Gnd-kf-FU5" eventType="touchUpInside" id="S6N-XZ-ArW"/>
                                                                                     </connections>
                                                                                 </button>
-                                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sgf-N6-qhg">
+                                                                                <view contentMode="scaleToFill" restorationIdentifier="dummy" translatesAutoresizingMaskIntoConstraints="NO" id="sgf-N6-qhg">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="191" height="24"/>
                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 </view>
@@ -947,6 +948,21 @@
         <image name="splash_logo" width="300" height="300"/>
         <image name="tutorial_image1" width="300" height="194"/>
         <image name="tutorial_image2" width="240" height="266"/>
+        <namedColor name="ColorAccent">
+            <color red="1" green="0.43529411764705883" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorAccent">
+            <color red="1" green="0.43500000239999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorAccent">
+            <color red="1" green="0.43500000239999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorAccent">
+            <color red="1" green="0.43500000238418579" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorPrimary">
+            <color red="0.16862745098039217" green="0.72941176470588232" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0xg-Ij-ORp"/>

@@ -67,8 +67,10 @@ class FoodTableViewCell: UITableViewCell {
   @IBOutlet weak var carretImage: UIImageView!
   @IBOutlet weak var foodNameLabel: UILabel!
   @IBOutlet weak var carboPer100gLabel: UILabel!
+  @IBOutlet weak var cubeSugar100Label: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
-
+  @IBOutlet weak var cubeSugarLabel: UILabel!
+  
   @IBOutlet weak var favoritesButton: UIButton!
   @IBOutlet weak var copyToClipboardButton: UIButton!
   @IBOutlet weak var shareButton: UIButton!
@@ -83,10 +85,16 @@ class FoodTableViewCell: UITableViewCell {
 
     foodNameLabel.text = food.name
     foodNameLabel.textColor = getCarboColor()
+
     carboPer100gLabel.text = "\(food.carbohydrate_per_100g) g"
     carboPer100gLabel.textColor = getCarboColor()
+
+    cubeSugar100Label.text = createCubeSugarString(carbohydrate: food.carbohydrate_per_100g)
+
     let descriptionString = createDescriptionString(food: food)
     descriptionLabel.text = descriptionString
+
+    cubeSugarLabel.text = createCubeSugarString(carbohydrate: food.carbohydrate_per_weight)
 
     let isFavorite = FavoriteDataProvider.sharedInstance.isFavorite(food: food)
     favoritesState = isFavorite ? .favorite : .notFavorite
@@ -172,6 +180,16 @@ class FoodTableViewCell: UITableViewCell {
 
   private func updateFavorites() {
     self.favoritesButton.setImage(self.favoritesState.favoriteImage, for: UIControlState.normal)
+  }
+
+  private func createCubeSugarString(carbohydrate: Float) -> String {
+    let cubeNum = round(carbohydrate * 10 / 4.0) / 10 // 小数点第２位を四捨五入
+    var cubeString : String = "0"
+    if (cubeNum != 0) {
+      cubeString = String(format:"%.1f", cubeNum)
+    }
+    cubeString = String(format: NSLocalizedString("Foods.cubeSugar.text", comment: ""), String(cubeString))
+    return cubeString
   }
 
   private func createDescriptionString(food: Food) -> String {

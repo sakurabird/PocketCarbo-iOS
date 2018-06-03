@@ -29,7 +29,7 @@
 		214D87392063568A00F20EF7 /* AppLaunchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D87382063568A00F20EF7 /* AppLaunchManager.swift */; };
 		214D873B2063589500F20EF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873A2063589500F20EF7 /* Constants.swift */; };
 		214D873D20635B7500F20EF7 /* UserDefault+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873C20635B7500F20EF7 /* UserDefault+extension.swift */; };
-		214D873F20636C4300F20EF7 /* Notification+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873E20636C4300F20EF7 /* Notification+extension.swift */; };
+		214D873F20636C4300F20EF7 /* NotificationCenter+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873E20636C4300F20EF7 /* NotificationCenter+extension.swift */; };
 		216AA4DD20643E28002AA44E /* MainParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4DC20643E28002AA44E /* MainParentViewController.swift */; };
 		216AA4DF20643E4E002AA44E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4DE20643E4E002AA44E /* MainViewController.swift */; };
 		216AA4E120643EB8002AA44E /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4E020643EB8002AA44E /* SideMenuViewController.swift */; };
@@ -114,7 +114,7 @@
 		214D87382063568A00F20EF7 /* AppLaunchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchManager.swift; sourceTree = "<group>"; };
 		214D873A2063589500F20EF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		214D873C20635B7500F20EF7 /* UserDefault+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefault+extension.swift"; sourceTree = "<group>"; };
-		214D873E20636C4300F20EF7 /* Notification+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+extension.swift"; sourceTree = "<group>"; };
+		214D873E20636C4300F20EF7 /* NotificationCenter+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+extension.swift"; sourceTree = "<group>"; };
 		216AA4DC20643E28002AA44E /* MainParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainParentViewController.swift; sourceTree = "<group>"; };
 		216AA4DE20643E4E002AA44E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		216AA4E020643EB8002AA44E /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				214D873C20635B7500F20EF7 /* UserDefault+extension.swift */,
-				214D873E20636C4300F20EF7 /* Notification+extension.swift */,
+				214D873E20636C4300F20EF7 /* NotificationCenter+extension.swift */,
 				216AA4E4206446A5002AA44E /* UIColor+extension.swift */,
 				216AA4F0206449DF002AA44E /* UIViewController+extension.swift */,
 				21FAF840207615EF004048E5 /* UITableView+extension.swift */,
@@ -660,7 +660,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				216AA5082064F948002AA44E /* TypeDataProvider.swift in Sources */,
-				214D873F20636C4300F20EF7 /* Notification+extension.swift in Sources */,
+				214D873F20636C4300F20EF7 /* NotificationCenter+extension.swift in Sources */,
 				216AA4E720644868002AA44E /* SideMenuTableViewCell.swift in Sources */,
 				216AA4FD2064B095002AA44E /* FoodsTableViewController.swift in Sources */,
 				214D86E620629B8A00F20EF7 /* AppDelegate.swift in Sources */,

@@ -15,6 +15,7 @@ class MainParentViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    showAppMessageDialog()
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +40,30 @@ class MainParentViewController: UIViewController {
     let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tutorial") as! TutorialViewController
     self.navigationController?.present(viewController, animated: true, completion: nil)
     UserDefaults.standard.setShowTutorial(showTutorial: false)
+  }
+
+  func showAppMessageDialog() {
+    let lastMessageNo = UserDefaults.standard.getAppMessageNo()
+
+    if UserDefaults.standard.isFirstLaunch() {
+      UserDefaults.standard.setAppMessageNo(appMessageNo: Config.appMessageNo)
+      return
+    }
+
+    if UserDefaults.standard.isTutorialShowing() {
+      return
+    }
+
+    // Do not show dialog if already shown
+    if Config.appMessageNo <= lastMessageNo {
+      return
+    }
+
+    let title: String = NSLocalizedString("information", comment: "")
+    let message: String = Config.appMessageText
+    present(UIAlertController.alertWithTitle(title: title, message: message, buttonTitle: "OK"), animated: true, completion: nil)
+
+    UserDefaults.standard.setAppMessageNo(appMessageNo: Config.appMessageNo)
   }
 
   // MARK: - Navigation

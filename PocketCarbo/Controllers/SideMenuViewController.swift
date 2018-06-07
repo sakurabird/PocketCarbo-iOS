@@ -157,7 +157,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     // TODO : app store URL
     let shareText = "#\(appName)"
-    let shareUrl = NSURL(string: NSLocalizedString("appURL", comment: ""))!
+    let shareUrl = NSURL(string: NSLocalizedString("appStoreURL", comment: ""))!
 
     let activityViewController : UIActivityViewController = UIActivityViewController(
       activityItems: [shareText, shareUrl], applicationActivities: nil)

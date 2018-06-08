@@ -7,11 +7,11 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>sakurafish.com.ios.PocketCarbo$(BUNDLE_ID_SUFFIX)</string>
+	<string>sakurafish.com.ios.PocketCarbo.$(BUNDLE_ID_SUFFIX)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>ポケット糖質量</string>
+	<string>$(BUNDLE_NAME_PREFIX)ポケット糖質量</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

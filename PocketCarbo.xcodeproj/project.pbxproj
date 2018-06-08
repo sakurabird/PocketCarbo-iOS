@@ -876,6 +876,7 @@
 			baseConfigurationReference = CEE6C1AC699A1882B337540C /* Pods-PocketCarbo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_ID_SUFFIX = _debug;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 28TS6W29VY;
@@ -895,6 +896,7 @@
 			baseConfigurationReference = E66E9B212BFDE1CAA2EC2C3D /* Pods-PocketCarbo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_ID_SUFFIX = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28TS6W29VY;
 				ENABLE_BITCODE = YES;

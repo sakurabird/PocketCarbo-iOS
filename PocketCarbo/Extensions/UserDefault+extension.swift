@@ -15,6 +15,7 @@ extension UserDefaults {
     case showTutorialKey
     case isTutorialShowingKey
     case dataVersionKey
+    case appMessageNoKey
   }
 
   func isFirstLaunch() -> Bool {
@@ -54,5 +55,15 @@ extension UserDefaults {
 
   func getDataVersion() -> Int {
     return integer(forKey: UserDefaultsKeys.dataVersionKey.rawValue)
+  }
+
+  func getAppMessageNo() -> Int {
+    register(defaults: [UserDefaultsKeys.appMessageNoKey.rawValue : 0])
+    return integer(forKey: UserDefaultsKeys.appMessageNoKey.rawValue)
+  }
+
+  func setAppMessageNo(appMessageNo: Int) {
+    set(appMessageNo, forKey: UserDefaultsKeys.appMessageNoKey.rawValue)
+    synchronize()
   }
 }

@@ -68,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let navigationController = UINavigationController(rootViewController: mainVC)
 
     UINavigationBar.appearance().tintColor = UIColor.white
-    UINavigationBar.appearance().barTintColor = UIColor(rgb: 0x2BBBAD)
+    UINavigationBar.appearance().barTintColor = UIColor(named: "ColorPrimary")
     UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
 
     sideMenuVC.mainViewController = navigationController

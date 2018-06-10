@@ -67,8 +67,10 @@ class FoodTableViewCell: UITableViewCell {
   @IBOutlet weak var carretImage: UIImageView!
   @IBOutlet weak var foodNameLabel: UILabel!
   @IBOutlet weak var carboPer100gLabel: UILabel!
+  @IBOutlet weak var cubeSugar100Label: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
-
+  @IBOutlet weak var cubeSugarLabel: UILabel!
+  
   @IBOutlet weak var favoritesButton: UIButton!
   @IBOutlet weak var copyToClipboardButton: UIButton!
   @IBOutlet weak var shareButton: UIButton!
@@ -83,10 +85,18 @@ class FoodTableViewCell: UITableViewCell {
 
     foodNameLabel.text = food.name
     foodNameLabel.textColor = getCarboColor()
+
     carboPer100gLabel.text = "\(food.carbohydrate_per_100g) g"
-    carboPer100gLabel.textColor = getCarboColor()
+    let textColor : UIColor = getCarboColor()
+    carboPer100gLabel.textColor = textColor
+
+    cubeSugar100Label.text = createCubeSugarString(carbohydrate: food.carbohydrate_per_100g)
+
     let descriptionString = createDescriptionString(food: food)
     descriptionLabel.text = descriptionString
+    descriptionLabel.textColor = textColor
+
+    cubeSugarLabel.text = createCubeSugarString(carbohydrate: food.carbohydrate_per_weight)
 
     let isFavorite = FavoriteDataProvider.sharedInstance.isFavorite(food: food)
     favoritesState = isFavorite ? .favorite : .notFavorite
@@ -157,21 +167,31 @@ class FoodTableViewCell: UITableViewCell {
     switch self.food.carbohydrate_per_100g {
     case 0 ..< 5:
       // 糖質量が少ない
-      return UIColor(rgb: 0x0000d2)
+      return UIColor(named: "ColorTextSafe")!
     case 5 ..< 15:
       // 糖質量がやや多い
-      return UIColor(rgb: 0x049336)
+      return UIColor(named: "ColorTextWarning")!
     case 15 ..< 50:
       // 糖質量が多い
-      return UIColor(rgb: 0xf44336)
+      return UIColor(named: "ColorTextDanger")!
     default:
       // 糖質量が非常に多い
-      return UIColor(rgb: 0x9c27b0)
+      return UIColor(named: "ColorTextDangerHigh")!
     }
   }
 
   private func updateFavorites() {
     self.favoritesButton.setImage(self.favoritesState.favoriteImage, for: UIControlState.normal)
+  }
+
+  private func createCubeSugarString(carbohydrate: Float) -> String {
+    let cubeNum = round(carbohydrate * 10 / 4.0) / 10 // 小数点第２位を四捨五入
+    var cubeString : String = "0"
+    if (cubeNum != 0) {
+      cubeString = String(format:"%.1f", cubeNum)
+    }
+    cubeString = String(format: NSLocalizedString("Foods.cubeSugar.text", comment: ""), String(cubeString))
+    return cubeString
   }
 
   private func createDescriptionString(food: Food) -> String {

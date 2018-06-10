@@ -9,6 +9,7 @@
 //--------------------------------------------------------
 // Constants
 "appURL" = "https://www.pockettoushituryou.com/";
+"appStoreURL" = "https://itunes.apple.com/jp/app/id1371454314";
 "mail" = "sakurafish1@gmail.com";
 
 //--------------------------------------------------------
@@ -16,6 +17,7 @@
 "ok" = "OK";
 "share" = "シェア";
 "search" = "検索";
+"information" = "お知らせ";
 
 //--------------------------------------------------------
 // Foods Scene
@@ -34,6 +36,8 @@
 "Foods.description.text4" = "たんぱく質 : %@ g\n";
 "Foods.description.text5" = "脂質 : %@ g\n";
 "Foods.description.text6" = "塩分 : %@ g";
+
+"Foods.cubeSugar.text" = "角砂糖%@個分";
 
 "Foods.text.copied" = "テキストをコピーしました\n%@";
 "Foods.clipboard.text1" = "100gあたりの糖質量:%@g, ";

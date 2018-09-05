@@ -19,6 +19,9 @@ final class AppLaunchManager {
 
   func onAppStarted() {
 
+    // Lanch Count
+    UserDefaults.standard.incrementLaunchCount()
+
     setupRealm()
 
     if !newDataVersion() {

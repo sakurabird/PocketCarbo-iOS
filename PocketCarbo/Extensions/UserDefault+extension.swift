@@ -12,6 +12,7 @@ extension UserDefaults {
 
   enum UserDefaultsKeys: String {
     case isFirstLaunchKey
+    case launchCountKey
     case showTutorialKey
     case isTutorialShowingKey
     case dataVersionKey
@@ -26,6 +27,17 @@ extension UserDefaults {
   func setFirstLaunch(firstLaunch: Bool) {
     set(firstLaunch, forKey: UserDefaultsKeys.isFirstLaunchKey.rawValue)
     synchronize()
+  }
+
+  func incrementLaunchCount() {
+    let launchCount = getLaunchCount()
+    set((launchCount + 1), forKey: UserDefaultsKeys.launchCountKey.rawValue)
+    synchronize()
+  }
+
+  func getLaunchCount() -> Int {
+    register(defaults: [UserDefaultsKeys.launchCountKey.rawValue : 0])
+    return integer(forKey: UserDefaultsKeys.launchCountKey.rawValue)
   }
 
   func isShowTutorial() -> Bool {

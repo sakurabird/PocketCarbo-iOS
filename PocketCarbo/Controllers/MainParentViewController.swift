@@ -16,6 +16,8 @@ class MainParentViewController: UIViewController {
     super.viewDidLoad()
 
     showAppMessageDialog()
+    
+    AppdStoreManager.sharedInstance.showReviewDialog()
   }
 
   override func viewWillAppear(_ animated: Bool) {

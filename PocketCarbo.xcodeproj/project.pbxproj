@@ -11,6 +11,7 @@
 		21402F6A2079FB8200C552F6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21402F692079FB8100C552F6 /* TutorialViewController.swift */; };
 		2147C61520761D0800A845C2 /* EmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2147C61420761D0800A845C2 /* EmptyDataView.xib */; };
 		2147C61720761E2900A845C2 /* UIView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147C61620761E2900A845C2 /* UIView+extention.swift */; };
+		214B9A0F2140383A00596A3A /* AppStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214B9A0E2140383A00596A3A /* AppStoreManager.swift */; };
 		214D86E620629B8A00F20EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D86E520629B8A00F20EF7 /* AppDelegate.swift */; };
 		214D86EB20629B8A00F20EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214D86E920629B8A00F20EF7 /* Main.storyboard */; };
 		214D86F020629B8A00F20EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214D86EE20629B8A00F20EF7 /* LaunchScreen.storyboard */; };
@@ -89,6 +90,7 @@
 		21402F692079FB8100C552F6 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		2147C61420761D0800A845C2 /* EmptyDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataView.xib; sourceTree = "<group>"; };
 		2147C61620761E2900A845C2 /* UIView+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extention.swift"; sourceTree = "<group>"; };
+		214B9A0E2140383A00596A3A /* AppStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreManager.swift; sourceTree = "<group>"; };
 		214D86E220629B8A00F20EF7 /* PocketCarbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketCarbo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		214D86E520629B8A00F20EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		214D86EA20629B8A00F20EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 			children = (
 				214D87382063568A00F20EF7 /* AppLaunchManager.swift */,
 				21C0D99E207BF73F007F68A0 /* ADManager.swift */,
+				214B9A0E2140383A00596A3A /* AppStoreManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				214D873220634C4D00F20EF7 /* Food.swift in Sources */,
 				216AA4ED20644954002AA44E /* FavoritesViewController.swift in Sources */,
 				216AA4F1206449DF002AA44E /* UIViewController+extension.swift in Sources */,
+				214B9A0F2140383A00596A3A /* AppStoreManager.swift in Sources */,
 				216AA5012064B7D4002AA44E /* KindDataProvider.swift in Sources */,
 				214D873D20635B7500F20EF7 /* UserDefault+extension.swift in Sources */,
 				216AA4E92064493C002AA44E /* HelpViewController.swift in Sources */,

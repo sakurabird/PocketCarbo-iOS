@@ -7,21 +7,17 @@
 //
 
 import UIKit
-import GoogleMobileAds
 
 class SearchViewController: UIViewController {
 
   let searchController = UISearchController(searchResultsController: nil)
   var foodsTableViewController: FoodsTableViewController?
 
-  @IBOutlet weak var adBannerView: GADBannerView!
-
   // MARK: - View life cycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    setupAdMob()
     setupFoods()
     setupSearchController()
   }
@@ -64,12 +60,6 @@ class SearchViewController: UIViewController {
       }
     }
     navigationItem.searchController = searchController
-  }
-
-  private func setupAdMob() {
-    adBannerView.adUnitID = ADManager.sharedInstance.getBannerId()
-    adBannerView.rootViewController = self
-    adBannerView.load(ADManager.sharedInstance.getGADRequest())
   }
 }
 

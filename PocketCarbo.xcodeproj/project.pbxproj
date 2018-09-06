@@ -63,6 +63,7 @@
 		21E09FE72064202E00142405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E09FE92064202E00142405 /* Localizable.strings */; };
 		21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */; };
 		21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E99206FE103006ECDA2 /* WebViewController.swift */; };
+		21F46C222141AC5E002FA7BA /* AdBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F46C212141AC5E002FA7BA /* AdBannerViewController.swift */; };
 		21FAF841207615EF004048E5 /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FAF840207615EF004048E5 /* UITableView+extension.swift */; };
 		90FA1F09849C23C438827C5D /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B50A6B7C1DF8E7EF0454338 /* Pods_PocketCarbo.framework */; };
 		FF1E76F13B60847FF85D57BF /* Pods_PocketCarboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D562F07F2CB413F7662238 /* Pods_PocketCarboTests.framework */; };
@@ -144,6 +145,7 @@
 		21E09FEC2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
 		21EB5E99206FE103006ECDA2 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		21F46C212141AC5E002FA7BA /* AdBannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerViewController.swift; sourceTree = "<group>"; };
 		21FAF840207615EF004048E5 /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
 		357AB0B0AB7E5DC3FE26C4D8 /* Pods-PocketCarboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.release.xcconfig"; sourceTree = "<group>"; };
 		39E68DB569ACC0387BBE578A /* Pods-PocketCarbo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarbo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo.release.xcconfig"; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				216AA4EC20644954002AA44E /* FavoritesViewController.swift */,
 				216AA4EE2064495D002AA44E /* SettingsViewController.swift */,
 				2173047F207C932100EB055A /* SearchViewController.swift */,
+				21F46C212141AC5E002FA7BA /* AdBannerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				216AA4DD20643E28002AA44E /* MainParentViewController.swift in Sources */,
 				21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */,
 				21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */,
+				21F46C222141AC5E002FA7BA /* AdBannerViewController.swift in Sources */,
 				21402F6A2079FB8200C552F6 /* TutorialViewController.swift in Sources */,
 				214D87392063568A00F20EF7 /* AppLaunchManager.swift in Sources */,
 				214D873220634C4D00F20EF7 /* Food.swift in Sources */,

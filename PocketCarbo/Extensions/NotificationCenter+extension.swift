@@ -10,6 +10,7 @@ import Foundation
 
 enum NotificationEvent: String {
   case foodsAndKindsUpdated
+  case userClickedADBanner
 }
 
 extension NotificationCenter {

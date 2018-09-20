@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DF8EEAD788ED38FBAC16858 /* Pods_PocketCarboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9DC8CF8ED2CFA63A3CEF65 /* Pods_PocketCarboUITests.framework */; };
+		211071FE214F613F000A9FB5 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211071FD214F613F000A9FB5 /* ADManager.swift */; };
 		21402F6A2079FB8200C552F6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21402F692079FB8100C552F6 /* TutorialViewController.swift */; };
 		2147C61520761D0800A845C2 /* EmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2147C61420761D0800A845C2 /* EmptyDataView.xib */; };
 		2147C61720761E2900A845C2 /* UIView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147C61620761E2900A845C2 /* UIView+extention.swift */; };
@@ -57,9 +58,6 @@
 		21C0D99B207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
 		21C0D99C207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
 		21C0D99D207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
-		21C0D99F207BF73F007F68A0 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0D99E207BF73F007F68A0 /* ADManager.swift */; };
-		21C0D9A0207BF73F007F68A0 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0D99E207BF73F007F68A0 /* ADManager.swift */; };
-		21C0D9A1207BF73F007F68A0 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0D99E207BF73F007F68A0 /* ADManager.swift */; };
 		21E09FE72064202E00142405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E09FE92064202E00142405 /* Localizable.strings */; };
 		21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */; };
 		21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E99206FE103006ECDA2 /* WebViewController.swift */; };
@@ -88,6 +86,7 @@
 
 /* Begin PBXFileReference section */
 		1B50A6B7C1DF8E7EF0454338 /* Pods_PocketCarbo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarbo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		211071FD214F613F000A9FB5 /* ADManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADManager.swift; sourceTree = "<group>"; };
 		21402F692079FB8100C552F6 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		2147C61420761D0800A845C2 /* EmptyDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataView.xib; sourceTree = "<group>"; };
 		2147C61620761E2900A845C2 /* UIView+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extention.swift"; sourceTree = "<group>"; };
@@ -140,7 +139,6 @@
 		21A8EAF72072930B008FA5D0 /* FavoriteDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteDataProvider.swift; sourceTree = "<group>"; };
 		21C0D996207BECD1007F68A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		21C0D99A207BEDED007F68A0 /* Secret.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
-		21C0D99E207BF73F007F68A0 /* ADManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADManager.swift; sourceTree = "<group>"; };
 		21E09FEA2064204500142405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21E09FEC2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
@@ -353,8 +351,8 @@
 			isa = PBXGroup;
 			children = (
 				214D87382063568A00F20EF7 /* AppLaunchManager.swift */,
-				21C0D99E207BF73F007F68A0 /* ADManager.swift */,
 				214B9A0E2140383A00596A3A /* AppStoreManager.swift */,
+				211071FD214F613F000A9FB5 /* ADManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -676,7 +674,6 @@
 				216AA4E120643EB8002AA44E /* SideMenuViewController.swift in Sources */,
 				216AA4FF2064B4F0002AA44E /* FoodDataProvider.swift in Sources */,
 				216AA4DF20643E4E002AA44E /* MainViewController.swift in Sources */,
-				21C0D99F207BF73F007F68A0 /* ADManager.swift in Sources */,
 				21A8EAF82072930B008FA5D0 /* FavoriteDataProvider.swift in Sources */,
 				21730480207C932100EB055A /* SearchViewController.swift in Sources */,
 				216AA4DD20643E28002AA44E /* MainParentViewController.swift in Sources */,
@@ -691,6 +688,7 @@
 				214B9A0F2140383A00596A3A /* AppStoreManager.swift in Sources */,
 				216AA5012064B7D4002AA44E /* KindDataProvider.swift in Sources */,
 				214D873D20635B7500F20EF7 /* UserDefault+extension.swift in Sources */,
+				211071FE214F613F000A9FB5 /* ADManager.swift in Sources */,
 				216AA4E92064493C002AA44E /* HelpViewController.swift in Sources */,
 				214D873320634C4D00F20EF7 /* Kind.swift in Sources */,
 				214D873420634C4D00F20EF7 /* FavoriteFood.swift in Sources */,
@@ -708,7 +706,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21C0D9A0207BF73F007F68A0 /* ADManager.swift in Sources */,
 				214D86FB20629B8B00F20EF7 /* PocketCarboTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,7 +714,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21C0D9A1207BF73F007F68A0 /* ADManager.swift in Sources */,
 				214D870620629B8B00F20EF7 /* PocketCarboUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

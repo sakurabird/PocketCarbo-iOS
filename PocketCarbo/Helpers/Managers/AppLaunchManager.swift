@@ -35,7 +35,22 @@ final class AppLaunchManager {
   //MARK: Private Methods
 
   private func setupRealm() {
-    var config = Realm.Configuration()
+    let config = Realm.Configuration(
+      schemaVersion: 1,
+
+      migrationBlock: { migration, oldSchemaVersion in
+
+        if oldSchemaVersion < 1 {
+          // Kindにsearch_wordを追加 & Foodにnotesを追加
+          migration.enumerateObjects(ofType: Kind.className()) { oldObject, newObject in
+            newObject!["search_word"] = ""
+          }
+          migration.enumerateObjects(ofType: Food.className()) { oldObject, newObject in
+            newObject!["notes"] = ""
+          }
+        }
+    })
+
     Realm.Configuration.defaultConfiguration = config
   }
 

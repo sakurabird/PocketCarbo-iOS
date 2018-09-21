@@ -133,7 +133,11 @@ class FoodTableViewCell: UITableViewCell {
   }
   
   @IBAction func didTapShare(_ sender: UIButton) {
-    delegate?.didTapShare(self, shareText: createClipboardText())
+    var shareText = createClipboardText()
+    shareText.append("\n")
+    shareText.append(NSLocalizedString("appStoreWebURL", comment: ""))
+
+    delegate?.didTapShare(self, shareText: shareText)
     sender.animateCellButton(completion: { (finish) in
     })
   }

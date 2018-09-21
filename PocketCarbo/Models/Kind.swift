@@ -12,11 +12,13 @@ import RealmSwift
 class Kind : RealmSwift.Object, Codable {
   @objc dynamic var id: Int = 0
   @objc dynamic var name: String?
+  @objc dynamic var search_word: String?
   @objc dynamic var type_id: Int = 0
 
   enum CodingKeys: String, CodingKey {
     case id = "id"
     case name = "name"
+    case search_word = "search_word"
     case type_id = "type_id"
   }
 
@@ -25,6 +27,7 @@ class Kind : RealmSwift.Object, Codable {
     let values = try decoder.container(keyedBy: CodingKeys.self)
     id = (try values.decodeIfPresent(Int.self, forKey: .id))!
     name = try values.decodeIfPresent(String.self, forKey: .name)
+    search_word = try values.decodeIfPresent(String.self, forKey: .search_word)
     type_id = (try values.decodeIfPresent(Int.self, forKey: .type_id))!
   }
 

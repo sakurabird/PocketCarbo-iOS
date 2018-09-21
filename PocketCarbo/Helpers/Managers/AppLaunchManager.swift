@@ -36,7 +36,6 @@ final class AppLaunchManager {
 
   private func setupRealm() {
     var config = Realm.Configuration()
-    config.deleteRealmIfMigrationNeeded = true
     Realm.Configuration.defaultConfiguration = config
   }
 

@@ -10,7 +10,7 @@ import Foundation
 
 enum Config {
   // TODO: jsonファイルを更新したらこの数値も変更すること 
-  static let dataVersion = 3
+  static let dataVersion = 5
 
   // TODO: アプリからのお知らせ
   static let appMessageNo = 2

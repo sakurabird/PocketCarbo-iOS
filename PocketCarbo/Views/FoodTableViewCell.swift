@@ -66,6 +66,7 @@ class FoodTableViewCell: UITableViewCell {
   @IBOutlet weak var stackView: UIStackView!
   @IBOutlet weak var carretImage: UIImageView!
   @IBOutlet weak var foodNameLabel: UILabel!
+  @IBOutlet weak var kindNameLabel: PaddingLabel!
   @IBOutlet weak var carboPer100gLabel: UILabel!
   @IBOutlet weak var cubeSugar100Label: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
@@ -85,6 +86,8 @@ class FoodTableViewCell: UITableViewCell {
 
     foodNameLabel.text = food.name
     foodNameLabel.textColor = getCarboColor()
+
+    kindNameLabel.text = KindDataProvider.sharedInstance.findData(kindId: food.kind_id).name
 
     carboPer100gLabel.text = "\(food.carbohydrate_per_100g) g"
     let textColor : UIColor = getCarboColor()

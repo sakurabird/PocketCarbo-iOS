@@ -21,7 +21,15 @@ final class KindDataProvider {
 
     let predicate = NSPredicate(format: "type_id == %i", typeId)
     let kinds = realm.objects(Kind.self).filter(predicate).sorted(byKeyPath: "id")
-    
-    return  Array(kinds)
+
+    return Array(kinds)
+  }
+
+  func findData(kindId: Int) -> Kind {
+
+    let predicate = NSPredicate(format: "id == %i", kindId)
+    let kind = realm.objects(Kind.self).filter(predicate).first
+
+    return kind!
   }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DF8EEAD788ED38FBAC16858 /* Pods_PocketCarboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9DC8CF8ED2CFA63A3CEF65 /* Pods_PocketCarboUITests.framework */; };
 		211071FE214F613F000A9FB5 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211071FD214F613F000A9FB5 /* ADManager.swift */; };
+		2117FFED2154045800C67EBD /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117FFEC2154045800C67EBD /* PaddingLabel.swift */; };
 		21402F6A2079FB8200C552F6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21402F692079FB8100C552F6 /* TutorialViewController.swift */; };
 		2147C61520761D0800A845C2 /* EmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2147C61420761D0800A845C2 /* EmptyDataView.xib */; };
 		2147C61720761E2900A845C2 /* UIView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147C61620761E2900A845C2 /* UIView+extention.swift */; };
@@ -87,6 +88,7 @@
 /* Begin PBXFileReference section */
 		1B50A6B7C1DF8E7EF0454338 /* Pods_PocketCarbo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarbo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		211071FD214F613F000A9FB5 /* ADManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADManager.swift; sourceTree = "<group>"; };
+		2117FFEC2154045800C67EBD /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		21402F692079FB8100C552F6 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		2147C61420761D0800A845C2 /* EmptyDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataView.xib; sourceTree = "<group>"; };
 		2147C61620761E2900A845C2 /* UIView+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extention.swift"; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				2147C61420761D0800A845C2 /* EmptyDataView.xib */,
 				216AA4E620644868002AA44E /* SideMenuTableViewCell.swift */,
 				216AA509206527B9002AA44E /* FoodTableViewCell.swift */,
+				2117FFEC2154045800C67EBD /* PaddingLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */,
 				21F46C222141AC5E002FA7BA /* AdBannerViewController.swift in Sources */,
 				21402F6A2079FB8200C552F6 /* TutorialViewController.swift in Sources */,
+				2117FFED2154045800C67EBD /* PaddingLabel.swift in Sources */,
 				214D87392063568A00F20EF7 /* AppLaunchManager.swift in Sources */,
 				214D873220634C4D00F20EF7 /* Food.swift in Sources */,
 				216AA4ED20644954002AA44E /* FavoritesViewController.swift in Sources */,

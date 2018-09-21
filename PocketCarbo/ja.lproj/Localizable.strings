@@ -10,6 +10,7 @@
 // Constants
 "appURL" = "https://www.pockettoushituryou.com/";
 "appStoreWebURL" = "https://itunes.apple.com/jp/app/id1371454314";
+"appStoreURLPath" = "itms-apps://itunes.apple.com/app/id1371454314";
 "mail" = "sakurafish1@gmail.com";
 
 //--------------------------------------------------------

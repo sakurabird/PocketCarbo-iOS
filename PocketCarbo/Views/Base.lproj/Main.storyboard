@@ -132,6 +132,7 @@
                         <viewLayoutGuide key="safeArea" id="9fV-cx-ORd"/>
                     </view>
                     <connections>
+                        <outlet property="logoImageView" destination="Pc2-t2-iI2" id="nKY-9h-2QK"/>
                         <outlet property="tableView" destination="hfB-Cu-whA" id="5YZ-Cy-ztC"/>
                     </connections>
                 </viewController>

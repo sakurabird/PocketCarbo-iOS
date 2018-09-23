@@ -36,7 +36,7 @@ final class AppLaunchManager {
 
   private func setupRealm() {
     let config = Realm.Configuration(
-      schemaVersion: 1,
+      schemaVersion: 2,
 
       migrationBlock: { migration, oldSchemaVersion in
 
@@ -48,6 +48,10 @@ final class AppLaunchManager {
           migration.enumerateObjects(ofType: Food.className()) { oldObject, newObject in
             newObject!["notes"] = ""
           }
+        }
+
+        if oldSchemaVersion < 2 {
+          // Kindにfoods: List<Food>, Foodsにkinds・: LinkingObjects<Kind>を追加
         }
     })
 
@@ -82,11 +86,18 @@ final class AppLaunchManager {
     let realm = try! Realm()
 
     try! realm.write {
-      for kind in kinds {
-        realm.add(kind, update: true)
-      }
+
       for food in foods {
         realm.add(food, update: true)
+      }
+
+      for kind in kinds {
+        let predicate = NSPredicate(format: "kind_id == %i", kind.id)
+        let foods = realm.objects(Food.self).filter(predicate)
+        kind.foods.removeAll()
+        kind.foods.append(objectsIn: foods)
+
+        realm.add(kind, update: true)
       }
     }
     // print(realm.objects(Kind.self))

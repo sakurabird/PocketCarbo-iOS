@@ -13,7 +13,7 @@ enum Config {
   static let dataVersion = 5
 
   // TODO: アプリからのお知らせ
-  static let appMessageNo = 2
-  static let appMessageText = "ポケット糖質量アプリは糖質量を角砂糖(1個4g)の個数で表示する機能を追加いたしました！是非御覧ください。"
+  static let appMessageNo = 3
+  static let appMessageText = "糖質量データが1200種類→1400種類に増えました！是非お役立てください。"
 }
 

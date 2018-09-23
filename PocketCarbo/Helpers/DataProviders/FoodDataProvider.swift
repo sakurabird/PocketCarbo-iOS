@@ -75,8 +75,14 @@ final class FoodDataProvider {
 
   func findData(searchText: String) -> [Food] {
 
-    let predicate = NSPredicate(format: "search_word CONTAINS[c] %@ OR name CONTAINS[c] %@", argumentArray: [searchText, searchText])
-    let foods = realm.objects(Food.self).filter(predicate)
+    let p1 = NSPredicate(format: "name CONTAINS[c] %@", argumentArray: [searchText])
+    let p2 = NSPredicate(format: "search_word CONTAINS[c] %@", argumentArray: [searchText])
+    let p3 = NSPredicate(format: "ANY kinds.name CONTAINS[c] %@", argumentArray: [searchText])
+    let p4 = NSPredicate(format: "ANY kinds.search_word CONTAINS[c] %@", argumentArray: [searchText])
+
+    let predicateCompound = NSCompoundPredicate.init(type: .or, subpredicates: [p1, p2, p3, p4])
+
+    let foods = realm.objects(Food.self).filter(predicateCompound)
       .sorted(byKeyPath: FoodSortOrder.nameAsc.key(), ascending: FoodSortOrder.nameAsc.ascending())
 
     return  Array(foods)

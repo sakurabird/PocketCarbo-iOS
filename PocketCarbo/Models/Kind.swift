@@ -15,6 +15,8 @@ class Kind : RealmSwift.Object, Codable {
   @objc dynamic var search_word: String?
   @objc dynamic var type_id: Int = 0
 
+  let foods = List<Food>()
+
   enum CodingKeys: String, CodingKey {
     case id = "id"
     case name = "name"

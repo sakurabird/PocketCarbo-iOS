@@ -25,6 +25,8 @@ class Food : RealmSwift.Object, Codable {
   @objc dynamic var search_word : String?
   @objc dynamic var weight_hint : String?
 
+  let kinds = LinkingObjects(fromType: Kind.self, property: "foods")
+
   enum CodingKeys: String, CodingKey {
 
     case id = "id"

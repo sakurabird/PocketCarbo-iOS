@@ -87,7 +87,7 @@ class FoodTableViewCell: UITableViewCell {
     foodNameLabel.text = food.name
     foodNameLabel.textColor = getCarboColor()
 
-    kindNameLabel.text = KindDataProvider.sharedInstance.findData(kindId: food.kind_id).name
+    kindNameLabel.text = food.kinds.first?.name
 
     carboPer100gLabel.text = "\(food.carbohydrate_per_100g) g"
     let textColor : UIColor = getCarboColor()

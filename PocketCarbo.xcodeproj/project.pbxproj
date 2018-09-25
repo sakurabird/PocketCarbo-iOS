@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CF2B5C2E2DEE2EF666AF060 /* Pods_PocketCarboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE81331B70D3B3D76DDEC7CB /* Pods_PocketCarboTests.framework */; };
+		1DF8EEAD788ED38FBAC16858 /* Pods_PocketCarboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9DC8CF8ED2CFA63A3CEF65 /* Pods_PocketCarboUITests.framework */; };
+		211071FE214F613F000A9FB5 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211071FD214F613F000A9FB5 /* ADManager.swift */; };
+		2117FFED2154045800C67EBD /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117FFEC2154045800C67EBD /* PaddingLabel.swift */; };
+		2117FFF121554D8300C67EBD /* foods_and_kinds.json in Resources */ = {isa = PBXBuildFile; fileRef = 2117FFF021554D8200C67EBD /* foods_and_kinds.json */; };
 		21402F6A2079FB8200C552F6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21402F692079FB8100C552F6 /* TutorialViewController.swift */; };
 		2147C61520761D0800A845C2 /* EmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2147C61420761D0800A845C2 /* EmptyDataView.xib */; };
 		2147C61720761E2900A845C2 /* UIView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147C61620761E2900A845C2 /* UIView+extention.swift */; };
+		214B9A0F2140383A00596A3A /* AppStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214B9A0E2140383A00596A3A /* AppStoreManager.swift */; };
 		214D86E620629B8A00F20EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D86E520629B8A00F20EF7 /* AppDelegate.swift */; };
 		214D86EB20629B8A00F20EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214D86E920629B8A00F20EF7 /* Main.storyboard */; };
 		214D86F020629B8A00F20EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 214D86EE20629B8A00F20EF7 /* LaunchScreen.storyboard */; };
@@ -21,7 +25,6 @@
 		214D872A20633BBD00F20EF7 /* common.css in Resources */ = {isa = PBXBuildFile; fileRef = 214D872620633BBD00F20EF7 /* common.css */; };
 		214D872B20633BBD00F20EF7 /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 214D872720633BBD00F20EF7 /* help.html */; };
 		214D872C20633BBD00F20EF7 /* privacy_policy.html in Resources */ = {isa = PBXBuildFile; fileRef = 214D872820633BBD00F20EF7 /* privacy_policy.html */; };
-		214D872E2063439800F20EF7 /* foods_and_kinds.json in Resources */ = {isa = PBXBuildFile; fileRef = 214D872D2063439800F20EF7 /* foods_and_kinds.json */; };
 		214D873220634C4D00F20EF7 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D872F20634C4D00F20EF7 /* Food.swift */; };
 		214D873320634C4D00F20EF7 /* Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873020634C4D00F20EF7 /* Kind.swift */; };
 		214D873420634C4D00F20EF7 /* FavoriteFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873120634C4D00F20EF7 /* FavoriteFood.swift */; };
@@ -56,15 +59,13 @@
 		21C0D99B207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
 		21C0D99C207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
 		21C0D99D207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
-		21C0D99F207BF73F007F68A0 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0D99E207BF73F007F68A0 /* ADManager.swift */; };
-		21C0D9A0207BF73F007F68A0 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0D99E207BF73F007F68A0 /* ADManager.swift */; };
-		21C0D9A1207BF73F007F68A0 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0D99E207BF73F007F68A0 /* ADManager.swift */; };
 		21E09FE72064202E00142405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E09FE92064202E00142405 /* Localizable.strings */; };
 		21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */; };
 		21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E99206FE103006ECDA2 /* WebViewController.swift */; };
+		21F46C222141AC5E002FA7BA /* AdBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F46C212141AC5E002FA7BA /* AdBannerViewController.swift */; };
 		21FAF841207615EF004048E5 /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FAF840207615EF004048E5 /* UITableView+extension.swift */; };
-		3048598BCED3767E9561682C /* Pods_PocketCarboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F395249A8D767A32E15DBC /* Pods_PocketCarboUITests.framework */; };
-		53134BCD252CE8653D127641 /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E55201D72BB574D8A65A84 /* Pods_PocketCarbo.framework */; };
+		90FA1F09849C23C438827C5D /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B50A6B7C1DF8E7EF0454338 /* Pods_PocketCarbo.framework */; };
+		FF1E76F13B60847FF85D57BF /* Pods_PocketCarboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D562F07F2CB413F7662238 /* Pods_PocketCarboTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,10 +86,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1EEE2F4D1371AAD2C87057D0 /* Pods-PocketCarboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B50A6B7C1DF8E7EF0454338 /* Pods_PocketCarbo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarbo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		211071FD214F613F000A9FB5 /* ADManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADManager.swift; sourceTree = "<group>"; };
+		2117FFEC2154045800C67EBD /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		2117FFF021554D8200C67EBD /* foods_and_kinds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = foods_and_kinds.json; path = "../../../../../../../Desktop/sakura/@my_development/PocketCarbo/iOS/ver2.0/foods_and_kinds.json"; sourceTree = "<group>"; };
 		21402F692079FB8100C552F6 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		2147C61420761D0800A845C2 /* EmptyDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataView.xib; sourceTree = "<group>"; };
 		2147C61620761E2900A845C2 /* UIView+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extention.swift"; sourceTree = "<group>"; };
+		214B9A0E2140383A00596A3A /* AppStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreManager.swift; sourceTree = "<group>"; };
 		214D86E220629B8A00F20EF7 /* PocketCarbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketCarbo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		214D86E520629B8A00F20EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		214D86EA20629B8A00F20EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,7 +111,6 @@
 		214D872620633BBD00F20EF7 /* common.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = common.css; sourceTree = "<group>"; };
 		214D872720633BBD00F20EF7 /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		214D872820633BBD00F20EF7 /* privacy_policy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = privacy_policy.html; sourceTree = "<group>"; };
-		214D872D2063439800F20EF7 /* foods_and_kinds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foods_and_kinds.json; sourceTree = "<group>"; };
 		214D872F20634C4D00F20EF7 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		214D873020634C4D00F20EF7 /* Kind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kind.swift; sourceTree = "<group>"; };
 		214D873120634C4D00F20EF7 /* FavoriteFood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteFood.swift; sourceTree = "<group>"; };
@@ -137,20 +141,20 @@
 		21A8EAF72072930B008FA5D0 /* FavoriteDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteDataProvider.swift; sourceTree = "<group>"; };
 		21C0D996207BECD1007F68A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		21C0D99A207BEDED007F68A0 /* Secret.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
-		21C0D99E207BF73F007F68A0 /* ADManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADManager.swift; sourceTree = "<group>"; };
 		21E09FEA2064204500142405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21E09FEC2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
 		21EB5E99206FE103006ECDA2 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		21F46C212141AC5E002FA7BA /* AdBannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerViewController.swift; sourceTree = "<group>"; };
 		21FAF840207615EF004048E5 /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
-		2D2C521B972E5CEFDA1CA638 /* Pods-PocketCarboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.release.xcconfig"; sourceTree = "<group>"; };
-		44F2A974A48250F8902230DE /* Pods-PocketCarboTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboTests/Pods-PocketCarboTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7C5BE215D88EAD17CC1EB3A8 /* Pods-PocketCarboTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboTests/Pods-PocketCarboTests.release.xcconfig"; sourceTree = "<group>"; };
-		A8F395249A8D767A32E15DBC /* Pods_PocketCarboUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE81331B70D3B3D76DDEC7CB /* Pods_PocketCarboTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6E55201D72BB574D8A65A84 /* Pods_PocketCarbo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarbo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEE6C1AC699A1882B337540C /* Pods-PocketCarbo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarbo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo.debug.xcconfig"; sourceTree = "<group>"; };
-		E66E9B212BFDE1CAA2EC2C3D /* Pods-PocketCarbo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarbo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo.release.xcconfig"; sourceTree = "<group>"; };
+		357AB0B0AB7E5DC3FE26C4D8 /* Pods-PocketCarboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.release.xcconfig"; sourceTree = "<group>"; };
+		39E68DB569ACC0387BBE578A /* Pods-PocketCarbo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarbo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo.release.xcconfig"; sourceTree = "<group>"; };
+		3A2990AF066DDE7A17CC4C18 /* Pods-PocketCarboTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboTests/Pods-PocketCarboTests.release.xcconfig"; sourceTree = "<group>"; };
+		44D562F07F2CB413F7662238 /* Pods_PocketCarboTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9DC8CF8ED2CFA63A3CEF65 /* Pods_PocketCarboUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarboUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		905382E4D4F0251E6406FF94 /* Pods-PocketCarbo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarbo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo.debug.xcconfig"; sourceTree = "<group>"; };
+		C529CFCB3B123741C055E177 /* Pods-PocketCarboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C593E6D241D42ECC95A16564 /* Pods-PocketCarboTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboTests/Pods-PocketCarboTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53134BCD252CE8653D127641 /* Pods_PocketCarbo.framework in Frameworks */,
+				90FA1F09849C23C438827C5D /* Pods_PocketCarbo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CF2B5C2E2DEE2EF666AF060 /* Pods_PocketCarboTests.framework in Frameworks */,
+				FF1E76F13B60847FF85D57BF /* Pods_PocketCarboTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3048598BCED3767E9561682C /* Pods_PocketCarboUITests.framework in Frameworks */,
+				1DF8EEAD788ED38FBAC16858 /* Pods_PocketCarboUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,8 +192,8 @@
 				214D86F920629B8B00F20EF7 /* PocketCarboTests */,
 				214D870420629B8B00F20EF7 /* PocketCarboUITests */,
 				214D86E320629B8A00F20EF7 /* Products */,
-				4198D3FABA7DABD00C0BD99B /* Pods */,
-				596BBB48FCF9955347934357 /* Frameworks */,
+				C275A8685D14FF27B2D05C18 /* Pods */,
+				8F51051343CA81DD9C45E280 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -292,6 +296,7 @@
 				2147C61420761D0800A845C2 /* EmptyDataView.xib */,
 				216AA4E620644868002AA44E /* SideMenuTableViewCell.swift */,
 				216AA509206527B9002AA44E /* FoodTableViewCell.swift */,
+				2117FFEC2154045800C67EBD /* PaddingLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				216AA4EC20644954002AA44E /* FavoritesViewController.swift */,
 				216AA4EE2064495D002AA44E /* SettingsViewController.swift */,
 				2173047F207C932100EB055A /* SearchViewController.swift */,
+				21F46C212141AC5E002FA7BA /* AdBannerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -328,7 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				216AA5042064F83B002AA44E /* type.json */,
-				214D872D2063439800F20EF7 /* foods_and_kinds.json */,
+				2117FFF021554D8200C67EBD /* foods_and_kinds.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -348,7 +354,8 @@
 			isa = PBXGroup;
 			children = (
 				214D87382063568A00F20EF7 /* AppLaunchManager.swift */,
-				21C0D99E207BF73F007F68A0 /* ADManager.swift */,
+				214B9A0E2140383A00596A3A /* AppStoreManager.swift */,
+				211071FD214F613F000A9FB5 /* ADManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -364,27 +371,27 @@
 			path = DataProviders;
 			sourceTree = "<group>";
 		};
-		4198D3FABA7DABD00C0BD99B /* Pods */ = {
+		8F51051343CA81DD9C45E280 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CEE6C1AC699A1882B337540C /* Pods-PocketCarbo.debug.xcconfig */,
-				E66E9B212BFDE1CAA2EC2C3D /* Pods-PocketCarbo.release.xcconfig */,
-				44F2A974A48250F8902230DE /* Pods-PocketCarboTests.debug.xcconfig */,
-				7C5BE215D88EAD17CC1EB3A8 /* Pods-PocketCarboTests.release.xcconfig */,
-				1EEE2F4D1371AAD2C87057D0 /* Pods-PocketCarboUITests.debug.xcconfig */,
-				2D2C521B972E5CEFDA1CA638 /* Pods-PocketCarboUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		596BBB48FCF9955347934357 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B6E55201D72BB574D8A65A84 /* Pods_PocketCarbo.framework */,
-				AE81331B70D3B3D76DDEC7CB /* Pods_PocketCarboTests.framework */,
-				A8F395249A8D767A32E15DBC /* Pods_PocketCarboUITests.framework */,
+				1B50A6B7C1DF8E7EF0454338 /* Pods_PocketCarbo.framework */,
+				44D562F07F2CB413F7662238 /* Pods_PocketCarboTests.framework */,
+				8A9DC8CF8ED2CFA63A3CEF65 /* Pods_PocketCarboUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C275A8685D14FF27B2D05C18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				905382E4D4F0251E6406FF94 /* Pods-PocketCarbo.debug.xcconfig */,
+				39E68DB569ACC0387BBE578A /* Pods-PocketCarbo.release.xcconfig */,
+				C593E6D241D42ECC95A16564 /* Pods-PocketCarboTests.debug.xcconfig */,
+				3A2990AF066DDE7A17CC4C18 /* Pods-PocketCarboTests.release.xcconfig */,
+				C529CFCB3B123741C055E177 /* Pods-PocketCarboUITests.debug.xcconfig */,
+				357AB0B0AB7E5DC3FE26C4D8 /* Pods-PocketCarboUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,13 +401,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 214D870A20629B8B00F20EF7 /* Build configuration list for PBXNativeTarget "PocketCarbo" */;
 			buildPhases = (
-				DE49EF84675109BF6B638DDE /* [CP] Check Pods Manifest.lock */,
+				D8EB132CA268189ACB8732C4 /* [CP] Check Pods Manifest.lock */,
 				214D86DE20629B8A00F20EF7 /* Sources */,
 				214D86DF20629B8A00F20EF7 /* Frameworks */,
 				214D86E020629B8A00F20EF7 /* Resources */,
 				214D87212063324C00F20EF7 /* ShellScript */,
-				237D1F2EF50446E47223FFE7 /* [CP] Embed Pods Frameworks */,
 				21C0D995207BDF42007F68A0 /* ShellScript */,
+				EAE56C23B99059CF307C5CCA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -415,7 +422,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 214D870D20629B8B00F20EF7 /* Build configuration list for PBXNativeTarget "PocketCarboTests" */;
 			buildPhases = (
-				312C4D3A18C21E08B5103DE3 /* [CP] Check Pods Manifest.lock */,
+				B2571EABCCAF48105B00BF75 /* [CP] Check Pods Manifest.lock */,
 				214D86F220629B8B00F20EF7 /* Sources */,
 				214D86F320629B8B00F20EF7 /* Frameworks */,
 				214D86F420629B8B00F20EF7 /* Resources */,
@@ -434,7 +441,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 214D871020629B8B00F20EF7 /* Build configuration list for PBXNativeTarget "PocketCarboUITests" */;
 			buildPhases = (
-				5A6E3B9361B88DB98B0BFB11 /* [CP] Check Pods Manifest.lock */,
+				CAE19D0DAD7ADFFF39B68BEA /* [CP] Check Pods Manifest.lock */,
 				214D86FD20629B8B00F20EF7 /* Sources */,
 				214D86FE20629B8B00F20EF7 /* Frameworks */,
 				214D86FF20629B8B00F20EF7 /* Resources */,
@@ -501,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21C0D997207BECD1007F68A0 /* GoogleService-Info.plist in Resources */,
+				2117FFF121554D8300C67EBD /* foods_and_kinds.json in Resources */,
 				214D871C2063271100F20EF7 /* Settings.bundle in Resources */,
 				214D872B20633BBD00F20EF7 /* help.html in Resources */,
 				216AA4F820647B44002AA44E /* Assets.xcassets in Resources */,
@@ -510,7 +518,6 @@
 				21E09FE72064202E00142405 /* Localizable.strings in Resources */,
 				214D86F020629B8A00F20EF7 /* LaunchScreen.storyboard in Resources */,
 				214D872A20633BBD00F20EF7 /* common.css in Resources */,
-				214D872E2063439800F20EF7 /* foods_and_kinds.json in Resources */,
 				2147C61520761D0800A845C2 /* EmptyDataView.xib in Resources */,
 				214D86EB20629B8A00F20EF7 /* Main.storyboard in Resources */,
 				216AA5052064F83B002AA44E /* type.json in Resources */,
@@ -557,48 +564,15 @@
 			files = (
 			);
 			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 5d6fabbcde793289c1e4057daced02012118e520 4d3b7b1a7392e3998c8f1dc0bb73338daa6db425366d39cb4f1a955990cafad0\n";
 		};
-		237D1F2EF50446E47223FFE7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
-				"${BUILT_PRODUCTS_DIR}/Gecco/Gecco.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
-				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gecco.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		312C4D3A18C21E08B5103DE3 /* [CP] Check Pods Manifest.lock */ = {
+		B2571EABCCAF48105B00BF75 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -616,7 +590,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5A6E3B9361B88DB98B0BFB11 /* [CP] Check Pods Manifest.lock */ = {
+		CAE19D0DAD7ADFFF39B68BEA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -634,7 +608,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DE49EF84675109BF6B638DDE /* [CP] Check Pods Manifest.lock */ = {
+		D8EB132CA268189ACB8732C4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -650,6 +624,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAE56C23B99059CF307C5CCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/Gecco/Gecco.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gecco.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -669,19 +677,22 @@
 				216AA4E120643EB8002AA44E /* SideMenuViewController.swift in Sources */,
 				216AA4FF2064B4F0002AA44E /* FoodDataProvider.swift in Sources */,
 				216AA4DF20643E4E002AA44E /* MainViewController.swift in Sources */,
-				21C0D99F207BF73F007F68A0 /* ADManager.swift in Sources */,
 				21A8EAF82072930B008FA5D0 /* FavoriteDataProvider.swift in Sources */,
 				21730480207C932100EB055A /* SearchViewController.swift in Sources */,
 				216AA4DD20643E28002AA44E /* MainParentViewController.swift in Sources */,
 				21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */,
 				21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */,
+				21F46C222141AC5E002FA7BA /* AdBannerViewController.swift in Sources */,
 				21402F6A2079FB8200C552F6 /* TutorialViewController.swift in Sources */,
+				2117FFED2154045800C67EBD /* PaddingLabel.swift in Sources */,
 				214D87392063568A00F20EF7 /* AppLaunchManager.swift in Sources */,
 				214D873220634C4D00F20EF7 /* Food.swift in Sources */,
 				216AA4ED20644954002AA44E /* FavoritesViewController.swift in Sources */,
 				216AA4F1206449DF002AA44E /* UIViewController+extension.swift in Sources */,
+				214B9A0F2140383A00596A3A /* AppStoreManager.swift in Sources */,
 				216AA5012064B7D4002AA44E /* KindDataProvider.swift in Sources */,
 				214D873D20635B7500F20EF7 /* UserDefault+extension.swift in Sources */,
+				211071FE214F613F000A9FB5 /* ADManager.swift in Sources */,
 				216AA4E92064493C002AA44E /* HelpViewController.swift in Sources */,
 				214D873320634C4D00F20EF7 /* Kind.swift in Sources */,
 				214D873420634C4D00F20EF7 /* FavoriteFood.swift in Sources */,
@@ -699,7 +710,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21C0D9A0207BF73F007F68A0 /* ADManager.swift in Sources */,
 				214D86FB20629B8B00F20EF7 /* PocketCarboTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -708,7 +718,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21C0D9A1207BF73F007F68A0 /* ADManager.swift in Sources */,
 				214D870620629B8B00F20EF7 /* PocketCarboUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -815,6 +824,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -867,13 +877,14 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		214D870B20629B8B00F20EF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEE6C1AC699A1882B337540C /* Pods-PocketCarbo.debug.xcconfig */;
+			baseConfigurationReference = 905382E4D4F0251E6406FF94 /* Pods-PocketCarbo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDebug;
 				BUNDLE_ID_SUFFIX = .debug;
@@ -894,7 +905,7 @@
 		};
 		214D870C20629B8B00F20EF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E66E9B212BFDE1CAA2EC2C3D /* Pods-PocketCarbo.release.xcconfig */;
+			baseConfigurationReference = 39E68DB569ACC0387BBE578A /* Pods-PocketCarbo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = "";
@@ -914,7 +925,7 @@
 		};
 		214D870E20629B8B00F20EF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44F2A974A48250F8902230DE /* Pods-PocketCarboTests.debug.xcconfig */;
+			baseConfigurationReference = C593E6D241D42ECC95A16564 /* Pods-PocketCarboTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -932,7 +943,7 @@
 		};
 		214D870F20629B8B00F20EF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C5BE215D88EAD17CC1EB3A8 /* Pods-PocketCarboTests.release.xcconfig */;
+			baseConfigurationReference = 3A2990AF066DDE7A17CC4C18 /* Pods-PocketCarboTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -950,7 +961,7 @@
 		};
 		214D871120629B8B00F20EF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EEE2F4D1371AAD2C87057D0 /* Pods-PocketCarboUITests.debug.xcconfig */;
+			baseConfigurationReference = C529CFCB3B123741C055E177 /* Pods-PocketCarboUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -967,7 +978,7 @@
 		};
 		214D871220629B8B00F20EF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D2C521B972E5CEFDA1CA638 /* Pods-PocketCarboUITests.release.xcconfig */;
+			baseConfigurationReference = 357AB0B0AB7E5DC3FE26C4D8 /* Pods-PocketCarboUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

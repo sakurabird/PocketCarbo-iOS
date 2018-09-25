@@ -69,9 +69,10 @@ class TutorialViewController: SpotlightViewController {
     let screenSize = UIScreen.main.bounds.size
 
     var topMargin = 0
-    if ((UIApplication.shared.keyWindow?.safeAreaInsets.top)! > CGFloat(0.0)) {
+    if ((UIApplication.shared.keyWindow?.safeAreaInsets.bottom)! > CGFloat(0.0)) {
       topMargin += 24
     }
+
     switch stepIndex {
     case 0:
       // Menu

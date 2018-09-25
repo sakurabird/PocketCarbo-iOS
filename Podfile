@@ -5,10 +5,10 @@ target 'PocketCarbo' do
 
   # Pods for PocketCarbo
   pod 'Firebase/Core'
-  pod 'Fabric', '~> 1.7.2'
-  pod 'Crashlytics', '~> 3.9.3'
+  pod 'Fabric'
+  pod 'Crashlytics'
   pod 'Google-Mobile-Ads-SDK'
-  pod 'XLPagerTabStrip', '~> 8.0'
+  pod 'XLPagerTabStrip'
   pod 'SlideMenuControllerSwift'
   pod 'DropDown'
   pod 'RealmSwift'

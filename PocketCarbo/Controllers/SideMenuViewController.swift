@@ -87,12 +87,18 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
   }()
 
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var logoImageView: UIImageView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
 
     tableView.estimatedRowHeight = 70.0
     tableView.rowHeight = UITableViewAutomaticDimension
+
+    let tapGesture = UITapGestureRecognizer(
+      target: self, action: #selector(self.logoImageTapped(gesture:)))
+    logoImageView.addGestureRecognizer(tapGesture)
+    logoImageView.isUserInteractionEnabled = true
   }
 
   override func didReceiveMemoryWarning() {
@@ -151,13 +157,22 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     }
   }
 
+  @objc func logoImageTapped(gesture: UIGestureRecognizer) {
+    if let url = URL(string: NSLocalizedString("appStoreURLPath", comment: "")),
+      UIApplication.shared.canOpenURL(url){
+      UIApplication.shared.open(url, options: [:]) { (opened) in
+      }
+    } else {
+      print("Can't Open URL on Simulator")
+    }
+  }
+
   private func share() {
     guard let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String else {
       return
     }
-    // TODO : app store URL
     let shareText = "#\(appName)"
-    let shareUrl = NSURL(string: NSLocalizedString("appStoreURL", comment: ""))!
+    let shareUrl = NSURL(string: NSLocalizedString("appStoreWebURL", comment: ""))!
 
     let activityViewController : UIActivityViewController = UIActivityViewController(
       activityItems: [shareText, shareUrl], applicationActivities: nil)

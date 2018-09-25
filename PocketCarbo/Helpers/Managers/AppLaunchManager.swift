@@ -19,6 +19,9 @@ final class AppLaunchManager {
 
   func onAppStarted() {
 
+    // Lanch Count
+    UserDefaults.standard.incrementLaunchCount()
+
     setupRealm()
 
     if !newDataVersion() {
@@ -32,8 +35,26 @@ final class AppLaunchManager {
   //MARK: Private Methods
 
   private func setupRealm() {
-    var config = Realm.Configuration()
-    config.deleteRealmIfMigrationNeeded = true
+    let config = Realm.Configuration(
+      schemaVersion: 2,
+
+      migrationBlock: { migration, oldSchemaVersion in
+
+        if oldSchemaVersion < 1 {
+          // Kindにsearch_wordを追加 & Foodにnotesを追加
+          migration.enumerateObjects(ofType: Kind.className()) { oldObject, newObject in
+            newObject!["search_word"] = ""
+          }
+          migration.enumerateObjects(ofType: Food.className()) { oldObject, newObject in
+            newObject!["notes"] = ""
+          }
+        }
+
+        if oldSchemaVersion < 2 {
+          // Kindにfoods: List<Food>, Foodsにkinds・: LinkingObjects<Kind>を追加
+        }
+    })
+
     Realm.Configuration.defaultConfiguration = config
   }
 
@@ -65,11 +86,18 @@ final class AppLaunchManager {
     let realm = try! Realm()
 
     try! realm.write {
-      for kind in kinds {
-        realm.add(kind, update: true)
-      }
+
       for food in foods {
         realm.add(food, update: true)
+      }
+
+      for kind in kinds {
+        let predicate = NSPredicate(format: "kind_id == %i", kind.id)
+        let foods = realm.objects(Food.self).filter(predicate)
+        kind.foods.removeAll()
+        kind.foods.append(objectsIn: foods)
+
+        realm.add(kind, update: true)
       }
     }
     // print(realm.objects(Kind.self))

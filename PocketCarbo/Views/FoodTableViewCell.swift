@@ -66,6 +66,7 @@ class FoodTableViewCell: UITableViewCell {
   @IBOutlet weak var stackView: UIStackView!
   @IBOutlet weak var carretImage: UIImageView!
   @IBOutlet weak var foodNameLabel: UILabel!
+  @IBOutlet weak var kindNameLabel: PaddingLabel!
   @IBOutlet weak var carboPer100gLabel: UILabel!
   @IBOutlet weak var cubeSugar100Label: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
@@ -85,6 +86,8 @@ class FoodTableViewCell: UITableViewCell {
 
     foodNameLabel.text = food.name
     foodNameLabel.textColor = getCarboColor()
+
+    kindNameLabel.text = food.kinds.first?.name
 
     carboPer100gLabel.text = "\(food.carbohydrate_per_100g) g"
     let textColor : UIColor = getCarboColor()
@@ -130,7 +133,11 @@ class FoodTableViewCell: UITableViewCell {
   }
   
   @IBAction func didTapShare(_ sender: UIButton) {
-    delegate?.didTapShare(self, shareText: createClipboardText())
+    var shareText = createClipboardText()
+    shareText.append("\n")
+    shareText.append(NSLocalizedString("appStoreWebURL", comment: ""))
+
+    delegate?.didTapShare(self, shareText: shareText)
     sender.animateCellButton(completion: { (finish) in
     })
   }
@@ -209,6 +216,10 @@ class FoodTableViewCell: UITableViewCell {
     str.append(String(format: NSLocalizedString("Foods.description.text4", comment: ""), String(food.protein)))
     str.append(String(format: NSLocalizedString("Foods.description.text5", comment: ""), String(food.fat)))
     str.append(String(format: NSLocalizedString("Foods.description.text6", comment: ""), String(food.sodium)))
+
+    if let notes = food.notes {
+      str.append(String(format: NSLocalizedString("Foods.description.text7", comment: ""), notes))
+    }
 
     return str
   }

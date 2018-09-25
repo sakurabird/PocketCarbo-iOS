@@ -198,10 +198,9 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   // MARK: - FoodTableViewCell Actions
 
   func didTapShare(_ sender: FoodTableViewCell, shareText: String) {
-    let shareUrl = NSURL(string: NSLocalizedString("appURL", comment: ""))!
 
     let activityViewController : UIActivityViewController = UIActivityViewController(
-      activityItems: [shareText, shareUrl], applicationActivities: nil)
+      activityItems: [shareText], applicationActivities: nil)
 
     // This lines is for the popover you need to show in iPad
     activityViewController.popoverPresentationController?.sourceView = sender

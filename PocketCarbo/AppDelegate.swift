@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import Fabric
+import Crashlytics
 import SlideMenuControllerSwift
 
 @UIApplicationMain
@@ -20,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Google Service
     FirebaseApp.configure()
+    Fabric.with([Crashlytics.self])
 
     // Setup Admob
     ADManager.sharedInstance.setupAdMob()

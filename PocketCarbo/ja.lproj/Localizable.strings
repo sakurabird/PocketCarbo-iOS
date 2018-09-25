@@ -9,7 +9,8 @@
 //--------------------------------------------------------
 // Constants
 "appURL" = "https://www.pockettoushituryou.com/";
-"appStoreURL" = "https://itunes.apple.com/jp/app/id1371454314";
+"appStoreWebURL" = "https://itunes.apple.com/jp/app/id1371454314";
+"appStoreURLPath" = "itms-apps://itunes.apple.com/app/id1371454314";
 "mail" = "sakurafish1@gmail.com";
 
 //--------------------------------------------------------
@@ -36,6 +37,7 @@
 "Foods.description.text4" = "たんぱく質 : %@ g\n";
 "Foods.description.text5" = "脂質 : %@ g\n";
 "Foods.description.text6" = "塩分 : %@ g";
+"Foods.description.text7" = "\n備考 : %@";
 
 "Foods.cubeSugar.text" = "角砂糖%@個分";
 

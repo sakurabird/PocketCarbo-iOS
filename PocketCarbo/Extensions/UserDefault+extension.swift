@@ -12,10 +12,12 @@ extension UserDefaults {
 
   enum UserDefaultsKeys: String {
     case isFirstLaunchKey
+    case launchCountKey
     case showTutorialKey
     case isTutorialShowingKey
     case dataVersionKey
     case appMessageNoKey
+    case lastADClickDateKey
   }
 
   func isFirstLaunch() -> Bool {
@@ -26,6 +28,17 @@ extension UserDefaults {
   func setFirstLaunch(firstLaunch: Bool) {
     set(firstLaunch, forKey: UserDefaultsKeys.isFirstLaunchKey.rawValue)
     synchronize()
+  }
+
+  func incrementLaunchCount() {
+    let launchCount = getLaunchCount()
+    set((launchCount + 1), forKey: UserDefaultsKeys.launchCountKey.rawValue)
+    synchronize()
+  }
+
+  func getLaunchCount() -> Int {
+    register(defaults: [UserDefaultsKeys.launchCountKey.rawValue : 0])
+    return integer(forKey: UserDefaultsKeys.launchCountKey.rawValue)
   }
 
   func isShowTutorial() -> Bool {
@@ -64,6 +77,21 @@ extension UserDefaults {
 
   func setAppMessageNo(appMessageNo: Int) {
     set(appMessageNo, forKey: UserDefaultsKeys.appMessageNoKey.rawValue)
+    synchronize()
+  }
+
+  func getlastADClickDate() -> Date {
+    if let date = object(forKey: UserDefaultsKeys.lastADClickDateKey.rawValue) as? Date {
+      return date
+    }
+    // 存在しない場合所定の時間経過前の日付を返す
+    let now = Date()
+    let date2 = Date(timeInterval: TimeInterval(ADManager.CLICK_DELAY_SECONDS * -100), since: now)
+    return date2
+  }
+
+  func setlastADClickDate(lastADClickDate: Date) {
+    set(lastADClickDate, forKey: UserDefaultsKeys.lastADClickDateKey.rawValue)
     synchronize()
   }
 }

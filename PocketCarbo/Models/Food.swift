@@ -19,10 +19,13 @@ class Food : RealmSwift.Object, Codable {
   @objc dynamic var protein : Float = 0
   @objc dynamic var fat : Float = 0
   @objc dynamic var sodium : Float = 0
+  @objc dynamic var notes : String?
   @objc dynamic var type_id : Int = 0
   @objc dynamic var kind_id : Int = 0
   @objc dynamic var search_word : String?
   @objc dynamic var weight_hint : String?
+
+  let kinds = LinkingObjects(fromType: Kind.self, property: "foods")
 
   enum CodingKeys: String, CodingKey {
 
@@ -35,6 +38,7 @@ class Food : RealmSwift.Object, Codable {
     case protein = "protein"
     case fat = "fat"
     case sodium = "sodium"
+    case notes = "notes"
     case type_id = "type_id"
     case kind_id = "kind_id"
     case search_word = "search_word"
@@ -53,6 +57,7 @@ class Food : RealmSwift.Object, Codable {
     protein = try values.decode(Float.self, forKey: .protein)
     fat = try values.decode(Float.self, forKey: .fat)
     sodium = try values.decode(Float.self, forKey: .sodium)
+    notes = try values.decodeIfPresent(String.self, forKey: .notes)
     type_id = try values.decode(Int.self, forKey: .type_id)
     kind_id = try values.decode(Int.self, forKey: .kind_id)
     search_word = try values.decodeIfPresent(String.self, forKey: .search_word)

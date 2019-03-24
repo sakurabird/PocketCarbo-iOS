@@ -242,7 +242,10 @@ class FoodTableViewCell: UITableViewCell {
     str.append(String(format: NSLocalizedString("Foods.clipboard.text4", comment: ""), String(food.protein)))
     str.append(String(format: NSLocalizedString("Foods.clipboard.text5", comment: ""), String(food.fat)))
     str.append(String(format: NSLocalizedString("Foods.clipboard.text6", comment: ""), String(food.sodium)))
-
+    if let notes = food.notes {
+      str.append(String(format: NSLocalizedString("Foods.clipboard.text7", comment: ""), notes))
+    }
+    str.append(NSLocalizedString("Foods.clipboard.text8", comment: ""))
     return str
   }
 }

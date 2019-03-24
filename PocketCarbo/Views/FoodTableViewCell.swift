@@ -60,6 +60,8 @@ class FoodTableViewCell: UITableViewCell {
   }
 
   weak var delegate: FoodTableViewCellDelegate?
+
+  var kind: Kind = Kind()
   var food: Food = Food()
 
   @IBOutlet weak var containerView: UIView!
@@ -82,12 +84,13 @@ class FoodTableViewCell: UITableViewCell {
   }
 
   func update(food: Food) {
+    self.kind = (food.kinds.first)!
     self.food = food
 
     foodNameLabel.text = food.name
     foodNameLabel.textColor = getCarboColor()
 
-    kindNameLabel.text = food.kinds.first?.name
+    kindNameLabel.text = self.kind.name
 
     carboPer100gLabel.text = "\(food.carbohydrate_per_100g) g"
     let textColor : UIColor = getCarboColor()
@@ -226,6 +229,7 @@ class FoodTableViewCell: UITableViewCell {
 
   private func createClipboardText() -> String {
    var str: String = ""
+    str.append("[\(kind.name!)]")
     str.append(food.name!)
     str.append(String(format: NSLocalizedString("Foods.clipboard.text1", comment: ""), String(food.carbohydrate_per_100g)))
     if let weight_hint = food.weight_hint {

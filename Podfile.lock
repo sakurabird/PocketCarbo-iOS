@@ -62,6 +62,7 @@ PODS:
   - RealmSwift (3.13.1):
     - Realm (= 3.13.1)
   - SlideMenuControllerSwift (4.2.0)
+  - SwiftLint (0.31.0)
   - Toaster (2.1.1)
   - XLPagerTabStrip (8.1.1)
 
@@ -74,6 +75,7 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - RealmSwift
   - SlideMenuControllerSwift (from `https://github.com/sakurabird/SlideMenuControllerSwift.git`, branch `swift4.2`)
+  - SwiftLint
   - Toaster (from `https://github.com/iFindTA/Toaster.git`)
   - XLPagerTabStrip
 
@@ -92,6 +94,7 @@ SPEC REPOS:
     - nanopb
     - Realm
     - RealmSwift
+    - SwiftLint
     - XLPagerTabStrip
 
 EXTERNAL SOURCES:
@@ -130,9 +133,10 @@ SPEC CHECKSUMS:
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   SlideMenuControllerSwift: aff8b3e50027893ef3b6341ebd3b8d0c078a2c0e
+  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
   Toaster: 683521465d8d4d684baca3b55cd248030b51e813
   XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
 
-PODFILE CHECKSUM: 714e55566ff83b0c95e411524e1a80a537dba35c
+PODFILE CHECKSUM: 1d61dbca4ebe905746e906e8e5bee872dadc2d24
 
 COCOAPODS: 1.6.1

@@ -7,6 +7,7 @@ target 'PocketCarbo' do
   pod 'Firebase/Core'
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'SwiftLint'
   pod 'Google-Mobile-Ads-SDK'
   pod 'RealmSwift'
   pod 'XLPagerTabStrip'

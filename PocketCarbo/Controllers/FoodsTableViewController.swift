@@ -57,13 +57,13 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     NotificationCenter.default.removeObserver(self)
   }
 
-  //MARK: - Setup
+  // MARK: - Setup
 
   func setupTabData(indicatorInfo: IndicatorInfo, type: Type) {
     self.indicatorInfo = indicatorInfo
     self.type = type
-    self.selectedKind = kindAll; // 全ての種類
-    self.selectedSort = .nameAsc;
+    self.selectedKind = kindAll // 全ての種類
+    self.selectedSort = .nameAsc
 
     self.kinds = KindDataProvider.sharedInstance.findData(typeId: type.id!)
     self.foods = FoodDataProvider.sharedInstance.findData(typeId: type.id!, sort: selectedSort)
@@ -95,7 +95,10 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     guard let cell = tableView.cellForRow(at: indexPath) else {
       return
     }
-    let foodCell = cell as! FoodTableViewCell
+    guard let foodCell: FoodTableViewCell = cell as? FoodTableViewCell
+      else {
+        fatalError("The cell is not an instance of FoodTableViewCell.")
+    }
 
     foodCell.delegate = self
     if cellIsExpanded(at: indexPath) {
@@ -115,7 +118,10 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     guard let cell = tableView.cellForRow(at: indexPath) else {
       return
     }
-    let foodCell = cell as! FoodTableViewCell
+    guard let foodCell: FoodTableViewCell = cell as? FoodTableViewCell
+      else {
+        fatalError("The cell is not an instance of FoodTableViewCell.")
+    }
 
     foodCell.cellState = .collapsed
     removeExpandedIndexPath(indexPath)
@@ -139,7 +145,10 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   }
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! FoodTableViewCell
+    guard let cell: FoodTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? FoodTableViewCell
+      else {
+        fatalError("The cell is not an instance of FoodTableViewCell.")
+    }
 
     cell.update(food: foods![indexPath.row])
 
@@ -155,12 +164,12 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   }
 
   func extractKindData(kind: Kind) {
-    self.selectedKind = kind;
+    self.selectedKind = kind
     refeshData()
   }
 
   func sortData(sortOrder: FoodSortOrder) {
-    self.selectedSort = sortOrder;
+    self.selectedSort = sortOrder
     refeshData()
   }
 
@@ -199,7 +208,7 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
   func didTapShare(_ sender: FoodTableViewCell, shareText: String) {
 
-    let activityViewController : UIActivityViewController = UIActivityViewController(
+    let activityViewController: UIActivityViewController = UIActivityViewController(
       activityItems: [shareText], applicationActivities: nil)
 
     // This lines is for the popover you need to show in iPad
@@ -213,13 +222,12 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     activityViewController.excludedActivityTypes = [
       UIActivity.ActivityType.assignToContact,
       UIActivity.ActivityType.saveToCameraRoll,
-      UIActivity.ActivityType.addToReadingList,
+      UIActivity.ActivityType.addToReadingList
     ]
 
     self.present(activityViewController, animated: true, completion: nil)
   }
 }
-
 
 // -------------------------------------------
 // MARK: - お気に入り画面・検索画面用のextension
@@ -228,7 +236,7 @@ extension FoodsTableViewController {
 
   // お気に入り画面用のsetup
   func setupFavoritesData() {
-    self.selectedKind = kindAll;
+    self.selectedKind = kindAll
     self.foods = FavoriteDataProvider.sharedInstance.findAll()
 
     clearExpandedIndexPath()
@@ -237,7 +245,7 @@ extension FoodsTableViewController {
 
   // 検索画面用のsetup
   func setupAllData() {
-    self.selectedKind = kindAll;
+    self.selectedKind = kindAll
     self.foods = FoodDataProvider.sharedInstance.findAll()
   }
 
@@ -247,7 +255,7 @@ extension FoodsTableViewController {
       guard let foodsCount: Int = self.foods?.count else {
         return
       }
-      if (foodsCount > 0) {
+      if foodsCount > 0 {
         let indexPath = NSIndexPath(row: 0, section: 0)
         self.tableView.scrollToRow(at: indexPath as IndexPath, at: .top, animated: false)
       }

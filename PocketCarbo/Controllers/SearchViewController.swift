@@ -34,7 +34,7 @@ class SearchViewController: UIViewController {
   // MARK: Private Functions
 
   private func setupFoods() {
-    guard let vc = self.children.first as? FoodsTableViewController else  {
+    guard let vc = self.children.first as? FoodsTableViewController else {
       fatalError("Check storyboard for missing FoodsTableViewController")
     }
     self.navigationItem.title = NSLocalizedString("search", comment: "")
@@ -55,8 +55,8 @@ class SearchViewController: UIViewController {
       if let backgroundview = textfield.subviews.first {
         backgroundview.backgroundColor = UIColor.white // Background color
         // Rounded corner
-        backgroundview.layer.cornerRadius = 10;
-        backgroundview.clipsToBounds = true;
+        backgroundview.layer.cornerRadius = 10
+        backgroundview.clipsToBounds = true
       }
     }
     navigationItem.searchController = searchController
@@ -97,4 +97,3 @@ extension SearchViewController: UISearchResultsUpdating {
     filterContentForSearchText(searchController.searchBar.text!)
   }
 }
-

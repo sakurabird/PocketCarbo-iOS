@@ -29,7 +29,7 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     self.view.backgroundColor = UIColor(patternImage: UIImage(named: "main_bg")!)
   }
 
-  //MARK: - Setup
+  // MARK: - Setup
 
   func setupPagerTabStrip() {
     // Important: XLPagerTabStrip Settings should be called before viewDidLoad is called.
@@ -53,7 +53,7 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     }
   }
 
-  //MARK: - Setup DropDown Buttons
+  // MARK: - Setup DropDown Buttons
 
   private func setupDropDowns() {
     kindsDropDown.anchorView = kindSelectButton
@@ -71,7 +71,11 @@ class MainViewController: ButtonBarPagerTabStripViewController {
 
   private func setupKindsEachTab() {
 
-    let foodsTableViewController = tabControllers![currentIndex] as! FoodsTableViewController
+    guard let foodsTableViewController: FoodsTableViewController =  tabControllers![currentIndex] as? FoodsTableViewController
+    else {
+      fatalError("The tabs controller is not an instance of FoodsTableViewController.")
+    }
+
     let kinds = foodsTableViewController.kinds
 
     kindSelectButton.setTitle(foodsTableViewController.selectedKind.name, for: .normal)
@@ -93,7 +97,11 @@ class MainViewController: ButtonBarPagerTabStripViewController {
   fileprivate func setupSortEachTab() {
 
     // Action triggered on selection
-    let foodsTableViewController = tabControllers![currentIndex] as! FoodsTableViewController
+    guard let foodsTableViewController: FoodsTableViewController =  tabControllers![currentIndex] as? FoodsTableViewController
+      else {
+        fatalError("The tab controller is not an instance of FoodsTableViewController.")
+    }
+
     sortDropDown.selectionAction = { (index, item) in
 
       var sortOrder: FoodSortOrder = .nameAsc
@@ -141,7 +149,10 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     tabControllers = [UIViewController]()
 
     for type in types {
-      let vc = storyboard.instantiateViewController(withIdentifier: "Foods") as! FoodsTableViewController
+      guard let vc: FoodsTableViewController =  storyboard.instantiateViewController(withIdentifier: "Foods") as? FoodsTableViewController
+        else {
+          fatalError("The storyboard controller is not an instance of FoodsTableViewController.")
+      }
       vc.setupTabData(indicatorInfo: IndicatorInfo(title: type.name), type: type)
       tabControllers?.append(vc)
     }
@@ -170,4 +181,3 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     sortDropDown.show()
   }
 }
-

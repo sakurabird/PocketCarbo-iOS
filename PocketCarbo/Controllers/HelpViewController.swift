@@ -33,7 +33,7 @@ class HelpViewController: UIViewController, WKNavigationDelegate {
   func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 
     // リンクは全て外部ブラウザに飛ばす
-    if navigationAction.navigationType == .linkActivated  {
+    if navigationAction.navigationType == .linkActivated {
       if let url = navigationAction.request.url,
         UIApplication.shared.canOpenURL(url) {
         UIApplication.shared.open(url)
@@ -47,7 +47,7 @@ class HelpViewController: UIViewController, WKNavigationDelegate {
     }
   }
 
-  //MARK: Button Action
+  // MARK: Button Action
 
   @IBAction func didTapTutorial(_ sender: UIButton) {
     UserDefaults.standard.setShowTutorial(showTutorial: true)

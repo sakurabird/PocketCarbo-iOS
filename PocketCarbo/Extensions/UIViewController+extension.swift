@@ -36,4 +36,3 @@ extension UIViewController {
     self.dismiss(animated: true, completion: nil)
   }
 }
-

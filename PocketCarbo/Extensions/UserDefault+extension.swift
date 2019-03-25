@@ -21,7 +21,7 @@ extension UserDefaults {
   }
 
   func isFirstLaunch() -> Bool {
-    register(defaults: [UserDefaultsKeys.isFirstLaunchKey.rawValue : true])
+    register(defaults: [UserDefaultsKeys.isFirstLaunchKey.rawValue: true])
     return bool(forKey: UserDefaultsKeys.isFirstLaunchKey.rawValue)
   }
 
@@ -37,12 +37,12 @@ extension UserDefaults {
   }
 
   func getLaunchCount() -> Int {
-    register(defaults: [UserDefaultsKeys.launchCountKey.rawValue : 0])
+    register(defaults: [UserDefaultsKeys.launchCountKey.rawValue: 0])
     return integer(forKey: UserDefaultsKeys.launchCountKey.rawValue)
   }
 
   func isShowTutorial() -> Bool {
-    register(defaults: [UserDefaultsKeys.showTutorialKey.rawValue : true])
+    register(defaults: [UserDefaultsKeys.showTutorialKey.rawValue: true])
     return bool(forKey: UserDefaultsKeys.showTutorialKey.rawValue)
   }
 
@@ -52,7 +52,7 @@ extension UserDefaults {
   }
 
   func isTutorialShowing() -> Bool {
-    register(defaults: [UserDefaultsKeys.isTutorialShowingKey.rawValue : false])
+    register(defaults: [UserDefaultsKeys.isTutorialShowingKey.rawValue: false])
     return bool(forKey: UserDefaultsKeys.isTutorialShowingKey.rawValue)
   }
 
@@ -71,7 +71,7 @@ extension UserDefaults {
   }
 
   func getAppMessageNo() -> Int {
-    register(defaults: [UserDefaultsKeys.appMessageNoKey.rawValue : 0])
+    register(defaults: [UserDefaultsKeys.appMessageNoKey.rawValue: 0])
     return integer(forKey: UserDefaultsKeys.appMessageNoKey.rawValue)
   }
 

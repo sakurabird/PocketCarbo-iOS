@@ -7,10 +7,10 @@
 //
 
 import Foundation
-class FoodsAndKinds : Codable {
-  let dataVersion : Int?
-  let kinds : [Kind]?
-  let foods : [Food]?
+class FoodsAndKinds: Codable {
+  let dataVersion: Int?
+  let kinds: [Kind]?
+  let foods: [Food]?
 
   enum CodingKeys: String, CodingKey {
     case dataVersion = "data_version"
@@ -27,4 +27,3 @@ class FoodsAndKinds : Codable {
   }
 
 }
-

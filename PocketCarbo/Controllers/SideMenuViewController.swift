@@ -17,9 +17,8 @@ enum SideMenu: Int {
   case help
 
   var name: String {
-    get { return String(describing: self) }
+    return String(describing: self)
   }
-
 }
 
 struct SideMenuData {
@@ -27,7 +26,7 @@ struct SideMenuData {
   let menuLabel: String?
 }
 
-protocol SideMenuProtocol : class {
+protocol SideMenuProtocol: class {
   func changeViewController(_ menu: SideMenu)
 }
 
@@ -41,14 +40,20 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
 
   // Favorites scene
   var favoritesViewController: UIViewController! = {
-    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.favorites.name) as! FavoritesViewController
+    guard let vc: FavoritesViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.favorites.name) as? FavoritesViewController
+      else {
+        fatalError("The storyboard controller is not an instance of FavoritesViewController.")
+    }
     vc.navigationItem.title = NSLocalizedString("Favorite.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
 
   // Settings scene
   var settingsController: UIViewController! = {
-    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.settings.name) as! SettingsViewController
+    guard let vc: SettingsViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.settings.name) as? SettingsViewController
+      else {
+        fatalError("The storyboard controller is not an instance of SettingsViewController.")
+    }
     vc.navigationItem.title = NSLocalizedString("Setting.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
@@ -57,15 +62,22 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
   var informationController: UIViewController! = {
     let htmlPath = Bundle.main.path(forResource: "announcement", ofType: "html")
     let url = URL(fileURLWithPath: htmlPath!)
-    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.information.name) as! WebViewController
+
+    guard let vc: WebViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.information.name) as? WebViewController
+      else {
+        fatalError("The storyboard controller is not an instance of WebViewController.")
+    }
     vc.setUp(url: url, embed: true)
     vc.navigationItem.title = NSLocalizedString("Information.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
-  
+
   // Help scene
   var helpController: UIViewController! = {
-    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.help.name) as! HelpViewController
+    guard let vc: HelpViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.help.name) as? HelpViewController
+      else {
+        fatalError("The storyboard controller is not an instance of HelpViewController.")
+    }
     vc.navigationItem.title = NSLocalizedString("Help.title", comment: "")
     return UINavigationController(rootViewController: vc)
   }()
@@ -129,7 +141,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     return 56
   }
 
-  //MARK: - Side Menu Controller
+  // MARK: - Side Menu Controller
 
   func changeViewController(_ menu: SideMenu) {
     switch menu {
@@ -137,8 +149,15 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
       self.slideMenuController()?.changeMainViewController(self.mainViewController, close: true)
 
     case .favorites:
-      let nav = self.favoritesViewController as! UINavigationController
-      let vc = nav.topViewController as! FavoritesViewController
+      guard let nav: UINavigationController = self.favoritesViewController as? UINavigationController
+        else {
+          fatalError("The controller is not an instance of UINavigationController.")
+      }
+      guard let vc: FavoritesViewController = nav.topViewController as? FavoritesViewController
+        else {
+          fatalError("The controller is not an instance of FavoritesViewController.")
+      }
+
       vc.updateFavorites()
       self.slideMenuController()?.changeMainViewController(self.favoritesViewController, close: true)
 
@@ -159,9 +178,8 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
 
   @objc func logoImageTapped(gesture: UIGestureRecognizer) {
     if let url = URL(string: NSLocalizedString("appStoreURLPath", comment: "")),
-      UIApplication.shared.canOpenURL(url){
-      UIApplication.shared.open(url, options: [:]) { (opened) in
-      }
+      UIApplication.shared.canOpenURL(url) {
+        UIApplication.shared.open(url, options: [:])
     } else {
       print("Can't Open URL on Simulator")
     }
@@ -174,7 +192,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     let shareText = "#\(appName)"
     let shareUrl = NSURL(string: NSLocalizedString("appStoreWebURL", comment: ""))!
 
-    let activityViewController : UIActivityViewController = UIActivityViewController(
+    let activityViewController: UIActivityViewController = UIActivityViewController(
       activityItems: [shareText, shareUrl], applicationActivities: nil)
 
     // This lines is for the popover you need to show in iPad
@@ -188,7 +206,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     activityViewController.excludedActivityTypes = [
       UIActivity.ActivityType.assignToContact,
       UIActivity.ActivityType.saveToCameraRoll,
-      UIActivity.ActivityType.addToReadingList,
+      UIActivity.ActivityType.addToReadingList
     ]
 
     self.present(activityViewController, animated: true, completion: nil)

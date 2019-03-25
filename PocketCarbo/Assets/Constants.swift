@@ -16,4 +16,3 @@ enum Config {
   static let appMessageNo = 3
   static let appMessageText = "糖質量データが1200種類→1400種類に増えました！是非お役立てください。"
 }
-

@@ -36,7 +36,7 @@ class TutorialViewController: SpotlightViewController {
   // MARK: - Setup
 
   private func setupTapGesture() {
-    let gesture = UITapGestureRecognizer(target: self, action: #selector(TutorialViewController.viewTouched(_:)));
+    let gesture = UITapGestureRecognizer(target: self, action: #selector(TutorialViewController.viewTouched(_:)))
     view.addGestureRecognizer(gesture)
   }
 
@@ -69,7 +69,7 @@ class TutorialViewController: SpotlightViewController {
     let screenSize = UIScreen.main.bounds.size
 
     var topMargin = 0
-    if ((UIApplication.shared.keyWindow?.safeAreaInsets.bottom)! > CGFloat(0.0)) {
+    if (UIApplication.shared.keyWindow?.safeAreaInsets.bottom)! > CGFloat(0.0) {
       topMargin += 24
     }
 
@@ -135,4 +135,3 @@ extension TutorialViewController: SpotlightViewControllerDelegate {
     spotlightView.disappear()
   }
 }
-

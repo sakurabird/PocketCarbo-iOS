@@ -43,7 +43,7 @@ class FoodTableViewCell: UITableViewCell {
     }
   }
 
-  //MARK: Properties
+  // MARK: Properties
 
   private let expandedViewIndex: Int = 1
 
@@ -93,7 +93,7 @@ class FoodTableViewCell: UITableViewCell {
     kindNameLabel.text = self.kind.name
 
     carboPer100gLabel.text = "\(food.carbohydrate_per_100g) g"
-    let textColor : UIColor = getCarboColor()
+    let textColor: UIColor = getCarboColor()
     carboPer100gLabel.textColor = textColor
 
     cubeSugar100Label.text = createCubeSugarString(carbohydrate: food.carbohydrate_per_100g)
@@ -108,7 +108,7 @@ class FoodTableViewCell: UITableViewCell {
     favoritesState = isFavorite ? .favorite : .notFavorite
   }
 
-  //MARK: Button Action
+  // MARK: Button Action
 
   @IBAction func didTapFavorites(_ sender: UIButton) {
 
@@ -120,13 +120,13 @@ class FoodTableViewCell: UITableViewCell {
       FavoriteDataProvider.sharedInstance.saveData(food: food)
     }
 
-    sender.animateCellButton(completion: { (finish) in
+    sender.animateCellButton(completion: { (_) in
       self.favoritesState = isFavorite ? .notFavorite : .favorite
     })
   }
 
   @IBAction func didTapCopyToclipboard(_ sender: UIButton) {
-    sender.animateCellButton(completion: { (finish) in
+    sender.animateCellButton(completion: { (_) in
     })
 
     let text = createClipboardText()
@@ -141,11 +141,11 @@ class FoodTableViewCell: UITableViewCell {
     shareText.append(NSLocalizedString("appStoreWebURL", comment: ""))
 
     delegate?.didTapShare(self, shareText: shareText)
-    sender.animateCellButton(completion: { (finish) in
+    sender.animateCellButton(completion: { (_) in
     })
   }
 
-  //MARK: Private Methods
+  // MARK: Private Methods
 
   private func setupViews() {
     selectionStyle = .none
@@ -196,9 +196,9 @@ class FoodTableViewCell: UITableViewCell {
 
   private func createCubeSugarString(carbohydrate: Float) -> String {
     let cubeNum = round(carbohydrate * 10 / 4.0) / 10 // 小数点第２位を四捨五入
-    var cubeString : String = "0"
-    if (cubeNum != 0) {
-      cubeString = String(format:"%.1f", cubeNum)
+    var cubeString: String = "0"
+    if cubeNum != 0 {
+      cubeString = String(format: "%.1f", cubeNum)
     }
     cubeString = String(format: NSLocalizedString("Foods.cubeSugar.text", comment: ""), String(cubeString))
     return cubeString

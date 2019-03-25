@@ -93,7 +93,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     super.viewDidLoad()
 
     tableView.estimatedRowHeight = 70.0
-    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.rowHeight = UITableView.automaticDimension
 
     let tapGesture = UITapGestureRecognizer(
       target: self, action: #selector(self.logoImageTapped(gesture:)))
@@ -186,9 +186,9 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
 
     // Anything you want to exclude
     activityViewController.excludedActivityTypes = [
-      UIActivityType.assignToContact,
-      UIActivityType.saveToCameraRoll,
-      UIActivityType.addToReadingList,
+      UIActivity.ActivityType.assignToContact,
+      UIActivity.ActivityType.saveToCameraRoll,
+      UIActivity.ActivityType.addToReadingList,
     ]
 
     self.present(activityViewController, animated: true, completion: nil)

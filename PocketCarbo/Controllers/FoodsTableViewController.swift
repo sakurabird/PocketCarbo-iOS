@@ -79,7 +79,7 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     tableView.backgroundColor = UIColor(patternImage: UIImage(named: "main_bg")!)
     let insets = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
     self.tableView.contentInset = insets
-    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = 200.0
   }
 
@@ -211,9 +211,9 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
     // Anything you want to exclude
     activityViewController.excludedActivityTypes = [
-      UIActivityType.assignToContact,
-      UIActivityType.saveToCameraRoll,
-      UIActivityType.addToReadingList,
+      UIActivity.ActivityType.assignToContact,
+      UIActivity.ActivityType.saveToCameraRoll,
+      UIActivity.ActivityType.addToReadingList,
     ]
 
     self.present(activityViewController, animated: true, completion: nil)

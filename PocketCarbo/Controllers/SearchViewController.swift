@@ -34,7 +34,7 @@ class SearchViewController: UIViewController {
   // MARK: Private Functions
 
   private func setupFoods() {
-    guard let vc = self.childViewControllers.first as? FoodsTableViewController else  {
+    guard let vc = self.children.first as? FoodsTableViewController else  {
       fatalError("Check storyboard for missing FoodsTableViewController")
     }
     self.navigationItem.title = NSLocalizedString("search", comment: "")

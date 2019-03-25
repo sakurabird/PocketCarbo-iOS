@@ -191,7 +191,7 @@ class FoodTableViewCell: UITableViewCell {
   }
 
   private func updateFavorites() {
-    self.favoritesButton.setImage(self.favoritesState.favoriteImage, for: UIControlState.normal)
+    self.favoritesButton.setImage(self.favoritesState.favoriteImage, for: UIControl.State.normal)
   }
 
   private func createCubeSugarString(carbohydrate: Float) -> String {

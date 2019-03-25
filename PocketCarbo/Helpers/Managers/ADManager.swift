@@ -18,14 +18,7 @@ final class ADManager {
   static let CLICK_DELAY_SECONDS: Double = 60 * 60; // 60 min
 
   func setupAdMob() {
-    if let path = Bundle.main.path(forResource: "Secret", ofType: "plist") {
-      let dictRoot = NSDictionary(contentsOfFile: path)
-      if let dict = dictRoot {
-        let id = dict["AD_MOB_APP_ID"] as! String
-        // Initialize the Google Mobile Ads SDK.
-        GADMobileAds.configure(withApplicationID: id)
-      }
-    }
+    GADMobileAds.sharedInstance().start(completionHandler: nil)
   }
 
   func getBannerId() -> String {

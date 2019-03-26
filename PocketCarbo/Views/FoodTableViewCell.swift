@@ -208,7 +208,7 @@ class FoodTableViewCell: UITableViewCell {
 
     var str: String = ""
 
-    str.append("\(food.weight) g")
+    str.append("\(food.weight) g ")
     if let hint = food.weight_hint {
       str.append(hint)
     }

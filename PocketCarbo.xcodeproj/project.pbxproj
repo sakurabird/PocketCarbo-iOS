@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1DF8EEAD788ED38FBAC16858 /* Pods_PocketCarboUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9DC8CF8ED2CFA63A3CEF65 /* Pods_PocketCarboUITests.framework */; };
+		21095C39224FCF460064FA0F /* foods_and_kinds.json in Resources */ = {isa = PBXBuildFile; fileRef = 21095C38224FCF460064FA0F /* foods_and_kinds.json */; };
 		211071FE214F613F000A9FB5 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211071FD214F613F000A9FB5 /* ADManager.swift */; };
 		2117FFED2154045800C67EBD /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117FFEC2154045800C67EBD /* PaddingLabel.swift */; };
-		2117FFF121554D8300C67EBD /* foods_and_kinds.json in Resources */ = {isa = PBXBuildFile; fileRef = 2117FFF021554D8200C67EBD /* foods_and_kinds.json */; };
 		21402F6A2079FB8200C552F6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21402F692079FB8100C552F6 /* TutorialViewController.swift */; };
 		2147C61520761D0800A845C2 /* EmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2147C61420761D0800A845C2 /* EmptyDataView.xib */; };
 		2147C61720761E2900A845C2 /* UIView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147C61620761E2900A845C2 /* UIView+extention.swift */; };
@@ -87,9 +87,9 @@
 
 /* Begin PBXFileReference section */
 		1B50A6B7C1DF8E7EF0454338 /* Pods_PocketCarbo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCarbo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21095C38224FCF460064FA0F /* foods_and_kinds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foods_and_kinds.json; sourceTree = "<group>"; };
 		211071FD214F613F000A9FB5 /* ADManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADManager.swift; sourceTree = "<group>"; };
 		2117FFEC2154045800C67EBD /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
-		2117FFF021554D8200C67EBD /* foods_and_kinds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = foods_and_kinds.json; path = "../../../../../../../Desktop/sakura/@my_development/PocketCarbo/iOS/ver2.0/foods_and_kinds.json"; sourceTree = "<group>"; };
 		21402F692079FB8100C552F6 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		2147C61420761D0800A845C2 /* EmptyDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataView.xib; sourceTree = "<group>"; };
 		2147C61620761E2900A845C2 /* UIView+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extention.swift"; sourceTree = "<group>"; };
@@ -333,8 +333,8 @@
 		214D872020632F6000F20EF7 /* Json */ = {
 			isa = PBXGroup;
 			children = (
+				21095C38224FCF460064FA0F /* foods_and_kinds.json */,
 				216AA5042064F83B002AA44E /* type.json */,
-				2117FFF021554D8200C67EBD /* foods_and_kinds.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -510,7 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21C0D997207BECD1007F68A0 /* GoogleService-Info.plist in Resources */,
-				2117FFF121554D8300C67EBD /* foods_and_kinds.json in Resources */,
+				21095C39224FCF460064FA0F /* foods_and_kinds.json in Resources */,
 				214D871C2063271100F20EF7 /* Settings.bundle in Resources */,
 				214D872B20633BBD00F20EF7 /* help.html in Resources */,
 				216AA4F820647B44002AA44E /* Assets.xcassets in Resources */,

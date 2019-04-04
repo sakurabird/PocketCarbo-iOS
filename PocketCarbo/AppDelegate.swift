@@ -17,8 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
     // Google Service
     FirebaseApp.configure()
@@ -36,7 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func applicationWillResignActive(_ application: UIApplication) {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+    // Sent when the application is about to move from active to inactive state.
+    // This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
   }
 
@@ -64,15 +64,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private func setupSlideMenu() {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
-    let mainVC = storyboard.instantiateViewController(withIdentifier: "MainParent") as! MainParentViewController
-    let sideMenuVC = storyboard.instantiateViewController(withIdentifier: "SideMenu") as! SideMenuViewController
+    guard let mainVC: MainParentViewController =  storyboard.instantiateViewController(withIdentifier: "MainParent") as? MainParentViewController
+      else {
+        fatalError("The storyboard controller is not an instance of MainParentViewController.")
+    }
+    guard let sideMenuVC: SideMenuViewController =  storyboard.instantiateViewController(withIdentifier: "SideMenu") as? SideMenuViewController
+      else {
+        fatalError("The storyboard controller is not an instance of SideMenuViewController.")
+    }
 
     //NavigationBar
     let navigationController = UINavigationController(rootViewController: mainVC)
 
     UINavigationBar.appearance().tintColor = UIColor.white
     UINavigationBar.appearance().barTintColor = UIColor(named: "ColorPrimary")
-    UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+    UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
 
     sideMenuVC.mainViewController = navigationController
 
@@ -83,4 +89,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.window?.makeKeyAndVisible()
   }
 }
-

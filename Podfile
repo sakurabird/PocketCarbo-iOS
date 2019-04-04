@@ -1,4 +1,4 @@
-platform :ios, '11.0'
+platform :ios, '12.2'
 
 target 'PocketCarbo' do
   use_frameworks!
@@ -7,22 +7,14 @@ target 'PocketCarbo' do
   pod 'Firebase/Core'
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'SwiftLint'
   pod 'Google-Mobile-Ads-SDK'
-  pod 'XLPagerTabStrip'
-  pod 'SlideMenuControllerSwift'
-  pod 'DropDown'
   pod 'RealmSwift'
-  pod 'Toaster'
-  pod 'Gecco'
-
-  # Need for Realm
-  post_install do |installer|
-    installer.pods_project.targets.each do |target|
-      target.build_configurations.each do |config|
-        config.build_settings['SWIFT_VERSION'] = '4.0'
-      end
-    end
-  end
+  pod 'XLPagerTabStrip'
+  pod 'SlideMenuControllerSwift', :git => 'https://github.com/sakurabird/SlideMenuControllerSwift.git', :branch => 'swift4.2'
+  pod 'DropDown'
+  pod 'Toaster', :git => 'https://github.com/iFindTA/Toaster.git'
+  pod 'Gecco', :git => 'https://github.com/shukob/Gecco.git'
 
   target 'PocketCarboTests' do
     inherit! :search_paths

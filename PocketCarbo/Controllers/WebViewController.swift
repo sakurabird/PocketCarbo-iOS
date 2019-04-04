@@ -53,7 +53,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
   func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 
     // リンクは全て外部ブラウザに飛ばす
-    if navigationAction.navigationType == .linkActivated  {
+    if navigationAction.navigationType == .linkActivated {
       if let url = navigationAction.request.url,
         UIApplication.shared.canOpenURL(url) {
         UIApplication.shared.open(url)
@@ -74,7 +74,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
       self.progressView.alpha = 1.0
       self.progressView.setProgress(Float(change.newValue!), animated: true)
 
-      if (self.webView.estimatedProgress >= 1.0) {
+      if self.webView.estimatedProgress >= 1.0 {
         UIView.animate(withDuration: 0.3,
                        delay: 0.3,
                        options: [.curveEaseOut],
@@ -87,4 +87,3 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     })
   }
 }
-

@@ -43,7 +43,7 @@ class FoodTableViewCell: UITableViewCell {
     }
   }
 
-  //MARK: Properties
+  // MARK: Properties
 
   private let expandedViewIndex: Int = 1
 
@@ -60,6 +60,8 @@ class FoodTableViewCell: UITableViewCell {
   }
 
   weak var delegate: FoodTableViewCellDelegate?
+
+  var kind: Kind = Kind()
   var food: Food = Food()
 
   @IBOutlet weak var containerView: UIView!
@@ -82,15 +84,16 @@ class FoodTableViewCell: UITableViewCell {
   }
 
   func update(food: Food) {
+    self.kind = (food.kinds.first)!
     self.food = food
 
     foodNameLabel.text = food.name
     foodNameLabel.textColor = getCarboColor()
 
-    kindNameLabel.text = food.kinds.first?.name
+    kindNameLabel.text = self.kind.name
 
     carboPer100gLabel.text = "\(food.carbohydrate_per_100g) g"
-    let textColor : UIColor = getCarboColor()
+    let textColor: UIColor = getCarboColor()
     carboPer100gLabel.textColor = textColor
 
     cubeSugar100Label.text = createCubeSugarString(carbohydrate: food.carbohydrate_per_100g)
@@ -105,7 +108,7 @@ class FoodTableViewCell: UITableViewCell {
     favoritesState = isFavorite ? .favorite : .notFavorite
   }
 
-  //MARK: Button Action
+  // MARK: Button Action
 
   @IBAction func didTapFavorites(_ sender: UIButton) {
 
@@ -117,13 +120,13 @@ class FoodTableViewCell: UITableViewCell {
       FavoriteDataProvider.sharedInstance.saveData(food: food)
     }
 
-    sender.animateCellButton(completion: { (finish) in
+    sender.animateCellButton(completion: { (_) in
       self.favoritesState = isFavorite ? .notFavorite : .favorite
     })
   }
 
   @IBAction func didTapCopyToclipboard(_ sender: UIButton) {
-    sender.animateCellButton(completion: { (finish) in
+    sender.animateCellButton(completion: { (_) in
     })
 
     let text = createClipboardText()
@@ -138,11 +141,11 @@ class FoodTableViewCell: UITableViewCell {
     shareText.append(NSLocalizedString("appStoreWebURL", comment: ""))
 
     delegate?.didTapShare(self, shareText: shareText)
-    sender.animateCellButton(completion: { (finish) in
+    sender.animateCellButton(completion: { (_) in
     })
   }
 
-  //MARK: Private Methods
+  // MARK: Private Methods
 
   private func setupViews() {
     selectionStyle = .none
@@ -188,14 +191,14 @@ class FoodTableViewCell: UITableViewCell {
   }
 
   private func updateFavorites() {
-    self.favoritesButton.setImage(self.favoritesState.favoriteImage, for: UIControlState.normal)
+    self.favoritesButton.setImage(self.favoritesState.favoriteImage, for: UIControl.State.normal)
   }
 
   private func createCubeSugarString(carbohydrate: Float) -> String {
     let cubeNum = round(carbohydrate * 10 / 4.0) / 10 // 小数点第２位を四捨五入
-    var cubeString : String = "0"
-    if (cubeNum != 0) {
-      cubeString = String(format:"%.1f", cubeNum)
+    var cubeString: String = "0"
+    if cubeNum != 0 {
+      cubeString = String(format: "%.1f", cubeNum)
     }
     cubeString = String(format: NSLocalizedString("Foods.cubeSugar.text", comment: ""), String(cubeString))
     return cubeString
@@ -205,7 +208,7 @@ class FoodTableViewCell: UITableViewCell {
 
     var str: String = ""
 
-    str.append("\(food.weight) g")
+    str.append("\(food.weight) g ")
     if let hint = food.weight_hint {
       str.append(hint)
     }
@@ -226,6 +229,7 @@ class FoodTableViewCell: UITableViewCell {
 
   private func createClipboardText() -> String {
    var str: String = ""
+    str.append("[\(kind.name!)]")
     str.append(food.name!)
     str.append(String(format: NSLocalizedString("Foods.clipboard.text1", comment: ""), String(food.carbohydrate_per_100g)))
     if let weight_hint = food.weight_hint {
@@ -238,7 +242,10 @@ class FoodTableViewCell: UITableViewCell {
     str.append(String(format: NSLocalizedString("Foods.clipboard.text4", comment: ""), String(food.protein)))
     str.append(String(format: NSLocalizedString("Foods.clipboard.text5", comment: ""), String(food.fat)))
     str.append(String(format: NSLocalizedString("Foods.clipboard.text6", comment: ""), String(food.sodium)))
-
+    if let notes = food.notes {
+      str.append(String(format: NSLocalizedString("Foods.clipboard.text7", comment: ""), notes))
+    }
+    str.append(NSLocalizedString("Foods.clipboard.text8", comment: ""))
     return str
   }
 }

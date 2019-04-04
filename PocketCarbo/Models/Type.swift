@@ -8,11 +8,11 @@
 
 import Foundation
 
-class Types : Codable {
-  let types : [Type]?
+class Types: Codable {
+  let types: [Type]?
 
   enum CodingKeys: String, CodingKey {
-    case types = "types"
+    case types
   }
 
   required init(from decoder: Decoder) throws {
@@ -22,13 +22,13 @@ class Types : Codable {
 
 }
 
-class Type : Codable {
-  let id : Int?
-  let name : String?
+class Type: Codable {
+  let id: Int?
+  let name: String?
 
   enum CodingKeys: String, CodingKey {
-    case id = "id"
-    case name = "name"
+    case id
+    case name
   }
 
   required init(from decoder: Decoder) throws {
@@ -39,4 +39,3 @@ class Type : Codable {
   }
 
 }
-

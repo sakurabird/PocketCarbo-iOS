@@ -10,7 +10,6 @@ import Foundation
 import Realm
 import RealmSwift
 
-
 enum FoodSortOrder: Int {
   case nameAsc = 0
   case nameDsc

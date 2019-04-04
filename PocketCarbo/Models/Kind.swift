@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class Kind : RealmSwift.Object, Codable {
+class Kind: RealmSwift.Object, Codable {
   @objc dynamic var id: Int = 0
   @objc dynamic var name: String?
   @objc dynamic var search_word: String?
@@ -18,10 +18,10 @@ class Kind : RealmSwift.Object, Codable {
   let foods = List<Food>()
 
   enum CodingKeys: String, CodingKey {
-    case id = "id"
-    case name = "name"
-    case search_word = "search_word"
-    case type_id = "type_id"
+    case id
+    case name
+    case search_word
+    case type_id
   }
 
   required convenience init(from decoder: Decoder) throws {

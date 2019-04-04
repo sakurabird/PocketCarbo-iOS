@@ -23,7 +23,7 @@ final class TypeDataProvider {
       let data = try Data(contentsOf: url)
       let typeArray = try JSONDecoder().decode(Types.self, from: data)
       types = typeArray.types!
-    } catch  {
+    } catch {
       print(error)
     }
     return types

@@ -18,30 +18,26 @@ final class ADManager {
   static let CLICK_DELAY_SECONDS: Double = 60 * 60; // 60 min
 
   func setupAdMob() {
-    if let path = Bundle.main.path(forResource: "Secret", ofType: "plist") {
-      let dictRoot = NSDictionary(contentsOfFile: path)
-      if let dict = dictRoot {
-        let id = dict["AD_MOB_APP_ID"] as! String
-        // Initialize the Google Mobile Ads SDK.
-        GADMobileAds.configure(withApplicationID: id)
-      }
-    }
+    GADMobileAds.sharedInstance().start(completionHandler: nil)
   }
 
   func getBannerId() -> String {
-    var id: String = "ca-app-pub-3940256099942544/2934735716" // for Test
+    var bannerId: String = "ca-app-pub-3940256099942544/2934735716" // for Test
 
     #if DEBUG
       #else
       if let path = Bundle.main.path(forResource: "Secret", ofType: "plist") {
         let dictRoot = NSDictionary(contentsOfFile: path)
         if let dict = dictRoot {
-          id = dict["AD_MOB_BANNER_ID"] as! String
+          guard let id: String = dict["AD_MOB_BANNER_ID"] as? String
+            else {
+              fatalError("AD_MOB_BANNER_ID could not instantiated.")
+          }
+          bannerId = id
         }
       }
     #endif
-    print("ad:\(id)")
-    return id
+    return bannerId
   }
 
   func getGADRequest() -> GADRequest {

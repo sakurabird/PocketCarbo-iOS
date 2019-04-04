@@ -38,8 +38,11 @@ class MainParentViewController: UIViewController {
     if UserDefaults.standard.isTutorialShowing() || !UserDefaults.standard.isShowTutorial() {
       return
     }
+    guard let viewController: TutorialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tutorial") as? TutorialViewController
+      else {
+        fatalError("The controller is not an instance of TutorialViewController.")
+    }
 
-    let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tutorial") as! TutorialViewController
     self.navigationController?.present(viewController, animated: true, completion: nil)
     UserDefaults.standard.setShowTutorial(showTutorial: false)
   }
@@ -76,10 +79,13 @@ class MainParentViewController: UIViewController {
   @IBAction func didTapSearch(_ sender: UIBarButtonItem) {
     // 検索ボタンが押された
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let vc = storyboard.instantiateViewController(withIdentifier: "search") as! SearchViewController
+
+    guard let vc: SearchViewController = storyboard.instantiateViewController(withIdentifier: "search") as? SearchViewController
+      else {
+        fatalError("The controller is not an instance of SearchViewController.")
+    }
     let nv = UINavigationController(rootViewController: vc)
 
     self.present(nv, animated: true, completion: nil)
   }
 }
-

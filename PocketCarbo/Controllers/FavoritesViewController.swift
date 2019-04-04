@@ -46,14 +46,14 @@ class FavoritesViewController: UIViewController {
   // MARK: Private Functions
 
   private func setupFavorites() {
-    guard let vc = self.childViewControllers.first as? FoodsTableViewController else  {
+    guard let vc = self.children.first as? FoodsTableViewController else {
       fatalError("Check storyboard for missing FoodsTableViewController")
     }
     self.foodsTableViewController = vc
     updateFavorites()
 
     let realm = try! Realm()
-    notificationToken = realm.observe { [unowned self] note, realm in
+      notificationToken = realm.observe { [unowned self] _, _ in
       self.updateFavorites()
     }
   }

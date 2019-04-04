@@ -21,7 +21,6 @@ class AdBannerViewController: UIViewController, GADBannerViewDelegate {
 
   var clickedFrom = false
 
-
   // MARK: - Properties
 
   deinit {

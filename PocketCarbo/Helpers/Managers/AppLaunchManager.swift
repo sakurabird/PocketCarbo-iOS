@@ -31,8 +31,7 @@ final class AppLaunchManager {
     loadJsonFile()
   }
 
-
-  //MARK: Private Methods
+  // MARK: Private Methods
 
   private func setupRealm() {
     let config = Realm.Configuration(
@@ -42,10 +41,10 @@ final class AppLaunchManager {
 
         if oldSchemaVersion < 1 {
           // Kindにsearch_wordを追加 & Foodにnotesを追加
-          migration.enumerateObjects(ofType: Kind.className()) { oldObject, newObject in
+          migration.enumerateObjects(ofType: Kind.className()) { _, newObject in
             newObject!["search_word"] = ""
           }
-          migration.enumerateObjects(ofType: Food.className()) { oldObject, newObject in
+          migration.enumerateObjects(ofType: Food.className()) { _, newObject in
             newObject!["notes"] = ""
           }
         }
@@ -74,7 +73,7 @@ final class AppLaunchManager {
       try
         foodsAndKinds = JSONDecoder().decode(FoodsAndKinds.self, from: data)
         saveDB()
-    } catch  {
+    } catch {
       print(error)
     }
   }

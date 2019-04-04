@@ -39,7 +39,7 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
     return 3
   }
 
-  //MARK: - Setup
+  // MARK: - Setup
 
   func setupGestures() {
 
@@ -50,13 +50,17 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
     mailToDevCell.addGestureRecognizer(tapGesturMailToDevCell)
   }
 
-  //MARK: - Cell tap actions
+  // MARK: - Cell tap actions
 
   @objc func handleTapPrivacyPolicy(sender: UITapGestureRecognizer) {
     let informationController: UIViewController! = {
       let htmlPath = Bundle.main.path(forResource: "privacy_policy", ofType: "html")
       let url = URL(fileURLWithPath: htmlPath!)
-      let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.information.name) as! WebViewController
+
+      guard let vc: WebViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SideMenu.information.name) as? WebViewController
+        else {
+          fatalError("The controller is not an instance of WebViewController.")
+      }
       vc.setUp(url: url, embed: false)
       vc.navigationItem.title = NSLocalizedString("Setting.privacy_policy", comment: "")
       return UINavigationController(rootViewController: vc)

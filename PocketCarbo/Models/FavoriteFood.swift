@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class FavoriteFood : RealmSwift.Object {
+class FavoriteFood: RealmSwift.Object {
   @objc dynamic var id: Int = 0
   @objc dynamic var food: Food?
   @objc dynamic var createdAt: Date?

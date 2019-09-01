@@ -13,7 +13,7 @@ target 'PocketCarbo' do
   pod 'XLPagerTabStrip'
   pod 'SlideMenuControllerSwift', :git => 'https://github.com/sakurabird/SlideMenuControllerSwift.git'
   pod 'DropDown'
-  pod 'Toaster', :git => 'https://github.com/iFindTA/Toaster.git'
+  pod 'Toaster'
   pod 'Gecco', :git => 'https://github.com/sakurabird/Gecco.git'
 
   target 'PocketCarboTests' do

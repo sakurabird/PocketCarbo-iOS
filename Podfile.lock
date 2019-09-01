@@ -75,7 +75,7 @@ PODS:
     - Realm (= 3.17.3)
   - SlideMenuControllerSwift (5.0.0)
   - SwiftLint (0.34.0)
-  - Toaster (2.1.1)
+  - Toaster (2.2.0)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
@@ -88,7 +88,7 @@ DEPENDENCIES:
   - RealmSwift
   - SlideMenuControllerSwift (from `https://github.com/sakurabird/SlideMenuControllerSwift.git`)
   - SwiftLint
-  - Toaster (from `https://github.com/iFindTA/Toaster.git`)
+  - Toaster
   - XLPagerTabStrip
 
 SPEC REPOS:
@@ -111,6 +111,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - SwiftLint
+    - Toaster
     - XLPagerTabStrip
 
 EXTERNAL SOURCES:
@@ -118,8 +119,6 @@ EXTERNAL SOURCES:
     :git: https://github.com/sakurabird/Gecco.git
   SlideMenuControllerSwift:
     :git: https://github.com/sakurabird/SlideMenuControllerSwift.git
-  Toaster:
-    :git: https://github.com/iFindTA/Toaster.git
 
 CHECKOUT OPTIONS:
   Gecco:
@@ -128,9 +127,6 @@ CHECKOUT OPTIONS:
   SlideMenuControllerSwift:
     :commit: f9f6bfa4b029f886919900be0317f8a13d3713a9
     :git: https://github.com/sakurabird/SlideMenuControllerSwift.git
-  Toaster:
-    :commit: 59d0f0dc6e2bbfa2cd2e53a5567b69a0f6fa6e77
-    :git: https://github.com/iFindTA/Toaster.git
 
 SPEC CHECKSUMS:
   Crashlytics: 2dfd686bcb918dc10ee0e76f7f853fe42c7bd552
@@ -153,9 +149,9 @@ SPEC CHECKSUMS:
   RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
   SlideMenuControllerSwift: d740ea24105a658fe6a8c256f2bf5832fee7c047
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
-  Toaster: 683521465d8d4d684baca3b55cd248030b51e813
+  Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: d110cb8da3083a9988e4b308e1dc612d0735aa3b
+PODFILE CHECKSUM: 95c1830acdd0b4eb15a8065bcd18a3147041dfa9
 
 COCOAPODS: 1.7.5

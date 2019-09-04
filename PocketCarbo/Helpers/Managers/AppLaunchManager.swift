@@ -87,7 +87,7 @@ final class AppLaunchManager {
     try! realm.write {
 
       for food in foods {
-        realm.add(food, update: true)
+        realm.add(food, update: .modified)
       }
 
       for kind in kinds {
@@ -96,7 +96,7 @@ final class AppLaunchManager {
         kind.foods.removeAll()
         kind.foods.append(objectsIn: foods)
 
-        realm.add(kind, update: true)
+        realm.add(kind, update: .modified)
       }
     }
     // print(realm.objects(Kind.self))

@@ -11,10 +11,10 @@ target 'PocketCarbo' do
   pod 'Google-Mobile-Ads-SDK'
   pod 'RealmSwift'
   pod 'XLPagerTabStrip'
-  pod 'SlideMenuControllerSwift', :git => 'https://github.com/sakurabird/SlideMenuControllerSwift.git', :branch => 'swift4.2'
+  pod 'SlideMenuControllerSwift', :git => 'https://github.com/sakurabird/SlideMenuControllerSwift.git'
   pod 'DropDown'
-  pod 'Toaster', :git => 'https://github.com/iFindTA/Toaster.git'
-  pod 'Gecco', :git => 'https://github.com/shukob/Gecco.git'
+  pod 'Toaster'
+  pod 'Gecco', :git => 'https://github.com/sakurabird/Gecco.git'
 
   target 'PocketCarboTests' do
     inherit! :search_paths

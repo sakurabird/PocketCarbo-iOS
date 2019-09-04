@@ -42,7 +42,7 @@ final class FavoriteDataProvider {
     fav.createdAt = Date()
 
     try! realm.write {
-      realm.add(fav, update: true)
+      realm.add(fav, update: .all)
     }
   }
 

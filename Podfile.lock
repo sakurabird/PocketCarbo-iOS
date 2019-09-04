@@ -1,82 +1,94 @@
 PODS:
-  - Crashlytics (3.12.0):
-    - Fabric (~> 1.9.0)
-  - DropDown (2.3.12)
-  - Fabric (1.9.0)
-  - Firebase/Core (5.19.0):
+  - Crashlytics (3.13.4):
+    - Fabric (~> 1.10.2)
+  - DropDown (2.3.13)
+  - Fabric (1.10.2)
+  - Firebase/Core (6.7.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (= 5.8.0)
-  - Firebase/CoreOnly (5.19.0):
-    - FirebaseCore (= 5.4.0)
-  - FirebaseAnalytics (5.8.0):
-    - FirebaseCore (~> 5.4)
-    - FirebaseInstanceID (~> 3.8)
-    - GoogleAppMeasurement (= 5.8.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
-    - GoogleUtilities/MethodSwizzler (~> 5.2)
-    - GoogleUtilities/Network (~> 5.2)
-    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - FirebaseAnalytics (= 6.1.1)
+  - Firebase/CoreOnly (6.7.0):
+    - FirebaseCore (= 6.2.1)
+  - FirebaseAnalytics (6.1.1):
+    - FirebaseCore (~> 6.2)
+    - FirebaseInstanceID (~> 4.2)
+    - GoogleAppMeasurement (= 6.1.1)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (~> 0.3)
-  - FirebaseCore (5.4.0):
-    - GoogleUtilities/Environment (~> 5.2)
-    - GoogleUtilities/Logger (~> 5.2)
-  - FirebaseInstanceID (3.8.0):
-    - FirebaseCore (~> 5.2)
-    - GoogleUtilities/Environment (~> 5.2)
-    - GoogleUtilities/UserDefaults (~> 5.2)
+  - FirebaseCore (6.2.1):
+    - FirebaseCoreDiagnostics (~> 1.0)
+    - FirebaseCoreDiagnosticsInterop (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.2)
+    - GoogleUtilities/Logger (~> 6.2)
+  - FirebaseCoreDiagnostics (1.0.1):
+    - FirebaseCoreDiagnosticsInterop (~> 1.0)
+    - GoogleDataTransportCCTSupport (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.2)
+    - GoogleUtilities/Logger (~> 6.2)
+  - FirebaseCoreDiagnosticsInterop (1.0.0)
+  - FirebaseInstanceID (4.2.3):
+    - FirebaseCore (~> 6.0)
+    - GoogleUtilities/Environment (~> 6.0)
+    - GoogleUtilities/UserDefaults (~> 6.0)
   - Gecco (1.0.0)
-  - Google-Mobile-Ads-SDK (7.42.1):
-    - GoogleAppMeasurement (~> 5.7)
-  - GoogleAppMeasurement (5.8.0):
-    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
-    - GoogleUtilities/MethodSwizzler (~> 5.2)
-    - GoogleUtilities/Network (~> 5.2)
-    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+  - Google-Mobile-Ads-SDK (7.49.0):
+    - GoogleAppMeasurement (~> 6.0)
+  - GoogleAppMeasurement (6.1.1):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (~> 0.3)
-  - GoogleUtilities/AppDelegateSwizzler (5.5.0):
+  - GoogleDataTransport (1.1.3)
+  - GoogleDataTransportCCTSupport (1.0.2):
+    - GoogleDataTransport (~> 1.1)
+    - nanopb
+  - GoogleUtilities/AppDelegateSwizzler (6.2.5):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
     - GoogleUtilities/Network
-  - GoogleUtilities/Environment (5.5.0)
-  - GoogleUtilities/Logger (5.5.0):
+  - GoogleUtilities/Environment (6.2.5)
+  - GoogleUtilities/Logger (6.2.5):
     - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (5.5.0):
+  - GoogleUtilities/MethodSwizzler (6.2.5):
     - GoogleUtilities/Logger
-  - GoogleUtilities/Network (5.5.0):
+  - GoogleUtilities/Network (6.2.5):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (5.5.0)"
-  - GoogleUtilities/Reachability (5.5.0):
+  - "GoogleUtilities/NSData+zlib (6.2.5)"
+  - GoogleUtilities/Reachability (6.2.5):
     - GoogleUtilities/Logger
-  - GoogleUtilities/UserDefaults (5.5.0):
+  - GoogleUtilities/UserDefaults (6.2.5):
     - GoogleUtilities/Logger
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - Realm (3.13.1):
-    - Realm/Headers (= 3.13.1)
-  - Realm/Headers (3.13.1)
-  - RealmSwift (3.13.1):
-    - Realm (= 3.13.1)
-  - SlideMenuControllerSwift (4.2.0)
-  - SwiftLint (0.31.0)
-  - Toaster (2.1.1)
-  - XLPagerTabStrip (8.1.1)
+  - Realm (3.17.3):
+    - Realm/Headers (= 3.17.3)
+  - Realm/Headers (3.17.3)
+  - RealmSwift (3.17.3):
+    - Realm (= 3.17.3)
+  - SlideMenuControllerSwift (5.0.0)
+  - SwiftLint (0.34.0)
+  - Toaster (2.2.0)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - Crashlytics
   - DropDown
   - Fabric
   - Firebase/Core
-  - Gecco (from `https://github.com/shukob/Gecco.git`)
+  - Gecco (from `https://github.com/sakurabird/Gecco.git`)
   - Google-Mobile-Ads-SDK
   - RealmSwift
-  - SlideMenuControllerSwift (from `https://github.com/sakurabird/SlideMenuControllerSwift.git`, branch `swift4.2`)
+  - SlideMenuControllerSwift (from `https://github.com/sakurabird/SlideMenuControllerSwift.git`)
   - SwiftLint
-  - Toaster (from `https://github.com/iFindTA/Toaster.git`)
+  - Toaster
   - XLPagerTabStrip
 
 SPEC REPOS:
@@ -87,56 +99,59 @@ SPEC REPOS:
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCoreDiagnosticsInterop
     - FirebaseInstanceID
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - nanopb
     - Realm
     - RealmSwift
     - SwiftLint
+    - Toaster
     - XLPagerTabStrip
 
 EXTERNAL SOURCES:
   Gecco:
-    :git: https://github.com/shukob/Gecco.git
+    :git: https://github.com/sakurabird/Gecco.git
   SlideMenuControllerSwift:
-    :branch: swift4.2
     :git: https://github.com/sakurabird/SlideMenuControllerSwift.git
-  Toaster:
-    :git: https://github.com/iFindTA/Toaster.git
 
 CHECKOUT OPTIONS:
   Gecco:
-    :commit: 123aa33f0ad874a87e16f92fa871232ece279b83
-    :git: https://github.com/shukob/Gecco.git
+    :commit: c15598b95bb4c4d181106124bcfade93eafe73af
+    :git: https://github.com/sakurabird/Gecco.git
   SlideMenuControllerSwift:
-    :commit: ae0d5588a99bc92e16a92d5dd594bad89963c363
+    :commit: f9f6bfa4b029f886919900be0317f8a13d3713a9
     :git: https://github.com/sakurabird/SlideMenuControllerSwift.git
-  Toaster:
-    :commit: 59d0f0dc6e2bbfa2cd2e53a5567b69a0f6fa6e77
-    :git: https://github.com/iFindTA/Toaster.git
 
 SPEC CHECKSUMS:
-  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
-  DropDown: 0bcc278799ec11a3d34ce1aac9367fbbaf5423d9
-  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
-  Firebase: c60d49e9c2630875a96207d15e2affb8364996d1
-  FirebaseAnalytics: fd72a26bf8dac84cefba2f0864366f718555a5b0
-  FirebaseCore: 22a79a961c3951ef2f77b67bfbc99e454247b319
-  FirebaseInstanceID: cf488df2f4b79782f0e430b04a0e17c0aa7979b2
-  Gecco: e662f949821e742997787bad7b730ccc0052e43c
-  Google-Mobile-Ads-SDK: 30a1520469efa03097af62ea0d8f9be773542267
-  GoogleAppMeasurement: 1624046ab1bcc5e170061a56ef5679000b079c8e
-  GoogleUtilities: 6481e6318c5fcabaaa8513ef8120f329055d7c10
+  Crashlytics: 2dfd686bcb918dc10ee0e76f7f853fe42c7bd552
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
+  Firebase: 291d7b0a7b393f252358083b5d224884126fa46d
+  FirebaseAnalytics: 843c7f64a8f9c79f0d03281197ebe7bb1d58d477
+  FirebaseCore: 32b48f41c84a56fbde73b35ed01a830b3b6dc048
+  FirebaseCoreDiagnostics: 4c04ae09d0ab027c30179828c6bb47764df1bd13
+  FirebaseCoreDiagnosticsInterop: 6829da2b8d1fc795ff1bd99df751d3788035d2cb
+  FirebaseInstanceID: 8b42755db950682e7de0d167bc6fb26a57b244af
+  Gecco: 89c80316b3a6e22566e90dde05c4a49e8fdc4582
+  Google-Mobile-Ads-SDK: df315e371b29cf935f7ea872e7bdec39462a100e
+  GoogleAppMeasurement: 86a82f0e1f20b8eedf8e20326530138fd71409de
+  GoogleDataTransport: 91e682bd60a49d3f8f69f2e909a66efaed5a1e7a
+  GoogleDataTransportCCTSupport: 6b545f7149111180763dc18c6f372c963de4a310
+  GoogleUtilities: e7dc37039b19df7fe543479d3e4a02ac8d11bb69
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
-  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
-  SlideMenuControllerSwift: aff8b3e50027893ef3b6341ebd3b8d0c078a2c0e
-  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
-  Toaster: 683521465d8d4d684baca3b55cd248030b51e813
-  XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
+  Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
+  RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
+  SlideMenuControllerSwift: d740ea24105a658fe6a8c256f2bf5832fee7c047
+  SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
+  Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 1d61dbca4ebe905746e906e8e5bee872dadc2d24
+PODFILE CHECKSUM: 95c1830acdd0b4eb15a8065bcd18a3147041dfa9
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.5

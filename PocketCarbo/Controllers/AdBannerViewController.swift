@@ -82,7 +82,7 @@ class AdBannerViewController: UIViewController, GADBannerViewDelegate {
   private func displayView(isHidden: Bool) {
     adBannerView.isHidden = isHidden
     if !isHidden {
-      adBannerView.load(ADManager.sharedInstance.getGADRequest())
+      adBannerView.load(GADRequest())
     }
   }
 

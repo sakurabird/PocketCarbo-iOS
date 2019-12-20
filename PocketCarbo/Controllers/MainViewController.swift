@@ -25,8 +25,6 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     setupPagerTabStrip()
 
     super.viewDidLoad()
-
-    self.view.backgroundColor = UIColor(patternImage: UIImage(named: "main_bg")!)
   }
 
   // MARK: - Setup

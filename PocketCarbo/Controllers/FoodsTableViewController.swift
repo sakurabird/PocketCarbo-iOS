@@ -76,7 +76,6 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 }
 
   func setupTableView() {
-    tableView.backgroundColor = UIColor(patternImage: UIImage(named: "main_bg")!)
     let insets = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
     self.tableView.contentInset = insets
     tableView.rowHeight = UITableView.automaticDimension

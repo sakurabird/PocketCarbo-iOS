@@ -413,7 +413,7 @@
             <objects>
                 <viewController id="0Gb-Xt-pIX" customClass="MainViewController" customModule="PocketCarbo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uOt-Dw-qGk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vo5-Ym-PDV" customClass="ButtonBarView" customModule="XLPagerTabStrip">
@@ -481,6 +481,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" name="ColorFoodsBG"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5Ym-hu-WDI"/>
                                     <constraint firstItem="OvQ-8r-CcH" firstAttribute="bottom" secondItem="bNw-da-ljV" secondAttribute="bottom" id="6n5-v7-OhC"/>
@@ -493,10 +494,10 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7CV-Yc-JaI">
-                                <rect key="frame" x="0.0" y="98" width="375" height="499"/>
+                                <rect key="frame" x="0.0" y="98" width="375" height="519"/>
                             </scrollView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAY-yn-eHT">
-                                <rect key="frame" x="0.0" y="597" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Pzn-mu-rQW"/>
                                 </constraints>
@@ -718,7 +719,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jeW-mR-lDK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="ColorFoodsBG"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodCell" rowHeight="200" id="Gnd-kf-FU5" customClass="FoodTableViewCell" customModule="PocketCarbo">
                                 <rect key="frame" x="0.0" y="28" width="375" height="200"/>
@@ -747,7 +748,7 @@
                                                                     <rect key="frame" x="16" y="12" width="311" height="77.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxq-1l-ZnZ" customClass="PaddingLabel" customModule="PocketCarbo" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="31" height="14.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="41" height="18.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                             <color key="textColor" name="ColorAccent"/>
                                                                             <nil key="highlightedColor"/>
@@ -776,7 +777,7 @@
                                                                             </userDefinedRuntimeAttributes>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="食品名" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOu-c7-ooM">
-                                                                            <rect key="frame" x="0.0" y="22" width="55.5" height="21.5"/>
+                                                                            <rect key="frame" x="0.0" y="24" width="55.5" height="21.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -1020,6 +1021,9 @@
         <image name="tutorial_image2" width="247" height="257"/>
         <namedColor name="ColorAccent">
             <color red="1" green="0.43500000238418579" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ColorFoodsBG">
+            <color red="0.88235294117647056" green="0.96078431372549022" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ColorPrimary">
             <color red="0.16862745098039217" green="0.72941176470588232" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

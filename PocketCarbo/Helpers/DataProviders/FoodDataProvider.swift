@@ -73,13 +73,18 @@ final class FoodDataProvider {
   }
 
   func findData(searchText: String) -> [Food] {
+    let replacedText = searchText.replacingOccurrences(of: "　", with: " ")
+    let texts = replacedText.trimmingCharacters(in: .whitespaces).components(separatedBy: " ")
 
-    let p1 = NSPredicate(format: "name CONTAINS[c] %@", argumentArray: [searchText])
-    let p2 = NSPredicate(format: "search_word CONTAINS[c] %@", argumentArray: [searchText])
-    let p3 = NSPredicate(format: "ANY kinds.name CONTAINS[c] %@", argumentArray: [searchText])
-    let p4 = NSPredicate(format: "ANY kinds.search_word CONTAINS[c] %@", argumentArray: [searchText])
-
-    let predicateCompound = NSCompoundPredicate.init(type: .or, subpredicates: [p1, p2, p3, p4])
+    var predicateCompounds = [NSCompoundPredicate]()
+    for text in (texts.filter { !$0.isEmpty }) {
+        let p1 = NSPredicate(format: "name CONTAINS[c] %@", argumentArray: [text])
+        let p2 = NSPredicate(format: "search_word CONTAINS[c] %@", argumentArray: [text])
+        let p3 = NSPredicate(format: "ANY kinds.name CONTAINS[c] %@", argumentArray: [text])
+        let p4 = NSPredicate(format: "ANY kinds.search_word CONTAINS[c] %@", argumentArray: [text])
+        predicateCompounds.append(NSCompoundPredicate.init(type: .or, subpredicates: [p1, p2, p3, p4]))
+    }
+    let predicateCompound = NSCompoundPredicate.init(type: .and, subpredicates: predicateCompounds)
 
     let foods = realm.objects(Food.self).filter(predicateCompound)
       .sorted(byKeyPath: FoodSortOrder.nameAsc.key(), ascending: FoodSortOrder.nameAsc.ascending())

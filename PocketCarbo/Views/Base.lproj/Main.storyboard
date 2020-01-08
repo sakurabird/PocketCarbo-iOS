@@ -592,13 +592,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7Wk-gR-EYN">
-                                <rect key="frame" x="16" y="118" width="343" height="492.5"/>
+                                <rect key="frame" x="16" y="118" width="343" height="274.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_image1" translatesAutoresizingMaskIntoConstraints="NO" id="xaG-Yg-q67">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="436"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="218"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="リストの行をクリックして詳細情報を表示します。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWQ-PQ-fV2">
-                                        <rect key="frame" x="0.0" y="448" width="343" height="44.5"/>
+                                        <rect key="frame" x="0.0" y="230" width="343" height="44.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -606,7 +606,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Bkg-fY-h1T">
-                                <rect key="frame" x="16" y="100" width="343" height="627"/>
+                                <rect key="frame" x="16" y="100" width="343" height="370"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="食品は糖質量率によって色分けしています。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ii5-eB-b4F">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="22.5"/>
@@ -615,10 +615,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_image2" translatesAutoresizingMaskIntoConstraints="NO" id="hVU-u1-CIf">
-                                        <rect key="frame" x="0.0" y="34.5" width="343" height="514"/>
+                                        <rect key="frame" x="0.0" y="34.5" width="343" height="257"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="読んでくれてありがとうございました！ ポケット糖質量を毎日のご健康にお役立てください！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJO-Pa-AWV">
-                                        <rect key="frame" x="0.0" y="560.5" width="343" height="66.5"/>
+                                        <rect key="frame" x="0.0" y="303.5" width="343" height="66.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>

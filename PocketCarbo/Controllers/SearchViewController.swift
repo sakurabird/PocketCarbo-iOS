@@ -59,6 +59,9 @@ class SearchViewController: UIViewController {
         backgroundview.clipsToBounds = true
       }
     }
+    if #available(iOS 13.0, *) {
+      searchController.searchBar.searchTextField.backgroundColor = UIColor.white
+    }
     navigationItem.searchController = searchController
   }
 }

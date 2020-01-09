@@ -18,6 +18,7 @@ class Food: RealmSwift.Object, Codable {
   @objc dynamic var calory: Float = 0
   @objc dynamic var protein: Float = 0
   @objc dynamic var fat: Float = 0
+  @objc dynamic var fat_per100g: Float = 0
   @objc dynamic var sodium: Float = 0
   @objc dynamic var notes: String?
   @objc dynamic var type_id: Int = 0
@@ -37,6 +38,7 @@ class Food: RealmSwift.Object, Codable {
     case calory
     case protein
     case fat
+    case fat_per100g
     case sodium
     case notes
     case type_id
@@ -56,6 +58,7 @@ class Food: RealmSwift.Object, Codable {
     calory = try values.decode(Float.self, forKey: .calory)
     protein = try values.decode(Float.self, forKey: .protein)
     fat = try values.decode(Float.self, forKey: .fat)
+    fat_per100g = try values.decode(Float.self, forKey: .fat_per100g)
     sodium = try values.decode(Float.self, forKey: .sodium)
     notes = try values.decodeIfPresent(String.self, forKey: .notes)
     type_id = try values.decode(Int.self, forKey: .type_id)

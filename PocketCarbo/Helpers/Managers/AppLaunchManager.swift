@@ -35,7 +35,7 @@ final class AppLaunchManager {
 
   private func setupRealm() {
     let config = Realm.Configuration(
-      schemaVersion: 2,
+      schemaVersion: 3,
 
       migrationBlock: { migration, oldSchemaVersion in
 
@@ -49,9 +49,13 @@ final class AppLaunchManager {
           }
         }
 
-        if oldSchemaVersion < 2 {
+        // if oldSchemaVersion < 2 {
           // Kindにfoods: List<Food>, Foodsにkinds・: LinkingObjects<Kind>を追加
-        }
+        // }
+
+        // if oldSchemaVersion < 3 {
+          // Foodにfat_per100gを追加
+        // }
     })
 
     Realm.Configuration.defaultConfiguration = config

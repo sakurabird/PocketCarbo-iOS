@@ -79,7 +79,7 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     let insets = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
     self.tableView.contentInset = insets
     tableView.rowHeight = UITableView.automaticDimension
-    tableView.estimatedRowHeight = 200.0
+    tableView.estimatedRowHeight = 100.0
   }
 
   // MARK: - IndicatorInfoProvider

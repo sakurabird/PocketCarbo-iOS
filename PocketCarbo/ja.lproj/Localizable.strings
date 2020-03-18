@@ -31,13 +31,13 @@
 "Foods.dropdown.sort.carbohydratePer100gDsc" = "糖質量の多い順";
 "Foods.dropdown.sort.toast" = "に並び替えました";
 
-"Foods.description.text1" = "あたりの値\n";
-"Foods.description.text2" = "糖質 : %@ g\n";
-"Foods.description.text3" = "カロリー : %@ kcal\n";
-"Foods.description.text4" = "たんぱく質 : %@ g\n";
-"Foods.description.text5" = "脂質 : %@ g\n";
+"Foods.description.text1" = "あたりの値";
+"Foods.description.text2" = "糖質 : %@ g";
+"Foods.description.text3" = "カロリー : %@ kcal";
+"Foods.description.text4" = "たんぱく質 : %@ g";
+"Foods.description.text5" = "脂質 : %@ g";
 "Foods.description.text6" = "塩分 : %@ g";
-"Foods.description.text7" = "\n備考 : %@";
+"Foods.description.text7" = "備考 : ";
 
 "Foods.cubeSugar.text" = "角砂糖%@個分";
 

@@ -19,6 +19,9 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
   var indicatorInfo = IndicatorInfo(title: "Kinds")
 
+  var isFavotitesScene = false
+  var isSearchScene = false
+
   var type: Type?
   var kinds: [Kind]?
   var foods: [Food]?
@@ -49,6 +52,11 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     NotificationCenter.default.observeEvent(observer: self,
                                             selector: #selector(FoodsTableViewController.dataUpdated),
                                             notification: NotificationEvent.foodsAndKindsUpdated)
+
+    // Observe favorites DB update event
+    NotificationCenter.default.observeEvent(observer: self,
+                                            selector: #selector(FoodsTableViewController.favoritesUpdated),
+                                            notification: NotificationEvent.favoritesUpdated)
   }
 
   // MARK: - deinit
@@ -162,6 +170,12 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     refeshData()
   }
 
+  @objc func favoritesUpdated(notification: NSNotification) {
+    if !isFavotitesScene && !isSearchScene {
+      refeshData()
+    }
+  }
+
   func extractKindData(kind: Kind) {
     self.selectedKind = kind
     refeshData()
@@ -235,6 +249,7 @@ extension FoodsTableViewController {
 
   // お気に入り画面用のsetup
   func setupFavoritesData() {
+    self.isFavotitesScene = true
     self.selectedKind = kindAll
     self.foods = FavoriteDataProvider.sharedInstance.findAll()
 
@@ -244,6 +259,7 @@ extension FoodsTableViewController {
 
   // 検索画面用のsetup
   func setupAllData() {
+    self.isSearchScene = true
     self.selectedKind = kindAll
     self.foods = FoodDataProvider.sharedInstance.findAll()
   }

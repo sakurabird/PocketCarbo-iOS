@@ -43,6 +43,7 @@ final class FavoriteDataProvider {
 
     try! realm.write {
       realm.add(fav, update: .all)
+      NotificationCenter.default.postEvent(notification: NotificationEvent.favoritesUpdated, object: self, userInfo: nil)
     }
   }
 
@@ -52,6 +53,7 @@ final class FavoriteDataProvider {
 
     try! realm.write {
       realm.delete(favoriteFood)
+      NotificationCenter.default.postEvent(notification: NotificationEvent.favoritesUpdated, object: self, userInfo: nil)
     }
   }
 }

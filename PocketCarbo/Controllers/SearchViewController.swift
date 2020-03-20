@@ -24,11 +24,16 @@ class SearchViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    SceneStatus.sharedInstance.currentSearchStatus = .Active
 
     self.setLeftNavigationBarBack()
     self.navigationController?.hidesBarsOnSwipe = true
     // 検索画面の検索欄を常に表示しておく
     self.navigationItem.hidesSearchBarWhenScrolling = false
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    SceneStatus.sharedInstance.currentSearchStatus = .InActive
   }
 
   // MARK: Private Functions

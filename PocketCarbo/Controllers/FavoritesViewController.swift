@@ -26,11 +26,13 @@ class FavoritesViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    SceneStatus.sharedInstance.currentFavoritesStatus = .Active
     self.setNavigationBarItem()
     self.navigationController?.hidesBarsOnSwipe = true
   }
 
   override func viewWillDisappear(_ animated: Bool) {
+    SceneStatus.sharedInstance.currentFavoritesStatus = .InActive
     notificationToken?.invalidate()
   }
 
@@ -51,10 +53,5 @@ class FavoritesViewController: UIViewController {
     }
     self.foodsTableViewController = vc
     updateFavorites()
-
-    let realm = try! Realm()
-      notificationToken = realm.observe { [unowned self] _, _ in
-      self.updateFavorites()
-    }
   }
 }

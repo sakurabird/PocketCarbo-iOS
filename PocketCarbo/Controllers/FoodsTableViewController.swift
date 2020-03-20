@@ -19,9 +19,6 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
   var indicatorInfo = IndicatorInfo(title: "Kinds")
 
-  var isFavotitesScene = false
-  var isSearchScene = false
-
   var type: Type?
   var kinds: [Kind]?
   var foods: [Food]?
@@ -171,7 +168,16 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
   }
 
   @objc func favoritesUpdated(notification: NSNotification) {
-    if !isFavotitesScene && !isSearchScene {
+    if let parentViewController: UIViewController = self.parent {
+      if parentViewController is MainViewController {
+      } else {
+        return
+      }
+    } else {
+      return
+    }
+
+    if SceneStatus.sharedInstance.currentFavoritesStatus == .Active || SceneStatus.sharedInstance.currentSearchStatus == .Active {
       refeshData()
     }
   }
@@ -249,7 +255,6 @@ extension FoodsTableViewController {
 
   // お気に入り画面用のsetup
   func setupFavoritesData() {
-    self.isFavotitesScene = true
     self.selectedKind = kindAll
     self.foods = FavoriteDataProvider.sharedInstance.findAll()
 
@@ -259,7 +264,6 @@ extension FoodsTableViewController {
 
   // 検索画面用のsetup
   func setupAllData() {
-    self.isSearchScene = true
     self.selectedKind = kindAll
     self.foods = FoodDataProvider.sharedInstance.findAll()
   }

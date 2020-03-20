@@ -11,6 +11,7 @@
 		21095C39224FCF460064FA0F /* foods_and_kinds.json in Resources */ = {isa = PBXBuildFile; fileRef = 21095C38224FCF460064FA0F /* foods_and_kinds.json */; };
 		211071FE214F613F000A9FB5 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211071FD214F613F000A9FB5 /* ADManager.swift */; };
 		2117FFED2154045800C67EBD /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117FFEC2154045800C67EBD /* PaddingLabel.swift */; };
+		2118C23224246B3B00EBE2C5 /* SceneStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2118C23124246B3B00EBE2C5 /* SceneStatus.swift */; };
 		21402F6A2079FB8200C552F6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21402F692079FB8100C552F6 /* TutorialViewController.swift */; };
 		2147C61520761D0800A845C2 /* EmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2147C61420761D0800A845C2 /* EmptyDataView.xib */; };
 		2147C61720761E2900A845C2 /* UIView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147C61620761E2900A845C2 /* UIView+extention.swift */; };
@@ -90,6 +91,7 @@
 		21095C38224FCF460064FA0F /* foods_and_kinds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foods_and_kinds.json; sourceTree = "<group>"; };
 		211071FD214F613F000A9FB5 /* ADManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADManager.swift; sourceTree = "<group>"; };
 		2117FFEC2154045800C67EBD /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		2118C23124246B3B00EBE2C5 /* SceneStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneStatus.swift; sourceTree = "<group>"; };
 		21402F692079FB8100C552F6 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		2147C61420761D0800A845C2 /* EmptyDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataView.xib; sourceTree = "<group>"; };
 		2147C61620761E2900A845C2 /* UIView+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extention.swift"; sourceTree = "<group>"; };
@@ -185,6 +187,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2118C23024246ADE00EBE2C5 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2118C23124246B3B00EBE2C5 /* SceneStatus.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		214D86D920629B8A00F20EF7 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				214D86E520629B8A00F20EF7 /* AppDelegate.swift */,
+				2118C23024246ADE00EBE2C5 /* Shared */,
 				214D87152063211700F20EF7 /* Models */,
 				214D87172063215100F20EF7 /* Views */,
 				214D87182063217F00F20EF7 /* Controllers */,
@@ -697,6 +708,7 @@
 				216AA4E5206446A5002AA44E /* UIColor+extension.swift in Sources */,
 				216AA4EF2064495D002AA44E /* SettingsViewController.swift in Sources */,
 				216AA4E120643EB8002AA44E /* SideMenuViewController.swift in Sources */,
+				2118C23224246B3B00EBE2C5 /* SceneStatus.swift in Sources */,
 				216AA4FF2064B4F0002AA44E /* FoodDataProvider.swift in Sources */,
 				216AA4DF20643E4E002AA44E /* MainViewController.swift in Sources */,
 				21A8EAF82072930B008FA5D0 /* FavoriteDataProvider.swift in Sources */,

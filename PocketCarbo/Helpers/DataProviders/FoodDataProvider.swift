@@ -15,6 +15,8 @@ enum FoodSortOrder: Int {
   case nameDsc
   case carbohydratePer100gAsc
   case carbohydratePer100gDsc
+  case fatPer100gAsc
+  case fatPer100gDsc
 
   func key() -> String {
     switch self {
@@ -26,6 +28,10 @@ enum FoodSortOrder: Int {
       return "carbohydrate_per_100g"
     case .carbohydratePer100gDsc:
       return "carbohydrate_per_100g"
+    case .fatPer100gAsc:
+      return "fat_per100g"
+    case .fatPer100gDsc:
+      return "fat_per100g"
     }
   }
 
@@ -38,6 +44,10 @@ enum FoodSortOrder: Int {
     case .carbohydratePer100gAsc:
       return true
     case .carbohydratePer100gDsc:
+      return false
+    case .fatPer100gAsc:
+      return true
+    case .fatPer100gDsc:
       return false
     }
   }

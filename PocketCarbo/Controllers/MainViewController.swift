@@ -118,6 +118,12 @@ class MainViewController: ButtonBarPagerTabStripViewController {
       case 3:
         sortOrder = .carbohydratePer100gDsc
         toastString.append(NSLocalizedString("Foods.dropdown.sort.carbohydratePer100gDsc", comment: ""))
+      case 4:
+        sortOrder = .fatPer100gAsc
+        toastString.append(NSLocalizedString("Foods.dropdown.sort.fatPer100gAsc", comment: ""))
+      case 5:
+        sortOrder = .fatPer100gDsc
+        toastString.append(NSLocalizedString("Foods.dropdown.sort.fatPer100gDsc", comment: ""))
       default:
         print(sortOrder)
       }
@@ -134,6 +140,8 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     strings.append(NSLocalizedString("Foods.dropdown.sort.nameDsc", comment: ""))
     strings.append(NSLocalizedString("Foods.dropdown.sort.carbohydratePer100gAsc", comment: ""))
     strings.append(NSLocalizedString("Foods.dropdown.sort.carbohydratePer100gDsc", comment: ""))
+    strings.append(NSLocalizedString("Foods.dropdown.sort.fatPer100gAsc", comment: ""))
+    strings.append(NSLocalizedString("Foods.dropdown.sort.fatPer100gDsc", comment: ""))
 
     return strings
   }

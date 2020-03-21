@@ -12,6 +12,7 @@
 		211071FE214F613F000A9FB5 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211071FD214F613F000A9FB5 /* ADManager.swift */; };
 		2117FFED2154045800C67EBD /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117FFEC2154045800C67EBD /* PaddingLabel.swift */; };
 		2118C23224246B3B00EBE2C5 /* SceneStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2118C23124246B3B00EBE2C5 /* SceneStatus.swift */; };
+		212226D9242501C400E74FF2 /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212226D8242501C400E74FF2 /* Bundle+extension.swift */; };
 		21402F6A2079FB8200C552F6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21402F692079FB8100C552F6 /* TutorialViewController.swift */; };
 		2147C61520761D0800A845C2 /* EmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2147C61420761D0800A845C2 /* EmptyDataView.xib */; };
 		2147C61720761E2900A845C2 /* UIView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147C61620761E2900A845C2 /* UIView+extention.swift */; };
@@ -92,6 +93,7 @@
 		211071FD214F613F000A9FB5 /* ADManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADManager.swift; sourceTree = "<group>"; };
 		2117FFEC2154045800C67EBD /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		2118C23124246B3B00EBE2C5 /* SceneStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneStatus.swift; sourceTree = "<group>"; };
+		212226D8242501C400E74FF2 /* Bundle+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
 		21402F692079FB8100C552F6 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		2147C61420761D0800A845C2 /* EmptyDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataView.xib; sourceTree = "<group>"; };
 		2147C61620761E2900A845C2 /* UIView+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extention.swift"; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 		214D87132063210100F20EF7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				212226D8242501C400E74FF2 /* Bundle+extension.swift */,
 				214D873C20635B7500F20EF7 /* UserDefault+extension.swift */,
 				214D873E20636C4300F20EF7 /* NotificationCenter+extension.swift */,
 				216AA4E4206446A5002AA44E /* UIColor+extension.swift */,
@@ -666,6 +669,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/Gecco/Gecco.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -678,6 +682,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gecco.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -735,6 +740,7 @@
 				216AA50E20666335002AA44E /* UIButton+extention.swift in Sources */,
 				214D873B2063589500F20EF7 /* Constants.swift in Sources */,
 				216AA50A206527B9002AA44E /* FoodTableViewCell.swift in Sources */,
+				212226D9242501C400E74FF2 /* Bundle+extension.swift in Sources */,
 				216AA5032064F824002AA44E /* Type.swift in Sources */,
 				2147C61720761E2900A845C2 /* UIView+extention.swift in Sources */,
 			);

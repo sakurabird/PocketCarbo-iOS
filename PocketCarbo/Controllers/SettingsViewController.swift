@@ -18,9 +18,7 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    if let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
-      versionLabel.text = version
-    }
+    versionLabel.text = Bundle.main.releaseVersionNumber
     setupGestures()
   }
 

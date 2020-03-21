@@ -1,6 +1,7 @@
 PODS:
   - Crashlytics (3.14.0):
     - Fabric (~> 1.10.2)
+  - Device (3.2.1)
   - DropDown (2.3.13)
   - Fabric (1.10.2)
   - Firebase/Core (6.13.0):
@@ -81,6 +82,7 @@ PODS:
 
 DEPENDENCIES:
   - Crashlytics
+  - Device (~> 3.2.1)
   - DropDown
   - Fabric
   - Firebase/Core
@@ -95,6 +97,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Crashlytics
+    - Device
     - DropDown
     - Fabric
     - Firebase
@@ -131,6 +134,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
+  Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   Firebase: 458d109512200d1aca2e1b9b6cf7d68a869a4a46
@@ -153,6 +157,6 @@ SPEC CHECKSUMS:
   Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 3e71bee223cd68798525fbc175716d5fc2744cd9
+PODFILE CHECKSUM: b82869893b1ced2b708e815d292d2a11c27fa633
 
 COCOAPODS: 1.8.4

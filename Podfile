@@ -15,6 +15,7 @@ target 'PocketCarbo' do
   pod 'DropDown'
   pod 'Toaster'
   pod 'Gecco', :git => 'https://github.com/sakurabird/Gecco.git'
+  pod "Device", '~> 3.2.1'
 
   target 'PocketCarboTests' do
     inherit! :search_paths

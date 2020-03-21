@@ -290,20 +290,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1r-x5-nKD">
                                 <rect key="frame" x="10" y="10" width="355" height="647"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下のボタンを押していただけますと、 ホーム画面にチュートリアルを表示します。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb6-P9-Glr" userLabel="showTutorialDescription">
-                                        <rect key="frame" x="16" y="0.0" width="323" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="25H-Wq-OOk"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下のボタンを押していただけますと、 インストール時のチュートリアルを表示します。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb6-P9-Glr" userLabel="showTutorialDescription">
+                                        <rect key="frame" x="16" y="0.0" width="323" height="28"/>
                                         <fontDescription key="fontDescription" name="HGGothicE" family="HGGothicE" pointSize="12"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" name="ColorTextGrayDark"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WLy-bx-1Gt">
-                                        <rect key="frame" x="40" y="58" width="275" height="40"/>
+                                        <rect key="frame" x="40" y="32" width="275" height="32"/>
                                         <color key="backgroundColor" red="0.70196078429999997" green="0.93333333330000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="zeF-Mx-EBU"/>
+                                            <constraint firstAttribute="height" constant="32" id="zeF-Mx-EBU"/>
                                         </constraints>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -326,7 +323,7 @@
                                         </connections>
                                     </button>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cn7-og-G3d">
-                                        <rect key="frame" x="0.0" y="106" width="355" height="541"/>
+                                        <rect key="frame" x="0.0" y="66" width="355" height="581"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <wkWebViewConfiguration key="configuration">
                                             <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -338,10 +335,10 @@
                                     <constraint firstItem="Cn7-og-G3d" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" id="2hm-pA-FFl"/>
                                     <constraint firstItem="Pb6-P9-Glr" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" constant="16" id="4zp-9d-SQA"/>
                                     <constraint firstAttribute="bottom" secondItem="Cn7-og-G3d" secondAttribute="bottom" id="5BT-gy-cco"/>
-                                    <constraint firstItem="Cn7-og-G3d" firstAttribute="top" secondItem="WLy-bx-1Gt" secondAttribute="bottom" constant="8" id="HqB-C1-iXt"/>
+                                    <constraint firstItem="Cn7-og-G3d" firstAttribute="top" secondItem="WLy-bx-1Gt" secondAttribute="bottom" constant="2" id="HqB-C1-iXt"/>
                                     <constraint firstItem="Pb6-P9-Glr" firstAttribute="top" secondItem="u1r-x5-nKD" secondAttribute="top" id="P7J-TI-o1y"/>
                                     <constraint firstItem="WLy-bx-1Gt" firstAttribute="leading" secondItem="u1r-x5-nKD" secondAttribute="leading" constant="40" id="SJ1-E2-uN4"/>
-                                    <constraint firstItem="WLy-bx-1Gt" firstAttribute="top" secondItem="Pb6-P9-Glr" secondAttribute="bottom" constant="10" id="Spf-Dg-HUI"/>
+                                    <constraint firstItem="WLy-bx-1Gt" firstAttribute="top" secondItem="Pb6-P9-Glr" secondAttribute="bottom" constant="4" id="Spf-Dg-HUI"/>
                                     <constraint firstAttribute="trailing" secondItem="Cn7-og-G3d" secondAttribute="trailing" id="WeS-n9-Qbn"/>
                                     <constraint firstAttribute="trailing" secondItem="WLy-bx-1Gt" secondAttribute="trailing" constant="40" id="XbV-fs-yj0"/>
                                     <constraint firstAttribute="trailing" secondItem="Pb6-P9-Glr" secondAttribute="trailing" constant="16" id="vuj-x7-cO1"/>
@@ -1106,10 +1103,10 @@
             <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ColorGray600">
-            <color red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.45899999141693115" green="0.45899999141693115" blue="0.45899999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ColorGray800">
-            <color red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.25900000333786011" green="0.25900000333786011" blue="0.25900000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ColorPrimary">
             <color red="0.16862745098039217" green="0.72941176470588232" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

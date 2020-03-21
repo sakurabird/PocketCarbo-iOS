@@ -61,6 +61,10 @@
 		21C0D99B207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
 		21C0D99C207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
 		21C0D99D207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
+		21D92EB324264FFC00E415B6 /* help_menu_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D92EAF24264FFC00E415B6 /* help_menu_bar.png */; };
+		21D92EB424264FFC00E415B6 /* help_tabs.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D92EB024264FFC00E415B6 /* help_tabs.png */; };
+		21D92EB524264FFC00E415B6 /* help_kinds.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D92EB124264FFC00E415B6 /* help_kinds.png */; };
+		21D92EB624264FFC00E415B6 /* help_sort.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D92EB224264FFC00E415B6 /* help_sort.png */; };
 		21E09FE72064202E00142405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E09FE92064202E00142405 /* Localizable.strings */; };
 		21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */; };
 		21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E99206FE103006ECDA2 /* WebViewController.swift */; };
@@ -145,6 +149,10 @@
 		21A8EAF72072930B008FA5D0 /* FavoriteDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteDataProvider.swift; sourceTree = "<group>"; };
 		21C0D996207BECD1007F68A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		21C0D99A207BEDED007F68A0 /* Secret.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
+		21D92EAF24264FFC00E415B6 /* help_menu_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_menu_bar.png; sourceTree = "<group>"; };
+		21D92EB024264FFC00E415B6 /* help_tabs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_tabs.png; sourceTree = "<group>"; };
+		21D92EB124264FFC00E415B6 /* help_kinds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_kinds.png; sourceTree = "<group>"; };
+		21D92EB224264FFC00E415B6 /* help_sort.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_sort.png; sourceTree = "<group>"; };
 		21E09FEA2064204500142405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21E09FEC2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
@@ -356,6 +364,10 @@
 		214D872420633BBD00F20EF7 /* www */ = {
 			isa = PBXGroup;
 			children = (
+				21D92EAF24264FFC00E415B6 /* help_menu_bar.png */,
+				21D92EB024264FFC00E415B6 /* help_tabs.png */,
+				21D92EB124264FFC00E415B6 /* help_kinds.png */,
+				21D92EB224264FFC00E415B6 /* help_sort.png */,
 				214D872620633BBD00F20EF7 /* common.css */,
 				214D872520633BBD00F20EF7 /* announcement.html */,
 				214D872720633BBD00F20EF7 /* help.html */,
@@ -528,7 +540,9 @@
 			files = (
 				21C0D997207BECD1007F68A0 /* GoogleService-Info.plist in Resources */,
 				21095C39224FCF460064FA0F /* foods_and_kinds.json in Resources */,
+				21D92EB424264FFC00E415B6 /* help_tabs.png in Resources */,
 				214D871C2063271100F20EF7 /* Settings.bundle in Resources */,
+				21D92EB624264FFC00E415B6 /* help_sort.png in Resources */,
 				214D872B20633BBD00F20EF7 /* help.html in Resources */,
 				216AA4F820647B44002AA44E /* Assets.xcassets in Resources */,
 				21C0D99B207BEDED007F68A0 /* Secret.plist in Resources */,
@@ -536,9 +550,11 @@
 				214D872920633BBD00F20EF7 /* announcement.html in Resources */,
 				21E09FE72064202E00142405 /* Localizable.strings in Resources */,
 				214D86F020629B8A00F20EF7 /* LaunchScreen.storyboard in Resources */,
+				21D92EB524264FFC00E415B6 /* help_kinds.png in Resources */,
 				214D872A20633BBD00F20EF7 /* common.css in Resources */,
 				2147C61520761D0800A845C2 /* EmptyDataView.xib in Resources */,
 				214D86EB20629B8A00F20EF7 /* Main.storyboard in Resources */,
+				21D92EB324264FFC00E415B6 /* help_menu_bar.png in Resources */,
 				216AA5052064F83B002AA44E /* type.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

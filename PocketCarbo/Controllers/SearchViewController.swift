@@ -56,17 +56,29 @@ class SearchViewController: UIViewController {
 
     searchController.searchBar.placeholder = NSLocalizedString("Foods.search.placeholder", comment: "")
     searchController.searchBar.tintColor = .white // cancel text
-    if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+
+    if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField,
+      let iconView = textfield.leftView as? UIImageView {
+
+      textfield.tintColor = UIColor(named: "ColorGray600")! // input field cursor color
+
       if let backgroundview = textfield.subviews.first {
         backgroundview.backgroundColor = UIColor.white // Background color
         // Rounded corner
         backgroundview.layer.cornerRadius = 10
         backgroundview.clipsToBounds = true
+
+        iconView.image = iconView.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+        iconView.tintColor = UIColor(named: "ColorGray600")! // search icon color
       }
     }
+
     if #available(iOS 13.0, *) {
       searchController.searchBar.searchTextField.backgroundColor = UIColor.white
     }
+
+    UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "ColorGray800")!] // input text color
+
     navigationItem.searchController = searchController
   }
 }

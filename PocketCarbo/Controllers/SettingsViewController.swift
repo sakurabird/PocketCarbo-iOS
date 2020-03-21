@@ -19,6 +19,7 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    self.view.backgroundColor = UIColor(named: "ColorGray100")
     versionLabel.text = Bundle.main.releaseVersionNumber
     setupGestures()
   }
@@ -32,6 +33,12 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
 
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
+  }
+
+  override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    guard let header = view as? UITableViewHeaderFooterView else { return }
+    header.textLabel?.textColor = UIColor(named: "ColorGray600")
+    header.contentView.backgroundColor = UIColor(named: "ColorGray100")
   }
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

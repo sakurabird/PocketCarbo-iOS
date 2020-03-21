@@ -67,8 +67,8 @@
 "Setting.privacy_policy" = "プライバシーポリシー";
 "Setting.mail.error.title" = "mail起動エラー";
 "Setting.mail.error.message" = "メールの起動が出来ませんでした。\nお手数ですが\n sakurafish1@gmail.com\n宛にメールをお送りくださいませ。";
-"Setting.mail.subject" = "【ポケット糖質量】ご意見・ご要望";
-"Setting.mail.messageBody" = "ポケット糖質量へのご意見・ご要望をご記入ください。\nユーザー様のメールアドレスはこの連絡以外に使用することは一切ありません。\n返信が必要な場合、sakurafish1@gmail.comというメールアドレスよりお送りいたします。\n--------------------\n";
+"Setting.mail.subject" = "【ポケット糖質量iOS】ご意見・ご要望";
+"Setting.mail.messageBody" = "\n-----ここを消さないでください-----\nアプリバージョン=%@\n機種=%@\nOS version=%@\n--------------------\nポケット糖質量へのご意見・ご要望をご記入ください。\nユーザー様のメールアドレスはこの連絡以外に使用することは一切ありません。\n返信が必要な場合、sakurafish1@gmail.comというメールアドレスよりお送りいたします。\n--------------------\n";
 
 //--------------------------------------------------------
 // Information Scene

@@ -32,6 +32,11 @@ class SearchViewController: UIViewController {
     self.navigationItem.hidesSearchBarWhenScrolling = false
   }
 
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    self.searchController.isActive = true // for focus input field
+  }
+
   override func viewWillDisappear(_ animated: Bool) {
     SceneStatus.sharedInstance.currentSearchStatus = .InActive
   }
@@ -50,6 +55,7 @@ class SearchViewController: UIViewController {
   private func setupSearchController() {
     // Setup the Search Controller
     definesPresentationContext = true
+    searchController.delegate = self // for focus input field
     searchController.searchResultsUpdater = self
     searchController.searchBar.delegate = self
     searchController.obscuresBackgroundDuringPresentation = false
@@ -116,4 +122,15 @@ extension SearchViewController: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
     filterContentForSearchText(searchController.searchBar.text!)
   }
+}
+
+extension SearchViewController: UISearchControllerDelegate {
+  func didPresentSearchController(_ searchController: UISearchController) {
+      DispatchQueue.global(qos: .background).async {
+          DispatchQueue.main.async {
+            // focus input field メインスレッド上でしないとキーボードが出ない
+            searchController.searchBar.becomeFirstResponder()
+          }
+      }
+    }
 }

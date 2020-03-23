@@ -11,6 +11,8 @@
 		21095C39224FCF460064FA0F /* foods_and_kinds.json in Resources */ = {isa = PBXBuildFile; fileRef = 21095C38224FCF460064FA0F /* foods_and_kinds.json */; };
 		211071FE214F613F000A9FB5 /* ADManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211071FD214F613F000A9FB5 /* ADManager.swift */; };
 		2117FFED2154045800C67EBD /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117FFEC2154045800C67EBD /* PaddingLabel.swift */; };
+		2118C23224246B3B00EBE2C5 /* SceneStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2118C23124246B3B00EBE2C5 /* SceneStatus.swift */; };
+		212226D9242501C400E74FF2 /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212226D8242501C400E74FF2 /* Bundle+extension.swift */; };
 		21402F6A2079FB8200C552F6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21402F692079FB8100C552F6 /* TutorialViewController.swift */; };
 		2147C61520761D0800A845C2 /* EmptyDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2147C61420761D0800A845C2 /* EmptyDataView.xib */; };
 		2147C61720761E2900A845C2 /* UIView+extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147C61620761E2900A845C2 /* UIView+extention.swift */; };
@@ -59,6 +61,10 @@
 		21C0D99B207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
 		21C0D99C207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
 		21C0D99D207BEDED007F68A0 /* Secret.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C0D99A207BEDED007F68A0 /* Secret.plist */; };
+		21D92EB324264FFC00E415B6 /* help_menu_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D92EAF24264FFC00E415B6 /* help_menu_bar.png */; };
+		21D92EB424264FFC00E415B6 /* help_tabs.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D92EB024264FFC00E415B6 /* help_tabs.png */; };
+		21D92EB524264FFC00E415B6 /* help_kinds.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D92EB124264FFC00E415B6 /* help_kinds.png */; };
+		21D92EB624264FFC00E415B6 /* help_sort.png in Resources */ = {isa = PBXBuildFile; fileRef = 21D92EB224264FFC00E415B6 /* help_sort.png */; };
 		21E09FE72064202E00142405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E09FE92064202E00142405 /* Localizable.strings */; };
 		21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */; };
 		21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E99206FE103006ECDA2 /* WebViewController.swift */; };
@@ -90,6 +96,8 @@
 		21095C38224FCF460064FA0F /* foods_and_kinds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foods_and_kinds.json; sourceTree = "<group>"; };
 		211071FD214F613F000A9FB5 /* ADManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADManager.swift; sourceTree = "<group>"; };
 		2117FFEC2154045800C67EBD /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		2118C23124246B3B00EBE2C5 /* SceneStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneStatus.swift; sourceTree = "<group>"; };
+		212226D8242501C400E74FF2 /* Bundle+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
 		21402F692079FB8100C552F6 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		2147C61420761D0800A845C2 /* EmptyDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataView.xib; sourceTree = "<group>"; };
 		2147C61620761E2900A845C2 /* UIView+extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extention.swift"; sourceTree = "<group>"; };
@@ -141,6 +149,10 @@
 		21A8EAF72072930B008FA5D0 /* FavoriteDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteDataProvider.swift; sourceTree = "<group>"; };
 		21C0D996207BECD1007F68A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		21C0D99A207BEDED007F68A0 /* Secret.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secret.plist; sourceTree = "<group>"; };
+		21D92EAF24264FFC00E415B6 /* help_menu_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_menu_bar.png; sourceTree = "<group>"; };
+		21D92EB024264FFC00E415B6 /* help_tabs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_tabs.png; sourceTree = "<group>"; };
+		21D92EB124264FFC00E415B6 /* help_kinds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_kinds.png; sourceTree = "<group>"; };
+		21D92EB224264FFC00E415B6 /* help_sort.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_sort.png; sourceTree = "<group>"; };
 		21E09FEA2064204500142405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21E09FEC2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
@@ -185,6 +197,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2118C23024246ADE00EBE2C5 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2118C23124246B3B00EBE2C5 /* SceneStatus.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		214D86D920629B8A00F20EF7 = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				214D86E520629B8A00F20EF7 /* AppDelegate.swift */,
+				2118C23024246ADE00EBE2C5 /* Shared */,
 				214D87152063211700F20EF7 /* Models */,
 				214D87172063215100F20EF7 /* Views */,
 				214D87182063217F00F20EF7 /* Controllers */,
@@ -248,6 +269,7 @@
 		214D87132063210100F20EF7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				212226D8242501C400E74FF2 /* Bundle+extension.swift */,
 				214D873C20635B7500F20EF7 /* UserDefault+extension.swift */,
 				214D873E20636C4300F20EF7 /* NotificationCenter+extension.swift */,
 				216AA4E4206446A5002AA44E /* UIColor+extension.swift */,
@@ -342,6 +364,10 @@
 		214D872420633BBD00F20EF7 /* www */ = {
 			isa = PBXGroup;
 			children = (
+				21D92EAF24264FFC00E415B6 /* help_menu_bar.png */,
+				21D92EB024264FFC00E415B6 /* help_tabs.png */,
+				21D92EB124264FFC00E415B6 /* help_kinds.png */,
+				21D92EB224264FFC00E415B6 /* help_sort.png */,
 				214D872620633BBD00F20EF7 /* common.css */,
 				214D872520633BBD00F20EF7 /* announcement.html */,
 				214D872720633BBD00F20EF7 /* help.html */,
@@ -514,7 +540,9 @@
 			files = (
 				21C0D997207BECD1007F68A0 /* GoogleService-Info.plist in Resources */,
 				21095C39224FCF460064FA0F /* foods_and_kinds.json in Resources */,
+				21D92EB424264FFC00E415B6 /* help_tabs.png in Resources */,
 				214D871C2063271100F20EF7 /* Settings.bundle in Resources */,
+				21D92EB624264FFC00E415B6 /* help_sort.png in Resources */,
 				214D872B20633BBD00F20EF7 /* help.html in Resources */,
 				216AA4F820647B44002AA44E /* Assets.xcassets in Resources */,
 				21C0D99B207BEDED007F68A0 /* Secret.plist in Resources */,
@@ -522,9 +550,11 @@
 				214D872920633BBD00F20EF7 /* announcement.html in Resources */,
 				21E09FE72064202E00142405 /* Localizable.strings in Resources */,
 				214D86F020629B8A00F20EF7 /* LaunchScreen.storyboard in Resources */,
+				21D92EB524264FFC00E415B6 /* help_kinds.png in Resources */,
 				214D872A20633BBD00F20EF7 /* common.css in Resources */,
 				2147C61520761D0800A845C2 /* EmptyDataView.xib in Resources */,
 				214D86EB20629B8A00F20EF7 /* Main.storyboard in Resources */,
+				21D92EB324264FFC00E415B6 /* help_menu_bar.png in Resources */,
 				216AA5052064F83B002AA44E /* type.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,9 +685,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PocketCarbo/Pods-PocketCarbo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/Gecco/Gecco.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
@@ -667,9 +699,11 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gecco.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
@@ -697,6 +731,7 @@
 				216AA4E5206446A5002AA44E /* UIColor+extension.swift in Sources */,
 				216AA4EF2064495D002AA44E /* SettingsViewController.swift in Sources */,
 				216AA4E120643EB8002AA44E /* SideMenuViewController.swift in Sources */,
+				2118C23224246B3B00EBE2C5 /* SceneStatus.swift in Sources */,
 				216AA4FF2064B4F0002AA44E /* FoodDataProvider.swift in Sources */,
 				216AA4DF20643E4E002AA44E /* MainViewController.swift in Sources */,
 				21A8EAF82072930B008FA5D0 /* FavoriteDataProvider.swift in Sources */,
@@ -723,6 +758,7 @@
 				216AA50E20666335002AA44E /* UIButton+extention.swift in Sources */,
 				214D873B2063589500F20EF7 /* Constants.swift in Sources */,
 				216AA50A206527B9002AA44E /* FoodTableViewCell.swift in Sources */,
+				212226D9242501C400E74FF2 /* Bundle+extension.swift in Sources */,
 				216AA5032064F824002AA44E /* Type.swift in Sources */,
 				2147C61720761E2900A845C2 /* UIView+extention.swift in Sources */,
 			);
@@ -823,7 +859,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -912,14 +948,17 @@
 				BUNDLE_ID_SUFFIX = .debug;
 				BUNDLE_NAME_PREFIX = Debug;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 28TS6W29VY;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = PocketCarbo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sakurafish.com.ios.PocketCarbo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -933,13 +972,16 @@
 				BUNDLE_ID_SUFFIX = "";
 				BUNDLE_NAME_PREFIX = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 28TS6W29VY;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = PocketCarbo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sakurafish.com.ios.PocketCarbo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

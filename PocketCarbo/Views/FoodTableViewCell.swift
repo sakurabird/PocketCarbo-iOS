@@ -67,13 +67,24 @@ class FoodTableViewCell: UITableViewCell {
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var stackView: UIStackView!
   @IBOutlet weak var carretImage: UIImageView!
+
   @IBOutlet weak var foodNameLabel: UILabel!
   @IBOutlet weak var kindNameLabel: PaddingLabel!
+  @IBOutlet weak var carboPer100gTitleLabel: UILabel!
   @IBOutlet weak var carboPer100gLabel: UILabel!
   @IBOutlet weak var cubeSugar100Label: UILabel!
-  @IBOutlet weak var descriptionLabel: UILabel!
+  @IBOutlet weak var fatPer100gTitleLabel: UILabel!
+  @IBOutlet weak var fatPer100gLabel: UILabel!
+
+  @IBOutlet weak var oneServingTitleLabel: UILabel!
+  @IBOutlet weak var carboPerWeightLabel: UILabel!
   @IBOutlet weak var cubeSugarLabel: UILabel!
-  
+  @IBOutlet weak var caloryLabel: UILabel!
+  @IBOutlet weak var proteinLabel: UILabel!
+  @IBOutlet weak var fatLabel: UILabel!
+  @IBOutlet weak var sodiumLabel: UILabel!
+  @IBOutlet weak var notesLabel: UILabel!
+
   @IBOutlet weak var favoritesButton: UIButton!
   @IBOutlet weak var copyToClipboardButton: UIButton!
   @IBOutlet weak var shareButton: UIButton!
@@ -86,23 +97,43 @@ class FoodTableViewCell: UITableViewCell {
   func update(food: Food) {
     self.kind = (food.kinds.first)!
     self.food = food
+    let textColor: UIColor = getCarboColor()
 
     foodNameLabel.text = food.name
-    foodNameLabel.textColor = getCarboColor()
+    foodNameLabel.textColor = textColor
 
     kindNameLabel.text = self.kind.name
 
+    carboPer100gTitleLabel.textColor = textColor
     carboPer100gLabel.text = "\(food.carbohydrate_per_100g) g"
-    let textColor: UIColor = getCarboColor()
     carboPer100gLabel.textColor = textColor
 
     cubeSugar100Label.text = createCubeSugarString(carbohydrate: food.carbohydrate_per_100g)
 
-    let descriptionString = createDescriptionString(food: food)
-    descriptionLabel.text = descriptionString
-    descriptionLabel.textColor = textColor
+    fatPer100gTitleLabel.textColor = textColor
+    fatPer100gLabel.text = "\(food.fat_per100g) g"
+    fatPer100gLabel.textColor = textColor
+
+    let oneServingTitleString = createOneServingTitleString(food: food)
+    oneServingTitleLabel.text = oneServingTitleString
+
+    carboPerWeightLabel.text = String(format: NSLocalizedString("Foods.description.text2", comment: ""), String(food.carbohydrate_per_weight))
+    carboPerWeightLabel.textColor = textColor
 
     cubeSugarLabel.text = createCubeSugarString(carbohydrate: food.carbohydrate_per_weight)
+
+    caloryLabel.text = String(format: NSLocalizedString("Foods.description.text3", comment: ""), String(food.calory))
+    caloryLabel.textColor = textColor
+    proteinLabel.text = String(format: NSLocalizedString("Foods.description.text4", comment: ""), String(food.protein))
+    proteinLabel.textColor = textColor
+    fatLabel.text = String(format: NSLocalizedString("Foods.description.text5", comment: ""), String(food.fat))
+    fatLabel.textColor = textColor
+    sodiumLabel.text = String(format: NSLocalizedString("Foods.description.text6", comment: ""), String(food.sodium))
+    sodiumLabel.textColor = textColor
+
+    let notesString = createNotesString(food: food)
+    notesLabel.text = notesString
+    notesLabel.textColor = textColor
 
     let isFavorite = FavoriteDataProvider.sharedInstance.isFavorite(food: food)
     favoritesState = isFavorite ? .favorite : .notFavorite
@@ -204,26 +235,25 @@ class FoodTableViewCell: UITableViewCell {
     return cubeString
   }
 
-  private func createDescriptionString(food: Food) -> String {
-
-    var str: String = ""
-
-    str.append("\(food.weight) g ")
+  private func createOneServingTitleString(food: Food) -> String {
+    var str = "\(food.weight) g "
     if let hint = food.weight_hint {
-      str.append(hint)
+      str.append("(\(hint))")
+    } else {
+      if food.weight != 100 {
+        str.append("(1回分)")
+      }
     }
-
     str.append(NSLocalizedString("Foods.description.text1", comment: ""))
-    str.append(String(format: NSLocalizedString("Foods.description.text2", comment: ""), String(food.carbohydrate_per_weight)))
-    str.append(String(format: NSLocalizedString("Foods.description.text3", comment: ""), String(food.calory)))
-    str.append(String(format: NSLocalizedString("Foods.description.text4", comment: ""), String(food.protein)))
-    str.append(String(format: NSLocalizedString("Foods.description.text5", comment: ""), String(food.fat)))
-    str.append(String(format: NSLocalizedString("Foods.description.text6", comment: ""), String(food.sodium)))
+    return str
+  }
 
+  private func createNotesString(food: Food) -> String {
+    var str = ""
     if let notes = food.notes {
-      str.append(String(format: NSLocalizedString("Foods.description.text7", comment: ""), notes))
+      str.append(NSLocalizedString("Foods.description.text7", comment: ""))
+      str.append(notes)
     }
-
     return str
   }
 

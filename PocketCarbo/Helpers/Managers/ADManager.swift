@@ -19,6 +19,9 @@ final class ADManager {
 
   func setupAdMob() {
     GADMobileAds.sharedInstance().start(completionHandler: nil)
+    // TODO : テスト用のデバイスを追加したらここにdevice idを追加する
+    GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers =
+      [ "1272c87f3c314b9131df2f16c82e646f" ] // iPhone7
   }
 
   func getBannerId() -> String {
@@ -38,14 +41,6 @@ final class ADManager {
       }
     #endif
     return bannerId
-  }
-
-  func getGADRequest() -> GADRequest {
-    let request = GADRequest()
-    // TODO : テスト用のデバイスを追加したらここにdevice idを追加する
-    request.testDevices = [ kGADSimulatorID,
-                            "1272c87f3c314b9131df2f16c82e646f" ] // iPhone7
-    return request
   }
 
   func isIntervalOK() -> Bool {

@@ -24,11 +24,21 @@ class SearchViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    SceneStatus.sharedInstance.currentSearchStatus = .Active
 
     self.setLeftNavigationBarBack()
     self.navigationController?.hidesBarsOnSwipe = true
     // 検索画面の検索欄を常に表示しておく
     self.navigationItem.hidesSearchBarWhenScrolling = false
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    self.searchController.isActive = true // for focus input field
+  }
+
+  override func viewWillDisappear(_ animated: Bool) {
+    SceneStatus.sharedInstance.currentSearchStatus = .InActive
   }
 
   // MARK: Private Functions
@@ -45,20 +55,36 @@ class SearchViewController: UIViewController {
   private func setupSearchController() {
     // Setup the Search Controller
     definesPresentationContext = true
+    searchController.delegate = self // for focus input field
     searchController.searchResultsUpdater = self
     searchController.searchBar.delegate = self
     searchController.obscuresBackgroundDuringPresentation = false
 
     searchController.searchBar.placeholder = NSLocalizedString("Foods.search.placeholder", comment: "")
     searchController.searchBar.tintColor = .white // cancel text
-    if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+
+    if let textfield = searchController.searchBar.value(forKey: "searchField") as? UITextField,
+      let iconView = textfield.leftView as? UIImageView {
+
+      textfield.tintColor = UIColor(named: "ColorGray600")! // input field cursor color
+
       if let backgroundview = textfield.subviews.first {
         backgroundview.backgroundColor = UIColor.white // Background color
         // Rounded corner
         backgroundview.layer.cornerRadius = 10
         backgroundview.clipsToBounds = true
+
+        iconView.image = iconView.image?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+        iconView.tintColor = UIColor(named: "ColorGray600")! // search icon color
       }
     }
+
+    if #available(iOS 13.0, *) {
+      searchController.searchBar.searchTextField.backgroundColor = UIColor.white
+    }
+
+    UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "ColorGray800")!] // input text color
+
     navigationItem.searchController = searchController
   }
 }
@@ -96,4 +122,15 @@ extension SearchViewController: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
     filterContentForSearchText(searchController.searchBar.text!)
   }
+}
+
+extension SearchViewController: UISearchControllerDelegate {
+  func didPresentSearchController(_ searchController: UISearchController) {
+      DispatchQueue.global(qos: .background).async {
+          DispatchQueue.main.async {
+            // focus input field メインスレッド上でしないとキーボードが出ない
+            searchController.searchBar.becomeFirstResponder()
+          }
+      }
+    }
 }

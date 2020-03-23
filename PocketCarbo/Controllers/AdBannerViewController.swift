@@ -31,8 +31,6 @@ class AdBannerViewController: UIViewController, GADBannerViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    self.view.backgroundColor = UIColor(patternImage: UIImage(named: "main_bg")!)
-
     // observe Users AD click events
     NotificationCenter.default.observeEvent(observer: self,
                                             selector: #selector(hideAD),
@@ -82,7 +80,7 @@ class AdBannerViewController: UIViewController, GADBannerViewDelegate {
   private func displayView(isHidden: Bool) {
     adBannerView.isHidden = isHidden
     if !isHidden {
-      adBannerView.load(ADManager.sharedInstance.getGADRequest())
+      adBannerView.load(GADRequest())
     }
   }
 

@@ -72,6 +72,7 @@ fastlane/test_output
 
 # PocketCarbo files
 foods_and_kinds.json
+scripts/ex-*
 
 # Property List
 Secret.plist

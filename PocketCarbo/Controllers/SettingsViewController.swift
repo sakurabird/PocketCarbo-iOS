@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import Device
 
 class SettingsViewController: UITableViewController, MFMailComposeViewControllerDelegate {
 
@@ -18,9 +19,8 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    if let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
-      versionLabel.text = version
-    }
+    self.view.backgroundColor = UIColor(named: "ColorGray100")
+    versionLabel.text = Bundle.main.releaseVersionNumber
     setupGestures()
   }
 
@@ -33,6 +33,12 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
 
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
+  }
+
+  override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    guard let header = view as? UITableViewHeaderFooterView else { return }
+    header.textLabel?.textColor = UIColor(named: "ColorGray600")
+    header.contentView.backgroundColor = UIColor(named: "ColorGray100")
   }
 
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,29 +75,32 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
     self.present(informationController, animated: true, completion: nil)
   }
 
-  @objc func handleTapMailToDev(sender: UITapGestureRecognizer) {
-    
-    if !MFMailComposeViewController.canSendMail() {
-      let title: String = NSLocalizedString("Setting.mail.error.title", comment: "")
-      let message: String = NSLocalizedString("Setting.mail.error.message", comment: "")
-      present(UIAlertController.alertWithTitle(title: title, message: message, buttonTitle: "OK"), animated: true, completion: nil)
-      return
-    }
+   @objc func handleTapMailToDev(sender: UITapGestureRecognizer) {
 
-    let mail: String = NSLocalizedString("mail", comment: "")
-    let subject: String = NSLocalizedString("Setting.mail.subject", comment: "")
-    let body: String = NSLocalizedString("Setting.mail.messageBody", comment: "")
+     if !MFMailComposeViewController.canSendMail() {
+       let title: String = NSLocalizedString("Setting.mail.error.title", comment: "")
+       let message: String = NSLocalizedString("Setting.mail.error.message", comment: "")
+       present(UIAlertController.alertWithTitle(title: title, message: message, buttonTitle: "OK"), animated: true, completion: nil)
+       return
+     }
 
-    let mailViewController = MFMailComposeViewController()
-    let toRecipients = [mail]
+     let mail: String = NSLocalizedString("mail", comment: "")
+     let subject: String = NSLocalizedString("Setting.mail.subject", comment: "")
+     let appVersion = Bundle.main.releaseVersionNumber ?? ""
+     let deviceModel = Device.version().rawValue
+     let osVersion = UIDevice.current.systemVersion
+     let body = String(format: NSLocalizedString("Setting.mail.messageBody", comment: ""), appVersion, deviceModel, osVersion)
 
-    mailViewController.mailComposeDelegate = self
-    mailViewController.setSubject(subject)
-    mailViewController.setToRecipients(toRecipients)
-    mailViewController.setMessageBody(body, isHTML: false)
+     let mailViewController = MFMailComposeViewController()
+     let toRecipients = [mail]
 
-    self.present(mailViewController, animated: true, completion: nil)
-  }
+     mailViewController.mailComposeDelegate = self
+     mailViewController.setSubject(subject)
+     mailViewController.setToRecipients(toRecipients)
+     mailViewController.setMessageBody(body, isHTML: false)
+
+     self.present(mailViewController, animated: true, completion: nil)
+   }
 
   func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
     controller.dismiss(animated: true, completion: nil)

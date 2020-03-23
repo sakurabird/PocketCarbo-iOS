@@ -15,6 +15,8 @@ enum FoodSortOrder: Int {
   case nameDsc
   case carbohydratePer100gAsc
   case carbohydratePer100gDsc
+  case fatPer100gAsc
+  case fatPer100gDsc
 
   func key() -> String {
     switch self {
@@ -26,6 +28,10 @@ enum FoodSortOrder: Int {
       return "carbohydrate_per_100g"
     case .carbohydratePer100gDsc:
       return "carbohydrate_per_100g"
+    case .fatPer100gAsc:
+      return "fat_per100g"
+    case .fatPer100gDsc:
+      return "fat_per100g"
     }
   }
 
@@ -38,6 +44,10 @@ enum FoodSortOrder: Int {
     case .carbohydratePer100gAsc:
       return true
     case .carbohydratePer100gDsc:
+      return false
+    case .fatPer100gAsc:
+      return true
+    case .fatPer100gDsc:
       return false
     }
   }
@@ -73,13 +83,18 @@ final class FoodDataProvider {
   }
 
   func findData(searchText: String) -> [Food] {
+    let replacedText = searchText.replacingOccurrences(of: "　", with: " ")
+    let texts = replacedText.trimmingCharacters(in: .whitespaces).components(separatedBy: " ")
 
-    let p1 = NSPredicate(format: "name CONTAINS[c] %@", argumentArray: [searchText])
-    let p2 = NSPredicate(format: "search_word CONTAINS[c] %@", argumentArray: [searchText])
-    let p3 = NSPredicate(format: "ANY kinds.name CONTAINS[c] %@", argumentArray: [searchText])
-    let p4 = NSPredicate(format: "ANY kinds.search_word CONTAINS[c] %@", argumentArray: [searchText])
-
-    let predicateCompound = NSCompoundPredicate.init(type: .or, subpredicates: [p1, p2, p3, p4])
+    var predicateCompounds = [NSCompoundPredicate]()
+    for text in (texts.filter { !$0.isEmpty }) {
+        let p1 = NSPredicate(format: "name CONTAINS[c] %@", argumentArray: [text])
+        let p2 = NSPredicate(format: "search_word CONTAINS[c] %@", argumentArray: [text])
+        let p3 = NSPredicate(format: "ANY kinds.name CONTAINS[c] %@", argumentArray: [text])
+        let p4 = NSPredicate(format: "ANY kinds.search_word CONTAINS[c] %@", argumentArray: [text])
+        predicateCompounds.append(NSCompoundPredicate.init(type: .or, subpredicates: [p1, p2, p3, p4]))
+    }
+    let predicateCompound = NSCompoundPredicate.init(type: .and, subpredicates: predicateCompounds)
 
     let foods = realm.objects(Food.self).filter(predicateCompound)
       .sorted(byKeyPath: FoodSortOrder.nameAsc.key(), ascending: FoodSortOrder.nameAsc.ascending())

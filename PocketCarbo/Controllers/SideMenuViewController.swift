@@ -104,6 +104,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    tableView.backgroundColor = UIColor(named: "ColorGray100")
     tableView.estimatedRowHeight = 70.0
     tableView.rowHeight = UITableView.automaticDimension
 

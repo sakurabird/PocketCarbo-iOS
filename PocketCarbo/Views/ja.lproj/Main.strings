@@ -3,7 +3,7 @@
 "3bA-EY-ada.normalTitle" = "ソート";
 
 /* Class = "UILabel"; text = "(100g中)"; ObjectID = "40k-Ac-7Jy"; */
-"40k-Ac-7Jy.text" = "(100g中)";
+"40k-Ac-7Jy.text" = "糖質：";
 
 /* Class = "UIViewController"; title = "MainParent"; ObjectID = "BYZ-38-t0r"; */
 "BYZ-38-t0r.title" = "MainParent";

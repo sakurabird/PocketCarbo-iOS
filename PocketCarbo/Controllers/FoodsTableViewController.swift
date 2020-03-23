@@ -49,6 +49,11 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
     NotificationCenter.default.observeEvent(observer: self,
                                             selector: #selector(FoodsTableViewController.dataUpdated),
                                             notification: NotificationEvent.foodsAndKindsUpdated)
+
+    // Observe favorites DB update event
+    NotificationCenter.default.observeEvent(observer: self,
+                                            selector: #selector(FoodsTableViewController.favoritesUpdated),
+                                            notification: NotificationEvent.favoritesUpdated)
   }
 
   // MARK: - deinit
@@ -76,11 +81,10 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 }
 
   func setupTableView() {
-    tableView.backgroundColor = UIColor(patternImage: UIImage(named: "main_bg")!)
     let insets = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
     self.tableView.contentInset = insets
     tableView.rowHeight = UITableView.automaticDimension
-    tableView.estimatedRowHeight = 200.0
+    tableView.estimatedRowHeight = 100.0
   }
 
   // MARK: - IndicatorInfoProvider
@@ -161,6 +165,21 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
 
   @objc func dataUpdated(notification: NSNotification) {
     refeshData()
+  }
+
+  @objc func favoritesUpdated(notification: NSNotification) {
+    if let parentViewController: UIViewController = self.parent {
+      if parentViewController is MainViewController {
+      } else {
+        return
+      }
+    } else {
+      return
+    }
+
+    if SceneStatus.sharedInstance.currentFavoritesStatus == .Active || SceneStatus.sharedInstance.currentSearchStatus == .Active {
+      refeshData()
+    }
   }
 
   func extractKindData(kind: Kind) {

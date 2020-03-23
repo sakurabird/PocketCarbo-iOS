@@ -29,15 +29,17 @@
 "Foods.dropdown.sort.nameDsc" = "食品名逆順";
 "Foods.dropdown.sort.carbohydratePer100gAsc" = "糖質量の少ない順";
 "Foods.dropdown.sort.carbohydratePer100gDsc" = "糖質量の多い順";
+"Foods.dropdown.sort.fatPer100gAsc" = "脂質量の少ない順";
+"Foods.dropdown.sort.fatPer100gDsc" = "脂質量の多い順";
 "Foods.dropdown.sort.toast" = "に並び替えました";
 
 "Foods.description.text1" = "あたりの値\n";
-"Foods.description.text2" = "糖質 : %@ g\n";
-"Foods.description.text3" = "カロリー : %@ kcal\n";
-"Foods.description.text4" = "たんぱく質 : %@ g\n";
-"Foods.description.text5" = "脂質 : %@ g\n";
+"Foods.description.text2" = "糖質 : %@ g";
+"Foods.description.text3" = "カロリー : %@ kcal";
+"Foods.description.text4" = "たんぱく質 : %@ g";
+"Foods.description.text5" = "脂質 : %@ g";
 "Foods.description.text6" = "塩分 : %@ g";
-"Foods.description.text7" = "\n備考 : %@";
+"Foods.description.text7" = "備考 : ";
 
 "Foods.cubeSugar.text" = "角砂糖%@個分";
 
@@ -65,8 +67,8 @@
 "Setting.privacy_policy" = "プライバシーポリシー";
 "Setting.mail.error.title" = "mail起動エラー";
 "Setting.mail.error.message" = "メールの起動が出来ませんでした。\nお手数ですが\n sakurafish1@gmail.com\n宛にメールをお送りくださいませ。";
-"Setting.mail.subject" = "【ポケット糖質量】ご意見・ご要望";
-"Setting.mail.messageBody" = "ポケット糖質量へのご意見・ご要望をご記入ください。\nユーザー様のメールアドレスはこの連絡以外に使用することは一切ありません。\n返信が必要な場合、sakurafish1@gmail.comというメールアドレスよりお送りいたします。\n--------------------\n";
+"Setting.mail.subject" = "【ポケット糖質量iOS】ご意見・ご要望";
+"Setting.mail.messageBody" = "\n-----ここを消さないでください-----\nアプリバージョン=%@\n機種=%@\nOS version=%@\n--------------------\nポケット糖質量へのご意見・ご要望をご記入ください。\nユーザー様のメールアドレスはこの連絡以外に使用することは一切ありません。\n返信が必要な場合、sakurafish1@gmail.comというメールアドレスよりお送りいたします。\n--------------------\n";
 
 //--------------------------------------------------------
 // Information Scene
@@ -75,5 +77,5 @@
 //--------------------------------------------------------
 // Help Scene
 "Help.title" = "ヘルプ";
-"Help.toast.tutorial" = "チュートリアル表示設定しました";
+"Help.toast.tutorial" = "チュートリアル表示設定しました。\nホーム画面に表示されます。";
 

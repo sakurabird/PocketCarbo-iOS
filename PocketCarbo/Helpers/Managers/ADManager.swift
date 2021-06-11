@@ -21,7 +21,8 @@ final class ADManager {
     GADMobileAds.sharedInstance().start(completionHandler: nil)
     // TODO : テスト用のデバイスを追加したらここにdevice idを追加する
     GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers =
-      [ "1272c87f3c314b9131df2f16c82e646f" ] // iPhone7
+      [ "1272c87f3c314b9131df2f16c82e646f", // iPhone7
+        "af3e50d387305470fea76ab1cf6b9e84" ] // iPod touch gen7
   }
 
   func getBannerId() -> String {

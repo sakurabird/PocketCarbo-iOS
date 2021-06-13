@@ -26,7 +26,7 @@ struct SideMenuData {
   let menuLabel: String?
 }
 
-protocol SideMenuProtocol: class {
+protocol SideMenuProtocol: AnyObject {
   func changeViewController(_ menu: SideMenu)
 }
 

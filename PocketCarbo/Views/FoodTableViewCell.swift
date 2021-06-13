@@ -9,7 +9,7 @@
 import UIKit
 import Toaster
 
-protocol FoodTableViewCellDelegate: class {
+protocol FoodTableViewCellDelegate: AnyObject {
   func didTapShare(_ sender: FoodTableViewCell, shareText: String)
 }
 

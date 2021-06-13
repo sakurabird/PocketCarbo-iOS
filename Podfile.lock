@@ -132,7 +132,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   SlideMenuControllerSwift:
-    :commit: f9f6bfa4b029f886919900be0317f8a13d3713a9
+    :commit: ccf1e504f0c7e53b676fc446c22bafb97092455e
     :git: https://github.com/sakurabird/SlideMenuControllerSwift.git
 
 SPEC CHECKSUMS:

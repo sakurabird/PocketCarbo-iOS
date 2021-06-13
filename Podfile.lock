@@ -34,7 +34,7 @@ PODS:
     - FirebaseCore (~> 6.6)
     - GoogleUtilities/UserDefaults (~> 6.5)
     - PromisesObjC (~> 1.2)
-  - Gecco (1.0.0)
+  - Gecco (2.0.0)
   - Google-Mobile-Ads-SDK (7.57.0):
     - GoogleAppMeasurement (~> 6.0)
   - GoogleAppMeasurement (6.3.1):
@@ -87,7 +87,7 @@ DEPENDENCIES:
   - DropDown
   - Fabric
   - Firebase/Core
-  - Gecco (from `https://github.com/sakurabird/Gecco.git`)
+  - Gecco
   - Google-Mobile-Ads-SDK
   - RealmSwift
   - SlideMenuControllerSwift (from `https://github.com/sakurabird/SlideMenuControllerSwift.git`)
@@ -107,6 +107,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseCoreDiagnosticsInterop
     - FirebaseInstallations
+    - Gecco
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleDataTransport
@@ -121,31 +122,26 @@ SPEC REPOS:
     - XLPagerTabStrip
 
 EXTERNAL SOURCES:
-  Gecco:
-    :git: https://github.com/sakurabird/Gecco.git
   SlideMenuControllerSwift:
     :git: https://github.com/sakurabird/SlideMenuControllerSwift.git
 
 CHECKOUT OPTIONS:
-  Gecco:
-    :commit: c15598b95bb4c4d181106124bcfade93eafe73af
-    :git: https://github.com/sakurabird/Gecco.git
   SlideMenuControllerSwift:
     :commit: f9f6bfa4b029f886919900be0317f8a13d3713a9
     :git: https://github.com/sakurabird/SlideMenuControllerSwift.git
 
 SPEC CHECKSUMS:
-  Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
+  Crashlytics: 9220f5bc89e7a618df411b4f639389dbfb0e03d2
   Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
-  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
+  Fabric: ea977e3cd9c20425516d3dafd3bf8c941c51223f
   Firebase: fe7f74012742ab403451dd283e6909b8f1fb348a
   FirebaseAnalytics: 572e467f3d977825266e8ccd52674aa3e6f47eac
   FirebaseCore: ed0a24c758a57c2b88c5efa8e6a8195e868af589
   FirebaseCoreDiagnostics: e9b4cd8ba60dee0f2d13347332e4b7898cca5b61
   FirebaseCoreDiagnosticsInterop: 296e2c5f5314500a850ad0b83e9e7c10b011a850
   FirebaseInstallations: 575cd32f2aec0feeb0e44f5d0110a09e5e60b47b
-  Gecco: 89c80316b3a6e22566e90dde05c4a49e8fdc4582
+  Gecco: 6d4225d0b58f6cf952d198a831904d50e646ec3f
   Google-Mobile-Ads-SDK: ec897018b9ab9b447e7aa4876e7f75aba13ba2de
   GoogleAppMeasurement: c29d405ff76e18551b5d158eaba6753fda8c7542
   GoogleDataTransport: a857c6a002d201b524dd4bc2ed7e7355ed07e785
@@ -160,6 +156,6 @@ SPEC CHECKSUMS:
   Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: b82869893b1ced2b708e815d292d2a11c27fa633
+PODFILE CHECKSUM: 8a46e5e4e11a2ded28b8eeeefbaa7e62fc5bf582
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1

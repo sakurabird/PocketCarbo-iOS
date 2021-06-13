@@ -140,7 +140,7 @@ class FoodsTableViewController: UITableViewController, IndicatorInfoProvider, Fo
       return 0
     }
 
-    if foods.count  == 0 {
+    if foods.isEmpty {
       self.tableView.setEmptyView()
     } else {
       self.tableView.restore()

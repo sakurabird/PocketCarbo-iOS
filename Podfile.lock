@@ -78,7 +78,7 @@ PODS:
     - Realm (= 4.3.2)
   - SlideMenuControllerSwift (5.0.0)
   - SwiftLint (0.39.1)
-  - Toaster (2.2.0)
+  - Toaster (2.3.0)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
@@ -153,7 +153,7 @@ SPEC CHECKSUMS:
   RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
   SlideMenuControllerSwift: d740ea24105a658fe6a8c256f2bf5832fee7c047
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
-  Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
 PODFILE CHECKSUM: 8a46e5e4e11a2ded28b8eeeefbaa7e62fc5bf582

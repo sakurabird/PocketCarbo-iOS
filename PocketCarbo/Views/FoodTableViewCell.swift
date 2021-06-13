@@ -165,7 +165,7 @@ class FoodTableViewCell: UITableViewCell {
     let toastText = String(format: NSLocalizedString("Foods.text.copied", comment: ""), text)
     Toast(text: toastText, duration: Delay.long).show()
   }
-  
+
   @IBAction func didTapShare(_ sender: UIButton) {
     var shareText = createClipboardText()
     shareText.append("\n")

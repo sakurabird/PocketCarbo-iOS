@@ -14,11 +14,11 @@ final class TypeDataProvider {
   static let sharedInstance = TypeDataProvider()
 
   func findAll() -> [Type] {
-    
+
     let path = Bundle.main.path(forResource: "type", ofType: "json")
     let url = URL(fileURLWithPath: path!)
     var types: [Type] = [Type]()
-    
+
     do {
       let data = try Data(contentsOf: url)
       let typeArray = try JSONDecoder().decode(Types.self, from: data)

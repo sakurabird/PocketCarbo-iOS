@@ -78,7 +78,7 @@ final class FoodDataProvider {
 
     let predicate = NSPredicate(format: "type_id == %i AND kind_id == %i", argumentArray: [typeId, kindId])
     let foods = realm.objects(Food.self).filter(predicate).sorted(byKeyPath: sort.key(), ascending: sort.ascending())
-    
+
     return  Array(foods)
   }
 

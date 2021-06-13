@@ -100,7 +100,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
 
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var logoImageView: UIImageView!
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
 

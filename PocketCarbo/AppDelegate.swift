@@ -73,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         fatalError("The storyboard controller is not an instance of SideMenuViewController.")
     }
 
-    //NavigationBar
+    // NavigationBar
     let navigationController = UINavigationController(rootViewController: mainVC)
 
     UINavigationBar.appearance().tintColor = UIColor.white
@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let slideMenuController = SlideMenuController(mainViewController: navigationController, leftMenuViewController: sideMenuVC)
     SlideMenuOptions.contentViewScale = 1
-    
+
     self.window?.rootViewController = slideMenuController
     self.window?.makeKeyAndVisible()
   }

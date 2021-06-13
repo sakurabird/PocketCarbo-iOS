@@ -15,7 +15,7 @@ class SettingsViewController: UITableViewController, MFMailComposeViewController
   @IBOutlet weak var versionLabel: UILabel!
   @IBOutlet weak var privacyPolicyCell: UITableViewCell!
   @IBOutlet weak var mailToDevCell: UITableViewCell!
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
 

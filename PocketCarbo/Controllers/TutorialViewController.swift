@@ -15,7 +15,7 @@ class TutorialViewController: SpotlightViewController {
   @IBOutlet var annotationViews: [UIView]!
   @IBOutlet weak var skipButton: UIButton!
   @IBOutlet weak var skipDescription: UIStackView!
-  
+
   var stepIndex: Int = 0
 
   override func viewDidLoad() {
@@ -32,7 +32,7 @@ class TutorialViewController: SpotlightViewController {
   deinit {
     UserDefaults.standard.setTutorialShowing(tutorialShowing: false)
   }
-  
+
   // MARK: - Setup
 
   private func setupTapGesture() {
@@ -47,7 +47,7 @@ class TutorialViewController: SpotlightViewController {
     let frame = skipButton.frame
     let frameEndX = frame.origin.x + frame.width
     let frameEndY = frame.origin.y + frame.height
-    
+
     if touchPoint.x >= frame.origin.x && touchPoint.x <= frameEndX
       && touchPoint.y >= frame.origin.y && touchPoint.y <= frameEndY {
 
@@ -65,7 +65,7 @@ class TutorialViewController: SpotlightViewController {
 
   func next(_ labelAnimated: Bool) {
     updateAnnotationView(labelAnimated)
-    
+
     let screenSize = UIScreen.main.bounds.size
 
     var topMargin = 0

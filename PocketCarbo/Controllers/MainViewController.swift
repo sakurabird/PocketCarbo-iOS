@@ -44,7 +44,7 @@ class MainViewController: ButtonBarPagerTabStripViewController {
     settings.style.buttonBarLeftContentInset = 0
     settings.style.buttonBarRightContentInset = 0
 
-    changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
+    changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, _ progressPercentage: CGFloat, changeCurrentIndex: Bool, _ animated: Bool) -> Void in
       guard changeCurrentIndex == true else { return }
       oldCell?.label.textColor = UIColor(named: "ColorTextGrayDark")
       newCell?.label.textColor = UIColor(named: "ColorAccent")
@@ -100,7 +100,7 @@ class MainViewController: ButtonBarPagerTabStripViewController {
         fatalError("The tab controller is not an instance of FoodsTableViewController.")
     }
 
-    sortDropDown.selectionAction = { (index, item) in
+    sortDropDown.selectionAction = { (index, _) in
 
       var sortOrder: FoodSortOrder = .nameAsc
       var toastString = String()

@@ -16,7 +16,7 @@ class MainParentViewController: UIViewController {
     super.viewDidLoad()
 
     showAppMessageDialog()
-    
+
     AppdStoreManager.sharedInstance.showReviewDialog()
   }
 

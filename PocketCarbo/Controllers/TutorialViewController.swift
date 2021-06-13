@@ -127,7 +127,7 @@ extension TutorialViewController: SpotlightViewControllerDelegate {
     next(false)
   }
 
-  func spotlightViewControllerTapped(_ viewController: SpotlightViewController, isInsideSpotlight: Bool) {
+  func spotlightViewControllerTapped(_ viewController: SpotlightViewController, tappedSpotlight: SpotlightType?) {
     next(true)
   }
 

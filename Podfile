@@ -5,8 +5,7 @@ target 'PocketCarbo' do
 
   # Pods for PocketCarbo
   pod 'Firebase/Core'
-  pod 'Fabric'
-  pod 'Crashlytics'
+  pod 'Firebase/Crashlytics'
   pod 'SwiftLint'
   pod 'Google-Mobile-Ads-SDK'
   pod 'RealmSwift'

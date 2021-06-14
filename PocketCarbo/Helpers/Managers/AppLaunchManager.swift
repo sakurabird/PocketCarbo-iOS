@@ -86,21 +86,21 @@ final class AppLaunchManager {
     guard let kinds = self.foodsAndKinds?.kinds else { return }
     guard let foods = self.foodsAndKinds?.foods else { return }
 
-    let realm = try! Realm()
+    let realm = Realm.safeInit()
 
-    try! realm.write {
+    realm!.safeWrite {
 
       for food in foods {
-        realm.add(food, update: .modified)
+        realm!.add(food, update: .modified)
       }
 
       for kind in kinds {
         let predicate = NSPredicate(format: "kind_id == %i", kind.id)
-        let foods = realm.objects(Food.self).filter(predicate)
+        let foods = realm!.objects(Food.self).filter(predicate)
         kind.foods.removeAll()
         kind.foods.append(objectsIn: foods)
 
-        realm.add(kind, update: .modified)
+      realm!.add(kind, update: .modified)
       }
     }
     // print(realm.objects(Kind.self))

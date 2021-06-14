@@ -68,6 +68,7 @@
 		21E09FE72064202E00142405 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21E09FE92064202E00142405 /* Localizable.strings */; };
 		21EB5E98206FDFB6006ECDA2 /* UIAlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */; };
 		21EB5E9A206FE103006ECDA2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB5E99206FE103006ECDA2 /* WebViewController.swift */; };
+		21ED738826777AFF007F4D42 /* Realm+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ED738726777AFF007F4D42 /* Realm+extension.swift */; };
 		21F46C222141AC5E002FA7BA /* AdBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F46C212141AC5E002FA7BA /* AdBannerViewController.swift */; };
 		21FAF841207615EF004048E5 /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FAF840207615EF004048E5 /* UITableView+extension.swift */; };
 		90FA1F09849C23C438827C5D /* Pods_PocketCarbo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B50A6B7C1DF8E7EF0454338 /* Pods_PocketCarbo.framework */; };
@@ -157,6 +158,7 @@
 		21E09FEC2064209B00142405 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extension.swift"; sourceTree = "<group>"; };
 		21EB5E99206FE103006ECDA2 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		21ED738726777AFF007F4D42 /* Realm+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+extension.swift"; sourceTree = "<group>"; };
 		21F46C212141AC5E002FA7BA /* AdBannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerViewController.swift; sourceTree = "<group>"; };
 		21FAF840207615EF004048E5 /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
 		357AB0B0AB7E5DC3FE26C4D8 /* Pods-PocketCarboUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCarboUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCarboUITests/Pods-PocketCarboUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				216AA50D20666335002AA44E /* UIButton+extention.swift */,
 				2147C61620761E2900A845C2 /* UIView+extention.swift */,
 				21EB5E97206FDFB6006ECDA2 /* UIAlertController+extension.swift */,
+				21ED738726777AFF007F4D42 /* Realm+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -759,6 +762,7 @@
 				214D873B2063589500F20EF7 /* Constants.swift in Sources */,
 				216AA50A206527B9002AA44E /* FoodTableViewCell.swift in Sources */,
 				212226D9242501C400E74FF2 /* Bundle+extension.swift in Sources */,
+				21ED738826777AFF007F4D42 /* Realm+extension.swift in Sources */,
 				216AA5032064F824002AA44E /* Type.swift in Sources */,
 				2147C61720761E2900A845C2 /* UIView+extention.swift in Sources */,
 			);

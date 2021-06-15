@@ -35,6 +35,7 @@
 		214D873B2063589500F20EF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873A2063589500F20EF7 /* Constants.swift */; };
 		214D873D20635B7500F20EF7 /* UserDefault+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873C20635B7500F20EF7 /* UserDefault+extension.swift */; };
 		214D873F20636C4300F20EF7 /* NotificationCenter+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D873E20636C4300F20EF7 /* NotificationCenter+extension.swift */; };
+		215F6B732678DDF8008F91D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 215F6B752678DDF8008F91D0 /* InfoPlist.strings */; };
 		216AA4DD20643E28002AA44E /* MainParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4DC20643E28002AA44E /* MainParentViewController.swift */; };
 		216AA4DF20643E4E002AA44E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4DE20643E4E002AA44E /* MainViewController.swift */; };
 		216AA4E120643EB8002AA44E /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216AA4E020643EB8002AA44E /* SideMenuViewController.swift */; };
@@ -128,6 +129,7 @@
 		214D873A2063589500F20EF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		214D873C20635B7500F20EF7 /* UserDefault+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefault+extension.swift"; sourceTree = "<group>"; };
 		214D873E20636C4300F20EF7 /* NotificationCenter+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+extension.swift"; sourceTree = "<group>"; };
+		215F6B742678DDF8008F91D0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		216AA4DC20643E28002AA44E /* MainParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainParentViewController.swift; sourceTree = "<group>"; };
 		216AA4DE20643E4E002AA44E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		216AA4E020643EB8002AA44E /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				21C0D996207BECD1007F68A0 /* GoogleService-Info.plist */,
 				21C0D99A207BEDED007F68A0 /* Secret.plist */,
 				21E09FE92064202E00142405 /* Localizable.strings */,
+				215F6B752678DDF8008F91D0 /* InfoPlist.strings */,
 			);
 			path = PocketCarbo;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				21C0D99B207BEDED007F68A0 /* Secret.plist in Resources */,
 				214D872C20633BBD00F20EF7 /* privacy_policy.html in Resources */,
 				214D872920633BBD00F20EF7 /* announcement.html in Resources */,
+				215F6B732678DDF8008F91D0 /* InfoPlist.strings in Resources */,
 				21E09FE72064202E00142405 /* Localizable.strings in Resources */,
 				214D86F020629B8A00F20EF7 /* LaunchScreen.storyboard in Resources */,
 				21D92EB524264FFC00E415B6 /* help_kinds.png in Resources */,
@@ -825,6 +829,14 @@
 				214D86EF20629B8A00F20EF7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		215F6B752678DDF8008F91D0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				215F6B742678DDF8008F91D0 /* ja */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		21E09FE92064202E00142405 /* Localizable.strings */ = {

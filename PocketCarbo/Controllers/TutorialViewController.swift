@@ -53,6 +53,7 @@ class TutorialViewController: SpotlightViewController {
 
     dismiss(animated: true, completion: nil)
 
+    ADManager.sharedInstance.showATTAuthorizationAlart()
   }
 
   // MARK: - Gecco control
@@ -99,6 +100,7 @@ class TutorialViewController: SpotlightViewController {
       spotlightView.move(Spotlight.RoundedRect(center: CGPoint(x: screenSize.width / 2, y: screenSize.height / 2), size: CGSize(width: 0, height: 0), cornerRadius: 0), moveType: .disappear)
     case 7:
       dismiss(animated: true, completion: nil)
+      ADManager.sharedInstance.showATTAuthorizationAlart()
     default:
       break
     }

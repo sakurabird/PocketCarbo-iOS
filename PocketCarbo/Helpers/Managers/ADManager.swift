@@ -8,6 +8,8 @@
 
 import Foundation
 import GoogleMobileAds
+import AppTrackingTransparency
+import AdSupport
 
 final class ADManager {
 
@@ -25,21 +27,30 @@ final class ADManager {
         "af3e50d387305470fea76ab1cf6b9e84" ] // iPod touch gen7
   }
 
+  func showATTAuthorizationAlart() {
+    if #available(iOS 14, *) {
+      ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+        // Tracking authorization completed. Start loading ads here.
+        // loadAd()
+      })
+    }
+  }
+
   func getBannerId() -> String {
     var bannerId: String = "ca-app-pub-3940256099942544/2934735716" // for Test
 
     #if DEBUG
-      #else
-      if let path = Bundle.main.path(forResource: "Secret", ofType: "plist") {
-        let dictRoot = NSDictionary(contentsOfFile: path)
-        if let dict = dictRoot {
-          guard let id: String = dict["AD_MOB_BANNER_ID"] as? String
-            else {
-              fatalError("AD_MOB_BANNER_ID could not instantiated.")
-          }
-          bannerId = id
+    #else
+    if let path = Bundle.main.path(forResource: "Secret", ofType: "plist") {
+      let dictRoot = NSDictionary(contentsOfFile: path)
+      if let dict = dictRoot {
+        guard let id: String = dict["AD_MOB_BANNER_ID"] as? String
+        else {
+          fatalError("AD_MOB_BANNER_ID could not instantiated.")
         }
+        bannerId = id
       }
+    }
     #endif
     return bannerId
   }

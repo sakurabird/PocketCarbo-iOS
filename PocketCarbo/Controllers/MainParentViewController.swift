@@ -15,6 +15,8 @@ class MainParentViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    ADManager.sharedInstance.showATTAuthorizationAlart()
+
     showAppMessageDialog()
 
     AppdStoreManager.sharedInstance.showReviewDialog()

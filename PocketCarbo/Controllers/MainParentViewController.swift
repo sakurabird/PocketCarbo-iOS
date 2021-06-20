@@ -39,28 +39,17 @@ class MainParentViewController: UIViewController {
       return
     }
     guard let viewController: TutorialViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tutorial") as? TutorialViewController
-      else {
-        fatalError("The controller is not an instance of TutorialViewController.")
+    else {
+      fatalError("The controller is not an instance of TutorialViewController.")
     }
 
-    self.navigationController?.present(viewController, animated: true, completion: nil)
-    UserDefaults.standard.setShowTutorial(showTutorial: false)
+    self.navigationController?.present(viewController, animated: true, completion: {
+      UserDefaults.standard.setShowTutorial(showTutorial: false)
+    })
   }
 
   func showAppMessageDialog() {
-    let lastMessageNo = UserDefaults.standard.getAppMessageNo()
-
-    if UserDefaults.standard.isFirstLaunch() {
-      UserDefaults.standard.setAppMessageNo(appMessageNo: Config.appMessageNo)
-      return
-    }
-
-    if UserDefaults.standard.isTutorialShowing() {
-      return
-    }
-
-    // Do not show dialog if already shown
-    if Config.appMessageNo <= lastMessageNo {
+    if !mustShowAppMessage() {
       return
     }
 
@@ -69,6 +58,26 @@ class MainParentViewController: UIViewController {
     present(UIAlertController.alertWithTitle(title: title, message: message, buttonTitle: "OK"), animated: true, completion: nil)
 
     UserDefaults.standard.setAppMessageNo(appMessageNo: Config.appMessageNo)
+  }
+
+  private func mustShowAppMessage() -> Bool {
+    let lastMessageNo = UserDefaults.standard.getAppMessageNo()
+
+    if UserDefaults.standard.isFirstLaunch() {
+      UserDefaults.standard.setFirstLaunch(firstLaunch: false)
+      UserDefaults.standard.setAppMessageNo(appMessageNo: Config.appMessageNo)
+      return false
+    }
+
+    if UserDefaults.standard.isTutorialShowing() {
+      return false
+    }
+
+    // Do not show dialog if already shown
+    if Config.appMessageNo <= lastMessageNo {
+      return false
+    }
+    return true
   }
 
   // MARK: - Navigation
@@ -81,8 +90,8 @@ class MainParentViewController: UIViewController {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
     guard let vc: SearchViewController = storyboard.instantiateViewController(withIdentifier: "search") as? SearchViewController
-      else {
-        fatalError("The controller is not an instance of SearchViewController.")
+    else {
+      fatalError("The controller is not an instance of SearchViewController.")
     }
     let nv = UINavigationController(rootViewController: vc)
 

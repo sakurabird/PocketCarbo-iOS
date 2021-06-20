@@ -29,7 +29,7 @@ final class ADManager {
 
   func showATTAuthorizationAlart() {
     if #available(iOS 14, *) {
-      ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+      ATTrackingManager.requestTrackingAuthorization(completionHandler: { _ in
         // Tracking authorization completed. Start loading ads here.
         // loadAd()
       })

@@ -41,25 +41,19 @@ class TutorialViewController: SpotlightViewController {
   }
 
   @objc func viewTouched(_ gesture: UITapGestureRecognizer) {
-    let touchPoint = gesture.location(in: spotlightView)
-
-    // Dismiss if Skip Button tapped
-    let frame = skipButton.frame
-    let frameEndX = frame.origin.x + frame.width
-    let frameEndY = frame.origin.y + frame.height
-
-    if touchPoint.x >= frame.origin.x && touchPoint.x <= frameEndX
-      && touchPoint.y >= frame.origin.y && touchPoint.y <= frameEndY {
-
-      let toastText = NSLocalizedString("Foods.tutorial.skip", comment: "")
-      Toast(text: toastText, duration: Delay.short).show()
-
-      dismiss(animated: true, completion: nil)
-      return
-    }
     // Show next annotation
     next(true)
  }
+
+  // MARK: Button Action
+
+  @IBAction func onClickSkipButton(_ sender: Any) {
+    let toastText = NSLocalizedString("Foods.tutorial.skip", comment: "")
+    Toast(text: toastText, duration: Delay.short).show()
+
+    dismiss(animated: true, completion: nil)
+
+  }
 
   // MARK: - Gecco control
 

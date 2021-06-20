@@ -80,8 +80,26 @@ class AdBannerViewController: UIViewController, GADBannerViewDelegate {
   private func displayView(isHidden: Bool) {
     adBannerView.isHidden = isHidden
     if !isHidden {
-      adBannerView.load(GADRequest())
+      loadBannerAd()
     }
+  }
+
+  func loadBannerAd() {
+    // Determine the view width to use for the ad width.
+    let frame = { () -> CGRect in
+      // Here safe area is taken into account, hence the view frame is used
+      // after the view has been laid out.
+        return view.frame.inset(by: view.safeAreaInsets)
+    }()
+    let viewWidth = frame.size.width
+
+    // Get Adaptive GADAdSize and set the ad view.
+    // Here the current interface orientation is used. If the ad is being preloaded
+    // for a future orientation change or different orientation, the function for the
+    // relevant orientation should be used.
+    adBannerView.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
+
+    adBannerView.load(GADRequest())
   }
 
   private func startInterval(clicked: Bool) {

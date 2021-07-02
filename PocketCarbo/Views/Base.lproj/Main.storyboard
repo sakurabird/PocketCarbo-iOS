@@ -307,7 +307,7 @@
                                                 <fragment content="チュートリアルを表示">
                                                     <attributes>
                                                         <color key="NSColor" red="0.082352941176470587" green="0.3529411764705882" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="15" name=".HiraKakuInterface-W3"/>
+                                                        <font key="NSFont" metaFont="system" size="15"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>

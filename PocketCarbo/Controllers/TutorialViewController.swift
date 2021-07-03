@@ -15,7 +15,7 @@ class TutorialViewController: SpotlightViewController {
   @IBOutlet var annotationViews: [UIView]!
   @IBOutlet weak var skipButton: UIButton!
   @IBOutlet weak var skipDescription: UIStackView!
-  
+
   var stepIndex: Int = 0
 
   override func viewDidLoad() {
@@ -32,7 +32,7 @@ class TutorialViewController: SpotlightViewController {
   deinit {
     UserDefaults.standard.setTutorialShowing(tutorialShowing: false)
   }
-  
+
   // MARK: - Setup
 
   private func setupTapGesture() {
@@ -41,31 +41,24 @@ class TutorialViewController: SpotlightViewController {
   }
 
   @objc func viewTouched(_ gesture: UITapGestureRecognizer) {
-    let touchPoint = gesture.location(in: spotlightView)
-
-    // Dismiss if Skip Button tapped
-    let frame = skipButton.frame
-    let frameEndX = frame.origin.x + frame.width
-    let frameEndY = frame.origin.y + frame.height
-    
-    if touchPoint.x >= frame.origin.x && touchPoint.x <= frameEndX
-      && touchPoint.y >= frame.origin.y && touchPoint.y <= frameEndY {
-
-      let toastText = NSLocalizedString("Foods.tutorial.skip", comment: "")
-      Toast(text: toastText, duration: Delay.short).show()
-
-      dismiss(animated: true, completion: nil)
-      return
-    }
     // Show next annotation
     next(true)
  }
+
+  // MARK: Button Action
+
+  @IBAction func onClickSkipButton(_ sender: Any) {
+    let toastText = NSLocalizedString("Foods.tutorial.skip", comment: "")
+    Toast(text: toastText, duration: Delay.short).show()
+
+    dismiss(animated: true, completion: nil)
+  }
 
   // MARK: - Gecco control
 
   func next(_ labelAnimated: Bool) {
     updateAnnotationView(labelAnimated)
-    
+
     let screenSize = UIScreen.main.bounds.size
 
     var topMargin = 0
@@ -127,7 +120,7 @@ extension TutorialViewController: SpotlightViewControllerDelegate {
     next(false)
   }
 
-  func spotlightViewControllerTapped(_ viewController: SpotlightViewController, isInsideSpotlight: Bool) {
+  func spotlightViewControllerTapped(_ viewController: SpotlightViewController, tappedSpotlight: SpotlightType?) {
     next(true)
   }
 

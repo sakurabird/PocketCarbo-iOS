@@ -8,7 +8,7 @@
 
 import UIKit
 extension UIAlertController {
-  
+
   static func alertWithTitle(title: String, message: String, buttonTitle: String) -> UIAlertController {
     let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
     let action = UIAlertAction(title: buttonTitle, style: .default, handler: nil)

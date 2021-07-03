@@ -58,28 +58,28 @@ final class FoodDataProvider {
   private init() { }
   static let sharedInstance = FoodDataProvider()
 
-  let realm: Realm = try! Realm()
+  let realm = Realm.safeInit()
 
   func findAll() -> [Food] {
-    let foods = realm.objects(Food.self).sorted(byKeyPath: FoodSortOrder.nameAsc.key())
-    return Array(foods)
+    let foods = realm?.objects(Food.self).sorted(byKeyPath: FoodSortOrder.nameAsc.key())
+    return Array(foods!)
   }
 
   func findData(typeId: Int, sort: FoodSortOrder) -> [Food] {
 
     let predicate = NSPredicate(format: "type_id == %i", typeId)
-    let foods = realm.objects(Food.self).filter(predicate)
+    let foods = realm?.objects(Food.self).filter(predicate)
       .sorted(byKeyPath: sort.key(), ascending: sort.ascending())
 
-    return  Array(foods)
+    return  Array(foods!)
   }
 
   func findData(typeId: Int, kindId: Int, sort: FoodSortOrder) -> [Food] {
 
     let predicate = NSPredicate(format: "type_id == %i AND kind_id == %i", argumentArray: [typeId, kindId])
-    let foods = realm.objects(Food.self).filter(predicate).sorted(byKeyPath: sort.key(), ascending: sort.ascending())
-    
-    return  Array(foods)
+    let foods = realm?.objects(Food.self).filter(predicate).sorted(byKeyPath: sort.key(), ascending: sort.ascending())
+
+    return  Array(foods!)
   }
 
   func findData(searchText: String) -> [Food] {
@@ -96,9 +96,9 @@ final class FoodDataProvider {
     }
     let predicateCompound = NSCompoundPredicate.init(type: .and, subpredicates: predicateCompounds)
 
-    let foods = realm.objects(Food.self).filter(predicateCompound)
+    let foods = realm?.objects(Food.self).filter(predicateCompound)
       .sorted(byKeyPath: FoodSortOrder.nameAsc.key(), ascending: FoodSortOrder.nameAsc.ascending())
 
-    return  Array(foods)
+    return  Array(foods!)
   }
 }

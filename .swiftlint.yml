@@ -1,52 +1,49 @@
-# 参考: https://github.com/xmartlabs/Swift-Project-Template/blob/master/Project-iOS/XLProjectName/.swiftlint.yml
-
+#https://gist.github.com/candostdagdeviren/1b0398f36defb113c249590b3a6bbb18
 disabled_rules: # rule identifiers to exclude from running
-#  - colon
-#  - comma
-#  - control_statement
-#  - file_length
-#  - force_cast
-  - force_try
-#  - function_body_length
-#  - leading_whitespace
-#  - line_length
-#  - nesting
-#  - operator_whitespace
-#  - opening_brace
-#  - return_arrow_whitespace
-#  - statement_position
-#  - todo
-#  - trailing_newline
-#  - trailing_semicolon
-  - trailing_whitespace
-#  - type_body_length
-#  - type_name
-  - valid_docs
-  - variable_name
-  - variable_name_min_length
-#  - variable_name_max_length
-excluded: # paths to ignore during linting. overridden by `included`.
-  - Carthage
+  - identifier_name
+  - nesting
+  - function_parameter_count
+  - line_length
+opt_in_rules: # some rules are only opt-in
+  - control_statement
+  - empty_count
+  - trailing_newline
+  - colon
+  - comma
+included: # paths to include during linting. `--path` is ignored if present.
+  - PocketCarbo
+  - PocketCarboTests
+  - PocketCarboUITests
+excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Pods
-  - fastlane
-  - XLProjectName/Helpers/R-Swift/R.generated.swift
-# parameterized rules can be customized from this configuration file
-file_length:
-  - 700
-  - 1000
-line_length:
-  - 230
-  - 250
-# parameterized rules are first parameterized as a warning level, then error level.
-function_body_length:
-  - 150 # warning
-  - 200 # error
+  - PocketCarbo/R.generated.swift
+
+# configurable rules can be customized from this configuration file
+# binary rules can set their severity level
+force_cast: warning # implicitly. Give warning only for force casting
+
+force_try:
+  severity: warning # explicitly. Give warning only for force try
+
 type_body_length:
   - 300 # warning
   - 400 # error
-variable_name_max_length:
-  - 30 # warning
-  - 40 # error
-variable_name_min_length:
-  - 2 # warning
-  - 1 # error
+
+# or they can set both explicitly
+file_length:
+  warning: 500
+  error: 800
+
+large_tuple: # warn user when using 3 values in tuple, give error if there are 4
+   - 3
+   - 4
+
+# naming rules can set warnings/errors for min_length and max_length
+# additionally they can set excluded names
+type_name:
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 30
+    error: 35
+  excluded: iPhone # excluded via string
+reporter: "xcode"

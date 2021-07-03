@@ -55,5 +55,5 @@ class HelpViewController: UIViewController, WKNavigationDelegate {
     let toastText = NSLocalizedString("Help.toast.tutorial", comment: "")
     Toast(text: toastText, duration: Delay.short).show()
   }
-  
+
 }

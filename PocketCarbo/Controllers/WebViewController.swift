@@ -13,7 +13,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
 
   @IBOutlet weak var progressView: UIProgressView!
   @IBOutlet weak var webView: WKWebView!
-  
+
   var url: URL?
   var embed: Bool?
   var observeEstimatedProgress: NSKeyValueObservation?

@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  PocketCarbo
+
+  Created by Sakura on 2021/06/15.
+  Copyright © 2021 Sakura. All rights reserved.
+*/
+NSUserTrackingUsageDescription = "広告を表示し効果の測定をするために使用されます。";

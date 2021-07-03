@@ -31,5 +31,5 @@ extension NotificationCenter {
     post(name: NSNotification.Name(rawValue: notification.rawValue),
          object: object, userInfo: userInfo)
   }
-  
+
 }

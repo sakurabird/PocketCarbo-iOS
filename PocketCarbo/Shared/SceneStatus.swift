@@ -16,7 +16,7 @@ final class SceneStatus {
     case Active
     case InActive
   }
-  
+
   var currentFavoritesStatus = SceneActiveStatus.InActive
   var currentSearchStatus = SceneActiveStatus.InActive
 }

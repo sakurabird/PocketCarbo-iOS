@@ -5,8 +5,7 @@ target 'PocketCarbo' do
 
   # Pods for PocketCarbo
   pod 'Firebase/Core'
-  pod 'Fabric'
-  pod 'Crashlytics'
+  pod 'Firebase/Crashlytics'
   pod 'SwiftLint'
   pod 'Google-Mobile-Ads-SDK'
   pod 'RealmSwift'
@@ -14,7 +13,7 @@ target 'PocketCarbo' do
   pod 'SlideMenuControllerSwift', :git => 'https://github.com/sakurabird/SlideMenuControllerSwift.git'
   pod 'DropDown'
   pod 'Toaster'
-  pod 'Gecco', :git => 'https://github.com/sakurabird/Gecco.git'
+  pod 'Gecco'
   pod "Device", '~> 3.2.1'
 
   target 'PocketCarboTests' do

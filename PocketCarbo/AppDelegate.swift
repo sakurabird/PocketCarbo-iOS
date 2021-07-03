@@ -8,8 +8,7 @@
 
 import UIKit
 import Firebase
-import Fabric
-import Crashlytics
+import FirebaseCrashlytics
 import SlideMenuControllerSwift
 
 @UIApplicationMain
@@ -21,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Google Service
     FirebaseApp.configure()
-    Fabric.with([Crashlytics.self])
 
     // Setup Admob
     ADManager.sharedInstance.setupAdMob()
@@ -73,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         fatalError("The storyboard controller is not an instance of SideMenuViewController.")
     }
 
-    //NavigationBar
+    // NavigationBar
     let navigationController = UINavigationController(rootViewController: mainVC)
 
     UINavigationBar.appearance().tintColor = UIColor.white
@@ -84,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let slideMenuController = SlideMenuController(mainViewController: navigationController, leftMenuViewController: sideMenuVC)
     SlideMenuOptions.contentViewScale = 1
-    
+
     self.window?.rootViewController = slideMenuController
     self.window?.makeKeyAndVisible()
   }

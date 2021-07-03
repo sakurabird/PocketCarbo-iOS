@@ -26,7 +26,7 @@ struct SideMenuData {
   let menuLabel: String?
 }
 
-protocol SideMenuProtocol: class {
+protocol SideMenuProtocol: AnyObject {
   func changeViewController(_ menu: SideMenu)
 }
 
@@ -100,7 +100,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
 
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var logoImageView: UIImageView!
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
 

@@ -15,10 +15,10 @@ final class FavoriteDataProvider {
   private init() { }
   static let sharedInstance = FavoriteDataProvider()
 
-  let realm: Realm = try! Realm()
+  let realm = Realm.safeInit()
 
   func findAll() -> [Food] {
-    let favorites = realm.objects(FavoriteFood.self).sorted(byKeyPath: "createdAt", ascending: false)
+    let favorites = realm!.objects(FavoriteFood.self).sorted(byKeyPath: "createdAt", ascending: false)
     var foods: [Food] = [Food]()
 
     for fav in favorites {
@@ -29,7 +29,7 @@ final class FavoriteDataProvider {
 
   func isFavorite(food: Food) -> Bool {
     let predicate = NSPredicate(format: "id == %i", food.id)
-    if realm.objects(FavoriteFood.self).filter(predicate).first != nil {
+    if realm!.objects(FavoriteFood.self).filter(predicate).first != nil {
       return true
     }
     return false
@@ -41,18 +41,18 @@ final class FavoriteDataProvider {
     fav.food = food
     fav.createdAt = Date()
 
-    try! realm.write {
-      realm.add(fav, update: .all)
+    realm!.safeWrite {
+      realm!.add(fav, update: .all)
       NotificationCenter.default.postEvent(notification: NotificationEvent.favoritesUpdated, object: self, userInfo: nil)
     }
   }
 
   func removeData(food: Food) {
     let predicate = NSPredicate(format: "id == %i", food.id)
-    let favoriteFood = realm.objects(FavoriteFood.self).filter(predicate)
+    let favoriteFood = realm!.objects(FavoriteFood.self).filter(predicate)
 
-    try! realm.write {
-      realm.delete(favoriteFood)
+    realm!.safeWrite {
+      realm!.delete(favoriteFood)
       NotificationCenter.default.postEvent(notification: NotificationEvent.favoritesUpdated, object: self, userInfo: nil)
     }
   }
